@@ -7,4 +7,20 @@ has_toc: false
 
 # SSTuino Classic
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+![Populated PCB](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/SSTuino.png)
+
+SSTuino is an easy to use Wi-Fi enabled microcontroller, designed and fabricated by SST Alumni. Users can write programs to connect or control things over the Internet. It is derived from the SPEEEduino v1.1 with some improvements.
+
+## Tutorials
+
+Tutorials are located here, covers the tutorials for the 2018 to 2021 versions of the SSTuino Innovator's Kit.
+
+[Tutorials](tutorials/index.md){: .btn }
+
+## Support
+
+Pan Ziyue: [random.rrr3@gmail.com](mailto:random.rrr3@gmail.com)
+
+Goh Qian Zhe: [goh_qian_zhe@s2012.sst.edu.sg](mailto:goh_qian_zhe@s2012.sst.edu.sg)
+
+If you need anything to be replaced, please email us!
