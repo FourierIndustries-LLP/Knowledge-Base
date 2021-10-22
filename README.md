@@ -1,1 +1,3 @@
-# Knowledge-Base
+# FourierIndustries Knowledge Base
+
+Hello World!
