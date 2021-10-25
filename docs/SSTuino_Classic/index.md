@@ -16,7 +16,7 @@ SSTuino is an easy to use Wi-Fi enabled microcontroller, designed and fabricated
 
 Tutorials are located here, covers the tutorials for the 2018 to 2021 versions of the SSTuino Innovator's Kit.
 
-[Tutorials](tutorials/index.md){: .btn }
+[![Populated PCB](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/SSTuino.png)](tutorials/index.md){: .btn }
 
 ## Support
 
