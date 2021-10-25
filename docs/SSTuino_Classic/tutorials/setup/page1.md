@@ -2,7 +2,6 @@
 layout: default
 title: Installation of CP2102 Driver
 parent: Setup
-grand_parent: Tutorials
 nav_order: 0
 has_toc: false
 ---
