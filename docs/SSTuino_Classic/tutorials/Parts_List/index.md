@@ -37,5 +37,6 @@ In the event of any missing components for the kit, feel free to bring this up t
 
 ## Next tutorial
 Setup your learning device for use of the SSTuino Classic
+
 [Getting Started with the SSTuino](../setup/index.md)
 
