@@ -17,10 +17,12 @@ The tutorials are designed for the SSTuino Classic used from 2018 to 2021.
 
 Before you start using the SSTuino kit, here are some things to do:
 
-* [Parts list for SSTuino Innovator's Kit](partsList.md)
+* [Parts list for SSTuino Innovator's Kit](Parts_List/index.md)
 * [Setting up your learning device and SSTuino Innovator's Kit](setup/index.md)
 * [Uploading a first program to the SSTuino](helloWorld.md)
 
-## [Secondary 1 Tutorials](Sec1/index.md)
+## Secondary 1 Tutorials
 
 This covers the lessons taught in your ICT cirriculum.
+
+[Secondary 1 Tutorials](sec1/index.md){: .btn }
