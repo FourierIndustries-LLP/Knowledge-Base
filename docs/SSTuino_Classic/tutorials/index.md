@@ -11,9 +11,7 @@ has_toc: false
 
 The tutorials covers on the setup and first use of the SSTuino, as well as the tutorials covered in the Sec 1 Cirriculum.
 
-Note
-{: .label }
-The tutorials are designed for the SSTuino Classic used from 2018 to 2021.
+Note {: .label } The tutorials are designed for the SSTuino Classic used from 2018 to 2021.
 
 ## Setup
 
