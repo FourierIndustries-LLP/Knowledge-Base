@@ -2,7 +2,7 @@
 layout: default
 title: Sec 1 Tutorials (SSTuino Classic)
 parent: SSTuino Classic Tutorials
-nav_order: 1
+nav_order: 2
 has_children: true
 has_toc: false
 ---
