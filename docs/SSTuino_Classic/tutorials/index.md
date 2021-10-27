@@ -25,4 +25,4 @@ Before you start using the SSTuino kit, here are some things to do:
 
 This covers the lessons taught in your ICT cirriculum.
 
-[Secondary 1 Tutorials](sec1/index.md){: .btn }
+[Secondary 1 Tutorials](Sec1/index.md){: .btn }
