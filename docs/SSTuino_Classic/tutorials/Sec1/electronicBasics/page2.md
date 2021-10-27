@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Resistors and LEDs
+title: Resistors & LEDs
 nav_order: 0
 parent: Electronics Basics
 has_toc: false
