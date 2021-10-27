@@ -24,9 +24,6 @@ SSTuino is an easy to use Wi-Fi enabled microcontroller, designed and fabricated
 
 This tutorial is a simple guide on how to get started with the SSTuino.
 
-> Note: This article was last updated on 25th October 2019.
-
-
 ## Setting up
 
 **Note**: Please take your time and carefully go through this tutorial as it is the most crucial step to get your product working. It is also recommended to set this up before the SSTuino lessons starts with your parents to allow the smoothest possible experience. Learning devices with **parental control** will need to have their parents approve the driver installation.
