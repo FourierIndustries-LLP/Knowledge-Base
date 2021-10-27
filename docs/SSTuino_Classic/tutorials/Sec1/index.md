@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Sec 1 Tutorials (SSTuino Classic)
+title: SSTuino Classic Sec 1 Tutorials
 parent: SSTuino Classic Tutorials
 nav_order: 2
 has_children: true
 has_toc: false
 ---
 
-# Sec 1 Tutorials (SSTuino Classic)
+# SSTuino Classic Sec 1 Tutorials
 
 * [How to not *burn* your LEDs!](electronicBasics/index.md)
     * Explanation of components inside your SSTuino Innovator's Kit.

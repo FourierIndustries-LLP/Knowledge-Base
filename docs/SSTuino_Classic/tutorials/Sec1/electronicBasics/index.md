@@ -2,7 +2,7 @@
 layout: default
 title: Electronics Basics
 nav_order: 0
-parent: Sec 1 Tutorials (SSTuino Classic)
+parent: SSTuino Classic Sec 1 Tutorials
 has_children: true
 has_toc: false
 ---
