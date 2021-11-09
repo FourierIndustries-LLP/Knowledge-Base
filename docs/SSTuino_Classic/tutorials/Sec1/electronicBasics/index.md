@@ -34,7 +34,7 @@ This tutorial will cover the details of the components that are included in the 
 ## SSTuino Board
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/a000066_front_1_1_1.jpgs" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/a000066_front_1_1_1.jpg" width="300" />
   <img src="https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/SSTuino.png" width="300" /> 
 </p>
 

@@ -10,7 +10,7 @@ has_toc: false
 
 This parts list applies to the kits for the 2021 batch.
 
-![Parts List](imageAssets/PartsLists.png)
+![Parts List](imageAssets/PartsList.png)
 
 | No.    | Component Name                       | Quantity  |
 |------- |:------------------------------------:| ---------:|
