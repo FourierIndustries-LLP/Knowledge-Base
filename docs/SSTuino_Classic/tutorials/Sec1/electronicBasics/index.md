@@ -25,7 +25,7 @@ Before we go into electronics, here is what will happen when if you do not handl
 
 ## Some essentials...
 
-In your SSTunino kit, we have provided some components for you to use, and is listed inside the [parts list page](https://d3lta-v.github.io/SSTuino/tutorials/partsList.html). 
+In your SSTunino kit, we have provided some components for you to use, and is listed inside the [parts list page](../../Parts_List/index.md). 
 
 **Note:** If there are any components missing from the kit when you first recieve it, please approach your ICT teachers.
 
