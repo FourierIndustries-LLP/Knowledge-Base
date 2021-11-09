@@ -10,7 +10,7 @@ has_toc: false
 
 This parts list applies to the kits for the 2021 batch.
 
-![Parts List](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/PartsList/PartsList.png)
+![Parts List](imageAssets/PartsLists.png)
 
 | No.    | Component Name                       | Quantity  |
 |------- |:------------------------------------:| ---------:|
