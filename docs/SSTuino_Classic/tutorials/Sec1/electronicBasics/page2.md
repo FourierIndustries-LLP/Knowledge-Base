@@ -39,8 +39,8 @@ Resistors are essential in every circuit. They limit the flow of current in your
 For generic resistors, there is generally two types of resistors: Carbon Composite Resistor or Film Type Resistor. Carbon resistors are popular due to their extremely low cost and good accurancy with low enough tolerance (usually about +- 5%). Flim Type Resistor, while being slightly costlier, provide closer tolerances (up to +-1%) from the rated resistance.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/d3lta-v/SSTuino/master/docs/tutorials/Sec1/partsList_images/CarbonR.jpg" width="300" />
-  <img src="https://raw.githubusercontent.com/d3lta-v/SSTuino/master/docs/tutorials/Sec1/partsList_images/MetalR.jpg" width="300" /> 
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/CarbonR.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/MetalR.jpg" width="300" /> 
 </p>
 
 *Carbon Film Resistors (left) and metal oxide resistors (right).*
@@ -54,21 +54,21 @@ The resistors provided in the kit is metal oxide resistors and have values of 33
 This is a **330 Ohm** resistor.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/d3lta-v/SSTuino/master/docs/tutorials/Sec1/partsList_images/10KOhm.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/330-ohm.jpg" width="300" />
 </p>
 
 This is a **10K Ohm** resistor.
 
 If you are wondering how to read the values of resistors, refer to the infograpic below:
 
-![resistorChart](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/docs/tutorials/Sec1/partsList_images/Resistors.png)
+![resistorChart](https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/Resistors.png)
 
 ## Light Emitting Diode (LED)
 
 Somehow or another, you would realise that you would need something to light up! Say hello to the LED! LEDs are small, efficient lightbulbs (that are rather bright). They are found in a large variety of devices like mobile phones, computer screens, the headlamps of the car and even spotlights!
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/d3lta-v/SSTuino/master/docs/tutorials/Sec1/partsList_images/LED.jpeg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/LED.jpeg" width="300" />
 </p>
 
 So, you might be wondering how should you place an LED in a circuit? Here are the 3 most important things to take note:
