@@ -1,3 +1,10 @@
+---
+layout: default
+title: First TinkerCAD Circuit
+nav_order: 1
+parent: TinkerCAD
+has_toc: false
+---
 ## Our first circuit!
 
 Back to the topic of burning LEDs, here is one huge benefit of using TinkerCAD. As TinkerCAD can simulate circuits, we can test whether we use the correct components and connected it correctly before actually building it.

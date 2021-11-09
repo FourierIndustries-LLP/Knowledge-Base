@@ -50,3 +50,5 @@ Signing in to TinkerCAD is easy.
 
 ![mainLanding](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/tinkercad/mainLanding.png)
 
+## Next Chapter
+[First TinkerCAD Circuit](page2.md)
