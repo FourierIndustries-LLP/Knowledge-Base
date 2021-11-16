@@ -56,7 +56,7 @@ Copy this circuit over to your SSTuino board setup.
 
 >**NOTE:** To prevent damage to your computer or the components, please **disconnect all power from the SSTuino board** when you are wiring up your circuit!
 
-![arduino3](/imageAssets/Arduino3.mp4)
+![arduino3](/imageAssets/arduino3.mp4)
 
 To futher spice up your circuit, you can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?
 
@@ -70,7 +70,7 @@ Create a new circuit and set up your circuit like this:
 
 What this circuit allows you to see is the difference in LED brightness as you cover the photoresistor or shine a torch on it. 
 
-![arduino6](/imageAssets/Arduino6.mp4)
+![arduino6](/imageAssets/arduino6.mp4)
 
 Copy this circuit over to your SSTuino board setup.
 
