@@ -59,4 +59,4 @@ Why would this happen? This is because that LEDs have a minimum voltage to light
 This means that the 1.5V battery would be barely able to light up the circuit, and only the 2 other battery types will be able to light up.
 
 ## Next Chapter
-[First Circuit with SSTuino](page3.md)
+[First SSTuino Circuit](page3.md)
