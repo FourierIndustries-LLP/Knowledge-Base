@@ -78,6 +78,5 @@ Copy this circuit over to your SSTuino board setup.
 
 What happens to the LED brightness as you play with the photoresistor? Record and post a video onto Instagram and place a hashtag `#sstuino`! 
 
-## Time to turn it up!
-
-We are going to move into the programming stage of the SSTuino Innovator's Kit, so please move to the **[next tutorial](https://d3lta-v.github.io/SSTuino/tutorials/Sec1/sstuinoProgram.html)**
+## Next tutorial
+[Basic Arduino Programming](../basicArduinoProgramming/index.md)
