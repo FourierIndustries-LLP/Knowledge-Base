@@ -36,19 +36,24 @@ Signing in to TinkerCAD is easy.
 
 * Go to [tinkercad.com](https://www.tinkercad.com/) and then click on Sign In
 
-![tinkerCAD](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/tinkercad/tinkerCAD.png)
+![tinkerCAD](https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/tinkercad/imageAssets/tinkerCAD.jpg)
 
 * Go to the login screen
 
-![signIn](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/tinkercad/signIn.png){: .small-image }
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/tinkercad/imageAssets/signIn.jpg" width="300" />
+</p>
 
 * Select sign in using social provider, and select your Google Account. 
 
-![socialProvider](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/tinkercad/signInSocialProvider.png){: .small-image }
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/tinkercad/imageAssets/signInSocialProvider.jpg" width="300" />
+</p>
 
 * You are signed in! Your projects will appear here in the future!
 
-![mainLanding](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/tinkercad/mainLanding.png)
+![mainLanding](https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/tinkercad/imageAssets/mainLanding.jpg)
 
 ## Next Chapter
 [First TinkerCAD Circuit](page2.md)
