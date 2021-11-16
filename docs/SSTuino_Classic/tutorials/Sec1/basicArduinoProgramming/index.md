@@ -30,29 +30,29 @@ The Arduino programming language is very simillar to the [C/C++ Language](https:
 
 Create a new circuit on TinkerCAD, and set it up like this:
 
-![arduinoProg1](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg1.png)
+![arduinoProg1](imageAssets/arduinoProg1.png)
 
 Once you set it up and press start simulation, notice the LED on the Arduino blinking? Why does this happen?
 
-![arduinoProg2](https://github.com/d3lta-v/SSTuino/blob/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg2.gif?raw=true)
+![arduinoProg2](imageAssets/arduinoProg2.mp4)
 
 The reason this happens is that TinkerCAD places in a sample code when you insert the Arduino into the circuit.
 
 > Stop the simulation and press the **CODE** button. You should see something like this:
 
-![arduinoProg3](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg3.png)
+![arduinoProg3](imageAssets/arduinoProg3.png)
 
 TinkerCAD is very simple to use as you can use block coding to program the Arduino. You would have had experience in block coding with Scratch, Thunkable and Blockly Games. The programming environment would be very simillar to those you had used before.
 
 If you would like to program with text in TinkerCAD, you can also do so like this:
 
-![arduinoProg10](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg10.png)
+![arduinoProg10](imageAssets/arduinoProg10.png)
 
 They also have another format called Blocks + Code. The text code changes according to the blocks that you place.
 
-![arduinoProg11](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg11.png)
+![arduinoProg11](imageAssets/arduinoProg11.png)
 
-> **Note:** In TinkerCAD, when you program in blocks, the text that you coded will be deleted, and when you program in text, the blocks that you placed will be deleted when you change the programming mode. This is to prevent any internal application error with the website.![arduinoProg12](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg12.png)
+> **Note:** In TinkerCAD, when you program in blocks, the text that you coded will be deleted, and when you program in text, the blocks that you placed will be deleted when you change the programming mode. This is to prevent any internal application error with the website.![arduinoProg12](imageAssets/arduinoProg12.png)
 
 So what does this block of code do? It tells the Arduino to:
 
@@ -69,11 +69,11 @@ Now change the value of the `wait ___ seconds` to something that you like. What 
 
 Now, let us connect up the circuit:
 
-![arduinoProg4](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg4.png)
+![arduinoProg4](imageAssets/arduinoProg4.png)
 
 After you start simulation, it should look something like this:
 
-![arduinoProg5](https://github.com/d3lta-v/SSTuino/blob/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg5.gif?raw=true)
+![arduinoProg5](imageAssets/arduinoProg5.mp4)
 
 *Wait a minute...* How come the LED attached turns on and off even though I did not program it? Well the reason behind it is that the `built-in` LED pin is also connected to pin 13. This means in the program, `LED_BUILTIN` is also pin 13.
 
@@ -83,17 +83,17 @@ In TinkerCAD, another awesome feature is the ability to download the program tha
 
 > Go to code, and press the download button
 
-![arduinoProg6](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg6.png)
+![arduinoProg6](imageAssets/arduinoProg6.png)
 
 A `.ino` file will be downloaded on your mac and can be used on the Arduino IDE. Open the file and you would see this:
 
-![arduinoProg7](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg7.png)
+![arduinoProg7](imageAssets/arduinoProg7.png)
 
 Click **OK**.
 
 A folder will then be created and you will be able to see this code appear.
 
-![arduinoProg8](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg8.png)
+![arduinoProg8](imageAssets/arduinoProg8.png)
 
 ## How does the code work?
 
@@ -101,11 +101,11 @@ You would probably have noticed that this code looks rather different than the b
 
 For example, I use another IDE called Visual Studio Code to modify this website for you! (in [Markdown](https://en.wikipedia.org/wiki/Markdown))
 
-![arduinoProg9](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg9.png)
+![arduinoProg9](imageAssets/arduinoProg9.png)
 
 Let us analyse the code we see here
 
-![arduinoProg8](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg8.png)
+![arduinoProg8](imageAssets/arduinoProg8.png)
 
 Here is an explanation on how most basic Arduino code works:
 
@@ -155,27 +155,25 @@ Now, let us connect our SSTuino like this:
 
 >**NOTE:** To prevent damage to your computer or the components, please **disconnect all power from the SSTuino board** when you are wiring up your circuit!
 
-
-
 Connect the SSTuino to your mac after you have finished assembling the circuit.
 
 In your Arduino IDE, go to
 
 > Tools -> Port -> /dev/tty.SLAB_USBtoUART
 
-![port](/docs/tutorials/gettingStarted_images/SPEEEduino_Blink3.jpg)
+![port](imageAssets/SPEEEduino_Blink3.jpg)
 
 Make sure to select the correct board:
 
-![board](/docs/tutorials/gettingStarted_images/SPEEEduino_Blink2.jpg)
+![board](imageAssets/SPEEEduino_Blink2.jpg)
 
 And now you can upload with this button:
 
-![arduinoProg13](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg13.png)
+![arduinoProg13](imageAssets/arduinoProg13.png)
 
 You should see your circuit light up like this:
 
-![arduinoProg14](https://github.com/d3lta-v/SSTuino/blob/master/Image%20Assets/Tutorial%20Image%20Assets/sstuinoProg/arduinoProg14.gif?raw=true)
+![arduinoProg14](imageAssets/arduinoProg14.mp4)
 
 ## The SSTuino can read?!
 
