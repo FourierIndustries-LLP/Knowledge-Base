@@ -14,8 +14,8 @@ has_toc: false
 * [TinkerCAD](tinkercad/index.md)
     * Setting up TinkerCAD and creating a few basic circuits without programming.
 * [Basic Arduino Programming](basicArduinoProgramming/index.md)
-    * Export code from TinkerCAD to Arduino IDE
-    * Upload code from Arduino IDE to SSTuino
+    * Export code from TinkerCAD to Arduino IDE.
+    * Upload code from Arduino IDE to SSTuino.
 * [My SSTuino can read! - DigitalRead and DigitalWrite](digitalRead.md)
     * This tutorial covers:
         * Pull up resistors
