@@ -16,7 +16,7 @@ has_toc: false
 * [Basic Arduino Programming](basicArduinoProgramming/index.md)
     * Export code from TinkerCAD to Arduino IDE.
     * Upload code from Arduino IDE to SSTuino.
-* [My SSTuino can read! - DigitalRead and DigitalWrite](digitalRead.md)
+* [My SSTuino can read! - DigitalRead and DigitalWrite](digitalRead/index.md)
     * This tutorial covers:
         * Pull up resistors
         * Push Buttons
