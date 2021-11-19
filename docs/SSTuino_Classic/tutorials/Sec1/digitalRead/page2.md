@@ -9,6 +9,17 @@ has_toc: false
 
 ## Flashing Lights!
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
  ![arduinoButton12](imageAssets/arduinoButton12.mp4)
 
  We are going to alternate the flashing of 2 different LED lights to mimick that of an emergency vehicle (e.g. Ambluance, Police Car, Fire Brigade etc.)

@@ -7,7 +7,18 @@ has_children: false
 has_toc: false
 ---
 
-## How about 2 buttons?!
+# How about 2 buttons?!
+
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
  We are going to introduce the AND OR operators into the program.
 
