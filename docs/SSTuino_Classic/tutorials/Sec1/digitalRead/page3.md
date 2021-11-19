@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Logic Operations
-parent: DigitalRead & DigitalWrite
+parent: digitalRead/Write
 nav_order: 1
 has_children: false
 has_toc: false
@@ -120,4 +120,4 @@ Here is how the program can be coded:
 Did you manage to do it?
 
 ## Next Tutorial
-[AnalogRead & AnalogWrite](analogRead/index.md)
+[analogRead/Write](../analogRead/index.md)

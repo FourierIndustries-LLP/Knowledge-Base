@@ -1,6 +1,6 @@
 ---
 layout: default
-title: DigitalRead & DigitalWrite
+title: digitalRead/Write
 parent: SSTuino Classic Sec 1 Tutorials
 nav_order: 3
 has_children: true

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Flashing Lights
-parent: DigitalRead & DigitalWrite
+parent: digitalRead/Write
 nav_order: 0
 has_children: false
 has_toc: false

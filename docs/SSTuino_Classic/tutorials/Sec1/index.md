@@ -25,7 +25,7 @@ has_toc: false
         * Variables
         * Drag Race / AND and OR Operators
         * Toggle Switch
-* [Data at my fingertips! - AnalogRead and AnalogWrite](dataInput.md)
+* [Data at my fingertips! - AnalogRead and AnalogWrite](analogRead/index.md)
     * This tutorial covers:
         * Potentiometer
         * Light Dependent Resistor/Photoresistor

@@ -99,4 +99,4 @@ You should see your circuit light up like this:
 
 ## Next Tutorial
 
-[DigitalRead and DigitalWrite](../)
+[digitalRead/Write](../digitalRead/index.md)
