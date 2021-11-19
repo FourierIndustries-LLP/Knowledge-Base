@@ -7,7 +7,7 @@ has_children: false
 has_toc: false
 ---
 
-## Flashing Lights!
+# Flashing Lights!
 
 {: .no_toc }
 

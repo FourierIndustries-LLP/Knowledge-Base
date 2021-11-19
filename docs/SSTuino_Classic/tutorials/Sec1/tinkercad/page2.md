@@ -7,6 +7,17 @@ has_toc: false
 ---
 # First TinkerCAD Circuit
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Back to the topic of burning LEDs, here is one huge benefit of using TinkerCAD. As TinkerCAD can simulate circuits, we can test whether we use the correct components and connected it correctly before actually building it.
 
 To start building our circuit, after you have logged in to your TinkerCAD account, navigate to 
