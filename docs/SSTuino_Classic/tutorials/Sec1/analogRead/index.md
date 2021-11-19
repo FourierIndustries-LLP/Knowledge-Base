@@ -118,7 +118,7 @@ We are now going to use the potentiometer to control the tone of the speaker. Th
 
 First, we will need to create a new variable called pot. In this exercise, we are going to introduce to you another function: *map to range*. What basically happens is that the input and output range will mostly be different. In this case, the potentiometer has a range `from 0 to 1023`, but the speaker has a output range `of 35 to 127`. By mapping the range, we can make sure that when the potentiometer is at one end of the input range, the speaker is definitely also at one end of its output range.
 
-![arduinoPot10](himageAssets/arduinoPot10.png)
+![arduinoPot10](imageAssets/arduinoPot10.png)
 
 After you have tried this out, run the simulation and create your own music!
 
