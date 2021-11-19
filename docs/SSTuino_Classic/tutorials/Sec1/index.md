@@ -31,11 +31,11 @@ has_toc: false
         * Light Dependent Resistor/Photoresistor
         * Ultrasonic Distance Sensor
         * TMP36 Temperature Sensor
-* [The SSTuino can connect to the internet?! - Interfacing the SSTuino with Adafruit.io](sstuinoIoT.md)
+* [The SSTuino can connect to the internet?! - Interfacing the SSTuino with Adafruit.io](sstuinoiot/index.md)
     * This tutorial covers:
-        * [What is the Internet of Things (IoT) all about?](sstuinoIoT.md/#what-is-the-internet-of-things-iot-all-about)
-        * [Creating your Adafruit.io account](sstuinoIoT.md/#creating-your-adafruitio-account)
-        * [Connecting SSTuino to Adafruit.io](sstuinoIoT.md/#connecting-sstuino-to-adafruitio)
-        * [MQTT Example](sstuinoIoT.md/#mqtt-example)
-        * [Controlling your SSTuino!](sstuinoIoT.md/#controlling-your-sstuino)
-        * [Connect SSTuino to Thunkable!](sstuinoIoT.md/#connect-sstuino-to-thunkable)
+        * What is the Internet of Things (IoT) all about?
+        * Creating your Adafruit.io account
+        * Connecting SSTuino to Adafruit.io
+        * MQTT Example
+        * Controlling your SSTuino!
+        * Connect SSTuino to Thunkable!
