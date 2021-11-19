@@ -36,7 +36,7 @@ The potentiometer is essentially a variable resistor. But instead of having 2 pi
 
 Potentiometers are used frequently and comonnly on electronic devices. A simple example would be the volume knob on speakers, or the light dimmers in your houses!
 
-**[Further read:](https://www.electronics-tutorials.ws/resistor/potentiometer.html)**
+**[Further read on Potentiometers](https://www.electronics-tutorials.ws/resistor/potentiometer.html)**
 
 This is the potentiometer that we will be using in this tutorial:
 
