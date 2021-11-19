@@ -9,6 +9,17 @@ has_toc: false
 
 # A *slightly* smarter light sensor
 
+{: .no_toc }
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 For this exercise, we will be going back to the Light Dependant Resistor (LDR)/photoresistor. Previously [in this tutorial](), we managed to try out the photoresistor. Now we are going to make use of it as an input for the SSTuino to trigger something! You may remember that the purpose of the photoresistor was not really significant or useful, as it made the LED brighter when the environment was bright. But with some programming, we can make it work properly!
 
 Let us move into TinkerCAD and create a new circuit, something that looks like this:
