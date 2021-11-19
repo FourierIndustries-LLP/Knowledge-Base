@@ -112,7 +112,7 @@ The blue loop code goes into this part of the MQTT Example:
 
 Your code should look something like this after the edit:
 
-``` Cpp
+```cpp
 /*
   Adafruit IO with MQTT
   For the SSTuino boards.
@@ -334,7 +334,7 @@ From your Adafruit IO, you would have seen that if the switch is **ON**, the rea
 
 Here is the text code you have just done:
 
-```Cpp
+```cpp
 /*
   Adafruit IO with MQTT
 
@@ -458,7 +458,7 @@ Now let us add a slider onto the dashboard. The values should range from 0 - 255
 
 Let us remove this portion of code from the program
 
-```C++
+```cpp
   if (receivedRawData == "ON") {
     digitalWrite(6, HIGH);
   } else {
@@ -468,7 +468,7 @@ Let us remove this portion of code from the program
 
 Instead, replace it with this
 
-``` C++
+``` cpp
   analogWrite(6, receivedRawData.toInt())
 ```
 
