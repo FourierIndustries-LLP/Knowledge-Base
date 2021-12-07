@@ -1,3 +1,3 @@
 # FourierIndustries Knowledge Base
 
-Hello World!
+Welcome to our Kowledge Base! Access the website [here](https://fourierindustries-llp.github.io/Knowledge-Base/).
