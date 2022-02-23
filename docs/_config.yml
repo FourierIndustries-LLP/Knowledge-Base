@@ -31,3 +31,9 @@ aux_links:
     - "//erp.fourier.industries"
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    measurement_id: "G-EK32RWJ802"
+    anonymize_ip: false
