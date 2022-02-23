@@ -8,15 +8,15 @@ has_toc: false
 
 Hello! Welcome to our Knowledge Base! Which product are you using?
 
-## SSTuino II
+## SSTuino Innovator's Kit v2
 
-![SSTuino Innovator's Kit](assets/SSTuino_kit_v1.png)
+![SSTuino Innovator's Kit](assets/SSTuino_kit_v2.png)
 
-The SSTuino II will be used for cirriculums from 2022 onwards.
+The SSTuino II will be used for cirriculums from 2022 onwards. This section of the Knowledge Base is currently under construction. Please visit us soon!
 
-[SSTuino II](SSTuinoII/index.md){: .btn }
+[SSTuino Innovator's Kit v2](SSTuinoII/index.md){: .btn }
 
-## SSTuino Classic
+## SSTuino Innovator's Kit
 
 ![SSTuino Innovator's Kit](assets/SSTuino_kit_v1.png)
 
@@ -24,7 +24,7 @@ The first generation of the SSTuino Innovator's Kit was offered to SST Students 
 
 It includes the SSTuino Classic, which was a custom designed Internet-of-Things microcontroller based off the Arduino Uno platform.
 
-[SSTuino Classic](SSTuino_Classic/index.md){: .btn }
+[SSTuino Innovator's Kit](SSTuino_Classic/index.md){: .btn }
 
 ## Other Products
 
