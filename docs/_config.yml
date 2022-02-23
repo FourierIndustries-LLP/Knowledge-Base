@@ -1,6 +1,7 @@
 # Build Settings
 markdown: kramdown
 remote_theme: pdmosses/just-the-docs@rec-nav-2
+logo: "/assets/logo.png"
 search_enabled: true
 search:
   # Split pages into sections that can be searched individually
