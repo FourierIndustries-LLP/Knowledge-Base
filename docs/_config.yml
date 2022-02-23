@@ -31,9 +31,7 @@ aux_links:
     - "//erp.fourier.industries"
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: true
-# Analytics
-analytics:
-  provider: "google-gtag"
-  google:
-    measurement_id: "G-EK32RWJ802"
-    anonymize_ip: false
+# Google Analytics Tracking (optional)
+# e.g, UA-1234567-89
+ga_tracking: UA-41542768-5
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
