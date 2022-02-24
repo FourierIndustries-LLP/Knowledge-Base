@@ -19,7 +19,7 @@ The SSTuino II is a radical redesign of the SSTuino Classic. Inspired by the Ard
 
 ![SSTuino II Explorer Board](/assets/explorer_infographic_low.png)
 
-The Explorer companion board was meant as a adaptor board to adapt the SSTuino II to a more famillar Arduino Uno form factor. It allows users to begin their journey in electronics and Internet-of-Things with ease.
+The Explorer companion board is designed as a adaptor board to adapt the SSTuino II to a more famillar Arduino Uno form factor. It allows users to begin their journey in electronics and Internet-of-Things with ease. It also easily integrates to our use of TinkerCAD, an online Arduino Simulation service that allows our users to test out their circuits and code before implementing them.
 
 ## Tutorials
 
