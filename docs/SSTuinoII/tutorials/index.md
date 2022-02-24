@@ -1,14 +1,15 @@
 ---
 layout: default
-title: SSTuino Classic Tutorials
-parent: SSTuino Innovator's Kit
+title: SSTuino II Tutorials
+parent: SSTuino Innovator's Kit v2
 nav_order: 0
 has_children: true
 has_toc: false
 ---
 
-# SSTuino Classic Tutorials
+# SSTuino II Tutorials
 
+The tutorials will cover the setup and first use of the SSTuino II
 The tutorials covers on the setup and first use of the SSTuino, as well as the tutorials covered in the Sec 1 Cirriculum.
 
 The tutorials are designed for the SSTuino Classic used from 2018 to 2021.

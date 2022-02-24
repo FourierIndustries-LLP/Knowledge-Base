@@ -1,12 +1,16 @@
 ---
 layout: default
-title: SSTuino Classic
+title: SSTuino Innovator's Kit
 nav_order: 2
 has_children: true
 has_toc: false
 ---
 
-# SSTuino Classic
+# SSTuino Innovator's Kit
+
+The SSTuino Innovator's Kit was developed by SST Alumni and used from 2018 to 2021. It features the SSTuino Classic.
+
+## SSTuino Classic
 
 ![Populated PCB](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/SSTuino.png)
 
