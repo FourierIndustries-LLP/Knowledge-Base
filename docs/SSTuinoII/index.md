@@ -11,7 +11,7 @@ The SSTuino Innovator's Kit v2 is has a major redesign of the SSTuino and will b
 
 ## SSTuino II
 
-![Populated PCB](https://raw.githubusercontent.com/d3lta-v/SSTuino/master/Image%20Assets/SSTuino.png)
+![SSTuino II](/assets/sstuinoii_infographic_low.png)
 
 The SSTuino II is a radical redesign of the SSTuino Classic. Inspired by the Arduino Nano Every, the SSTuino II has a significantly lower board size as compared to its predecessor. The smaller board size allows easier integration for its users while having more powerful microcontrollers.
 
