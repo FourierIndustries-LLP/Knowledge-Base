@@ -9,10 +9,10 @@ has_toc: false
 
 # SSTuino II Tutorials
 
-The tutorials will cover the setup and first use of the SSTuino II
-The tutorials covers on the setup and first use of the SSTuino, as well as the tutorials covered in the Sec 1 Cirriculum.
-
-The tutorials are designed for the SSTuino Classic used from 2018 to 2021.
+The tutorials will cover the following:
+- Setup and first use of the SSTuino II
+- Secondary 1 Cirriculum of the SSTuino program
+- More in-depth, advanced examples if you would like a challenge! :D
 
 ## Setup
 
@@ -20,10 +20,13 @@ Before you start using the SSTuino kit, here are some things to do:
 
 * [Parts list for SSTuino Innovator's Kit](Parts_List/index.md)
 * [Setting up your learning device and SSTuino Innovator's Kit](setup/index.md)
-* [Uploading a first program to the SSTuino](helloWorld.md)
 
-## Secondary 1 Tutorials
+## Secondary 1 Cirriculum
 
 This covers the lessons taught in your ICT cirriculum.
 
-[Secondary 1 Tutorials](Sec1/index.md){: .btn }
+[Secondary 1 Cirriculum](Sec1/index.md){: .btn }
+
+## Advanced Examples
+
+This content is still under development. Do check back soon!
