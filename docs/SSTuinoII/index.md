@@ -17,6 +17,8 @@ The SSTuino II is a radical redesign of the SSTuino Classic. Inspired by the Ard
 
 ## Explorer
 
+![SSTuino II Explorer Board](/assets/explorer_infographic_low.png)
+
 The Explorer companion board was meant as a adaptor board to adapt the SSTuino II to a more famillar Arduino Uno form factor. It allows users to begin their journey in electronics and Internet-of-Things with ease.
 
 ## Tutorials
