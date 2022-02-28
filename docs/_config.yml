@@ -36,3 +36,11 @@ aux_links_new_tab: true
 # e.g, UA-1234567-89
 ga_tracking: UA-41542768-5
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
+plugins:
+  - jekyll-seo-tag
+plugins:
+  - jekyll-sitemap
+url: "https://knowledge.fourier.industries" # the base hostname & protocol for your site
+title: FOURIERINDUSTRIES Knowledge Base
+tagline: A function of innovation | Making reimagined
+description: Tutorials and examples for the SSTuino Classic, SSTuino II and more...
