@@ -9,3 +9,4 @@ has_toc: false
 
 # SSTuino II Sec 1 Tutorials
 
+[![SSTuino II](/assets/sstuinoii_infographic_low.png)](electronicBasics/){: .btn }
