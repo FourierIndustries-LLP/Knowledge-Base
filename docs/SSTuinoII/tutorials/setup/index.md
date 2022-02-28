@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Setup
+title: Setting up your SSTuino II
 parent: SSTuino II Tutorials
 nav_order: 1
 has_children: true
