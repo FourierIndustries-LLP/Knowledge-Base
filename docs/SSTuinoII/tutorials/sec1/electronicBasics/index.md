@@ -2,7 +2,7 @@
 layout: default
 title: SSTuino II Basics
 nav_order: 0
-parent: SSTuino Classic II Tutorials
+parent: SSTuino II Sec 1 Tutorials
 has_children: true
 has_toc: false
 ---
@@ -37,3 +37,9 @@ You should see this!
 When we first started with the SSTuino Classic, we had time to go down to SST and observe the lessons conducted. One of the issues we noticed was with the ChangeMakers program, where the students tried to integrate the SSTuino into their products. Some of their projects were designed to be small or wearable, and the SSTuino Classic was simply too big for them to integrate into their projects.
 
 ARM and then the COVID and then the supply chain issues...
+
+## Up next...
+
+Let us go into how the SSTuino Innovator's Kit works and start tinkering!
+
+[Basic circuit theory and electronics](page2.md)
