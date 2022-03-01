@@ -34,4 +34,4 @@ Simple Ohm's Law
 
 Next, we will be simulating what we had learnt in this tutorial. We use TinkerCAD as the simulation platform for the SSTuino Innovator's Kit v2.
 
-[TinkerCAD](page3.md)
+[Circuit Simulation](page3.md)

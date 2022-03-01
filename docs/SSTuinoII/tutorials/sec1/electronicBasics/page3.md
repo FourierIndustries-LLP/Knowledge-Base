@@ -1,13 +1,13 @@
 ---
 layout: default
-title: TinkerCAD
+title: Circuit Simulation
 nav_order: 1
 parent: SSTuino II Basics
 has_children: true
 has_toc: false
 ---
 
-# TinkerCAD
+# Circuit Simulation
 
 {: .no_toc }
 
