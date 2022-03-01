@@ -15,6 +15,10 @@ The tutorials will cover the following:
 - Secondary 1 Cirriculum of the SSTuino program
 - More in-depth, advanced examples if you would like a challenge! :D
 
+## Note about the tutorials
+
+Thank you for using the FOURIERINDUSTRIES Knowledge Base. To help you get the most out of the resources, our individual tutorials for the SSTuino Innovator's Kit v2 will have a website and video version, to suit your needs.
+
 ## Setup
 
 Before you start using the SSTuino kit, here are some things to do:
