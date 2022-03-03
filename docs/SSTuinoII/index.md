@@ -9,6 +9,12 @@ has_toc: false
 
 The SSTuino Innovator's Kit v2 is has a major redesign of the SSTuino and will be used from 2022 onwards. The SSTuino Classic has been replaced with the SSTuino II and the Explorer companion board.
 
+## Tutorials
+
+The tutorials are designed for the SSTuino Innovator's Kit v2. It is very simple to learn for beginners but also covers more in-depth topics for the advanced users.
+
+[Tutorials](tutorials/){: .btn }
+
 ## SSTuino II
 
 ![SSTuino II](/assets/sstuinoii_infographic_low.png)
@@ -20,12 +26,6 @@ The SSTuino II is a radical redesign of the SSTuino Classic. Inspired by the Ard
 ![SSTuino II Explorer Board](/assets/explorer_infographic_low.png)
 
 The Explorer companion board is designed to adapt the SSTuino II to a more famillar Arduino Uno form factor. It allows users to begin their journey in electronics and Internet-of-Things with ease. It also integrates to TinkerCAD, an online Arduino simulation platform that allows our users to test out their circuits and code before implementing them.
-
-## Tutorials
-
-The tutorials are designed for the SSTuino Innovator's Kit v2. It is very simple to learn for beginners but also covers more in-depth topics for the advanced users.
-
-[Tutorials](tutorials/){: .btn }
 
 ## Support
 
