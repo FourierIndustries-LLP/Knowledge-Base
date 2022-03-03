@@ -39,7 +39,7 @@ Signing in to TinkerCAD is very simple!
 
 * Go to [tinkercad.com](https://www.tinkercad.com/) and then click on Sign In
 
-![tinkerCAD](imageAssets/tinkerCAD.png)
+[Insert TinkerCAD Photo]
 
 * Go to the login screen
 
@@ -47,7 +47,7 @@ Signing in to TinkerCAD is very simple!
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/tinkercad/imageAssets/signIn.png" width="300" />
 </p>
 
-* Select sign in using social provider, and select your Google Account. 
+* Select sign in using social provider, and select your SST Google Account. 
 
 
 <p align="center">
