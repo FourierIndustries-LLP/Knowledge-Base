@@ -47,6 +47,16 @@ Current is the rate of which the electricity flows throughout the circuit and is
 
 The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. Here are 2 examples, the one with resistor to the left, the one without on the right.
 
+To keep it simple for learning, we have 2 main resistors provided in the SSTuino Innovator's Kit v2 that would be just nice for the other components provided.
+
+## What does the components in my kit do?
+
+We have included very cool components inside this kit for you to try out and integrate into your projects! Here are the functions of them:
+
+## What if I need more components?
+
+Content coming soon... :)
+
 ## Let us put it into practice!
 
 Next, we will be simulating what we had learnt in this tutorial. We use TinkerCAD as the simulation platform for the SSTuino Innovator's Kit v2.
