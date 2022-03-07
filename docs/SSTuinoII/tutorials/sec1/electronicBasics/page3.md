@@ -20,7 +20,7 @@ has_toc: false
 {:toc}
 </details>
 
-> **Note:** As we will be progressing towards tinkering and creating a circuits, a very important rule of thumb is to **not connect the circuit/project** to power before completing it. This helps to lower the risk of a component failing due to a improperly constructed circuit.
+> **Note:** As we will be progressing towards tinkering and creating a circuits, a very important rule of thumb is to **not connect the circuit/project to power** before completing it. This helps to lower the risk of a component failing due to a improperly constructed circuit.
 
 ## What is Circuit Simulation?
 Circuit Simulation is a great tool to test out your circuit design before assembling it in real life. This helps to reduce the possibility of your components being spolit due to a incorrect circuit design.  The platform we will be using for the SSTuino Innovator's Kit v2 is TinkerCAD. 

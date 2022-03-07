@@ -20,7 +20,7 @@ has_toc: false
 {:toc}
 </details>
 
-> **Note:** As we will be progressing towards tinkering and creating a circuits, a very important rule of thumb is to **not connect the circuit/project** to power before completing it. This helps to lower the risk of a component failing due to a improperly constructed circuit.
+> **Note:** As we will be progressing towards tinkering and creating a circuits, a very important rule of thumb is to **not connect the circuit/project to power** before completing it. This helps to lower the risk of a component failing due to a improperly constructed circuit.
 
 ## How does circuits work?
 
@@ -52,6 +52,26 @@ To keep it simple for learning, we have 2 main resistors provided in the SSTuino
 ## What does the components in my kit do?
 
 We have included very cool components inside this kit for you to try out and integrate into your projects! Here are the functions of them:
+
+| No.    | Component Name                       | Function  |
+|------- |:------------------------------------:| ---------:|
+| 1      | SSTuino II                           |         1 |
+| 2      | SSTuino II Explorer Board            |         1 |
+| 3      | USB C Cable                          |         1 |
+| 4      | Breadboard                           |         1 |
+| 5      | Dupont cables (wires)                |         1 |
+| 6      | Assortment of LEDs                   |     1 bag |
+| 7      | Buzzer                               |         1 |
+| 8      | Push Button                          |         2 |
+| 9      | Potentiometer (10K Ohm)              |         1 |
+| 10     | Light Dependent Resistor             |         1 |
+| 11     | TMP36 Temperature Sensor             |         1 |
+| 12     | Ultrasonic Sensor                    |         1 |
+| 13     | PIR Proximity Sensor                 |         1 |
+| 14     | DHT11 Temperature and Humidity Sensor|         1 |
+| 15     | Servo                                |         1 |
+| 16     | RGB LEDs                             |         1 |
+| 17     | 330Ohm and 10KOhm resistor reel      | approx 25 |
 
 ## What if I need more components?
 
