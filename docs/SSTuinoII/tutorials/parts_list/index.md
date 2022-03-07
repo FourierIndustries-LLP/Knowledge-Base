@@ -12,7 +12,24 @@ has_toc: false
 
 Upon recieving your SSTuino Innovator's Kit v2, please ensure that all the components are present as stated below:
 
----Insert Parts List---
+| No. | Component Name                       | Quantity  |
+|---- |:------------------------------------:| ---------:|
+| 1   | SSTuino II                           |           |
+| 2   | SSTuino II Explorer Board            |           |
+| 3   | USB C Cable                          |           |
+| 4   | Breadboard                           |           |
+| 5   | Dupont cables (wires)                |           |
+| 6   | Assortment of LEDs                   |           |
+| 7   | Buzzer                               |           |
+| 8   | Push Button                          |           |
+| 9   | Potentiometer (10K Ohm)              |           |
+| 10  | Light Dependent Resistor             |           |
+| 11  | TMP36 Temperature Sensor             |           |
+| 12  | Ultrasonic Sensor                    |           |
+| 13  | PIR Proximity Sensor                 |           |
+| 14  | Servo                                |           |
+| 15  | RGB LEDs                             |           |
+| 16  | 330Ohm and 10KOhm resistor reel      |           |
 
 ## Installation of prerequisites
 

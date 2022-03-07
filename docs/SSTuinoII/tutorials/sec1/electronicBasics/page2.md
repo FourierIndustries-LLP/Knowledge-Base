@@ -51,27 +51,26 @@ To keep it simple for learning, we have 2 main resistors provided in the SSTuino
 
 ## What does the components in my kit do?
 
-We have included very cool components inside this kit for you to try out and integrate into your projects! Here are the functions of them:
+We have included very cool components inside this kit for you to try out and integrate into your projects! Here are the brief functions of them:
 
-| No.    | Component Name                       | Function  |
-|------- |:------------------------------------:| ---------:|
-| 1      | SSTuino II                           |         1 |
-| 2      | SSTuino II Explorer Board            |         1 |
-| 3      | USB C Cable                          |         1 |
-| 4      | Breadboard                           |         1 |
-| 5      | Dupont cables (wires)                |         1 |
-| 6      | Assortment of LEDs                   |     1 bag |
-| 7      | Buzzer                               |         1 |
-| 8      | Push Button                          |         2 |
-| 9      | Potentiometer (10K Ohm)              |         1 |
-| 10     | Light Dependent Resistor             |         1 |
-| 11     | TMP36 Temperature Sensor             |         1 |
-| 12     | Ultrasonic Sensor                    |         1 |
-| 13     | PIR Proximity Sensor                 |         1 |
-| 14     | DHT11 Temperature and Humidity Sensor|         1 |
-| 15     | Servo                                |         1 |
-| 16     | RGB LEDs                             |         1 |
-| 17     | 330Ohm and 10KOhm resistor reel      | approx 25 |
+| No. | Component Name                       | Function                                                       |
+|---- |:------------------------------------:| --------------------------------------------------------------:|
+| 1   | SSTuino II                           | The main brain of the kit. Has WiFi Chip on it for IoT.        |
+| 2   | SSTuino II Explorer Board            | Adapts the SSTuino II to a Arduino Uno form factor.            |
+| 3   | USB C Cable                          | Connects the SSTuino II to your LD. Also powers the SSTuino II |
+| 4   | Breadboard                           | A board to plug in wires and components to create circuits.    |
+| 5   | Dupont cables (wires)                | Wires that can be used to create circuits.                     |
+| 6   | Assortment of LEDs                   | Light Emitting Diodes (LEDs) are small and efficient lights.   |
+| 7   | Buzzer                               | A component that emitts sound. Able to change pitch too.       |
+| 8   | Push Button                          | A simple switch where circuit is closed when pressed.          |
+| 9   | Potentiometer (10K Ohm)              | An adjustable resistor with a knob. Max resistance: 10K Ohm    |
+| 10  | Light Dependent Resistor             | A resistor that changes resistance due to light intensity.     |
+| 11  | TMP36 Temperature Sensor             | A small and simple to use temperature sensor.                  |
+| 12  | Ultrasonic Sensor                    | Measures distance by using ultrasonic waves. Used on cars too. |
+| 13  | PIR Proximity Sensor                 | Also known as "motion sensors".                                |
+| 14  | Servo                                | A small adjustable motor that rotates 180 degrees.             |
+| 15  | RGB LEDs                             | LEDs with Red, Green, Blue in one "bulb". Very nice :)         |
+| 16  | 330Ohm and 10KOhm resistor reel      | Fixed value resistors for circuits.                            |
 
 ## What if I need more components?
 
