@@ -24,11 +24,28 @@ has_toc: false
 
 ## How does circuits work?
 
-Insert some basic electrical theory
+A basic electrical circuit has 3 items:
 
+1. Power Source (Battery, Wall Plug, etc.)
+2. Wires/Conductors
+3. Consumer (e.g. Light bulb, Speaker, Servo, etc.)
+
+The power source provides the electrical energy required by the comsumer by travelling through the wires. For example, the battery in this circuit provides energy to the LED.
+
+To prevent too much energy from travelling through the circuit to the consumer, we "limit" it by using resistors. Now we go into Ohm's Law.
 ## Ohms Law
 
-Simple Ohm's Law 
+In a basic circuit, there are 3 variables we need to consider:
+
+1. Voltage
+2. Current
+3. Resistance
+
+Voltage is the potential difference measured across the component. For example, the potential difference measured across this AA battery is 1.5V. Unit is V.
+
+Current is the rate of which the electricity flows throughout the circuit and is measured in Ampres. Unit is A.
+
+The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. Here are 2 examples, the one with resistor to the left, the one without on the right.
 
 ## Let us put it into practice!
 
