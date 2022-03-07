@@ -39,7 +39,7 @@ Signing in to TinkerCAD is very simple!
 
 * Go to [tinkercad.com](https://www.tinkercad.com/) and then click on Sign In
 
-[Insert TinkerCAD Photo]
+![Sign In](assets/tinkerCAD.png)
 
 * Go to the login screen
 
@@ -53,3 +53,9 @@ Signing in to TinkerCAD is very simple!
 <p align="center">
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/tinkercad/imageAssets/signInSocialProvider.png" width="300" />
 </p>
+
+## Create a Circuit
+
+There are a lot of functions inside TinkerCAD! However, for the purposes of the SSTuino we are going to use the "Circuits" function. Click on "Circuits" on the sidebar and click on create new circuit.
+
+![createCircuit](assets/createCircuit.png)
