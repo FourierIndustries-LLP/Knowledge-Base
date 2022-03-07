@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Analog Input/Output
-nav_order: 1
+nav_order: 2
 parent: SSTuino II Sec 1 Tutorials
 has_children: true
 has_toc: false
