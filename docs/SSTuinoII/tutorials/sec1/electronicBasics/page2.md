@@ -20,7 +20,7 @@ has_toc: false
 {:toc}
 </details>
 
-> **Note:** As we will be progressing towards tinkering and creating a circuits, a very important rule of thumb is to **not connect the circuit/project to power** before completing it. This helps to lower the risk of a component failing due to a improperly constructed circuit.
+> **Note:** As we will be progressing towards tinkering and creating a circuit, a very important rule of thumb is to **not connect the circuit/project to power** before completing it. This helps to lower the risk of a component failing due to a improperly constructed circuit.
 
 ## How does circuits work?
 
@@ -30,9 +30,10 @@ A basic electrical circuit has 3 items:
 2. Wires/Conductors
 3. Consumer (e.g. Light bulb, Speaker, Servo, etc.)
 
-The power source provides the electrical energy required by the comsumer by travelling through the wires. For example, the battery in this circuit provides energy to the LED.
+The power source provides the electrical energy required by the consumer by travelling through the wires. For example, the battery in this circuit provides energy to the LED.
 
 To prevent too much energy from travelling through the circuit to the consumer, we "limit" it by using resistors. Now we go into Ohm's Law.
+
 ## Ohms Law
 
 In a basic circuit, there are 3 variables we need to consider:
@@ -43,7 +44,7 @@ In a basic circuit, there are 3 variables we need to consider:
 
 Voltage is the potential difference measured across the component. For example, the potential difference measured across this AA battery is 1.5V. Unit is V.
 
-Current is the rate of which the electricity flows throughout the circuit and is measured in Ampres. Unit is A.
+Current is the rate of which the electricity flows throughout the circuit and is measured in Amperes. Unit is A.
 
 The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. Here are 2 examples, the one with resistor to the left, the one without on the right.
 
@@ -55,13 +56,13 @@ We have included very cool components inside this kit for you to try out and int
 
 | No. | Component Name                       | Function                                                       |
 |---- |:------------------------------------:| --------------------------------------------------------------:|
-| 1   | SSTuino II                           | The main brain of the kit. Has WiFi Chip on it for IoT.        |
-| 2   | SSTuino II Explorer Board            | Adapts the SSTuino II to a Arduino Uno form factor.            |
-| 3   | USB C Cable                          | Connects the SSTuino II to your LD. Also powers the SSTuino II |
+| 1   | SSTuino II                           | The main brain of the kit. Has Wi-Fi Chip on it for IoT.        |
+| 2   | SSTuino II Explorer Board            | Adapts the SSTuino II to an Arduino Uno form factor.            |
+| 3   | USB-C Cable                          | Connects the SSTuino II to your LD. Also powers the SSTuino II |
 | 4   | Breadboard                           | A board to plug in wires and components to create circuits.    |
 | 5   | Dupont cables (wires)                | Wires that can be used to create circuits.                     |
-| 6   | Assortment of LEDs                   | Light Emitting Diodes (LEDs) are small and efficient lights.   |
-| 7   | Buzzer                               | A component that emitts sound. Able to change pitch too.       |
+| 6   | Assortments of LEDs                  | Light Emitting Diodes (LEDs) are small and efficient lights.   |
+| 7   | Buzzer                               | A component that emits sound. Able to change pitch too.       |
 | 8   | Push Button                          | A simple switch where circuit is closed when pressed.          |
 | 9   | Potentiometer (10K Ohm)              | An adjustable resistor with a knob. Max resistance: 10K Ohm    |
 | 10  | Light Dependent Resistor             | A resistor that changes resistance due to light intensity.     |
