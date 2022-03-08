@@ -24,7 +24,7 @@ has_toc: false
 
 In this tutorial, we will install the required software, boards and libraries. This allows all of your code that you will create in the future to be transferred onto the SSTuino II.
 
-The SSTuino II has numerous changes as compared to the SSTuino Classic. In the SSTuino II, we have simplified the installation process, allowing our users to get started in no time.
+The SSTuino II has numerous changes as compared to the SSTuino Classic. In the SSTuino II, we have simplified the installation process, for you to get started in no time! :smile:
 
 ## Download Arduino IDE
 
