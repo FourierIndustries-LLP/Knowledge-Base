@@ -54,7 +54,9 @@ First, let us go to the preferences of the Arduino app.
 
 Next, copy this line:
 
-```https://fourierindustries-llp.github.io/SSTuino_II_Core/package_FourierIndustries-LLP_SSTuino_II_Core_index.json```
+```text
+https://fourierindustries-llp.github.io/SSTuino_II_Core/package_FourierIndustries-LLP_SSTuino_II_Core_index.json
+```
 
 Paste it into the box circled. Click `OK` after that.
 
