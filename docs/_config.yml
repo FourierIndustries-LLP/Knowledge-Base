@@ -41,6 +41,6 @@ plugins:
 plugins:
   - jekyll-sitemap
 url: "https://knowledge.fourier.industries" # the base hostname & protocol for your site
-title: FOURIERINDUSTRIES Knowledge Base
+title: FourierIndustries Knowledge Base
 tagline: A function of innovation | Making reimagined
 description: Tutorials and examples for the SSTuino Classic, SSTuino II and more...
