@@ -54,7 +54,7 @@ First, let us go to the preferences of the Arduino app.
 
 Next, copy this line:
 
-`https://fourierindustries-llp.github.io/SSTuino_II_Core/package_FourierIndustries-LLP_SSTuino_II_Core_index.json`
+```https://fourierindustries-llp.github.io/SSTuino_II_Core/package_FourierIndustries-LLP_SSTuino_II_Core_index.json```
 
 Paste it into the box circled. Click `OK` after that.
 
@@ -73,13 +73,3 @@ Type in SSTuino into the search bar and click on install.
 Ok and that sums up the installation process for the SSTuino II for your learning device. Next, let us get to know more about the SSTuino II!
 
 [SSTuino II and the basics of Electronics](../sec1/electronicBasics/index.md)
-
-## Test
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
