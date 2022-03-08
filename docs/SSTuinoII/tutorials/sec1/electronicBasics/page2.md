@@ -54,24 +54,69 @@ To keep it simple for learning, we have 2 main resistors provided in the SSTuino
 
 We have included very cool components inside this kit for you to try out and integrate into your projects! Here are the brief functions of them:
 
-| No. | Component Name                       | Function                                                       |
-|---- |:------------------------------------:| --------------------------------------------------------------:|
-| 1   | SSTuino II                           | The main brain of the kit. Has Wi-Fi Chip on it for IoT.        |
-| 2   | SSTuino II Explorer Board            | Adapts the SSTuino II to an Arduino Uno form factor.            |
-| 3   | USB-C Cable                          | Connects the SSTuino II to your LD. Also powers the SSTuino II |
-| 4   | Breadboard                           | A board to plug in wires and components to create circuits.    |
-| 5   | Dupont cables (wires)                | Wires that can be used to create circuits.                     |
-| 6   | Assortments of LEDs                  | Light Emitting Diodes (LEDs) are small and efficient lights.   |
-| 7   | Buzzer                               | A component that emits sound. Able to change pitch too.       |
-| 8   | Push Button                          | A simple switch where circuit is closed when pressed.          |
-| 9   | Potentiometer (10K Ohm)              | An adjustable resistor with a knob. Max resistance: 10K Ohm    |
-| 10  | Light Dependent Resistor             | A resistor that changes resistance due to light intensity.     |
-| 11  | TMP36 Temperature Sensor             | A small and simple to use temperature sensor.                  |
-| 12  | Ultrasonic Sensor                    | Measures distance by using ultrasonic waves. Used on cars too. |
-| 13  | PIR Proximity Sensor                 | Also known as "motion sensors".                                |
-| 14  | Servo                                | A small adjustable motor that rotates 180 degrees.             |
-| 15  | RGB LEDs                             | LEDs with Red, Green, Blue in one "bulb". Very nice :)         |
-| 16  | 330Ohm and 10KOhm resistor reel      | Fixed value resistors for circuits.                            |
+### SSTuino II
+
+The main brain of the kit. Has Wi-Fi Chip on it for IoT.  
+
+### SSTuino II Explorer Board
+
+Adapts the SSTuino II to an Arduino Uno form factor.
+
+### USB-C Cable
+
+Connects the SSTuino II to your LD. Also powers the SSTuino II.
+
+### Breadboard
+
+A board to plug in wires and components to create circuits.
+
+### Dupont Cables (Wires)
+
+Wires that can be used to create circuits.
+
+### Bag of LEDs
+
+Light Emitting Diodes (LEDs) are small and efficient lights.
+
+### Buzzer
+
+A component that emits sound. Able to change pitch too.
+
+### Push Button
+
+A simple switch where circuit is closed when pressed.
+
+### Potentiometer (10K Ohm)
+
+An adjustable resistor with a knob. Max resistance: 10K Ohm.
+
+### Light Dependent Resistor
+
+A resistor that changes resistance due to light intensity.
+
+### TMP36 Temperature Sensor
+
+A small and simple to use temperature sensor.
+
+### Ultrasonic Sensor
+
+Measures distance by using ultrasonic waves. Used on cars too.
+
+### PIR Proximity Sensor
+
+Also known as "motion sensors".
+
+### Servo
+
+A small adjustable motor that rotates 180 degrees.
+
+### RGB LED
+
+LEDs with Red, Green, Blue in one "bulb". Very nice :)
+
+### 330Ohm and 10KOhm resistor reel
+
+Fixed value resistors for circuits.
 
 ## What if I need more components?
 
