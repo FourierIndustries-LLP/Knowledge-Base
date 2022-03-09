@@ -50,17 +50,11 @@ The resistance resists the flow of electricity, to prevent the consumer from bei
 
 To keep it simple for learning, we have 2 main resistors provided in the SSTuino Innovator's Kit v2 that would be just nice for the other components provided.
 
-### Some simple circuit theory...
-
-Let us assume that we have some LEDs, resistors and a power source. Without any knowledge about datasheets and calculation, how should we go about connecting them together?
+Below is a simple example of a circuit with a resistor.
 
 <p align="center">
   <img src="https://cdn.sparkfun.com/assets/6/e/8/3/c/51f93d85757b7f2049270817.png" width="300" />
 </p>
-
-It is that simple.
-
-Moreover, a good resistor value for LEDs is 330Ohms (can be more or less), so we can simply use this resistor. *Easy, right?*
 
 ## What does the components in my kit do?
 
