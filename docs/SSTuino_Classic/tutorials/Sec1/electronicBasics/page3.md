@@ -85,7 +85,7 @@ This buzzer is a Piezo Buzzer. If you try to open up the buzzer, you would see t
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/resistor-pot3.gif" width="300" />
 </p>
 
-The potentiometer is a variable resistor, with a adjustable knob. As the knob is turned from one side to another, the resistance changes. Potentiometers are used for controlling devices, such as the brightness of the LED, and with the appropriate circuit, the speed of a motor.
+The potentiometer is a variable resistor, with an adjustable knob. As the knob is turned from one side to another, the resistance changes. Potentiometers are used for controlling devices, such as the brightness of the LED, and with the appropriate circuit, the speed of a motor.
 
 ## Ultrasonic Sensor
 
