@@ -185,7 +185,7 @@ The TMP36 is a rather accurate and simple to use temperature sensor for its low 
 **Note:** You may notice that this package may resemble that of other components such as transistors. **Please do not mix them up and read the respective manuals carefully.** The component model would be marked out on the **flat** side of the component for this package. Use the model number to search for the pinouts for you to make sure you are connecting the component the right way.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/TO92%20Pinout%20Transistor.jpeg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/TO92%20Pinout%20Transistor.jpeg" height="300" />
 </p>
 
 This shape and pinouts is called the TO-92 Package and is a very cheap and easy manufacturing method for transistors.
