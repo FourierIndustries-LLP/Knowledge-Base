@@ -50,33 +50,76 @@ The resistance resists the flow of electricity, to prevent the consumer from bei
 
 To keep it simple for learning, we have 2 main resistors provided in the SSTuino Innovator's Kit v2 that would be just nice for the other components provided.
 
+### Some simple circuit theory...
+
+Let us assume that we have some LEDs, resistors and a power source. Without any knowledge about datasheets and calculation, how should we go about connecting them together?
+
+<p align="center">
+  <img src="https://cdn.sparkfun.com/assets/6/e/8/3/c/51f93d85757b7f2049270817.png" width="300" />
+</p>
+
+It is that simple.
+
+Moreover, a good resistor value for LEDs is 330Ohms (can be more or less), so we can simply use this resistor. *Easy, right?*
+
 ## What does the components in my kit do?
 
 We have included very cool components inside this kit for you to try out and integrate into your projects! Here are the brief functions of them:
 
 ### SSTuino II
 
+![sstuinoii](assets/sstuinoii.png)
+
 The SSTuino II is the main microcontroller (or brain) for the kit. It has a Wi-Fi chip on it for use with the Internet of Things (IoT). It has a small footprint to easily integrate the board into projects.
 
 ### SSTuino II Explorer Board
+
+![explorer](assets/explorer.png)
 
 The SSTuino II Explorer Board adapts the SSTuino II to a more familiar Arduino Uno form factor. It also includes LEDs to help visualise the usage of the pinouts.
 
 ### USB-C Cable
 
+![usb-c cable](https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/MLL82?wid=1144&hei=1144&fmt=jpeg&qlt=95&.v=1575503793499)
+
 The USB-C Cable connects the SSTuino II to your Learning Device. It is also used to upload code from the Arduino IDE to the SSTuino II.
 
 ### Breadboard
 
-A board to plug in wires and components to create circuits.
+![breadboard](assets/breadboard.jpeg)
+
+The breadboard is very simple to use for you to set up and test your circuits! In your lessons, your teacher will teach you how to connect up the circuits on the breadboard. You will also be using circuit simulation to test out your circuit virtually before implementing it! *So fingers crossed, no magic smoke!*
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/Breadboard-Circuit-Example.jpg" width="300" />
+</p>
+
+Here is the layout of the breadboard:
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/horizontal-rows.png" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/verticalpower.png" width="300" /> 
+</p>
 
 ### Dupont Cables (Wires)
 
-Wires that can be used to create circuits.
+The wires are one of the most essential components of the circuit! Without them, the electricity would not flow and the circuit would not work. In the kit, we have provided 2 types of wires; Male - Male, and Male - Female. These would help you to connect to all the components in the kit.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/mmwire.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/mfwire.jpg" width="300" /> 
+</p>
+
+Male - Male wires on the left, Male - Female wires on the right.
+{: .text-center }
 
 ### Bag of LEDs
 
-Light Emitting Diodes (LEDs) are small and efficient lights.
+LEDs are great for almost everything! It is a very good source of light while also being very energy efficient. LEDs are found in a large variety of everyday items - Mobile phones, headlamps of a car, flashlights and interior lights to name a few.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/LED.jpeg" width="300" />
+</p>
 
 ### Buzzer
 
