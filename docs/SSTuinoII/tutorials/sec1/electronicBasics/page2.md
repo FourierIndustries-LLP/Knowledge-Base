@@ -192,23 +192,68 @@ This shape and pinouts is called the TO-92 Package and is a very cheap and easy 
 
 ### Ultrasonic Sensor
 
-Measures distance by using ultrasonic waves. Used on cars too.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/Ultrasonic.jpg" width="300" />
+</p>
+
+The ultrasonic sensor is a device that measures distance by emitting ultrasonic waves, waits for the wave the bounce back and then measure the time taken. It is commonly found on cars for their reverse sensors.
 
 ### PIR Proximity Sensor
 
-Also known as "motion sensors".
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/PIR.jpg" width="300" />
+</p>
+
+PIR (Passive Infra-Red) sensors are low-power, inexpensive and easy to deploy devices that detect if a person is in range of the sensor. A common use would be the light sensor installed in toilets that automatically turns on the lights when someone steps into the toilet.
+
+To find out more about how it works, check out this detailed explanation from Adafruit: [https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work](https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work)
 
 ### Servo
 
-A small adjustable motor that rotates 180 degrees.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/servo.jpg" width="300" />
+</p>
+
+This Micro Servo has a lot of cool uses! It has precise control from 0 to 180º and is a very good component for prototyping.
 
 ### RGB LED
 
-LEDs with Red, Green, Blue in one "bulb". Very nice :)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/RGB.jpg" width="300" />
+</p>
+
+The RGB LED is a more complex version of the conventional coloured LED. It combines 3 LEDs (Red, Green and Blue) into one package. By configuring the intensity of the various LEDs, you can create lots of different colours from this LED.
+
+There is also an RGB LED on the SSTuino II too!
 
 ### 330Ohm and 10KOhm resistor reel
 
-Fixed value resistors for circuits.
+For generic resistors, there is generally two types of resistors: Carbon Composite Resistor or Film Type Resistor. Carbon resistors are popular due to their extremely low cost and good accuracy with low enough tolerance (usually about ± 5%). Film Type Resistor, while being slightly costlier, provide closer tolerances (up to ±1%) from the rated resistance.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/CarbonR.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/MetalR.jpg" width="300" /> 
+</p>
+
+*Carbon Film Resistors (left) and metal oxide resistors (right).*
+
+The resistors provided in the kit are Carbon Composite resistors and have values of 330 Ohm and 10K Ohm. You can read the values of the resistor from the colour band on the component.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/d3lta-v/SSTuino/master/docs/tutorials/Sec1/partsList_images/330-ohm.jpg" width="300" />
+</p>
+
+This is a **330 Ohm** resistor.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/330-ohm.jpg" width="300" />
+</p>
+
+This is a **10K Ohm** resistor.
+
+Refer to the infographic below on how to read the values of resistors:
+
+![resistorChart](https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/Resistors.png)
 
 ## What if I need more components?
 
