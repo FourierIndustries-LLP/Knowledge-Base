@@ -63,7 +63,7 @@ We have included very cool components inside this kit for you to try out and int
 ### SSTuino II
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1.electronicBasics/assets/sstuinoii.png" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/sstuinoii.png" width="300" />
 </p>
 
 The SSTuino II is the main microcontroller (or brain) for the kit. It has a Wi-Fi chip on it for use with the Internet of Things (IoT). It has a small footprint to easily integrate the board into projects.
@@ -71,7 +71,7 @@ The SSTuino II is the main microcontroller (or brain) for the kit. It has a Wi-F
 ### SSTuino II Explorer Board
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1.electronicBasics/assets/explorer.png" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/explorer.png" width="300" />
 </p>
 
 The SSTuino II Explorer Board adapts the SSTuino II to a more familiar Arduino Uno form factor. It also includes LEDs to help visualise the usage of the pinouts.
@@ -87,7 +87,7 @@ The USB-C Cable connects the SSTuino II to your Learning Device. It is also used
 ### Breadboard
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1.electronicBasics/assets/breadboard.jpeg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/breadboard.jpeg" width="300" />
 </p>
 
 The breadboard is very simple to use for you to set up and test your circuits! In your lessons, your teacher will teach you how to connect up the circuits on the breadboard. You will also be using circuit simulation to test out your circuit virtually before implementing it! *So fingers crossed, no magic smoke!*
