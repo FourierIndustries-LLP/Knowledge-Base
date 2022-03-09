@@ -56,7 +56,7 @@ Wires are the most important part of your circuit. Without them, you would not b
 
 This push button is a very simple example of a switch. But before you connect this push button into your house's mains, please do not do so :). The push button is meant for the breadboard instead.
 
-When the push button is pressed down, the circuit is closed and current would flow through the two terminals of the button. Likewise, when the push button is not pressed down, the circuit will be open and current would not flow through the two terminals of the button. One good example would be your Macbook keyboard. As you depress the key, the circuit is closed and the computer can detect wether the key is pressed down or not
+When the push button is pressed down, the circuit is closed and current would flow through the two terminals of the button. Likewise, when the push button is not pressed down, the circuit will be open and current would not flow through the two terminals of the button. One good example would be your MacBook keyboard. As you depress the key, the circuit is closed and the computer can detect whether the key is pressed down or not
 
 ## Light Dependant Resistor
 
