@@ -123,6 +123,16 @@ LEDs are great for almost everything! It is a very good source of light while al
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/LED.jpeg" width="300" />
 </p>
 
+### Polarity is important
+
+As LEDs are essentially diodes, it will only allow current flow in one direction. This is why for the LEDs provided in the kit, one of the leg is shorter than the other. The legs are specifically manufactured like this so that you can identify the polarity of the LED easily.
+
+The longer leg of the LED is the **positive** leg and is called the **anode**. The shorter leg of the LED is the **negative** leg and is the **cathode**.
+
+*But what if you just nice happen to connect it the wrong way? Would it explode?*
+
+The LED would not light up, so not to worry. You can just simply reverse the polarity of the LED (i.e flip the thing around) and it will work again!
+
 ### Buzzer
 
 A component that emits sound. Able to change pitch too.
