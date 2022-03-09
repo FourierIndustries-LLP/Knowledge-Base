@@ -14,22 +14,22 @@ Upon recieving your SSTuino Innovator's Kit v2, please ensure that all the compo
 
 | No. | Component Name                       | Quantity  |
 |---- |:------------------------------------:| ---------:|
-| 1   | SSTuino II                           |           |
-| 2   | SSTuino II Explorer Board            |           |
-| 3   | USB C Cable                          |           |
-| 4   | Breadboard                           |           |
-| 5   | Dupont cables (wires)                |           |
-| 6   | Assortment of LEDs                   |           |
-| 7   | Buzzer                               |           |
-| 8   | Push Button                          |           |
-| 9   | Potentiometer (10K Ohm)              |           |
-| 10  | Light Dependent Resistor             |           |
-| 11  | TMP36 Temperature Sensor             |           |
-| 12  | Ultrasonic Sensor                    |           |
-| 13  | PIR Proximity Sensor                 |           |
-| 14  | Servo                                |           |
-| 15  | RGB LEDs                             |           |
-| 16  | 330Ohm and 10KOhm resistor reel      |           |
+| 1   | SSTuino II                           | 1         |
+| 2   | SSTuino II Explorer Board            | 1         |
+| 3   | USB C Cable                          | 1         |
+| 4   | Breadboard                           | 1         |
+| 5   | Dupont cables (wires) (M-M), (M-F)   | 1 Each    |
+| 6   | Assortment of LEDs                   | 1 Bag     |
+| 7   | Buzzer                               | 1         |
+| 8   | Push Button                          | 2         |
+| 9   | Potentiometer (10K Ohm)              | 1         |
+| 10  | Light Dependent Resistor             | 1         |
+| 11  | TMP36 Temperature Sensor             | 1         |
+| 12  | Ultrasonic Sensor                    | 1         |
+| 13  | PIR Proximity Sensor                 | 1         |
+| 14  | Servo                                | 1         |
+| 15  | RGB LED                              | 1         |
+| 16  | 330Ohm and 10KOhm resistor reel      | 1 Bag     |
 
 ## Installation of prerequisites
 

@@ -72,6 +72,6 @@ Type in SSTuino into the search bar and click on install.
 
 ## All done!
 
-Ok and that sums up the installation process for the SSTuino II for your learning device. Next, let us get to know more about the SSTuino II!
+OK and that sums up the installation process for the SSTuino II for your learning device. Next, let us get to know more about the SSTuino II!
 
 [SSTuino II and the basics of Electronics](../sec1/electronicBasics/index.md)
