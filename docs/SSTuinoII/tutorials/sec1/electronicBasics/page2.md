@@ -56,15 +56,15 @@ We have included very cool components inside this kit for you to try out and int
 
 ### SSTuino II
 
-The main brain of the kit. Has Wi-Fi Chip on it for IoT.  
+The SSTuino II is the main microcontroller (or brain) for the kit. It has a Wi-Fi chip on it for use with the Internet of Things (IoT). It has a small footprint to easily integrate the board into projects.
 
 ### SSTuino II Explorer Board
 
-Adapts the SSTuino II to an Arduino Uno form factor.
+The SSTuino II Explorer Board adapts the SSTuino II to a more familiar Arduino Uno form factor. It also includes LEDs to help visualise the usage of the pinouts.
 
 ### USB-C Cable
 
-Connects the SSTuino II to your LD. Also powers the SSTuino II.
+The USB-C Cable connects the SSTuino II to your Learning Device. It is also used to upload code from the Arduino IDE to the SSTuino II.
 
 ### Breadboard
 
