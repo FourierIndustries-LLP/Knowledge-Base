@@ -135,23 +135,60 @@ The LED would not light up, so not to worry. You can just simply reverse the pol
 
 ### Buzzer
 
-A component that emits sound. Able to change pitch too.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/146-2.jpg" width="300" />
+</p>
+
+This buzzer is a Piezo Buzzer. If you try to open up the buzzer, you would see that there are a few embedded components inside the buzzer. What happens when you connect it to power is that it is converted to an oscilating signal, which is amplified and applied to the piezo disc. This causes the material to expand and contract rapidly, which results in sound waves being produced. 
+
+**Note:** The sound from the Piezo buzzer can be quite sharp and loud. Do be careful when using these components.
 
 ### Push Button
 
-A simple switch where circuit is closed when pressed.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/PushButton.jpg" width="300" />
+</p>
+
+The push button is a very simple example of a switch. But before you connect this push button into your house's mains supply, please do not do so as it is meant for low power electronics. :)
+
+When the push button is pressed down, the circuit is closed and current would flow through the two terminals of the button. Likewise, when the push button is not pressed down, the circuit will be open and current would not flow through the two terminals of the button. One good example would be the keyboard on your Learning Device. As you depress the key, the circuit is closed and the computer can detect if the key is depressed.
 
 ### Potentiometer (10K Ohm)
 
-An adjustable resistor with a knob. Max resistance: 10K Ohm.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/10KPot.jpg" width="300" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/resistor-pot3.gif" width="300" />
+</p>
+
+The potentiometer is a variable resistor, with an adjustable knob. The resistance changes when the knob turns from one side to the other.
+
+Potentiometers are used for controlling devices - the brightness of lights, speed of motor and loudness of speaker to name a few.
 
 ### Light Dependent Resistor
 
-A resistor that changes resistance due to light intensity.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/LDR.jpeg" width="300" />
+</p>
+
+As the name suggests, the Light Depedant Resistor (or Photoresistor) is a component that changes resistance when the light intensity changes. For the LDR that is provided in the kit, the resistance of the LDR **decreases** when the light intensity **increases**.
+
+Like a normal resistor, there is no polarity for the LDR and can be connected in both sides.
 
 ### TMP36 Temperature Sensor
 
-A small and simple to use temperature sensor.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/TMP36GZ_PinOut.png" width="300" />
+</p>
+
+The TMP36 is a rather accurate and simple to use temperature sensor for its low cost. For more information, visit the [Adafruit Website](https://learn.adafruit.com/tmp36-temperature-sensor/overview).
+
+**Note:** You may notice that this package may resemble that of other components such as transistors. **Please do not mix them up and read the respective manuals carefully.** The component model would be marked out on the **flat** side of the component for this package. Use the model number to search for the pinouts for you to make sure you are connecting the component the right way.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/TO92%20Pinout%20Transistor.jpeg" width="300" />
+</p>
+
+This shape and pinouts is called the TO-92 Package and is a very cheap and easy manufacturing method for transistors.
 
 ### Ultrasonic Sensor
 
