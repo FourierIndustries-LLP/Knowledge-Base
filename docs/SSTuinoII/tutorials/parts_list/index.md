@@ -18,7 +18,7 @@ Upon recieving your SSTuino Innovator's Kit v2, please ensure that all the compo
 |---- |:------------------------------------:| ---------:|
 | 1   | SSTuino II                           | 1         |
 | 2   | SSTuino II Explorer Board            | 1         |
-| 3   | USB C Cable                          | 1         |
+| 3   | USB-C Cable                          | 1         |
 | 4   | Breadboard                           | 1         |
 | 5   | Dupont cables (wires) (M-M), (M-F)   | 1 Each    |
 | 6   | Assortment of LEDs                   | 1 Bag     |
