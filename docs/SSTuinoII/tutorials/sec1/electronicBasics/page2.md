@@ -107,7 +107,7 @@ The wires are one of the most essential components of the circuit! Without them,
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/mmwire.jpg" width="300" />
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/mfwire.jpg" width="300" /> 
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/mfwire.jpeg" width="300" /> 
 </p>
 
 Male - Male wires on the left, Male - Female wires on the right.
