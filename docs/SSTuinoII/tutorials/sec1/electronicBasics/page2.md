@@ -188,7 +188,7 @@ The TMP36 is a rather accurate and simple to use temperature sensor for its low 
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/TO92%20Pinout%20Transistor.jpeg" height="300" />
 </p>
 
-This shape and pinouts is called the TO-92 Package and is a very cheap and easy manufacturing method for transistors.
+The TMP36 uses the TO-92 Package, which is cheap and simple to manufacture.
 
 ### Ultrasonic Sensor
 
