@@ -9,4 +9,10 @@ has_toc: false
 
 # SSTuino II Sec 1 Tutorials
 
-[![SSTuino II](/assets/sstuinoii_infographic_low.png)](electronicBasics/){: .btn }
+[SSTuino II Basics](electronicBasics/){: .btn }
+
+[Digital](digital/){: .btn }
+
+[Analog](analog/){: .btn }
+
+This page will be updated in a later date with infographics.
