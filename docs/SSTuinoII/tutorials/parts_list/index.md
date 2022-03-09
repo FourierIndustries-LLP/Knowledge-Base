@@ -12,6 +12,8 @@ has_toc: false
 
 Upon recieving your SSTuino Innovator's Kit v2, please ensure that all the components are present as stated below:
 
+![Parts List](assets/partslist.png)
+
 | No. | Component Name                       | Quantity  |
 |---- |:------------------------------------:| ---------:|
 | 1   | SSTuino II                           | 1         |
