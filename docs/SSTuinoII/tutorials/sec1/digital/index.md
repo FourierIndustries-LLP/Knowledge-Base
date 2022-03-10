@@ -36,7 +36,7 @@ Create a new circuit on TinkerCAD, and set it up like this:
 
 Once you set it up and press start simulation, notice the LED on the Arduino blinking? Why does this happen?
 
-[![arduinoProg2](assets/arduinoProg2.mp4)]
+![arduinoProg2](assets/arduinoProg2.mp4)
 
 The reason this happens is that TinkerCAD places in a sample code when you insert the Arduino into the circuit.
 
