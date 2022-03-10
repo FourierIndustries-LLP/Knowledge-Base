@@ -31,7 +31,7 @@ Let us analyse the code we see here
 
 Here is an explanation on how most basic Arduino code works:
 
-``` c++
+```cpp
 // These two slashes indicate a comment
 /* This also indicates a comment 
 The brackets () indicate a function e.g. int main()
