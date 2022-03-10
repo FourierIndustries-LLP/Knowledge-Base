@@ -100,6 +100,72 @@ Why would this happen? This is because that LEDs have a minimum voltage to light
 
 ![ledSpec](assets/ledSpec.png)
 
-> Forward Voltage: Min 1.8V, Max 2.2V. Suggested current:16 - 18mA
+> Forward Voltage: Min 1.8V, Max 2.2V.
 
 This means that the 1.5V battery would be barely able to light up the circuit, and only the 2 other battery types will be able to light up the LED.
+
+## Building a Circuit on the SSTuino II
+
+So you have built yourself some very simple circuits. Now let us build circuits, but with the SSTuino!
+
+In TinkerCAD, create a new circuit. In this new circuit, drag out an Arduino Uno, a breadboard, one resistor and a LED. Connect it in this manner, with the **Positive(+)** connect to **5V** and the **Negative(-)** connect to **GND**. 
+
+![arduino1](assets/arduino1.png)
+
+Press **Start Simulation** and see your circuit light up!
+
+![arduino2](assets/arduino2.png)
+
+Now, copy your circuit from TinkerCAD onto your SSTuino Innovator's Kit. 
+
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
+
+It should look something like this:
+
+![arduino8](assets/arduino8.png)
+
+Let us go back to the simulation and change the circuit like this:
+
+![arduino7](assets/arduino7.png)
+
+What would happen and why?
+
+## Add a button
+
+Now time for you to "control" your circuit. Set up your circuit like this:
+
+![arduino4](assets/arduino4.png)
+
+What this circuit allows you to do is to turn on and off your LED. This push button works something like this: When you press the button, the circuit is closed and current can flow to the LED, which makes the LED light up. When the button is not pressed, the circuit is considered open and current will not flow to the LED, which makes the LED not light up.
+
+Copy this circuit over to your SSTuino board setup.
+
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
+
+[Insert SSTuino II video here.]
+
+You can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?
+
+## The photoresistor
+
+The photoresistor is a resistor that reacts to light. It changes resistance when the amount of light it detects changes.
+
+Create a new circuit and set up your circuit like this:
+
+![arduino5](assets/arduino5.png)
+
+What this circuit allows you to see is the difference in LED brightness as you cover the photoresistor or shine a torch on it.
+
+![arduino6](assets/arduino6.mp4)
+
+Copy this circuit over to your SSTuino board setup.
+
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
+
+What happens to the LED brightness as you play with the photoresistor? Record and post a video onto Instagram and place a hashtag `#sstuino`!
+
+## Basic Arduino Programming
+
+Let us learn how to program the SSTuino II with the help of TinkerCAD!
+
+[Programming the SSTuino](../digital)
