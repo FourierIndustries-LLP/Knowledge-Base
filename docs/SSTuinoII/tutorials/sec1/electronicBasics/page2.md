@@ -48,6 +48,8 @@ Current is the rate of which the electricity flows throughout the circuit and is
 
 The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. Here are 2 examples, the one with resistor to the left, the one without on the right.
 
+(insert TinkerCAD picture inside)
+
 To keep it simple for learning, we have 2 main resistors provided in the SSTuino Innovator's Kit v2 that would be just nice for the other components provided.
 
 Below is a simple example of a circuit with a resistor.

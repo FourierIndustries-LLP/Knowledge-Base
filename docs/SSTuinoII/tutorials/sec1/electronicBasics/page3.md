@@ -98,7 +98,7 @@ After you connect up the circuit, this happens:
 
 Why would this happen? This is because that LEDs have a minimum voltage to light up. If you look at the spec sheet located here:
 
-[https://www.sparkfun.com/datasheets/Components/LED/COM-09590-YSL-R531R3D-D2.pdf](https://www.sparkfun.com/datasheets/Components/LED/COM-09590-YSL-R531R3D-D2.pdf)
+![ledSpec](assets/ledSpec.png)
 
 > Forward Voltage: Min 1.8V, Max 2.2V. Suggested current:16 - 18mA
 
