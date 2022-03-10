@@ -157,6 +157,8 @@ Arduino language reference: [https://www.arduino.cc/reference/en/](https://www.a
 
 ## It WORKS!!!
 
+[Need to do this up for the SSTuino II]
+
 Now, let us connect our SSTuino like this:
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
