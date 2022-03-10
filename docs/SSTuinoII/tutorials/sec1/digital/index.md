@@ -44,7 +44,7 @@ The reason this happens is that TinkerCAD places in a sample code when you inser
 
 ![arduinoProg3](assets/arduinoProg3.png)
 
-TinkerCAD is very simple to use as you can use block coding to program the Arduino. You may have had experience in block coding with Scratch, Thunkable and Blockly Games. The programming environment would be very similar to those you had used before.
+TinkerCAD is very simple to use as you can use block coding to program the Arduino, and might be familiar if you have done block coding before.
 
 If you would like to program with text in TinkerCAD, you can also do so like this:
 
@@ -81,7 +81,7 @@ After you start simulation, it should look something like this:
 
 *Wait a minute...* How come the LED attached turns on and off even though I did not program it? Well the reason behind it is that the `built-in` LED pin is also connected to pin 13. This means in the program, `LED_BUILTIN` is also pin 13.
 
-## Blink!
+## Download program from TinkerCAD to Arduino IDE
 
 In TinkerCAD, another awesome feature is the ability to download the program that you have coded just now! You just have to press the download button as shown here:
 
@@ -97,8 +97,80 @@ Click **OK**.
 
 A folder will then be created, and you will be able to see this code appear.
 
-![arduinoProg8](imageAssets/arduinoProg8.png)
+## Your code in Arduino IDE
 
-## Next Chapter
+![arduinoProg8](assets/arduinoProg8.png)
 
-[Code Explanation and Upload](page2.md)
+You would probably have noticed that this code looks rather different from the blocks you see in TinkerCAD. The Arduino app that you are using right now is called an **Integrated Development Environment** or **IDE** for short and is one of the programs that you can program your SSTuino II in.
+
+For example, I use another IDE called Visual Studio Code to modify this website for you! (in [Markdown](https://en.wikipedia.org/wiki/Markdown))
+
+![arduinoProg9](assets/arduinoProg9.png)
+
+Let us analyse the code we see here
+
+![arduinoProg8](assets/arduinoProg8.png)
+
+Here is an explanation on how most basic Arduino code works:
+
+```cpp
+// These two slashes indicate a comment
+/* This also indicates a comment 
+The brackets () indicate a function e.g. int main()
+*/
+void setup() //This is only run once when the device first powers up.
+{ //<- The curly brackets are very important. Place them carefully to avoid confusion.
+    pinMode(13, OUTPUT); 
+    /*
+    Why is pinMode written as so? That is due to the practice of using camelCase for writing code.
+    We declare pin 13 as the output pin. It can also be written as pinMode(LED_BUILTIN, OUTPUT).
+    The state "OUTPUT" must be written in CAPITAL LETTERS.
+    
+    It is also very important to place a semicolon ";" when you finish your "sentence", just like
+    how you write sentences in your essays.
+    */
+    
+}
+
+void loop() //loop = runs forever till the end of time (or until you turn off the power)
+{
+  digitalWrite(13, HIGH);// Turn on pin 13
+  delay(1000); // Wait for 1000 millisecond(s)
+  digitalWrite(13, LOW);// Turn off pin 13
+  delay(1000); // Wait for 1000 millisecond(s)
+
+  /* 
+  The section above will turn on and off the LED. Note the CAPITAL LETTERS on the "HIGH" and "LOW"
+  */
+}
+```
+
+### Additional information
+
+Learn more about camelCase here: [https://en.wikipedia.org/wiki/Camel_case](https://en.wikipedia.org/wiki/Camel_case)
+
+Learn more about the "()" :[http://www.cplusplus.com/reference/functional/function/operator_func/](http://www.cplusplus.com/reference/functional/function/operator_func/)
+
+If you want to read up about C++: [http://www.cplusplus.com/](http://www.cplusplus.com/)
+
+Arduino language reference: [https://www.arduino.cc/reference/en/](https://www.arduino.cc/reference/en/)
+
+## It WORKS!!!
+
+Now, let us connect our SSTuino like this:
+
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
+
+Only connect the SSTuino to your LD after you have finished assembling the circuit.
+
+In your Arduino IDE, go to
+
+[Need to change the steps for the SSTuino II]
+
+And now you can upload with this button:
+
+![arduinoProg13](imageAssets/arduinoProg13.png)
+
+You should see your circuit light up like this:
+
+[Insert working circuit]
