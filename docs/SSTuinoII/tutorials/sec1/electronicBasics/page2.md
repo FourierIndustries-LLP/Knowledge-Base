@@ -46,7 +46,9 @@ Voltage is the potential difference measured across the component. For example, 
 
 Current is the rate of which the electricity flows throughout the circuit and is measured in Amperes. Unit is A.
 
-The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. Here are 2 examples, the one with resistor to the left, the one without on the right.
+The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. Unit is Ω.
+
+Here are 2 examples, the one with resistor to the left, the one without on the right.
 
 (insert TinkerCAD picture inside)
 
