@@ -157,7 +157,7 @@ Arduino language reference: [https://www.arduino.cc/reference/en/](https://www.a
 
 ## It WORKS!!!
 
-[Need to do this up for the SSTuino II]
+**[Need to do this up for the SSTuino II]**
 
 Now, let us connect our SSTuino like this:
 
@@ -170,8 +170,6 @@ In your Arduino IDE, go to
 [Need to change the steps for the SSTuino II]
 
 And now you can upload with this button:
-
-![arduinoProg13](imageAssets/arduinoProg13.png)
 
 You should see your circuit light up like this:
 
