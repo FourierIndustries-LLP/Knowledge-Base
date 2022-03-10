@@ -50,9 +50,11 @@ The resistance resists the flow of electricity, to prevent the consumer from bei
 
 Here are 2 examples, the one with resistor to the left, the one without on the right.
 
-(insert TinkerCAD picture inside)
+![resistorCircuit](assets/resistorCircuit.png)
 
-To keep it simple for learning, we have 2 main resistors provided in the SSTuino Innovator's Kit v2 that would be just nice for the other components provided.
+Although the LED on the left is glowing much brighter than the one on the right, its lifespan is significantly reduced due to the excessive current flowing through the LED. If batteries with more voltage were used (e.g. 9-Volt Battery), it would probably cause the LED to be permanently damaged immediately.
+
+To keep it simple for learning, we have 2 main resistors provided in the SSTuino Innovator's Kit v2 that would be just nice for the included components.
 
 Below is a simple example of a circuit with a resistor.
 
@@ -109,7 +111,7 @@ Here is the layout of the breadboard:
 
 ### Dupont Cables (Wires)
 
-The wires are one of the most essential components of the circuit! Without them, the electricity would not flow and the circuit would not work. In the kit, we have provided 2 types of wires; Male - Male, and Male - Female. These would help you to connect to all the components in the kit.
+The wires are one of the most essential components of the circuit! Without them, the electricity would not flow, and the circuit would not work. In the kit, we have provided 2 types of wires; Male - Male, and Male - Female. These would help you to connect to all the components in the kit.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/mmwire.jpg" width="300" />
@@ -143,7 +145,7 @@ The LED would not light up, so not to worry. You can just simply reverse the pol
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/146-2.jpg" width="300" />
 </p>
 
-This buzzer is a Piezo Buzzer. If you try to open up the buzzer, you would see that there are a few embedded components inside the buzzer. What happens when you connect it to power is that it is converted to an oscilating signal, which is amplified and applied to the piezo disc. This causes the material to expand and contract rapidly, which results in sound waves being produced. 
+This buzzer is a Piezo Buzzer. If you try to open up the buzzer, you would see that there are a few embedded components inside the buzzer. What happens when you connect it to power is that it is converted to an oscillating signal, which is amplified and applied to the piezo disc. This causes the material to expand and contract rapidly, which results in sound waves being produced.
 
 **Note:** The sound from the Piezo buzzer can be quite sharp and loud. Do be careful when using these components.
 
@@ -174,7 +176,7 @@ Potentiometers are used for controlling devices - the brightness of lights, spee
   <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuino_Classic/tutorials/Sec1/electronicBasics/imageAssets/LDR.jpeg" width="300" />
 </p>
 
-As the name suggests, the Light Depedant Resistor (or Photoresistor) is a component that changes resistance when the light intensity changes. For the LDR that is provided in the kit, the resistance of the LDR **decreases** when the light intensity **increases**.
+As the name suggests, the Light Dependant Resistor (or Photoresistor) is a component that changes resistance when the light intensity changes. For the LDR that is provided in the kit, the resistance of the LDR **decreases** when the light intensity **increases**.
 
 Like a normal resistor, there is no polarity for the LDR and can be connected in both sides.
 
