@@ -168,4 +168,4 @@ What happens to the LED brightness as you play with the photoresistor? Record an
 
 Let us learn how to program the SSTuino II with the help of TinkerCAD!
 
-[Programming the SSTuino](../digital)
+[Programming the SSTuino II](../digital)
