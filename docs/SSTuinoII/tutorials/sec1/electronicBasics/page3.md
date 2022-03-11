@@ -142,7 +142,7 @@ Copy this circuit over to your SSTuino board setup.
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
 
-<iframe id="video" width="560" height="315" src="https://github.com/FourierIndustries-LLP/Knowledge-Base/blob/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/sstuinoii2.MOV" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen=""></iframe>
+![SSTuinoii2](assets/sstuinoii2.MOV)
 
 You can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?
 
