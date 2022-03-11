@@ -141,14 +141,12 @@ What this circuit allows you to do is to turn on and off your LED. This push but
 Copy this circuit over to your SSTuino board setup.
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
-
 <p align="center">
   <video width="640" height="480" autoplay muted>
     <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/sstuinoii2.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
 </p>
-
 You can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?
 
 ## The photoresistor
