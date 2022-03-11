@@ -9,7 +9,7 @@ has_toc: false
 
 # Programming the SSTuino II
 
-In this tutorial, we will discuss about the programming language that the SSTuino II uses, and explore some examples.
+In this tutorial, we will discuss the programming language that the SSTuino II uses, and explore some examples.
 
 {: .no_toc }
 
@@ -35,9 +35,12 @@ Create a new circuit on TinkerCAD, and set it up like this:
 ![arduinoProg1](assets/arduinoProg1.png)
 
 Once you set it up and press start simulation, notice the LED on the Arduino blinking? Why does this happen?
-
-![arduinoProg2](assets/arduinoProg2.mp4)
-
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
 The reason this happens is that TinkerCAD places in a sample code when you insert the Arduino into the circuit.
 
 > Stop the simulation and press the **CODE** button. You should see something like this:
@@ -155,22 +158,55 @@ If you want to read up about C++: [http://www.cplusplus.com/](http://www.cpluspl
 
 Arduino language reference: [https://www.arduino.cc/reference/en/](https://www.arduino.cc/reference/en/)
 
-## It WORKS!!!
+## Uploading code from Arduino IDE to your SSTuino II
 
-**[Need to do this up for the SSTuino II]**
+Let us connect our SSTuino like this:
 
-Now, let us connect our SSTuino like this:
+![sstuinoii](assets/sstuinoiiDigital.jpeg)
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
 
-Only connect the SSTuino to your LD after you have finished assembling the circuit.
+Please connect the SSTuino to your LD only after you have finished assembling the circuit.
 
-In your Arduino IDE, go to
+In your Arduino IDE, we will need to configure it to upload code to the SSTuino II.
 
-[Need to change the steps for the SSTuino II]
+* Plug in the SSTuino II into your LD.
 
-And now you can upload with this button:
+* Select the SSTuino II from `Tools > Board > SSTuino II > SSTuino II Rev A`
+
+![ArduinoProg14](assets/arduinoProg14.png)
+
+* Select the correct port
+
+![ArduinoProg15](assets/arduinoProg15.png)
+
+* Upload your code with this button
+
+![ArduinoProg13](assets/arduinoProg13.png)
 
 You should see your circuit light up like this:
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/sstuinoiiDigital1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+The SSTuino II Explorer board has a feature that helps you see if your circuit has issues.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/sstuinoiiDigital2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+For this particular example, if I connect the LED incorrectly (e.g. wrong LED polarity), you will notice that the LED on the SSTuino II Explorer Board lights up, but not the LED on the breadboard. I can use this information to diagnose what went wrong with the circuit, instead of wondering if I made a mistake on the circuit or on the programming instead.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/sstuinoiiDigital3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+This is a neat feature in the SSTuino II Explorer Board that we hope you enjoy. :)
 
-[Insert working circuit]
+## Diving deeper
+
+Let us dive deeper into programming the SSTuino II!
