@@ -119,9 +119,6 @@ Press **Start Simulation** and see your circuit light up!
 Now, copy your circuit from TinkerCAD onto your SSTuino Innovator's Kit. 
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
-**NOTE:** The SSTuino II Explorer board has sensitive electronics located at the bottom of the PCB. When it is powered up, it would cause the LEDs to light up if the surface placed in is not really insulated. One way to go about this is to use the top of the SSTuino Innovator's Kit v2 as the platform for your circuit.
-
-[Insert image here]
 
 Left: SSTuino II Explorer Board placed on MacBook, Right: Board placed on box surface
 {: .text-center }

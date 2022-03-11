@@ -32,6 +32,8 @@ The one thing you have been waiting for... connecting the SSTuino II to power! P
 
 You should see this!
 
+> **NOTE:** In the event you see LEDs lighting up when they should not, try to move the device to a more insulated surface (e.g. Plastic table or on the top of the SSTuino Innnovator's Kit v2). This happens as the components on the SSTuino II Explorer board is quite sensitive, but as long as the board is moved to a more insulated surface it will be good.
+
 ## The story of the various SSTuino generations...
 
 The SSTuino Classic started out its life as SPEEEduino, a WiFi enabled version of the Arduino Uno. It was used in lessons at Singapore Polytechnic when we studied there. Ziyue modified the design of the SPEEEduino for SST and that was how the SSTuino Classic came about. The SSTuino Classic shared many components as the Arduino Uno, with the main difference being that the ATMEGA328 being the main microcontroller (master), and the ESP-01 as the wireless interface (slave) despite the ESP-01 being more powerdul than the ATMEGA328.
