@@ -74,6 +74,8 @@ Now change the value of the `wait ___ seconds` to something that you like. What 
 
 [Note for self: need to verify if pin13 is still used, due to the migration to the SSTuino II platform.]
 
+[Note for self: PIN 13 IS NOT BUILTIN LED ANYMORE]
+
 Now, let us connect up the circuit:
 
 ![arduinoProg4](assets/arduinoProg4.png)
