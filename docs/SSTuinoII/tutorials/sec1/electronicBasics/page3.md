@@ -144,6 +144,10 @@ Copy this circuit over to your SSTuino board setup.
 
 <iframe id="video" src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/sstuinoii2.mp4"></iframe>
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/sstuinoii2.mp4"/>
+</p>
+
 You can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?
 
 ## The photoresistor
