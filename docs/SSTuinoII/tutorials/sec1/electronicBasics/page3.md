@@ -142,7 +142,7 @@ Copy this circuit over to your SSTuino board setup.
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
 <p align="center">
-  <video width="640" height="480" autoplay muted>
+  <video autoplay muted controls>
     <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/electronicBasics/assets/sstuinoii2.mp4" type="video/mp4">
   Your browser does not support the video tag.
   </video>
