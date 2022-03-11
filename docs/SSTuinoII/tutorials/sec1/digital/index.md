@@ -81,9 +81,12 @@ Now, let us connect up the circuit:
 ![arduinoProg4](assets/arduinoProg4.png)
 
 After you start simulation, it should look something like this:
-
-![arduinoProg5](assets/arduinoProg5.mp4)
-
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
 *Wait a minute...* How come the LED attached turns on and off even though I did not program it? Well the reason behind it is that the `built-in` LED pin is also connected to pin 13. This means in the program, `LED_BUILTIN` is also pin 13.
 
 ## Download program from TinkerCAD to Arduino IDE
