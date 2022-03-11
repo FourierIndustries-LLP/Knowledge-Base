@@ -122,7 +122,7 @@ Now, copy your circuit from TinkerCAD onto your SSTuino Innovator's Kit.
 
 It should look something like this:
 
-[Insert SSTuino II Picture]
+![SSTuino II](assets/sstuinoii1.jpg)
 
 Let us go back to the simulation and change the circuit like this:
 
