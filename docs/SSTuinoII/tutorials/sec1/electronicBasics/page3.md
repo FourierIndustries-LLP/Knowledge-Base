@@ -120,9 +120,6 @@ Now, copy your circuit from TinkerCAD onto your SSTuino Innovator's Kit.
 
 >**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
 
-Left: SSTuino II Explorer Board placed on MacBook, Right: Board placed on box surface
-{: .text-center }
-
 It should look something like this:
 
 [Insert SSTuino II Picture]
