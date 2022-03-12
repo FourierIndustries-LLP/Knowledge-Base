@@ -302,8 +302,8 @@ Create the variables `btn` and `led`. We are going to use these variables to sto
 
 Here is how the program can be coded:
 
-![arduinoButton28](imageAssets/arduinoButton28.png)
+![arduinoButton28](assets/arduinoButton28.png)
 
-Did you manage to do it? If you did that's great! Let's share your work! Record and post a video onto Instagram and place a hashtag `#sstuino`!
+Did you manage to do it? If you did, that's great! Let's share your work! Record and post a video onto Instagram and place a hashtag `#sstuino`!
 
 For those who were successful in completing this example, do help your peers out too!
