@@ -167,9 +167,7 @@ Let us connect our SSTuino like this:
 
 ![sstuinoii](assets/sstuinoiiDigital.jpeg)
 
->**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit!
-
-Please connect the SSTuino to your LD only after you have finished assembling the circuit.
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit! Please connect the SSTuino to your LD only after you have finished assembling the circuit.
 
 In your Arduino IDE, we will need to configure it to upload code to the SSTuino II.
 

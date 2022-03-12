@@ -20,67 +20,137 @@ has_toc: false
 {:toc}
 </details>
 
- ![arduinoButton12](imageAssets/arduinoButton12.mp4)
+Let us discover more digital functions of the SSTuino II!
 
-We are going to mimic an emergency vehicle (Fire truck, Ambulance, Police cars, etc.) by making 2 LEDs flash individually.
+## Pull-up Resistors
 
- Set up your circuit as shown:
+Pull-up resistors are found in digital logic devices and microcontrollers. When a pin in say, the SSTuino is connected as an input and tries to read the state of the pin, it is very difficult to determine whether the pin is actually high or low, due to a lot of factors such as noise in the circuit. This effect is referred to as floating (more detailed explanation [here](https://learn.adafruit.com/circuit-playground-digital-input/floating-inputs)).
 
-![arduinoButton6](imageAssets/arduinoButton6.png)
+To eliminate this, we will place a pull-up resistor to ensure that the pin is either in its `high` or `low` state, while using a little bit of current. Pull-up resistors are usually used on buttons and switches where there is a possibility of signal noise.
 
- This is one of the ways to program it. What other ways can you program it?
+![pullUp](https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg)
 
-![arduinoButton7](imageAssets/arduinoButton7.png)
+If you would like to read more about this, visit this sparkfun guide here:
 
-After you are done with the assembly and programming, this is how it should look like:
+[https://learn.sparkfun.com/tutorials/pull-up-resistors/all](https://learn.sparkfun.com/tutorials/pull-up-resistors/all)
 
-![arduinoButton8](imageAssets/arduinoButton8.mp4)
+## Buttons
+
+We are going to read very simple data from a push button, to know whether it has been pressed or not. Set up your circuit as shown:
+
+![arduinoButton1](assets/arduinoButton1.png)
+
+Next, go to the coding section and then program it like this:
+
+![arduinoButton2](assets/arduinoButton2.png)
+
+What this code does is that the Arduino would wait for the button to be pressed. If the button is not pressed, it would output "Not pressed!" in the serial monitor. If the button is pressed, it would output "pressed!" in the serial monitor.
+
+Now start simulation and then press the serial monitor:
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoButton3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+Copy this circuit over to your SSTuino board setup.
+
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit! Please connect the SSTuino to your LD only after you have finished assembling the circuit.
+
+## Control your lights
+
+*This time with coding...* With the data we have read from the push button, we can use it to trigger a reaction! Set up your circuit as shown:
+
+![arduinoButton4](assets/arduinoButton4.png)
+
+Next, we will need to edit the code such that the LED will light up when the button is pressed:
+
+![arduinoButton5](assets/arduinoButton5.png)
+
+This will happen after you start simulation:
 
 Copy this circuit over to your SSTuino board setup.
 
->**NOTE:** To prevent damage to your computer or the components, please **disconnect all power from the SSTuino board** when you are wiring up your circuit!
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit! Please connect the SSTuino to your LD only after you have finished assembling the circuit.
 
-![arduinoButton13](imageAssets/arduinoButton13.mp4)
+* Let's share your work! Record and post a video onto Instagram and place a hashtag `#sstuino`! 
 
-Now, we are going to improve this circuit by adding a button. This allows the user to turn on the flashing lights only when he/she needs to use it. When the button is pressed, the lights will start flashing?
+We are going to mimic an emergency vehicle (Fire truck, Ambulance, Police cars, etc.) by making 2 LEDs flash individually.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoButton12.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+Set up your circuit as shown:
+
+![arduinoButton6](assets/arduinoButton6.png)
+
+This is one of the ways to program it. What are the other possible ways to program it?
+
+![arduinoButton7](assets/arduinoButton7.png)
+
+After you are done with the assembly and programming, this is how it should look like:
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoButton8.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+Copy this circuit over to your SSTuino board setup.
+
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit! Please connect the SSTuino to your LD only after you have finished assembling the circuit.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoButton13.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+Now, we are going to improve this circuit by adding a button. This allows the user to turn on the flashing lights only when required. When the button is pressed, the lights will start flashing.
 
 Set up your circuit as shown:
 
-![arduinoButton9](imageAssets/arduinoButton9.png)
+![arduinoButton9](assets/arduinoButton9.png)
 
 How would you edit the code to make it flash when the button is pressed, and to stop flashing once the button is not pressed?
-
-![arduinoButton11](imageAssets/arduinoButton11.mp4)
-
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoButton11.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
 How would you edit the code for the lights to flash faster?
 
 Copy this circuit over to your SSTuino board setup.
 
->**NOTE:** To prevent damage to your computer or the components, please **disconnect all power from the SSTuino board** when you are wiring up your circuit!
-
-![arduinoButton14](imageAssets/arduinoButton14.mp4)
-
-Record and post a video onto Instagram and place a hashtag `#sstuino`! 
+>**NOTE:** To prevent damage to your computer or the components, please **do not connect the SSTuino II to your LD or any power supply** when you are wiring up your circuit! Please connect the SSTuino to your LD only after you have finished assembling the circuit.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoButton14.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+Let's share your work! Record and post a video onto Instagram and place a hashtag `#sstuino`!
 
 ## Emergency vehicle coming through!
 
-With your lights and the push button, let us attempt to insert some sound! For this section, we are going to use the included buzzer to make some sound!
+With your lights and the push button, let us attempt to insert the siren (**WEE WOO WEE WOO**)! For this section, we are going to use the included buzzer to make some sound!
 
 Duplicate the previous circuit:
 
-![arduinoButton18](imageAssets/arduinoButton18.png)
+![arduinoButton18](assets/arduinoButton18.png)
 
 and set it up as follows:
 
-![arduinoButton19](imageAssets/arduinoButton19.png)
+![arduinoButton19](assets/arduinoButton19.png)
 
 Along with the flashing lights, we would need to program the buzzer such that it sounds correctly! This is one way to program it:
 
-![arduinoButton20](imageAssets/arduinoButton20.png)
+![arduinoButton20](assets/arduinoButton20.png)
 
 ## Naming your variables
 
-After some tinkering with your coding, you may realise that it may be an hassle to change for example a pin, like this example code:
+After some tinkering with your coding, you may realise that it may be a hassle to change for example a pin, like this example code:
 
 ```cpp
 void setup()
@@ -97,13 +167,13 @@ void loop()
 }
 ```
 
-Imagine that you would have to change all the `pin 13` to another pin, and would have to scan through the entire code just to change all these values! Although Arduino Programs may be rather short, but still... *changing all of the numbers like that is kind of a hassle right?*
+Imagine that you would have to change all the `pin 13` to another pin, and would have to scan through the entire code just to change all these values! Although Arduino code may be rather short, but still... *changing all the numbers like that is kind of a hassle right?*
 
-*Introducing... Variable names.* 
+*Introducing... Variable names. **Imitates Chef's Kiss***
 
-Here is a modified version of the code you saw above just now.
+Here is a modified version of the code above.
 
-```C++
+```cpp
 int LED = 13;
 int wait = 1000;
 
@@ -121,7 +191,7 @@ void loop()
 }
 ```
 
-**SEE?** I have managed to change all the numbers to variable names. For example, in the event I want to adjust the `delay()` function in the code, I just have to change the `1000` at the `int wait=1000;` into a different number! Isn't that way more straightforward?
+***Voilà*** I have managed to change all the numbers to variable names. For example, in the event I want to adjust the `delay()` function in the code, I just have to change the `1000` at the `int wait=1000;` into a different number! Isn't that way more straightforward?
 
 *How about you try it out?*
 
@@ -133,11 +203,11 @@ We are going to introduce the AND OR operators into the program.
 
 Back when technology was not this advanced, the various operators were actual hardware logic gates that were placed into the circuit. The chips looked something like this:
 
-![arduinoButton15](imageAssets/arduinoButton15.jpg)
+![arduinoButton15](assets/arduinoButton15.jpg)
 
 In this section, we are going to cover two types of operators
 
-**AND Operator**
+### AND Operator
 
 How it works is that if both Input 1 and Input 2 are `high`, it will give a `high` output, as illustrated in this table:
 
@@ -147,8 +217,7 @@ How it works is that if both Input 1 and Input 2 are `high`, it will give a `hig
 |0|1|0|
 |1|1|1|
 
-
-**OR Operator**
+### OR Operator
 
 How it works is that if either Input 1 **OR** Input 2 are `high`, it will give a `high` output. If both Inputs are `high`, it will also give a `high` output, as illustrated in this table:
 
@@ -162,22 +231,21 @@ As technology has advanced leaps and bounds, these basic operators evolved from 
 
 If you are interested to learn about logic gates:[https://www.electronics-tutorials.ws/logic/logic_10.html](https://www.electronics-tutorials.ws/logic/logic_10.html)
 
-## OR Operator example:
+## OR Operator example
 
 Let us create a new circuit in TinkerCAD like this:
 
-![arduinoButton16](imageAssets/arduinoButton16.png)
+![arduinoButton16](assets/arduinoButton16.png)
 
 Next, we will need to edit the code such that the LED would light up once **one** of the buttons is pressed:
 
-![arduinoButton17](imageAssets/arduinoButton17.png)
+![arduinoButton17](assets/arduinoButton17.png)
 
-
-## AND Operator example:
+## AND Operator example
 
 For this, we just have to change the code to this:
 
-![arduinoButton21](imageAssets/arduinoButton21.png)
+![arduinoButton21](assets/arduinoButton21.png)
 
 Now start the simulation.
 
@@ -187,7 +255,7 @@ Now start the simulation.
 
 Let us duplicate the circuit we have just created in the previous section.
 
-![arduinoButton22](imageAssets/arduinoButton22.png)
+![arduinoButton22](assets/arduinoButton22.png)
 
 We will need to have 3 LEDs this time, to show that:
 
@@ -199,15 +267,16 @@ We will need to have 3 LEDs this time, to show that:
 
 The circuit is built as shown:
 
-![arduinoButton23](imageAssets/arduinoButton23.png)
+![arduinoButton23](assets/arduinoButton23.png)
 
 How would you program it?
 
 This is one of the ways it would work:
 
-![arduinoButton24](imageAssets/arduinoButton24.png)
+![arduinoButton24](assets/arduinoButton24.png)
 
-I would ask:
+Here is my thought process:
+
 1. Are any of the buttons pressed? If yes go to 2, if not, Red LED.
 2. Are both of the buttons pressed? If yes, Green LED, if not, Yellow LED.
 
@@ -217,22 +286,24 @@ So would there be other ways to do it? *Certainly!* This is just one of the ways
 
 Let us assume that we only have a button to control our lighting. Based on previous examples, if you were want to light up the LED, you would have to press and hold the LED right? What if I was to use the washroom and want the lights to be on? I would then have to press and hold the button for the lights to remain on! To prevent this from happening, we can make our button into a toggle switch with some coding...
 
-Duplicate this circuit from the this **[tutorial](#control-your-lights)**
+Duplicate this circuit from this **[tutorial](#control-your-lights)**
 
-![arduinoButton25](imageAssets/arduinoButton25.png)
+![arduinoButton25](assets/arduinoButton25.png)
 
 The circuit should look something like this:
 
-![arduinoButton26](imageAssets/arduinoButton26.png)
+![arduinoButton26](assets/arduinoButton26.png)
 
 For the program, we would have to introduce variables. To create variables, navigate here:
 
-![arduinoButton27](imageAssets/arduinoButton27.png)
+![arduinoButton27](assets/arduinoButton27.png)
 
-Create the variables `btn` and `led`. We are going to use these variables to store the state of the button and LED. What this means is that if the button is pressed, I change the state of the variable and it will remember the state, which also means that if I press and hold it, it does not spam the ON command. It will just activate once. Same with the LED.
+Create the variables `btn` and `led`. We are going to use these variables to store the state of the button and LED. What this means is that if the button is pressed, I change the state of the variable, and it will remember the state. This also means that if I press and hold the button, it does not spam the ON command. It will just activate once. Same with the LED.
 
 Here is how the program can be coded:
 
 ![arduinoButton28](imageAssets/arduinoButton28.png)
 
-Did you manage to do it?
+Did you manage to do it? If you did that's great! Let's share your work! Record and post a video onto Instagram and place a hashtag `#sstuino`!
+
+For those who were successful in completing this example, do help your peers out too!
