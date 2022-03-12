@@ -72,10 +72,6 @@ Now change the value of the `wait ___ seconds` to something that you like. What 
 
 ## Pin 13
 
-[Note for self: need to verify if pin13 is still used, due to the migration to the SSTuino II platform.]
-
-[Note for self: PIN 13 IS NOT BUILTIN LED ANYMORE]
-
 Now, let us connect up the circuit:
 
 ![arduinoProg4](assets/arduinoProg4.png)
@@ -88,6 +84,8 @@ After you start simulation, it should look something like this:
   </video>
 </p>
 *Wait a minute...* How come the LED attached turns on and off even though I did not program it? Well the reason behind it is that the `built-in` LED pin is also connected to pin 13. This means in the program, `LED_BUILTIN` is also pin 13.
+
+**Note:** For the Arduino Uno and the SSTuino Classic, the `built-in` LED pin is the same as pin 13. As we migrate to a more powerful microcontroller on the SSTuino II, the `built-in` LED pin and pin 13 is actually separate. The SSTuino II has more pins available compared to the SSTuino Classic, so we assigned these 2 pins separate to each other.
 
 ## Download program from TinkerCAD to Arduino IDE
 
@@ -196,6 +194,13 @@ You should see your circuit light up like this:
   Your browser does not support the video tag.
   </video>
 </p>
+With this example, we can see that for the SSTuino II, the `built-in` LED is different from that of the Arduino Uno/SSTuino Classic.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/sstuinoiiDigital4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
 The SSTuino II Explorer board has a feature that helps you see if your circuit has issues.
 <p align="center">
   <video width="100%" autoplay muted loop controls>
@@ -212,6 +217,26 @@ For this particular example, if I connect the LED incorrectly (e.g. wrong LED po
 </p>
 This is a neat feature in the SSTuino II Explorer Board that we hope you enjoy. :)
 
+## Built-In LED
+
+In the event you would like to use the `built-in` LED on the SSTuino II, there is a basic example on the Arduino IDE that can get you started.
+
+Go to `File -> Examples -> 01. Basic -> Blink`
+
+![arduinoProg16](assets/arduinoProg16.png)
+
+Plug in your SSTuino II and upload the code. You should see this on the SSTuino II. The Built-in LED on the SSTuino II lights up but not the LED at Pin 13.
+<p align="center">
+  <video width="100%" autoplay muted loop controls>
+    <source src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/sstuinoiiDigital5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+</p>
+With this, please bear in mind that the `Built-in` LED and pin 13 for the SSTUino II are different.
+
+## Built-In RGB LED
+
+This example is under construction. Please visit us later!
 ## Diving deeper
 
 Let us dive deeper into programming the SSTuino II!
