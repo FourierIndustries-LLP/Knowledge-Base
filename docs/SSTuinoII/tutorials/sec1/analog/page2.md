@@ -20,7 +20,7 @@ has_toc: false
 {:toc}
 </details>
 
-For this exercise, we will be going back to the Light Dependant Resistor (LDR)/photoresistor. Previously [in this tutorial](), we managed to try out the photoresistor. Now we are going to make use of it as an input for the SSTuino to trigger something! You may remember that the purpose of the photoresistor was not really significant or useful, as it made the LED brighter when the environment was bright. But with some programming, we can make it work properly!
+For this exercise, we will be going back to the Light Dependant Resistor (LDR)/photoresistor. In the previous tutorial, we managed to try out the photoresistor. Now we are going to make use of it as an input for the SSTuino to trigger something! You may remember that the purpose of the photoresistor was not really significant or useful, as it made the LED brighter when the environment was bright. But with some programming, we can make it work properly!
 
 Let us move into TinkerCAD and create a new circuit, something that looks like this:
 
