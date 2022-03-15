@@ -59,7 +59,7 @@ They also have another format called Blocks + Code. The text code changes accord
 
 > **Note:** In TinkerCAD, when you program in blocks, the text that you coded will be deleted, and when you program in text, the blocks that you placed will be deleted when you change the programming mode. This is to prevent any internal application error with the website.
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg12" width="50%" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg12.png" width="50%" />
 </p>
 
 So what does this block of code do? It tells the Arduino to:
@@ -100,7 +100,7 @@ In TinkerCAD, another awesome feature is the ability to download the program tha
 
 A `.ino` file will be downloaded on your LD and can be used on the Arduino IDE. Open the file and you would see this:
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg7" width="50%" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg7.png" width="50%" />
 </p>
 
 Click **OK**.
@@ -110,7 +110,7 @@ A folder will then be created, and you will be able to see this code appear.
 ## Your code in Arduino IDE
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg8" height="50%" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg8.png" height="50%" />
 </p>
 You would probably have noticed that this code looks rather different from the blocks you see in TinkerCAD. The Arduino app that you are using right now is called an **Integrated Development Environment** or **IDE** for short and is one of the programs that you can program your SSTuino II in.
 
@@ -120,7 +120,7 @@ For example, I use another IDE called Visual Studio Code to modify this website 
 
 Let us analyse the code we see here
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg8" height="50%" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg8.png" height="50%" />
 </p>
 Here is an explanation on how most basic Arduino code works:
 
@@ -188,7 +188,7 @@ In your Arduino IDE, we will need to configure it to upload code to the SSTuino 
 
 * Upload your code with this button
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg13" height="50%" />
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg13.png" height="50%" />
 </p>
 You should see your circuit light up like this:
 <p align="center">
