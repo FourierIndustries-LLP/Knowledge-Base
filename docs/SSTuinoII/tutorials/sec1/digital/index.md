@@ -57,7 +57,10 @@ They also have another format called Blocks + Code. The text code changes accord
 
 ![arduinoProg11](assets/arduinoProg11.png)
 
-> **Note:** In TinkerCAD, when you program in blocks, the text that you coded will be deleted, and when you program in text, the blocks that you placed will be deleted when you change the programming mode. This is to prevent any internal application error with the website.![arduinoProg12](assets/arduinoProg12.png)
+> **Note:** In TinkerCAD, when you program in blocks, the text that you coded will be deleted, and when you program in text, the blocks that you placed will be deleted when you change the programming mode. This is to prevent any internal application error with the website.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg12" width="50%" />
+</p>
 
 So what does this block of code do? It tells the Arduino to:
 
@@ -96,8 +99,9 @@ In TinkerCAD, another awesome feature is the ability to download the program tha
 ![arduinoProg6](assets/arduinoProg6.png)
 
 A `.ino` file will be downloaded on your LD and can be used on the Arduino IDE. Open the file and you would see this:
-
-![arduinoProg7](assets/arduinoProg7.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg7" width="50%" />
+</p>
 
 Click **OK**.
 
@@ -105,8 +109,9 @@ A folder will then be created, and you will be able to see this code appear.
 
 ## Your code in Arduino IDE
 
-![arduinoProg8](assets/arduinoProg8.png)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg8" height="50%" />
+</p>
 You would probably have noticed that this code looks rather different from the blocks you see in TinkerCAD. The Arduino app that you are using right now is called an **Integrated Development Environment** or **IDE** for short and is one of the programs that you can program your SSTuino II in.
 
 For example, I use another IDE called Visual Studio Code to modify this website for you! (in [Markdown](https://en.wikipedia.org/wiki/Markdown))
@@ -114,9 +119,9 @@ For example, I use another IDE called Visual Studio Code to modify this website 
 ![arduinoProg9](assets/arduinoProg9.png)
 
 Let us analyse the code we see here
-
-![arduinoProg8](assets/arduinoProg8.png)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg8" height="50%" />
+</p>
 Here is an explanation on how most basic Arduino code works:
 
 ```cpp
@@ -182,9 +187,9 @@ In your Arduino IDE, we will need to configure it to upload code to the SSTuino 
 ![ArduinoProg15](assets/arduinoProg15.png)
 
 * Upload your code with this button
-
-![ArduinoProg13](assets/arduinoProg13.png)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/digital/assets/arduinoProg13" height="50%" />
+</p>
 You should see your circuit light up like this:
 <p align="center">
   <video width="100%" autoplay muted loop controls>
