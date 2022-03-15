@@ -69,9 +69,9 @@ The coding part with blocks is rather simple, as the TinkerCAD team have simplif
 ## Temperature Sensor
 
 Temperature sensors are essential in electronics. Their uses are very broad, ranging from reading the temperature of the surrounding environment, to the temperature probes on your computer, to keep it from overheating! The temperature sensor that we are going to use in this exercise is the TMP36, an affordable yet accurate temperature sensor.
-
-![arduinoPot22](assets/arduinoPot22.png)
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/FourierIndustries-LLP/Knowledge-Base/main/docs/SSTuinoII/tutorials/sec1/analog/assets/arduinPot22.png" width="30%" />
+</p>
 Let us go into TinkerCAD and create a new circuit. We are going to assemble it like this:
 
 ![arduinoPot23](assets/arduinoPot23.png)
