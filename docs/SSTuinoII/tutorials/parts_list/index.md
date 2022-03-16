@@ -1,3 +1,6 @@
+---
+layout: default
+---
 # SSTuino Innovator's Kit v2 Parts List
 
 > **Note:** Please do not plug in the SSTuino II and/or its components to your learning device or any power source first. We will get to it very soon. :)
