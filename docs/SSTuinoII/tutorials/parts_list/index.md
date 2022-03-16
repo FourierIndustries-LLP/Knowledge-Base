@@ -1,5 +1,6 @@
 ---
 layout: default
+nav_exclude: true
 ---
 # SSTuino Innovator's Kit v2 Parts List
 
