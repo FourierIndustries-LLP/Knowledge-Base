@@ -13,7 +13,7 @@ In this tutorial, we will discuss the programming language that the SSTuino II u
 
 {: .no_toc }
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>
