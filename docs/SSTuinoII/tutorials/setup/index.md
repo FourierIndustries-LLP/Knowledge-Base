@@ -1,6 +1,8 @@
-# Setting up your SSTuino II
-
-{: .no_toc }
+---
+layout: default
+title: Setting up your SSTuino II
+nav_exclude: true
+---
 
 <details markdown="block">
   <summary>
