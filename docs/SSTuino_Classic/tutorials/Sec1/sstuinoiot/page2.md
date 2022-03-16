@@ -9,7 +9,7 @@ has_toc: false
 
 # Creating your Adafruit.io account
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>
@@ -230,7 +230,6 @@ Fill in your Wifi SSID (The name of the WiFi), password, Adafruit.io username, I
 > Note that Enterprise WiFi networks such as `SST_Student` will not work on the WiFi Chip due to insufficient memory to use the more complicated protocol. Instead you would have to use your mobile hotspot. Note that hotspots with a Apostrophe `'` like `Qian Zhe's iPhone` will not work. Please change the name of the network. A good example is `SINGTEL-2001`
 
 ![SSTuinoIoT5](imageAssets/SSTuinoIoT5.png)
-
 
 Let us now upload the code to the SSTuino. We will need the WiFi Chip (Flashed by Qian Zhe or Ziyue) to be installed on the SSTuino like this:
 > Make sure that the small white switches are all ON (push upwards)

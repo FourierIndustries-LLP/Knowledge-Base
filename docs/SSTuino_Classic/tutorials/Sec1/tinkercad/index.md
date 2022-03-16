@@ -13,7 +13,7 @@ In this tutorial, we will attempt a few simple circuits with a simple to use onl
 
 {: .no_toc }
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>

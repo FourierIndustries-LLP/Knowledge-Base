@@ -13,7 +13,7 @@ In this tutorial, we will discuss about the programming language that the SSTuin
 
 {: .no_toc }
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>

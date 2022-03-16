@@ -9,7 +9,7 @@ has_toc: false
 
 # The SSTuino can connect to the internet?!
 
-<details open markdown="block">
+<details markdown="block">
   <summary>
     Table of contents
   </summary>
