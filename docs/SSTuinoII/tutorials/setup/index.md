@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Setting up your SSTuino II
 nav_exclude: true
 ---
+
+# Setting up your SSTuino II
 
 <details markdown="block">
   <summary>
