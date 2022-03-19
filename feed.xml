@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-19T11:52:53+08:00</updated>
+    <updated>2022-03-19T12:18:05+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -39,7 +39,7 @@
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html</id>
 
-        <updated>2022-03-19T11:50:39+08:00</updated>
+        <updated>2022-03-19T12:18:05+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us create our first virtual circuit! Circuit Simulation is&hellip;
@@ -47,7 +47,7 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Let us create our first virtual circuit! Circuit Simulation is a great tool to test out your circuit design before assembling it in real life. This helps to reduce the possibility of your components being spoilt due to an incorrect circuit design. The platform we will be using for the SSTuino Innovator's Kit v2 is TinkerCAD.</p>
+                <p>Let us create our first virtual circuit! Circuit Simulation is a great tool to test out your circuit design before assembling it in real life. This helps to reduce the possibility of your components being spoilt due to an incorrect circuit design. </p>
 <p class="msg msg--warning"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">As we will be progressing towards tinkering and creating a circuit, please do not connect the circuit/project to power before completing it. This helps to lower the risk of a component failing due to an improperly constructed circuit. 🙂</span></p>
 <p>For our virtual circuits, we will be using TinkerCAD! It is one of the most popular classroom tools for creating simple designs from scratch. It is also a simple to use online 3D design and prototyping program.</p>
 <p>Let us set up TinkerCAD and have fun with a mini project!</p>
