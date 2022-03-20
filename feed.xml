@@ -3,12 +3,69 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-20T11:33:09+08:00</updated>
+    <updated>2022-03-20T20:50:48+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Pull-up resistors and If/Else Statements (copy)</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-3.html"/>
+        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-3.html</id>
+
+        <updated>2022-03-20T20:42:49+08:00</updated>
+            <summary>
+                <![CDATA[
+                    In this tutorial, we will learn about pull up resistors,&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>In this tutorial, we will learn about pull up resistors, and use push buttons to control lighting.</p>
+<h2>Pull-up resistors</h2>
+<p>Pull-up resistors are found in digital logic devices and microcontrollers.</p>
+<p>When a pin in an electronic device like the SSTuino is configured as an input but there's nothing there, interference from nearby electronics may cause the device to read <code>HIGH</code> and <code>LOW</code> randomly. This effect is referred to as floating, and that's not what we want here.<br><br>To eliminate this, we will place a pull-up resistor to ensure that the pin is either in its <code>HIGH</code> or <code>LOW</code> state while using a little bit of current. Pull-up resistors are usually used on buttons and switches where there is a possibility of signal noise.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg" data-is-external-image="true"  alt="" width="315" height="231"></figure>
+<h2>Buttons and If/Else Statement</h2>
+<p>We are going to read very simple data from a push button, to know whether it has been pressed or not. Set up your circuit as shown in the sample below:</p>
+<div class="post__iframe"><iframe loading="lazy" width="725" height="453" src="https://www.tinkercad.com/embed/8gburu5d3uO?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+<p>Next, go to the coding section and then program it like this:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/16/SE-3.1.1-Code.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.1-Code-xs.png 300w ,https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.1-Code-sm.png 480w ,https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.1-Code-md.png 749w"  alt="" width="449" height="231"></figure>
+<p>What this code does is that the Arduino would wait for the button to be pressed. <strong>If</strong> the button is not pressed, it would output "Not pressed!" in the serial monitor. <strong>Else</strong>, it would output "Pressed!" in the serial monitor. This is how a simple If/Else statement works!</p>
+<p>Now start the simulation and then press the serial monitor:</p>
+<figure class="post__video"><video loading="lazy" width="300" height="150" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/arduinoButton3.mp4" type="video/mp4" /></video></figure>
+<p>Let's copy this circuit to your SSTuino! </p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<p>After the code has been uploaded to the SSTuino, let's head to the serial monitor of the Arduino IDE:</p>
+<pre>insert picture here</pre>
+<p>Here is what the circuit looks like:</p>
+<pre>insert video here</pre>
+<h2>Control your lights</h2>
+<p><em>Try out some code! </em>😁 With the data we have read from the push button, we can use it to trigger a reaction. Set up your circuit in TinkerCAD as shown:</p>
+<div style="background-image: url(\;;"><iframe loading="lazy" width="725" height="453" src="https://www.tinkercad.com/embed/1kpm97jXp3r?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" data-mce-fragment="1"></iframe></div>
+<p>Next, we will need to edit the code such that the LED will light up when the button is pressed:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/16/arduinoButton5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/16/responsive/arduinoButton5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/16/responsive/arduinoButton5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/16/responsive/arduinoButton5-md.png 749w"  alt="" width="437" height="282"></figure>
+<p>The block code is similar to the previous exercise, but with LEDs added this time. This will happen after you start the simulation:</p>
+<pre>insert video here</pre>
+<p>Let's copy this circuit over to your SSTuino! This is how it should look like:</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<pre>insert video here</pre>
+<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<h2>Resources and Going Further</h2>
+<p>If you want to learn more about how pull-up resistors work in-depth, you can check out the other resources made by the Arduino community:</p>
+<ul>
+<li><a href="https://learn.sparkfun.com/tutorials/pull-up-resistors/all">Sparkfun: Pull-up Resistors</a></li>
+<li><a href="https://learn.adafruit.com/circuit-playground-digital-input/floating-inputs">Adafruit: Floating pins</a></li>
+<li><a href="https://www.mouser.com/blog/dont-leave-your-pins-floating">Mouser: Don't leave your pins floating</a></li>
+</ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Pull-up resistors and If/Else Statements</title>
         <author>
@@ -68,7 +125,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii.html</id>
 
-        <updated>2022-03-20T10:12:47+08:00</updated>
+        <updated>2022-03-20T20:45:28+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will discuss the programming language that&hellip;
@@ -116,11 +173,11 @@
 <h2 id="mcetoc_1fuihi7fh13l">Pin 13</h2>
 <p>Now, let us connect up this circuit:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg4-md.png 749w"  alt="" width="2880" height="1362"></figure>
-<p>After you start simulation, it should look something like this:</p>
+<p>After you start the simulation, it should look something like this:</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoProg5.mp4" type="video/mp4" /></video></figure>
-<p><em>Wait a minute...</em> How come the LED attached turns on and off even though I did not program it? Well the reason behind it is that the <code>built-in</code> LED pin is also connected to pin 13. This means in the program, <code>LED_BUILTIN</code> is also pin 13.</p>
-<p class="msg msg--info">For the Arduino Uno in TinkerCAD, the <code>built-in</code> LED pin is the same as pin 13. On the SSTuino II, the <code>built-in</code> LED pin and pin 13 is actually separate. The SSTuino II has more pins available compared to the Arduino Uno, so we assigned these 2 pins separate to each other. This means that pin 13 does not affect the <code>built-in</code> LED!</p>
+<p><em>Wait a minute...</em> How come the LED attached turns on and off even though I did not program it? Well, the reason behind it is that the <code>built-in</code> LED pin is also connected to pin 13. This means in the program, <code>LED_BUILTIN</code> is also pin 13.</p>
+<p class="msg msg--info">For the Arduino Uno in TinkerCAD, the <code>built-in</code> LED pin is the same as pin 13. On the SSTuino II, the <code>built-in</code> LED pin and pin 13 is separate. The SSTuino II has more pins available compared to the Arduino Uno, so we assigned these 2 pins separate from each other. This means that pin 13 does not affect the <code>built-in</code> LED!</p>
 <h2 id="mcetoc_1fuihi7fh13m">Transfer program from TinkerCAD to Arduino IDE</h2>
 <p>In TinkerCAD, another awesome feature is the ability to download the program that you have coded just now! Go to code, and press the download button:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg6-md.png 749w"  alt="" width="2880" height="1360"></figure>
@@ -128,7 +185,7 @@
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg7-md.png 749w"  alt="" width="376" height="129"></figure>
 <p>The Arduino app that you are using right now is called an <strong>Integrated Development Environment</strong> or <strong>IDE</strong>. It is one of the programs that you can program your SSTuino II in. Let us analyse the code we see here: </p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg8-md.png 749w"  alt="" width="306" height="368"></figure>
-<p>Here is an explanation on how most basic Arduino code works:</p>
+<p>Here is an explanation of how most basic Arduino code works:</p>
 <pre><code class="language-cpp">
 // These two slashes indicate a comment
 /* This also indicates a comment 
@@ -192,12 +249,12 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p>The explorer board has a cool feature to help to see if you have connection issues in your circuit!</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/sstuinoiiDigital2.mp4" type="video/mp4" /></video></figure>
-<p>For this particular example, if I connect the LED incorrectly (e.g. wrong LED polarity), you will notice that the LED on the Explorer Board lights up, but not the LED on the breadboard. I can use this information to diagnose what went wrong with the circuit, instead of wondering if I made a mistake on the circuit or on the programming instead.</p>
+<p>For this particular example, if I connect the LED incorrectly (e.g. wrong LED polarity), you will notice that the LED on the Explorer Board lights up, but not the LED on the breadboard. I can use this information to diagnose what went wrong with the circuit, instead of wondering if I made a mistake on the circuit or in the programming instead.</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/sstuinoiiDigital3.mp4" type="video/mp4" /></video></figure>
 <p>This is a neat feature that we hope you would enjoy. 🙂</p>
 <h2 id="mcetoc_1fuihi7fh13p">Built-in LED</h2>
-<p>In the event if you would like to use the <code>built-in</code> LED on the SSTuino II, not to worry. Here is a basic example on the Arduino IDE to get you started. Go to <code>`File -&gt; Examples -&gt; 01. Basic -&gt; Blink`</code></p>
+<p>If you would like to use the <code>built-in</code> LED on the SSTuino II, you can always do so. Here is a basic example on the Arduino IDE to get you started. Go to <code>File -&gt; Examples -&gt; 01. Basic -&gt; Blink</code></p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg16.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg16-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg16-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg16-md.png 749w"  alt="" width="401" height="173"></figure>
 <p>Plug in your SSTuino II and upload the code. You should see this on the SSTuino II. The Built-in LED on the SSTuino II lights up but not the LED at Pin 13.</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
@@ -273,7 +330,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html</id>
 
-        <updated>2022-03-19T12:59:58+08:00</updated>
+        <updated>2022-03-20T20:48:37+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us create our first virtual circuit! Circuit Simulation is&hellip;
@@ -307,9 +364,9 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 </figure>
 </div></div>
 <h2 id="mcetoc_1fug4oiglbo">Create a Circuit</h2>
-<p>There are a lot of functions inside TinkerCAD! However, for the purposes of the SSTuino we are going to use the "Circuits" function. Click on "Circuits" on the sidebar and click on create new circuit.</p>
+<p>There are a lot of functions inside TinkerCAD! However, for the purposes of the SSTuino, we are going to use the "Circuits" function. Click on "Circuits" on the sidebar and click on "Create new Circuit".</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/createCircuit.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-md.png 749w"  alt="" width="2880" height="1364"></figure>
-<p class="msg msg--highlight  msg--info">It is a very good habit to create a new circuit after you have finished your previous tutorial, instead of overwriting the current circuit. This is to help you to be able to reference to previous tutorials done when you need help with your future projects.</p>
+<p class="msg msg--highlight  msg--info">It is a very good habit to create a new circuit after you have finished your previous tutorial, instead of overwriting the current circuit. That way, you would be able to refer to previous tutorials done when you need help with your future projects.</p>
 <p>After you have created the new circuit, it should look like this. We have also included a legend on the interface of the TinkerCAD Circuits function.</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/tinkerCAD_legend.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/tinkerCAD_legend-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkerCAD_legend-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkerCAD_legend-md.png 749w"  alt="" width="2880" height="1362"></figure>
 <p>Let us bring out a 9V battery then connect it as follows. After you have connected the circuit, click on <strong>Start Simulation</strong> on the top right-hand corner of the website. You will notice that the LED immediately "explodes". 🤭</p>
@@ -317,18 +374,18 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test.png" data-size="1786x636"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test-thumbnail.png" alt="" width="749" height="267"></a></figure>
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test2.png" data-size="1738x544"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test2-thumbnail.png" alt="" width="749" height="234"></a></figure>
 </div></div>
-<p>The LED burns as there is no resistor used to limit the flow of the current. Instead, connect a resistor like this. With the resistor attached, the LED lights up without burning up. 🙂 Try this with different resistor values. What kind of changes happen?</p>
+<p>The LED burns as there is no resistor used to limit the flow of the current. Instead, connect a resistor like this. With the resistor attached, the LED lights up without burning up. 🙂 Try this with different resistor values. What kind of changes would happen here?</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/9V_Test3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/9V_Test3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/9V_Test3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/9V_Test3-md.png 749w"  alt="" width="2880" height="1366"></figure>
-<p>Now, let us try this out using different types of batteries. TinkerCAD mainly provides 3 types of batteries: 9V, 3V and 1.5V. Connect your circuit up as shown. The next picture illustrates when you start simulation</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<p>Now, let us try this out using different types of batteries. TinkerCAD mainly provides 3 types of batteries: 9V, 3V and 1.5V. Connect your circuit up as shown. The next picture illustrates when you start the simulation:</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test5.png" data-size="2878x1362"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test5-thumbnail.png" alt="" width="749" height="354"></a>
 <figcaption>Set up your circuit as shown</figcaption>
 </figure>
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test4.png" data-size="2880x1358"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test4-thumbnail.png" alt="" width="749" height="353"></a>
-<figcaption>This is what happens when you start simulation</figcaption>
+<figcaption>This is what happens when you start the simulation</figcaption>
 </figure>
 </div></div>
-<p>Why would this happen? This is because that LEDs have a minimum voltage to light up. If you look at the spec sheet located here:</p>
+<p>Why would this happen? This is because LEDs have a minimum voltage to light up. If you look at the spec sheet located here:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/ledSpec.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/ledSpec-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/ledSpec-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/ledSpec-md.png 749w"  alt="" width="2408" height="638"></figure>
 <p>The 1.5V battery would be barely able to light up the circuit, and only the 2 other battery types will be able to light up the LED.</p>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html" class="btn btn--green">Next ➡️</a></p>
@@ -343,7 +400,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html</id>
 
-        <updated>2022-03-20T10:13:39+08:00</updated>
+        <updated>2022-03-20T20:50:13+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will learn the basics of electronic&hellip;
@@ -356,11 +413,11 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#mcetoc_1fuihjt2m14c">How does circuits work?</a></li>
+<li><a href="#mcetoc_1fuihjt2m14c">How do circuits work?</a></li>
 <li><a href="#mcetoc_1fuihjt2m14d">Ohm's Law</a></li>
 </ul>
 </div>
-<h2 id="mcetoc_1fuihjt2m14c">How does circuits work?</h2>
+<h2 id="mcetoc_1fuihjt2m14c">How do circuits work?</h2>
 <div>
 <p>A basic electrical circuit has 3 items:</p>
 <ol>
@@ -378,9 +435,9 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <li>Resistance</li>
 </ol>
 <p>Voltage is the potential difference measured across the component. For example, the potential difference measured across a typical AA battery is 1.5V. <strong>The unit for voltage is V.</strong></p>
-<p>Current is the rate of which the electricity flows throughout the circuit and is measured in Amperes. <strong>The unit for current is A.</strong></p>
+<p>Current is the rate at which the electricity flows throughout the circuit and is measured in Amperes. <strong>The unit for current is A.</strong></p>
 <p>The resistance resists the flow of electricity, to prevent the consumer from being damaged due to too much current flowing through it. <strong>The unit for resistance is Ω</strong>.</p>
-<p>Here are 2 examples, the one with resistor to the left, the one without on the right.</p>
+<p>Here are 2 examples, the one with a resistor to the right, the one without on the left.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/10/resistorCircuit.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/10/responsive/resistorCircuit-xs.png 300w ,https://knowledge.fourier.industries/media/posts/10/responsive/resistorCircuit-sm.png 480w ,https://knowledge.fourier.industries/media/posts/10/responsive/resistorCircuit-md.png 749w"  alt="" width="425" height="306"></figure>
 <p>Although the LED on the left is glowing much brighter than the one on the right, its lifespan is significantly reduced due to the excessive current flowing through the LED. If batteries with more voltage were used (e.g. 9-Volt Battery), it would probably cause the LED to be permanently damaged immediately.</p>
 <p>To keep it simple for learning, we have 2 main resistors (330Ω and 10KΩ) provided in the SSTuino Innovator's Kit v2 that would be just nice for the included components.</p>
@@ -399,7 +456,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html</id>
 
-        <updated>2022-03-18T21:42:57+08:00</updated>
+        <updated>2022-03-20T20:50:30+08:00</updated>
             <summary>
                 <![CDATA[
                     It is now time to plug in your SSTuino II&hellip;
@@ -423,7 +480,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html</id>
 
-        <updated>2022-03-18T21:42:43+08:00</updated>
+        <updated>2022-03-20T20:50:48+08:00</updated>
             <summary>
                 <![CDATA[
                     Note: Please do not plug in the SSTuino II and/or&hellip;
@@ -653,40 +710,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <h2>Going Further</h2>
 <p>If you feel like you want an additional challenge, or resources to build solutions, check out our advanced track guides linked on the sidebar.</p>
 <p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Introduction to the SSTuino II</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2.html"/>
-        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2.html</id>
-
-        <updated>2022-03-18T19:53:59+08:00</updated>
-            <summary>
-                <![CDATA[
-                    SSTuino Innovator's Kit v2 The SSTuino Innovator's Kit v2 is&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <div>
-<h2>SSTuino Innovator's Kit v2</h2>
-</div>
-<p>The SSTuino Innovator's Kit v2 is has a major redesign of the SSTuino and will be used from 2022 onwards. The SSTuino Classic has been replaced with the SSTuino II and the Explorer companion board.</p>
-<div>
-<div>
-<h2>SSTuino II</h2>
-<div><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/3/sstuinoii_infographic_low.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/3/responsive/sstuinoii_infographic_low-xs.png 300w ,https://knowledge.fourier.industries/media/posts/3/responsive/sstuinoii_infographic_low-sm.png 480w ,https://knowledge.fourier.industries/media/posts/3/responsive/sstuinoii_infographic_low-md.png 749w"  alt="" width="561" height="316"></figure></div>
-<p>The SSTuino II is a radical redesign of the SSTuino Classic. Inspired by the Arduino Nano Every, the SSTuino II has a significantly lower board size as compared to its predecessor. The smaller board size allows easier integration for its users while having more powerful microcontrollers.</p>
-<h2>Explorer Companion Board</h2>
-<div><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/3/explorer_infographic_low.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/3/responsive/explorer_infographic_low-xs.png 300w ,https://knowledge.fourier.industries/media/posts/3/responsive/explorer_infographic_low-sm.png 480w ,https://knowledge.fourier.industries/media/posts/3/responsive/explorer_infographic_low-md.png 749w"  alt="" width="604" height="340"></figure></div>
-<p>The Explorer companion board is designed to adapt the SSTuino II to a more famillar Arduino Uno form factor. It allows users to begin their journey in electronics and Internet-of-Things with ease. It also integrates to TinkerCAD, an online Arduino simulation platform that allows our users to test out their circuits and code before implementing them.</p>
-</div>
-<p class="align-right"><a href="https://knowledge.fourier.industries/sstuino-ii-essentials-track.html" class="btn btn--green">Next ➡️</a></p>
-</div>
             ]]>
         </content>
     </entry>
