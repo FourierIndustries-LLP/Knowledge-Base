@@ -22,7 +22,7 @@
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html</loc>
-<lastmod>2022-03-21T16:47:55+08:00</lastmod>
+<lastmod>2022-03-21T21:25:13+08:00</lastmod>
 <image:image>
 <image:loc>https://knowledge.fourier.industries/media/posts/15/arduinoButton1-2.png</image:loc>
 <image:title><![CDATA[]]></image:title>
@@ -44,13 +44,13 @@
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
-<image:loc>https://knowledge.fourier.industries/media/posts/15/arduinoButton5-2.png</image:loc>
+<image:loc>https://knowledge.fourier.industries/media/posts/15/arduinoButton5.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html</loc>
-<lastmod>2022-03-21T16:47:46+08:00</lastmod>
+<lastmod>2022-03-21T21:30:45+08:00</lastmod>
 <image:image>
 <image:loc>https://knowledge.fourier.industries/media/posts/17/arduinoButton15.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
@@ -89,6 +89,14 @@
 </image:image>
 <image:image>
 <image:loc>https://knowledge.fourier.industries/media/posts/17/arduinoButton28.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+</url>
+<url>
+<loc>https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html</loc>
+<lastmod>2022-03-21T20:53:01+08:00</lastmod>
+<image:image>
+<image:loc>https://knowledge.fourier.industries/media/posts/18/SSTuinoIoT8.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 </url>
@@ -154,7 +162,7 @@
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/sstuino-ii-essentials-track.html</loc>
-<lastmod>2022-03-21T11:25:41+08:00</lastmod>
+<lastmod>2022-03-21T20:54:27+08:00</lastmod>
 <image:image>
 <image:loc>https://knowledge.fourier.industries/media/posts/4/nicolas-thomas-3GZi6OpSDcY-unsplash-2.jpg</image:loc>
 <image:title><![CDATA[]]></image:title>
@@ -194,7 +202,7 @@
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html</loc>
-<lastmod>2022-03-21T10:00:11+08:00</lastmod>
+<lastmod>2022-03-21T21:33:07+08:00</lastmod>
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html</loc>
