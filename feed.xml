@@ -3,69 +3,12 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-21T11:43:51+08:00</updated>
+    <updated>2022-03-21T13:31:21+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
-    <entry>
-        <title>Pull-up resistors and If/Else Statements (copy)</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-3.html"/>
-        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-3.html</id>
-
-        <updated>2022-03-20T22:14:30+08:00</updated>
-            <summary>
-                <![CDATA[
-                    In this tutorial, we will learn about pull up resistors,&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>In this tutorial, we will learn about pull up resistors, and use push buttons to control lighting.</p>
-<h2>Pull-up resistors</h2>
-<p>Pull-up resistors are found in digital logic devices and microcontrollers.</p>
-<p>When a pin in an electronic device like the SSTuino is configured as an input but there's nothing there, interference from nearby electronics may cause the device to read <code>HIGH</code> and <code>LOW</code> randomly. This effect is referred to as floating, and that's not what we want here.<br><br>To eliminate this, we will place a pull-up resistor to ensure that the pin is either in its <code>HIGH</code> or <code>LOW</code> state while using a little bit of current. Pull-up resistors are usually used on buttons and switches where there is a possibility of signal noise.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg" data-is-external-image="true"  alt="" width="315" height="231"></figure>
-<h2>Buttons and If/Else Statement</h2>
-<p>We are going to read very simple data from a push button, to know whether it has been pressed or not. Set up your circuit as shown in the sample below:</p>
-<div class="post__iframe"><iframe loading="lazy" width="725" height="453" src="https://www.tinkercad.com/embed/8gburu5d3uO?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
-<p>Next, go to the coding section and then program it like this:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/16/SE-3.1.1-Code.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.1-Code-xs.png 300w ,https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.1-Code-sm.png 480w ,https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.1-Code-md.png 749w"  alt="" width="449" height="231"></figure>
-<p>What this code does is that the Arduino would wait for the button to be pressed. <strong>If</strong> the button is not pressed, it would output "Not pressed!" in the serial monitor. <strong>Else</strong>, it would output "Pressed!" in the serial monitor. This is how a simple If/Else statement works!</p>
-<p>Now start the simulation and then press the serial monitor:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton3.mp4" type="video/mp4" /></video></figure>
-<p>Let's copy this circuit to your SSTuino! </p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>After the code has been uploaded to the SSTuino, let's head to the serial monitor of the Arduino IDE:</p>
-<pre>insert picture here</pre>
-<p>Here is what the circuit looks like:</p>
-<pre>insert video here</pre>
-<h2>Control your lights</h2>
-<p><em>Try out some code! </em>😁 With the data we have read from the push button, we can use it to trigger a reaction. Set up your circuit in TinkerCAD as shown:</p>
-<div style="background-image: url(\;;"><iframe loading="lazy" width="725" height="453" src="https://www.tinkercad.com/embed/1kpm97jXp3r?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" data-mce-fragment="1"></iframe></div>
-<p>Next, we will need to edit the code such that the LED will light up when the button is pressed:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/16/SE-3.1.2-Code.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.2-Code-xs.png 300w ,https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.2-Code-sm.png 480w ,https://knowledge.fourier.industries/media/posts/16/responsive/SE-3.1.2-Code-md.png 749w"  alt="" width="477" height="308"></figure>
-<p>The block code is similar to the previous exercise, but with LEDs added this time. This will happen after you start the simulation:</p>
-<pre>insert video here</pre>
-<p>Let's copy this circuit over to your SSTuino! This is how it should look like:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<pre>insert video here</pre>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<h2>Resources and Going Further</h2>
-<p>If you want to learn more about how pull-up resistors work in-depth, you can check out the other resources made by the Arduino community:</p>
-<ul>
-<li><a href="https://learn.sparkfun.com/tutorials/pull-up-resistors/all">Sparkfun: Pull-up Resistors</a></li>
-<li><a href="https://learn.adafruit.com/circuit-playground-digital-input/floating-inputs">Adafruit: Floating pins</a></li>
-<li><a href="https://www.mouser.com/blog/dont-leave-your-pins-floating">Mouser: Don't leave your pins floating</a></li>
-</ul>
-            ]]>
-        </content>
-    </entry>
     <entry>
         <title>Pull-up resistors and If/Else Statements</title>
         <author>
@@ -74,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html</id>
 
-        <updated>2022-03-21T11:43:51+08:00</updated>
+        <updated>2022-03-21T13:28:18+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will learn about pull up resistors,&hellip;
@@ -84,7 +27,7 @@
             <![CDATA[
                 <p>In this tutorial, we will learn about pull up resistors, and use push buttons to control lighting.</p>
 <h2>Pull-up resistors</h2>
-<p>Pull-up resistors are found in digital logic devices and microcontrollers. When a pin in say, the SSTuino is connected as an input and tries to read the state of the pin, it is very difficult to determine whether the pin is actually high or low, due to a lot of factors such as noise in the circuit. This effect is referred to as floating.<br><br>To eliminate this, we will place a pull-up resistor to ensure that the pin is either in its <code>high</code> or <code>low</code> state, while using a little bit of current. Pull-up resistors are usually used on buttons and switches where there is a possibility of signal noise.</p>
+<p>Pull-up resistors are found in digital logic devices and microcontrollers. When a pin in say, the SSTuino is connected as an input and tries to read the state of the pin, it is very difficult to determine whether the pin is actually high or low, due to a lot of factors such as noise in the circuit. This effect is referred to as floating.<br><br>To eliminate this, we will place a pull-up resistor to ensure that the pin is either in its <code>HIGH</code> or <code>LOW</code> state, while using a little bit of current. Pull-up resistors are usually used on buttons and switches where there is a possibility of signal noise.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg" data-is-external-image="true"  alt="" width="315" height="231"></figure>
 <h3>Resources and Going Further</h3>
 <ul>
@@ -98,7 +41,7 @@
 <p>Next, go to the coding section and then program it like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/15/arduinoButton2-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/15/responsive/arduinoButton2-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/15/responsive/arduinoButton2-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/15/responsive/arduinoButton2-2-md.png 749w"  alt="" width="639" height="329"></figure>
 <p>What this code does is that the Arduino would wait for the button to be pressed. <strong>If</strong> the button is not pressed, it would output "Not pressed!" in the serial monitor. <strong>Else</strong>, it would output "pressed!" in the serial monitor. This is how a simple If/Else statement works!</p>
-<p>Now start simulation and then press the serial monitor:</p>
+<p>Now start the simulation and then press the serial monitor:</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoButton3.mp4" type="video/mp4" /></video></figure>
 <p>Let's copy this circuit to your SSTuino! </p>
@@ -124,7 +67,7 @@
 <p>Let's copy this circuit over to your SSTuino! This is how it should look like:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <pre>insert video here</pre>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram <em><strong>#sstuino </strong></em>!</p>
+<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-17" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -137,7 +80,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii.html</id>
 
-        <updated>2022-03-21T10:43:12+08:00</updated>
+        <updated>2022-03-21T13:28:24+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will discuss the programming language that&hellip;
@@ -168,28 +111,28 @@
 <p>Once you set it up and press start simulation, notice the LED on the Arduino blinking? Why does this happen?</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/arduinoProg2.mp4" type="video/mp4" /></video></figure>
-<p>The reason this happens is that TinkerCAD places in a sample code when you insert the Arduino into the circuit. Stop the simulation and press the <strong>CODE</strong> button. You should see something like this:</p>
+<p>The reason this happens is that TinkerCAD automatically inserts a sample code when you add the Arduino into the circuit. Stop the simulation and press the <strong>Code</strong> button. You should see something like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg3-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg3-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg3-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg3-2-md.png 749w"  alt="" width="2880" height="1362"></figure>
-<p>TinkerCAD is very simple to use as you can use block coding to program the Arduino, and might be familiar if you have done block coding before.</p>
+<p>TinkerCAD is very simple to use as you can use block coding to program the Arduino, and might be familiar if you have done block coding before with environments like Scratch or MIT App Inventor.</p>
 <p>If you would like to program with text in TinkerCAD, you can also do so like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg10-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg10-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg10-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg10-2-md.png 749w"  alt="" width="910" height="379"></figure>
 <p>They also have another format called Blocks + Code. The text code changes according to the blocks that you place.</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg11-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg11-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg11-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg11-2-md.png 749w"  alt="" width="1662" height="822"></figure>
-<p class="msg msg--info"><strong>Tip:</strong> In TinkerCAD, when you program in blocks, the text that you coded will be deleted, and when you program in text, the blocks that you placed will be deleted when you change the programming mode. This is to prevent any internal application error with the website. <img loading="lazy" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" src="https://knowledge.fourier.industries/media/posts/14/arduinoProg12.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg12-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg12-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg12-md.png 749w"  alt=""></p>
+<p class="msg msg--info"><strong>Tip:</strong> TinkerCAD will delete your blocks if you switch over to text-based programming and vice versa (i.e. your text programming will be deleted if you switch back to block based programming). <img loading="lazy" style="display: block; margin-left: auto; margin-right: auto; width: 50%;" src="https://knowledge.fourier.industries/media/posts/14/arduinoProg12.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg12-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg12-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg12-md.png 749w"  alt=""></p>
 <p>So what does this block of code do? It tells the Arduino to:</p>
 <ul>
-<li>Turn on the built-in LED for 1 second,</li>
-<li>Turn off the built-in LED for 1 second</li>
+<li>Turn <strong>on</strong> the built-in LED for 1 second,</li>
+<li>Turn <strong>off</strong> the built-in LED for 1 second</li>
 </ul>
-<p>and it repeats all over until you turn off the circuit by unplugging the Arduino from the power source. In programming, <strong>HIGH</strong> means to turn something on or give it power, while <strong>LOW</strong> means to turn something off or to not give it power. For this code, there are only 2 states, <strong>HIGH or LOW.</strong> This means that it is either on or off and there is no value in between (either 1 or 0).<br><br>Now change the value of the <a href="#" class="btn btn--yellow">wait ___ seconds</a> to something that you like. What happens then?</p>
+<p>and it repeats all over until you turn off the circuit by unplugging the Arduino from the power source. In Arduino programming, <strong>HIGH</strong> means to turn something on or give it power, while <strong>LOW</strong> means to turn something off or to not give it power. For this code, there are only 2 states, <strong>HIGH or LOW.</strong> This means that it is either on or off and there is no value in between (either 1 or 0).<br><br>Now change the value of the <a href="#" class="btn btn--yellow">wait ___ seconds</a> to something that you like. What happens then?</p>
 <h2 id="mcetoc_1fuihi7fh13l">Pin 13</h2>
 <p>Now, let us connect up this circuit:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg4-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg4-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg4-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg4-2-md.png 749w"  alt="" width="1919" height="955"></figure>
 <p>After you start the simulation, it should look something like this:</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoProg5.mp4" type="video/mp4" /></video></figure>
-<p><em>Wait a minute...</em> How come the LED attached turns on and off even though I did not program it? Well, the reason behind it is that the <code>built-in</code> LED pin is also connected to pin 13. This means in the program, <code>LED_BUILTIN</code> is also pin 13.</p>
-<p class="msg msg--info">For the Arduino Uno in TinkerCAD, the <code>built-in</code> LED pin is the same as pin 13. On the SSTuino II, the <code>built-in</code> LED pin and pin 13 is separate. The SSTuino II has more pins available compared to the Arduino Uno, so we assigned these 2 pins separate from each other. This means that pin 13 does not affect the <code>built-in</code> LED!</p>
+<p><em>Wait a minute...</em> How come the LED attached turns on and off even though I did not program it? Well, the reason behind it is that the built in LED on the Arduino board is also connected to pin 13. This means in the program, <code>LED_BUILTIN</code> is also pin 13.</p>
+<p class="msg msg--info">For the Arduino Uno in TinkerCAD, the <code>LED_BUILTIN</code> LED pin is the same as pin 13. On the SSTuino II, the <code>LED_BUILTIN</code> LED pin and pin 13 is separate. The SSTuino II has more pins available compared to the Arduino Uno, so we assigned these 2 pins separate from each other. This means that pin 13 does not affect the <code>LED_BUILTIN</code> LED!</p>
 <h2 id="mcetoc_1fuihi7fh13m">Transfer program from TinkerCAD to Arduino IDE</h2>
 <p>In TinkerCAD, another awesome feature is the ability to download the program that you have coded just now! Go to code, and press the download button:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg6-md.png 749w"  alt="" width="2880" height="1360"></figure>
@@ -229,11 +172,12 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
   */
 }
 </code></pre>
-<h3 id="mcetoc_1fuihi7fh13n">Additional Information</h3>
-<p>Learn more about camelCase here: <a href="https://en.wikipedia.org/wiki/Camel_case">https://en.wikipedia.org/wiki/Camel_case</a></p>
-<p>Learn more about the "()" : <a href="http://www.cplusplus.com/reference/functional/function/operator_func/">http://www.cplusplus.com/reference/functional/function/operator_func/</a></p>
-<p>If you want to read up about C++: <a href="http://www.cplusplus.com/">http://www.cplusplus.com/</a></p>
-<p>Arduino language reference: <a href="https://www.arduino.cc/reference/en/">https://www.arduino.cc/reference/en/</a></p>
+<h3 id="mcetoc_1fuihi7fh13n">Resources and Going Further</h3>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia Article: camelCase</a></li>
+<li><a href="https://www.arduino.cc/reference/en/">Official Arduino Language Reference</a></li>
+<li><a href="https://www.codecademy.com/learn/learn-c-plus-plus">Codecademy Course: C++</a></li>
+</ul>
 <h2 id="mcetoc_1fuihi7fh13o">Uploading code from Arduino IDE to SSTuino II</h2>
 <p>Let us connect our SSTuino like this:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
@@ -284,7 +228,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html</id>
 
-        <updated>2022-03-21T11:24:26+08:00</updated>
+        <updated>2022-03-21T13:28:40+08:00</updated>
             <summary>
                 <![CDATA[
                     So you have built yourself some very simple circuits. Now&hellip;
@@ -330,7 +274,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p>Copy this circuit over to your SSTuino board setup.</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <p>What happens to the LED brightness as you play with the photoresistor?</p>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram <em><strong>#sstuino </strong></em>!</p>
+<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -343,7 +287,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html</id>
 
-        <updated>2022-03-21T10:18:12+08:00</updated>
+        <updated>2022-03-21T13:30:11+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us create our first virtual circuit! Circuit Simulation is&hellip;
@@ -352,7 +296,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <content type="html">
             <![CDATA[
                 <p>Let us create our first virtual circuit! Circuit Simulation is a great tool to test out your circuit design before assembling it in real life. This helps to reduce the possibility of your components being spoilt due to an incorrect circuit design. </p>
-<p class="msg msg--warning"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">As we will be progressing towards tinkering and creating a circuit, please do not connect the circuit/project to power before completing it. This helps to lower the risk of a component failing due to an improperly constructed circuit. 🙂</span></p>
+<p class="msg msg--warning"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">As we will be progressing towards tinkering and creating a circuit, please do not connect the circuit/project to power before completing it. This helps to lower the risk of a component failure due to an improperly constructed circuit. 🙂</span></p>
 <p>For our virtual circuits, we will be using TinkerCAD! It is one of the most popular classroom tools for creating simple designs from scratch. It is also a simple to use online 3D design and prototyping program.</p>
 <p>Let us set up TinkerCAD and have fun with a mini project!</p>
 <div class="post__toc">
@@ -413,7 +357,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html</id>
 
-        <updated>2022-03-20T20:50:13+08:00</updated>
+        <updated>2022-03-21T13:30:22+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will learn the basics of electronic&hellip;
@@ -422,7 +366,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <content type="html">
             <![CDATA[
                 <p>In this tutorial, we will learn the basics of electronic circuits, Ohm's Law, and a guide to the components provided in the SSTuino Innovator's Kit v2.</p>
-<p class="msg msg--warning"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">As we will be progressing towards tinkering and creating a circuit, please do not connect the circuit/project to power before completing it. This helps to lower the risk of a component failing due to an improperly constructed circuit. 🙂</span></p>
+<p class="msg msg--warning"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">As we will be progressing towards tinkering and creating a circuit, please do not connect the circuit/project to power before completing it. This helps to lower the risk of a component failure due to an improperly constructed circuit. 🙂</span></p>
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
@@ -493,7 +437,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html</id>
 
-        <updated>2022-03-20T20:50:48+08:00</updated>
+        <updated>2022-03-21T13:31:21+08:00</updated>
             <summary>
                 <![CDATA[
                     Note: Please do not plug in the SSTuino II and/or&hellip;
@@ -508,7 +452,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p class="align-center"><a href="https://downloads.arduino.cc/arduino-1.8.19-macosx.zip" class="btn">Download Arduino IDE for Mac</a></p>
 <p>Once the app has been downloaded, drag and drop it into your Applications folder.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino2-md.png 749w"  alt="" width="555" height="279"></figure>
-<p>Launch the app. You might notice this pop up appearing. Click on <span style="text-decoration: underline;">Open</span></p>
+<p>Launch the app. You might notice this pop up appearing on the screen. Click on <span style="text-decoration: underline;">Open</span></p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino3-md.png 749w"  alt="" width="323" height="128"></figure>
 <p class="msg msg--highlight  msg--info"><strong>Tip</strong>: For those who are not able to install due to parental controls, please ask your parents to authorise the installation.</p>
 <h2>Installing the SSTuino II board type</h2>
@@ -723,6 +667,40 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <h2>Going Further</h2>
 <p>If you feel like you want an additional challenge, or resources to build solutions, check out our advanced track guides linked on the sidebar.</p>
 <p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Introduction to the SSTuino II</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2.html"/>
+        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2.html</id>
+
+        <updated>2022-03-18T19:53:59+08:00</updated>
+            <summary>
+                <![CDATA[
+                    SSTuino Innovator's Kit v2 The SSTuino Innovator's Kit v2 is&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div>
+<h2>SSTuino Innovator's Kit v2</h2>
+</div>
+<p>The SSTuino Innovator's Kit v2 is has a major redesign of the SSTuino and will be used from 2022 onwards. The SSTuino Classic has been replaced with the SSTuino II and the Explorer companion board.</p>
+<div>
+<div>
+<h2>SSTuino II</h2>
+<div><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/3/sstuinoii_infographic_low.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/3/responsive/sstuinoii_infographic_low-xs.png 300w ,https://knowledge.fourier.industries/media/posts/3/responsive/sstuinoii_infographic_low-sm.png 480w ,https://knowledge.fourier.industries/media/posts/3/responsive/sstuinoii_infographic_low-md.png 749w"  alt="" width="561" height="316"></figure></div>
+<p>The SSTuino II is a radical redesign of the SSTuino Classic. Inspired by the Arduino Nano Every, the SSTuino II has a significantly lower board size as compared to its predecessor. The smaller board size allows easier integration for its users while having more powerful microcontrollers.</p>
+<h2>Explorer Companion Board</h2>
+<div><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/3/explorer_infographic_low.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/3/responsive/explorer_infographic_low-xs.png 300w ,https://knowledge.fourier.industries/media/posts/3/responsive/explorer_infographic_low-sm.png 480w ,https://knowledge.fourier.industries/media/posts/3/responsive/explorer_infographic_low-md.png 749w"  alt="" width="604" height="340"></figure></div>
+<p>The Explorer companion board is designed to adapt the SSTuino II to a more famillar Arduino Uno form factor. It allows users to begin their journey in electronics and Internet-of-Things with ease. It also integrates to TinkerCAD, an online Arduino simulation platform that allows our users to test out their circuits and code before implementing them.</p>
+</div>
+<p class="align-right"><a href="https://knowledge.fourier.industries/sstuino-ii-essentials-track.html" class="btn btn--green">Next ➡️</a></p>
+</div>
             ]]>
         </content>
     </entry>
