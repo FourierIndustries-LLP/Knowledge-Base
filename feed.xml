@@ -3,12 +3,119 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-24T12:29:19+08:00</updated>
+    <updated>2022-03-24T14:19:13+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Potentiometer</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html"/>
+        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html</id>
+
+        <updated>2022-03-24T14:19:13+08:00</updated>
+            <summary>
+                <![CDATA[
+                    In this tutorial, we are going to read data from&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>In this tutorial, we are going to read data from the potentiometer and ultimately use it to control cool stuff!</p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fut95ja3dt">About the Potentiometer</a>
+<ul>
+<li><a href="#mcetoc_1fut95ja4du">Resources and Going Further</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fut95ja4dv">Using the Potentiometer</a></li>
+<li><a href="#mcetoc_1fut95ja4e0">LED Speed Control</a></li>
+<li><a href="#mcetoc_1fut95ja4e1">LED Brightness Control</a>
+<ul>
+<li><a href="#mcetoc_1fut95ja4e2">Resources and Going Further</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fut95ja4e3">Bar Graph</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fut95ja3dt">About the Potentiometer</h2>
+<p>The potentiometer is essentially a variable resistor. But instead of having 2 pins, it has 3 pins.</p>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/19/arduinoPot1.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot1-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot1-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot1-md.jpg 749w"  alt="" width="151" height="151">
+<figcaption >The Bourns 3386F 10K Ohm Potentiometer provided in the kit.</figcaption>
+</figure>
+<p>Potentiometers are used frequently and commonly on electronic devices. A simple example would be the volume knob on speakers or the light dimmers in your house!<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-md.png 749w"  alt="" width="155" height="131"></figure>
+<p>The potentiometer that is provided in the kit is a 10K Ohm potentiometer, which means that when the knob is turned fully to one end it is 0 Ohm, while at the other end it is 10K Ohm.</p>
+<h3 id="mcetoc_1fut95ja4du">Resources and Going Further</h3>
+<ul>
+<li><a href="https://www.electronics-tutorials.ws/resistor/potentiometer.html" target="_blank" rel="noopener noreferrer">Electronics Tutorials: Potentiometers</a></li>
+<li><a href="https://www.digikey.sg/en/products/detail/bourns-inc/3386F-1-103TLF/1232544" target="_blank" rel="noopener noreferrer">Digikey Singapore: Bournes 3386F Potentiometer</a></li>
+</ul>
+<h2 id="mcetoc_1fut95ja4dv">Using the Potentiometer</h2>
+<p>Let us fire up TinkerCAD, create a new circuit and configure your circuit like this:</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-md.png 749w"  alt="" width="1260" height="579"></figure>
+<p class="msg msg--info">The potentiometer inside TinkerCAD might look different from the one provided in the kit. Fret not as they are the same, but do ensure that the potentiometer inside TinkerCAD is 10k Ohm. 🙂</p>
+<p>Let us program the board to output the potentiometer reading in our serial monitor!</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot3-md.png 749w"  alt="" width="434" height="110"></figure>
+<p>Once you are done with the circuit and code, let's run the simulation and open the serial monitor!</p>
+<pre>Insert video here</pre>
+<p>As you interact with the knob on the potentiometer, you should see the number change from 0 to 1023. Why does this happen? 🤔 Onboard the SSTuino, there is an Analog to Digital Converter (ADC), and it has a resolution of 10 bits. </p>
+<p>Let us set up this circuit on the SSTuino!</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<p>There is a cool feature inside the Arduino IDE! You can open the serial plotter as an alternative to the serial monitor as shown:</p>
+<p>Here is what it looks like on the SSTuino II:</p>
+<pre>Insert video here</pre>
+<h2 id="mcetoc_1fut95ja4e0">LED Speed Control</h2>
+<p>Let us make use of the potentiometer reading we have from the SSTuino to alter the blinking speed of the LED! Fire up TinkerCAD and make a circuit like so:</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
+<p>We are going to edit the code such that the location of the knob will affect the speed at which the LED blinks:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot5-md.png 749w"  alt="" width="497" height="282"></figure>
+<p>Here is what it looks like when I press <strong>Start Simulation:</strong></p>
+<pre>Insert video here</pre>
+<p>Let us build the circuit on the SSTuino! Here is what it looks like:</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<pre>Insert video here</pre>
+<p>You can also use the serial plotter in this example too!</p>
+<h2 id="mcetoc_1fut95ja4e1">LED Brightness Control</h2>
+<p>We will use SSTuino's PWM output function to control the brightness of the LED. There are some pins with the wavy `~` sign, which means that it can output PWM signals. </p>
+<p>PWM stands for Pulse Width Modulation. The pin would output a series of square waves, and depending on the duty cycle, adjusts the width of the square wave. What it essentially does is that it turns on and off the component very quickly, such that our eyes cannot see the difference.</p>
+<p>In the diagram below, you can see how the duty cycle is adjusted by changing the width of the square wave. When the duty cycle is 0, it turns off the component. From 0 to 100, it gradually increases the intensity and is a full power when at 100% duty cycle.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/Screenshot-2022-03-24-at-12.00.59.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-md.png 749w"  alt="" width="231" height="252"></figure>
+<h3 id="mcetoc_1fut95ja4e2">Resources and Going Further</h3>
+<ul>
+<li><a href="https://docs.arduino.cc/learn/microcontrollers/analog-output" target="_blank" rel="noopener noreferrer">Arduino: Basics of Pulse Width Modulation</a></li>
+<li><a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation/all" target="_blank" rel="noopener noreferrer">Sparkfun Learn: Pulse Width Modulation</a></li>
+</ul>
+<p>For this exercise, we will use the same circuit and just edit the code:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-md.png 749w"  alt="" width="538" height="134"></figure>
+<p>I divide the input by 4 as the range of the PWM output is only from 0-255, while the Analog input is from 0 to 1024<br><br>This is the result I should get:</p>
+<pre>Insert video here</pre>
+<p>Copy this circuit over to your SSTuino board setup.</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<p>Here is what it looks like on the SSTuino II:</p>
+<h2 id="mcetoc_1fut95ja4e3">Bar Graph</h2>
+<p>Let us control many LEDs using the Potentiometer! The aim is to vary the number of LEDs lit up when the knob of the potentiometer is turned.</p>
+<p>Setup the circuit in TinkerCAD as shown below:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot25.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-md.png 749w"  alt="" width="425" height="507"></figure>
+<p>In the code, we will be using the <strong>map</strong> function to map the range of the potentiometer input (0 - 1023) to the output pins (2 - 7). The higher the readout from the potentiometer, the more LEDs are light up.</p>
+<p>Here is how I program it. Do you have alternative ways?</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/19/gallery/arduinPot26.png" data-size="346x1156"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/19/gallery/arduinPot26-thumbnail.png" alt="" width="346" height="1156"></a></figure>
+</div></div>
+<p>In text programming, you can simplify this too! How can it be done?</p>
+<p>Here is what happens when I start the simulation:</p>
+<pre>Insert video here</pre>
+<p>This is how it works on the SSTuino II:</p>
+<pre>Insert video here</pre>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-20" class="btn btn--green">Next ➡️</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>From Blocks to Code, Part 1</title>
         <author>
@@ -31,7 +138,7 @@
 <p><strong>Declaration - </strong>Used to declare the libraries and variables used in the code. For example, the variable <code>temp</code> is declared as an integer and has the starting value of 0.</p>
 <p><strong>Setup - </strong>Code that is run once to set up your SSTuino. For example, the <code>Serial.begin(9600);</code> tells it to start the serial monitor with a baud rate (speed) of 9600bps (bits per second)</p>
 <p><strong>Loop - </strong>Code that is repeated forever, when the microcontroller is powered. For example, the code inside the example tells it to output temperature data using the serial monitor every 10 milliseconds.</p>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-19" class="btn btn--green">Next ➡️</a></p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -365,7 +472,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii.html</id>
 
-        <updated>2022-03-24T12:29:19+08:00</updated>
+        <updated>2022-03-24T14:04:05+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will discuss the programming language that&hellip;
@@ -505,7 +612,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p>Plug in your SSTuino II and upload the code. You should see this on the SSTuino II. The Built-in LED on the SSTuino II lights up but not the LED at Pin 13.</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/sstuinoiiDigital5.mp4" type="video/mp4" /></video></figure>
-<p class="msg msg--info">Please note that the <code>built-in</code> LED and Pin 13 on the SSTuino II are different pins. 🙂</p>
+<p class="msg msg--info">Please note that the built-in LED and Pin 13 on the SSTuino II are different pins. 🙂</p>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -728,7 +835,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html</id>
 
-        <updated>2022-03-21T13:31:21+08:00</updated>
+        <updated>2022-03-24T13:58:46+08:00</updated>
             <summary>
                 <![CDATA[
                     Note: Please do not plug in the SSTuino II and/or&hellip;
@@ -755,7 +862,8 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 </code></pre>
 </div>
 </div>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-md.png 749w"  alt="" width="564" height="392"></figure>Click <a href="#" class="btn btn--white btn--outline">OK</a> after you have completed pasting the address.</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino5-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-2-md.png 749w"  alt="" width="1602" height="1114"></figure>
+<p>Let us enable the <strong>Show verbose output during upload </strong>too! Click <a href="#" class="btn btn--white btn--outline">OK</a> after you have completed.</p>
 <p>Next, go to <code>Tools &gt; Board &gt; Boards Manager</code></p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino6-md.png 749w"  alt="" width="537" height="302"></figure>
 <p>Type in <code>SSTuino</code> into the search bar and click on install.</p>
@@ -763,120 +871,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <h2>Done!</h2>
 <p>That's all you have to do to install the SSTuino II to your Learning Device.</p>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>SSTuino Innovator&#x27;s Kit v2 Parts List</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list.html"/>
-        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list.html</id>
-
-        <updated>2022-03-18T19:52:25+08:00</updated>
-            <summary>
-                <![CDATA[
-                    Note: Please do not plug in the SSTuino II and/or&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p class="msg msg--warning"><strong>Note:</strong> Please do not plug in the SSTuino II and/or its components to your learning device or any power source first. We will get to it very soon. 🙂</p>
-<p>Upon receiving your SSTuino Innovator's Kit v2, please ensure that all the components are present as stated below:</p>
-<div><figure class="post__image post__image--wide"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/5//partslist.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/5//responsive/partslist-xs.png 300w ,https://knowledge.fourier.industries/media/posts/5//responsive/partslist-sm.png 480w ,https://knowledge.fourier.industries/media/posts/5//responsive/partslist-md.png 749w"  alt="" width="1440" height="810"></figure></div>
-<table class="table-bordered table-striped" style="border-collapse: collapse; width: 100%; height: 856.11px;" border="1">
-<tbody>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;"><strong>No.</strong></td>
-<td style="width: 67.6047%; height: 50.3594px;"><strong>Component Name</strong></td>
-<td style="width: 23.4082%; height: 50.3594px;"><strong>Quantity</strong></td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">1</td>
-<td style="width: 67.6047%; height: 50.3594px;">SSTuino II</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">2</td>
-<td style="width: 67.6047%; height: 50.3594px;">Explorer Board</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">3</td>
-<td style="width: 67.6047%; height: 50.3594px;">USB-C Cable</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">4</td>
-<td style="width: 67.6047%; height: 50.3594px;">Breadboard</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">5</td>
-<td style="width: 67.6047%; height: 50.3594px;">Dupont cables (wires) (M-M), (M-F)</td>
-<td style="width: 23.4082%; height: 50.3594px;">1 Each</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">6</td>
-<td style="width: 67.6047%; height: 50.3594px;">Assortment of LEDs</td>
-<td style="width: 23.4082%; height: 50.3594px;">1 Bag</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">7</td>
-<td style="width: 67.6047%; height: 50.3594px;">Buzzer</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">8</td>
-<td style="width: 67.6047%; height: 50.3594px;">Push Button</td>
-<td style="width: 23.4082%; height: 50.3594px;">2</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">9</td>
-<td style="width: 67.6047%; height: 50.3594px;">Potentiometer (10kΩ)</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">10</td>
-<td style="width: 67.6047%; height: 50.3594px;">Light Dependant Resistor</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">11</td>
-<td style="width: 67.6047%; height: 50.3594px;">Temperature Sensor (TMP36)</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">12</td>
-<td style="width: 67.6047%; height: 50.3594px;">Ultrasonic Distance Sensor</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">13</td>
-<td style="width: 67.6047%; height: 50.3594px;">Passive Infrared (PIR) Motion Sensor</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">14</td>
-<td style="width: 67.6047%; height: 50.3594px;">Servo</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">15</td>
-<td style="width: 67.6047%; height: 50.3594px;">RGB LED (Common cathode)</td>
-<td style="width: 23.4082%; height: 50.3594px;">1</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 8.98716%; height: 50.3594px;">16</td>
-<td style="width: 67.6047%; height: 50.3594px;">330Ω and 10kΩ resistor reel</td>
-<td style="width: 23.4082%; height: 50.3594px;">1 Bag</td>
-</tr>
-</tbody>
-</table>
-<h2>Installation of prerequisites</h2>
-<p>Next, we will be installing the required software onto your Learning Device.</p>
-<p><a href="https://knowledge.fourier.industries/sstuino-ii-essentials-track.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
