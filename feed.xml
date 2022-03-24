@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-24T14:19:13+08:00</updated>
+    <updated>2022-03-24T14:30:21+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html</id>
 
-        <updated>2022-03-24T14:19:13+08:00</updated>
+        <updated>2022-03-24T14:30:21+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to read data from&hellip;
@@ -104,8 +104,11 @@
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot25.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-md.png 749w"  alt="" width="425" height="507"></figure>
 <p>In the code, we will be using the <strong>map</strong> function to map the range of the potentiometer input (0 - 1023) to the output pins (2 - 7). The higher the readout from the potentiometer, the more LEDs are light up.</p>
 <p>Here is how I program it. Do you have alternative ways?</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/19/gallery/arduinPot26.png" data-size="346x1156"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/19/gallery/arduinPot26-thumbnail.png" alt="" width="346" height="1156"></a></figure>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/19/gallery/arduinPot26.png" data-size="346x1156"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/19/gallery/arduinPot26-thumbnail.png" alt="" width="346" height="1156"></a>
+<figcaption>dank</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/19/gallery/blank.png" data-size="512x512"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/19/gallery/blank-thumbnail.png" alt="" width="512" height="512"></a></figure>
 </div></div>
 <p>In text programming, you can simplify this too! How can it be done?</p>
 <p>Here is what happens when I start the simulation:</p>
