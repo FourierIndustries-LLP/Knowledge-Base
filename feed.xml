@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-23T14:43:15+08:00</updated>
+    <updated>2022-03-24T12:29:19+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -365,7 +365,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii.html</id>
 
-        <updated>2022-03-21T13:28:24+08:00</updated>
+        <updated>2022-03-24T12:29:19+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will discuss the programming language that&hellip;
@@ -470,7 +470,11 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p>In your Arduino IDE, we will need to configure it to upload code to the SSTuino II.</p>
 <ul>
 <li>Plug in the SSTuino II into your LD</li>
-<li>Select the SSTuino II from <code>Tools &gt; Board &gt; SSTuino II &gt; SSTuino II Rev A</code></li>
+<li>Select the SSTuino II from
+<ul>
+<li><strong>Tools &gt; Board &gt; SSTuino II &gt; SSTuino II Rev A</strong></li>
+</ul>
+</li>
 </ul>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg14.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg14-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg14-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg14-md.png 749w"  alt="" width="514" height="251"></figure>
 <ul>
@@ -484,7 +488,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p>You should see your circuit light up like this:</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/sstuinoiiDigital1.mp4" type="video/mp4" /></video></figure>
-<p>With this example, we can see that the <code>built-in</code> LED for the SSTuino II is different from the Arduino Uno in TinkerCAD.</p>
+<p>With this example, we can see that the built-in LED for the SSTuino II is different from the Arduino Uno in TinkerCAD.</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/sstuinoiiDigital4.mp4" type="video/mp4" /></video></figure>
 <p>The explorer board has a cool feature to help to see if you have connection issues in your circuit!</p>
@@ -495,7 +499,8 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <source src="media/files/sstuinoiiDigital3.mp4" type="video/mp4" /></video></figure>
 <p>This is a neat feature that we hope you would enjoy. 🙂</p>
 <h2 id="mcetoc_1fuihi7fh13p">Built-in LED</h2>
-<p>If you would like to use the <code>built-in</code> LED on the SSTuino II, you can always do so. Here is a basic example on the Arduino IDE to get you started. Go to <code>File -&gt; Examples -&gt; 01. Basic -&gt; Blink</code></p>
+<p>If you would like to use the built-in LED on the SSTuino II, you can always do so. Here is a basic example on the Arduino IDE to get you started. Go to:</p>
+<p><strong> File &gt; Examples &gt; 01. Basic &gt; Blink</strong></p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/14/arduinoProg16.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg16-xs.png 300w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg16-sm.png 480w ,https://knowledge.fourier.industries/media/posts/14/responsive/arduinoProg16-md.png 749w"  alt="" width="401" height="173"></figure>
 <p>Plug in your SSTuino II and upload the code. You should see this on the SSTuino II. The Built-in LED on the SSTuino II lights up but not the LED at Pin 13.</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
@@ -572,7 +577,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html</id>
 
-        <updated>2022-03-21T13:30:11+08:00</updated>
+        <updated>2022-03-24T12:22:40+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us create our first virtual circuit! Circuit Simulation is&hellip;
@@ -610,7 +615,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/createCircuit.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-md.png 749w"  alt="" width="2880" height="1364"></figure>
 <p class="msg msg--highlight  msg--info">It is a very good habit to create a new circuit after you have finished your previous tutorial, instead of overwriting the current circuit. That way, you would be able to refer to previous tutorials done when you need help with your future projects.</p>
 <p>After you have created the new circuit, it should look like this. We have also included a legend on the interface of the TinkerCAD Circuits function.</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/tinkerCAD_legend.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/tinkerCAD_legend-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkerCAD_legend-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkerCAD_legend-md.png 749w"  alt="" width="2880" height="1362"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/tinkercadLegend2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/tinkercadLegend2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkercadLegend2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkercadLegend2-md.png 749w"  alt="" width="1636" height="411"></figure>
 <p>Let us bring out a 9V battery then connect it as follows. After you have connected the circuit, click on <strong>Start Simulation</strong> on the top right-hand corner of the website. You will notice that the LED immediately "explodes". 🤭</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test.png" data-size="1786x636"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test-thumbnail.png" alt="" width="749" height="267"></a></figure>
