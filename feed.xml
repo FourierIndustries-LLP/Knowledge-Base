@@ -3,12 +3,79 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-24T15:13:35+08:00</updated>
+    <updated>2022-03-26T12:09:36+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Proximity Infra-Red Sensor</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
+        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
+
+        <updated>2022-03-26T12:09:36+08:00</updated>
+            <summary>
+                <![CDATA[
+                    Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Proximity Infra-Red (PIR) sensors are found in a lot of buildings and infrastructures to detect the presence of people. For example, the toilets in SST are equipped with PIR sensors to automatically turn on and off the lights to save electricity.</p>
+<p>There are two main components of the PIR sensor. The first one is the electronics, which detects the movement of objects crossing the sensor. The second one is the lens, which is the <em>magic sauce</em> to help the sensor increase its detection area.</p>
+<h2>Let's Build it!</h2>
+<p>Head over to TinkerCAD and create a new circuit like the one below:</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/arduinoPot27.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-md.png 749w"  alt="" width="1860" height="1006"></figure>
+<p class="msg msg--warning"><strong>Warning: </strong>The pinout for the PIR sensor that is provided with TinkerCAD is different from the kit! We will be talking about the sensor provided in the kit in the sections below.</p>
+<p>Here are the pinout differences between the two sensors:</p>
+<p>Insert gallery here</p>
+<h3>Fresnel Lens</h3>
+<p>The lens for the PIR sensor helps it to detect objects from a distance! However, this will not work for a classroom environment because there will be too many people attempting this and as a result, the sensor will always detect movement! 🤣</p>
+<p>To prevent this, let us remove the lens to reduce the detection range!</p>
+<pre>Insert video here</pre>
+<p>Let's build the circuit on the SSTuino and we will be moving into programming this example with the Arduino IDE!</p>
+<h2>Moving into Arduino IDE</h2>
+<p>Let's start programming on the Arduino IDE! Let us follow this template</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
+<h3>Declaration</h3>
+<p>Our code only requires us to light up the LED and send the data to the serial monitor, so I don't think there are any variables to declare. Alternatively, you can do so if you wish to for the numbering of the pins.</p>
+<h3>Setup</h3>
+<p>This section will set up the input pins, output pins and indicate that we want to use the serial monitor.</p>
+<pre><code class="language-cpp">
+void setup() 
+{ 
+    pinMode(6, INPUT); // This pin will receive the input signal from the PIR Sensor
+    pinMode(5, OUTPUT); // This pin will turn on and off the LED
+    Serial.begin(9600); // This will initialise the serial monitor
+}
+    </code></pre>
+<h3>Loop</h3>
+<p>This section will run the code forever when the SSTuino is powered on.</p>
+<pre><code class="language-cpp">
+void loop() 
+{
+  if (digitalRead(6) == 1) {
+    digitalWrite(5, HIGH); // This if statement states that if the PIR sensor detects movement, the LED will light up and serial monitor will print a new line "Detected!"
+    Serial.println("Detected!");
+  } else {
+    digitalWrite(5, LOW); //Else the LED will turn off and print a new line "Not Detected!"
+    Serial.println("Not Detected!");
+  }
+}
+    </code></pre>
+<h2>Your Turn</h2>
+<p>Let's try this out! This is what it looks like on the SSTuino:</p>
+<pre>Insert video here</pre>
+<p class="msg msg--success">Let's make some changes: Could you make the LED flash on and off every second once the PIR sensor detects movement?</p>
+<pre>Insert video here</pre>
+<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Potentiometer</title>
         <author>
@@ -111,7 +178,7 @@
 <pre>Insert video here</pre>
 <p>This is how it works on the SSTuino II:</p>
 <pre>Insert video here</pre>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-20" class="btn btn--green">Next ➡️</a></p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -823,53 +890,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/smoketest.mp4" type="video/mp4" /></video></figure>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Setting up your SSTuino II</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html"/>
-        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html</id>
-
-        <updated>2022-03-24T13:58:46+08:00</updated>
-            <summary>
-                <![CDATA[
-                    Note: Please do not plug in the SSTuino II and/or&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p class="msg msg--warning"><strong>Note:</strong> Please do not plug in the SSTuino II and/or its components to your learning device or any power source first. We will get to it very soon. 🙂</p>
-<p>In this tutorial, we will install the required software, boards and libraries. This allows all of your code that you will create in the future to be transferred onto the SSTuino II. The installation process is simple and we will get you started in no time!</p>
-<h2>Download Arduino IDE</h2>
-<p>First, let us download the required software for your learning device. Click on the button below to download Arduino IDE for your Mac.</p>
-<p class="align-center"><a href="https://downloads.arduino.cc/arduino-1.8.19-macosx.zip" class="btn">Download Arduino IDE for Mac</a></p>
-<p>Once the app has been downloaded, drag and drop it into your Applications folder.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino2-md.png 749w"  alt="" width="555" height="279"></figure>
-<p>Launch the app. You might notice this pop up appearing on the screen. Click on <span style="text-decoration: underline;">Open</span></p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino3-md.png 749w"  alt="" width="323" height="128"></figure>
-<p class="msg msg--highlight  msg--info"><strong>Tip</strong>: For those who are not able to install due to parental controls, please ask your parents to authorise the installation.</p>
-<h2>Installing the SSTuino II board type</h2>
-<p>Go to the preferences of the Arduino app</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino4-md.png 749w"  alt="" width="515" height="338"></figure>Copy this line and paste it into the box circled ("Additional Boards Manager URLs"):</p>
-<div class="language-text highlighter-rouge">
-<div class="highlight">
-<pre class="highlight"><code class="language-http codenobreak">https://fourierindustries-llp.github.io/SSTuino_II_Core/package_FourierIndustries-LLP_SSTuino_II_Core_index.json
-</code></pre>
-</div>
-</div>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino5-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino5-2-md.png 749w"  alt="" width="1602" height="1114"></figure>
-<p>Let us enable the <strong>Show verbose output during upload </strong>too! Click <a href="#" class="btn btn--white btn--outline">OK</a> after you have completed.</p>
-<p>Next, go to <code>Tools &gt; Board &gt; Boards Manager</code></p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino6-md.png 749w"  alt="" width="537" height="302"></figure>
-<p>Type in <code>SSTuino</code> into the search bar and click on install.</p>
-<h2><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/6/arduino7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/6/responsive/arduino7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/6/responsive/arduino7-md.png 749w"  alt="" width="553" height="311"></figure></h2>
-<h2>Done!</h2>
-<p>That's all you have to do to install the SSTuino II to your Learning Device.</p>
-<p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
