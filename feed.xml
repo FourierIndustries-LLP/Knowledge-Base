@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-27T11:41:42+08:00</updated>
+    <updated>2022-03-27T13:14:55+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -67,7 +67,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-03-27T11:20:01+08:00</updated>
+        <updated>2022-03-27T13:14:55+08:00</updated>
             <summary>
                 <![CDATA[
                     Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -76,24 +76,44 @@
         <content type="html">
             <![CDATA[
                 <p>Proximity Infra-Red (PIR) sensors are found in a lot of buildings and infrastructures to detect the presence of people. For example, the toilets in SST are equipped with PIR sensors to automatically turn on and off the lights to save electricity.</p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fv4sotai1l">About the sensor</a></li>
+<li><a href="#mcetoc_1fv4sotai1m">Let's Build it!</a>
+<ul>
+<li><a href="#mcetoc_1fv4sotai1n">Fresnel Lens</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fv4sotai1o">Moving into Arduino IDE</a>
+<ul>
+<li><a href="#mcetoc_1fv4sotai1p">Declaration</a></li>
+<li><a href="#mcetoc_1fv4sotai1q">Setup</a></li>
+<li><a href="#mcetoc_1fv4sotai1r">Loop</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fv4sotai1s">Your Turn</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fv4sotai1l">About the sensor</h2>
 <p>There are two main components of the PIR sensor. The first one is the electronics, which detects the movement of objects crossing the sensor. The second one is the lens, which is the <em>magic sauce</em> to help the sensor increase its detection area.</p>
-<h2>Let's Build it!</h2>
+<h2 id="mcetoc_1fv4sotai1m">Let's Build it!</h2>
 <p>Head over to TinkerCAD and create a new circuit like the one below:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/arduinoPot27.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-md.png 749w"  alt="" width="1860" height="1006"></figure>
 <p class="msg msg--warning"><strong>Warning: </strong>The pinout for the PIR sensor that is provided with TinkerCAD is different from the kit! We will be talking about the sensor provided in the kit in the sections below.</p>
 <p>Here are the pinout differences between the two sensors:</p>
 <p>Insert gallery here</p>
-<h3>Fresnel Lens</h3>
+<h3 id="mcetoc_1fv4sotai1n">Fresnel Lens</h3>
 <p>The lens for the PIR sensor helps it to detect objects from a distance! However, this will not work for a classroom environment because there will be too many people attempting this and as a result, the sensor will always detect movement! 🤣</p>
 <p>To prevent this, let us remove the lens to reduce the detection range!</p>
 <pre>Insert video here</pre>
 <p>Let's build the circuit on the SSTuino and we will be moving into programming this example with the Arduino IDE!</p>
-<h2>Moving into Arduino IDE</h2>
+<h2 id="mcetoc_1fv4sotai1o">Moving into Arduino IDE</h2>
 <p>Let's start programming on the Arduino IDE! Let us follow this template</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
-<h3>Declaration</h3>
+<h3 id="mcetoc_1fv4sotai1p">Declaration</h3>
 <p>Our code only requires us to light up the LED and send the data to the serial monitor, so I don't think there are any variables to declare. Alternatively, you can do so if you wish to for the numbering of the pins.</p>
-<h3>Setup</h3>
+<h3 id="mcetoc_1fv4sotai1q">Setup</h3>
 <p>This section will set up the input pins, output pins and indicate that we want to use the serial monitor.</p>
 <pre><code class="language-cpp">
 void setup() 
@@ -103,7 +123,7 @@ void setup()
     Serial.begin(9600); // This will initialise the serial monitor
 }
     </code></pre>
-<h3>Loop</h3>
+<h3 id="mcetoc_1fv4sotai1r">Loop</h3>
 <p>This section will run the code forever when the SSTuino is powered on.</p>
 <pre><code class="language-cpp">
 void loop() 
@@ -117,7 +137,7 @@ void loop()
   }
 }
     </code></pre>
-<h2>Your Turn</h2>
+<h2 id="mcetoc_1fv4sotai1s">Your Turn</h2>
 <p>Let's try this out! This is what it looks like on the SSTuino:</p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's make some changes: Could you make the LED flash on and off every second once the PIR sensor detects movement?</p>
