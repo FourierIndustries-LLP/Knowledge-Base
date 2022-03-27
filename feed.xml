@@ -3,12 +3,62 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-26T12:09:36+08:00</updated>
+    <updated>2022-03-27T11:41:42+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Piezo</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html"/>
+        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html</id>
+
+        <updated>2022-03-27T11:41:42+08:00</updated>
+            <summary>
+                <![CDATA[
+                    Let us play some tunes with the SSTuino! We are&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Let us play some tunes with the SSTuino! We are now going to insert a piezo element into our circuit. Configure your circuit like this:</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot8-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-md.png 749w"  alt="" width="1197" height="644"></figure>
+<p>I am going to play 3 tones on the harmonic scale. Below is how I programmed it. Can you program it to play up to 1 full scale? <em>(Do, Re, Mi, Fa, So, La, Ti Do!)</em></p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot9.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-md.png 749w"  alt="" width="879" height="254"></figure>
+<p>Let's create this circuit on the SSTuino! This is what it looks like:</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<pre>Insert video here</pre>
+<h2>Pieno</h2>
+<p>We are now going to use the potentiometer to control the tone of the speaker. When you turn the knob on the potentiometer, the pitch of the speaker will change. With the same circuit as the previous exercise, we are going to tweak the code for the Pieno.</p>
+<p>First, we will need to create a new variable called pot. In this exercise, we are going to use the <strong>map to range </strong>function. The potentiometer has a range from <strong>0 to 1023</strong>, but the speaker has an output range of <strong>35 to 127</strong>. By mapping the range, we can make sure that when the potentiometer is at one end of the input range, the speaker is also at one end of its output range.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot10.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot10-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot10-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot10-md.png 749w"  alt="" width="494" height="155"></figure>
+<p>After you have tried this out, run the simulation and create your own music!</p>
+<p>Let's try this on the SSTuino!</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<pre>Insert video here</pre>
+<h2>Enhance the pieno</h2>
+<p>Would it be possible to add more functions to the <em>pieno</em>? Sure thing! Let us add 2 more buttons to the circuit as shown:</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot11-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-md.png 749w"  alt="" width="1164" height="635"></figure>
+<p>We will add two functions:</p>
+<ul>
+<li>A button to stop the music (mute button)</li>
+<li>A button to make the piezo beep intermittently</li>
+</ul>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot12.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot12-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot12-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot12-md.png 749w"  alt="" width="396" height="385"></figure>
+<p>This happens when you press start simulation:</p>
+<pre>Insert video here</pre>
+<p>Let's create this circuit on the SSTuino! This is what it looks like on the SSTuino:</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<pre>Insert video here</pre>
+<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-22" class="btn btn--green">Next ➡️</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Proximity Infra-Red Sensor</title>
         <author>
@@ -17,7 +67,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-03-26T12:09:36+08:00</updated>
+        <updated>2022-03-27T11:20:01+08:00</updated>
             <summary>
                 <![CDATA[
                     Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -73,6 +123,7 @@ void loop()
 <p class="msg msg--success">Let's make some changes: Could you make the LED flash on and off every second once the PIR sensor detects movement?</p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -865,31 +916,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://cdn.sparkfun.com/assets/6/e/8/3/c/51f93d85757b7f2049270817.png" data-is-external-image="true"  alt="" width="362" height="215"></figure>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html" class="btn btn--green">Next ➡️</a></p>
 </div>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Smoke Test</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html"/>
-        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-3.html</id>
-
-        <updated>2022-03-22T15:12:51+08:00</updated>
-            <summary>
-                <![CDATA[
-                    It is now time to plug in your SSTuino II&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>It is now time to plug in your SSTuino II to your Learning Device! Please use the provided USB-C cable and plug it into your Learning Device.</p>
-<p class="msg msg--info"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);"><strong>Tip: </strong>In the event you see LEDs lighting up when they should not, try to move the device to a more insulated surface (e.g. Plastic table or on the top of the Kit's box). This happens as the components on the Explorer board is quite sensitive, but as long as the board is moved to a more insulated surface it will be good.</span></p>
-<p>The SSTuino should light up as follows:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/smoketest.mp4" type="video/mp4" /></video></figure>
-<p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-2.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
