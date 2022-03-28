@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-28T12:58:27+08:00</updated>
+    <updated>2022-03-28T14:59:50+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -298,7 +298,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html</id>
 
-        <updated>2022-03-21T20:53:01+08:00</updated>
+        <updated>2022-03-28T14:59:50+08:00</updated>
             <summary>
                 <![CDATA[
                     This tutorial aims to teach you the basics of text&hellip;
@@ -312,6 +312,25 @@ void loop()
 <p><strong>Declaration - </strong>Used to declare the libraries and variables used in the code. For example, the variable <code>temp</code> is declared as an integer and has the starting value of 0.</p>
 <p><strong>Setup - </strong>Code that is run once to set up your SSTuino. For example, the <code>Serial.begin(9600);</code> tells it to start the serial monitor with a baud rate (speed) of 9600bps (bits per second)</p>
 <p><strong>Loop - </strong>Code that is repeated forever, when the microcontroller is powered. For example, the code inside the example tells it to output temperature data using the serial monitor every 10 milliseconds.</p>
+<h2>Data Types</h2>
+<p>In programming, there are various data types. Some are used to store text, and others are used to store more complicated types of data. The common data types include:</p>
+<ul>
+<li><strong>String (str, text)</strong> - a combination of characters on the keyboard (letters, numbers symbols)</li>
+<li><strong>Character (char)</strong> - single letters</li>
+<li><strong>Integer (int)</strong> - whole numbers</li>
+<li><strong>Float (real) </strong>- numbers that contain decimal points or fractions</li>
+<li><strong>Boolean (bool) </strong>- for true/false or yes/no options.</li>
+</ul>
+<p>In many programming languages, variables must be declared before they can be used. Here are some examples that are used in Arduino:</p>
+<pre><code class="language-cpp">String password = "hello world";
+int temp = 0;
+bool ledState = 1;
+</code></pre>
+<h2>Conversion of Data Types</h2>
+<p>There are expressions that contain variables and constants of different data types. If you need to calculate the expressions, they will need to be converted to the same data type. Below are some common conversion types to help you.</p>
+<h3>String to Int</h3>
+<p> </p>
+<p> </p>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
