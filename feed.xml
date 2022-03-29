@@ -3,12 +3,76 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-28T14:59:50+08:00</updated>
+    <updated>2022-03-29T20:11:49+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Light Dependent Resistor</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html"/>
+        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html</id>
+
+        <updated>2022-03-29T19:59:50+08:00</updated>
+            <summary>
+                <![CDATA[
+                    For this exercise, we will be going to use the&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>For this exercise, we will be going to use the Light Dependent Resistor (LDR) to trigger the RGB LED! We can make use of the LDR to turn on the RGB LED when the environment is dark, and use the potentiometer to control the colour of the LED!</p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fvan9u4ng">About the Component</a>
+<ul>
+<li><a href="#mcetoc_1fvanutqb1k">Resources and Going Further</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvanutqb1l">Reading LDR value</a></li>
+<li><a href="#mcetoc_1fvao1ho31r">Control RGB LED</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fvan9u4ng">About the Component</h2>
+<figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/LDR.jpeg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/LDR-xs.jpeg 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/LDR-sm.jpeg 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/LDR-md.jpeg 749w"  alt="" width="171" height="160"></figure>
+<p>The Light Dependent Resistor (LDR/Photoresistor) is a type of resistor that reacts with light. When the amount of light it detects changes, the resistance changes. However, as there are many types of LDRs around, the way they change resistance with the amount of light would be different.</p>
+<h3 id="mcetoc_1fvanutqb1k">Resources and Going Further</h3>
+<ul>
+<li><a href="https://learn.adafruit.com/photocells" target="_blank" rel="noopener noreferrer">Adafruit: Photocells</a></li>
+<li><a href="https://www.electronics-notes.com/articles/electronic_components/resistors/light-dependent-resistor-ldr.php" target="_blank" rel="noopener noreferrer">Electronics-notes: Light Dependent Resistor</a></li>
+</ul>
+<h2 id="mcetoc_1fvanutqb1l">Reading LDR value</h2>
+<p>Let's create a new circuit on TinkerCAD like this:</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot30.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-md.png 749w"  alt="" width="1852" height="984"></figure>
+<p>We will read the value from the LDR and output it on the serial monitor:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot14.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-md.png 749w"  alt="" width="447" height="109"></figure>
+<p>When running the simulation, open up the serial monitor. The result should look something like this:</p>
+<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/arduinoPot31.mp4" type="video/mp4" /></video></figure>
+<p>While I change the light intensity of the LDR, the readings also change.</p>
+<h3>Calibration of the sensor</h3>
+<p>As the sensor has multiple variations, let's check yours out! Construct the circuit on your SSTuino!</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<p>After you are done uploading the code, open the serial monitor. Now note down the value when the room is lit. Afterwards, turn off the lights in the room and note down the value again. We will need this data afterwards to tell when to turn on the RGB LED.</p>
+<p class="msg msg--info"><strong>Tip: </strong>If the lights in the room are unable to be turned off, you can use your hands to cover the LDR. Similarly, if your environment is originally dark, you can use the torch from your mobile device to shine at it.</p>
+<pre>Insert video here</pre>
+<h2 id="mcetoc_1fvao1ho31r">Control RGB LED</h2>
+<p>Now let us make the sensor useful! Make it such that the LED will light up when the environment darkens, and you can use the potentiometer to control the colour. To do so, we edit our code to something like this:</p>
+<p class="msg msg--info"><strong>Tip: </strong>Use the average of your bright and dark value and input it inside the area (Read analog pin A0 &lt; 512)</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot32.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot32-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot32-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot32-md.png 749w"  alt="" width="530" height="374"></figure>
+<p>Afterwards, upload the code to the SSTuino. It should look like this:</p>
+<pre>Insert video here</pre>
+<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<p>If you have other ideas on how to control the RGB LED, please try them out and share them with your peers too!</p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html" class="btn btn--green">Next ➡️</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Ultrasonic Sensor</title>
         <author>
@@ -17,19 +81,40 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html</id>
 
-        <updated>2022-03-28T12:58:27+08:00</updated>
+        <updated>2022-03-29T20:11:49+08:00</updated>
             <summary>
                 <![CDATA[
-                    The ultrasonic distance sensor uses ultrasonic waves - a very&hellip;
+                    In this tutorial, we are going to learn about the&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot17.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-md.jpg 749w"  alt="" width="221" height="159"></figure>
+                <p>In this tutorial, we are going to learn about the Ultrasonic Sensor and read its distance using the serial monitor!</p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fvaopr9t49">About the Sensor</a>
+<ul>
+<li><a href="#mcetoc_1fvap7cft66">Resources and Going Further</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvap7cft67">Using the Sensor</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fvaopr9t49">About the Sensor</h2>
+<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot17.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-md.jpg 749w"  alt="" width="221" height="159"></figure>
 <p>The ultrasonic distance sensor uses ultrasonic waves - a very high-pitched sound that we cannot hear to measure the distance it is from an object.</p>
 <p>It is in a <strong>transceiver</strong> configuration, where both the transmitter and receiver are on the same sensor.</p>
 <p>One of the uses of the ultrasonic distance sensor is in the automotive industry. They are usually used as reverse warning sensors but are increasingly used in self-driving vehicles.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot21.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-md.jpg 749w"  alt="" width="374" height="273"></figure>
+<h3 id="mcetoc_1fvap7cft66">Resources and Going Further</h3>
+<ul>
+<li><a href="https://learn.adafruit.com/ultrasonic-sonar-distance-sensors" target="_blank" rel="noopener noreferrer">Adafruit: Ultrasonic Sonar Distance Sensors</a></li>
+<li><a href="https://www.maxbotix.com/articles/how-ultrasonic-sensors-work.htm" target="_blank" rel="noopener noreferrer">MaxBotix: Understanding How Ultrasonic Sensors Work</a></li>
+<li><a href="https://www.murata.com/en-sg/products/sensor/ultrasonic/library/apps" target="_blank" rel="noopener noreferrer">muRata: Ultrasonic Sensors application guide</a></li>
+<li><a href="https://www.continental-automotive.com/en-gl/Passenger-Cars/Autonomous-Mobility/Enablers/Ultrasonic-Parking-Sensor" target="_blank" rel="noopener noreferrer">Continental Automotive: Ultrasonic Parking Sensor</a></li>
+</ul>
+<h2 id="mcetoc_1fvap7cft67">Using the Sensor</h2>
 <p>The ultrasonic sensor we are going to use is the HC-SR04, which is commonly used in Arduino circuits:</p>
 <figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot18.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-xs.png 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-sm.png 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-md.png 749w"  alt="" width="221" height="129"></figure>
 <p class="msg msg--info"><strong>Note:</strong> We are using the 4 pin sensor instead of the 3 pin version, which can be found by typing <strong>ultrasonic sensor </strong>in the component search bar.</p>
@@ -38,11 +123,12 @@
 <p>We are going to program the Arduino such that the ultrasonic distance sensor will output the distance measured into the serial monitor. The code blocks have been extensively simplified by TinkerCAD and it just looks like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot20.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot20-xs.png 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot20-sm.png 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot20-md.png 749w"  alt="" width="1708" height="130"></figure>
 <p>This is what you will see when you start the simulation:</p>
-<pre>Insert video here</pre>
+<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/arduinoPot29.mp4" type="video/mp4" /></video></figure>
 <p>Let's build this circuit on the SSTuino and try it out! This is what it looks like on the SSTuino:</p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<p><a href="#non-existing-post-with-id-22" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-24" class="btn btn--green">Next ➡️</a></p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-24" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -92,7 +178,7 @@
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-22" class="btn btn--green">Next ➡️</a></p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -866,76 +952,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <p>What happens to the LED brightness as you play with the photoresistor?</p>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>TinkerCAD Introduction</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html"/>
-        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html</id>
-
-        <updated>2022-03-24T12:22:40+08:00</updated>
-            <summary>
-                <![CDATA[
-                    Let us create our first virtual circuit! Circuit Simulation is&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Let us create our first virtual circuit! Circuit Simulation is a great tool to test out your circuit design before assembling it in real life. This helps to reduce the possibility of your components being spoilt due to an incorrect circuit design. </p>
-<p class="msg msg--warning"><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">As we will be progressing towards tinkering and creating a circuit, please do not connect the circuit/project to power before completing it. This helps to lower the risk of a component failure due to an improperly constructed circuit. 🙂</span></p>
-<p>For our virtual circuits, we will be using TinkerCAD! It is one of the most popular classroom tools for creating simple designs from scratch. It is also a simple to use online 3D design and prototyping program.</p>
-<p>Let us set up TinkerCAD and have fun with a mini project!</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fug4oiglbn">Sign in to TinkerCAD</a></li>
-<li><a href="#mcetoc_1fug4oiglbo">Create a Circuit</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fug4oiglbn">Sign in to TinkerCAD</h2>
-<p>Signing in to TinkerCAD is very simple! Simply head over to the website:</p>
-<p class="align-center"><a href="https://www.tinkercad.com" class="btn" target="_blank" rel="noopener noreferrer">Visit TinkerCAD here</a></p>
-<p>Click on <strong>Join Now</strong></p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/Screenshot-2022-03-19-at-11.09.42-AM.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/Screenshot-2022-03-19-at-11.09.42-AM-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/Screenshot-2022-03-19-at-11.09.42-AM-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/Screenshot-2022-03-19-at-11.09.42-AM-md.png 749w"  alt="" width="2880" height="1638"></figure>
-<p>Click on <strong>Create a personal account</strong>, and <strong>Sign in with Google</strong>. Proceed to sign up with your SST Gmail account.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/Screenshot-2022-03-19-at-11.12.27-AM-2.png" data-size="726x1058"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/Screenshot-2022-03-19-at-11.12.27-AM-2-thumbnail.png" alt="" width="726" height="1058"></a>
-<figcaption>Click on "create a personal account"</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/Screenshot-2022-03-19-at-11.16.25-AM.png" data-size="720x1054"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/Screenshot-2022-03-19-at-11.16.25-AM-thumbnail.png" alt="" width="720" height="1054"></a>
-<figcaption>Click on Sign in with Google</figcaption>
-</figure>
-</div></div>
-<h2 id="mcetoc_1fug4oiglbo">Create a Circuit</h2>
-<p>There are a lot of functions inside TinkerCAD! However, for the purposes of the SSTuino, we are going to use the "Circuits" function. Click on "Circuits" on the sidebar and click on "Create new Circuit".</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/createCircuit.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/createCircuit-md.png 749w"  alt="" width="2880" height="1364"></figure>
-<p class="msg msg--highlight  msg--info">It is a very good habit to create a new circuit after you have finished your previous tutorial, instead of overwriting the current circuit. That way, you would be able to refer to previous tutorials done when you need help with your future projects.</p>
-<p>After you have created the new circuit, it should look like this. We have also included a legend on the interface of the TinkerCAD Circuits function.</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/tinkercadLegend2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/tinkercadLegend2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkercadLegend2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/tinkercadLegend2-md.png 749w"  alt="" width="1636" height="411"></figure>
-<p>Let us bring out a 9V battery then connect it as follows. After you have connected the circuit, click on <strong>Start Simulation</strong> on the top right-hand corner of the website. You will notice that the LED immediately "explodes". 🤭</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test.png" data-size="1786x636"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test-thumbnail.png" alt="" width="749" height="267"></a></figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test2.png" data-size="1738x544"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test2-thumbnail.png" alt="" width="749" height="234"></a></figure>
-</div></div>
-<p>The LED burns as there is no resistor used to limit the flow of the current. Instead, connect a resistor like this. With the resistor attached, the LED lights up without burning up. 🙂 Try this with different resistor values. What kind of changes would happen here?</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/9V_Test3-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/9V_Test3-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/9V_Test3-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/9V_Test3-2-md.png 749w"  alt="" width="1434" height="625"></figure>
-<p>Now, let us try this out using different types of batteries. TinkerCAD mainly provides 3 types of batteries: 9V, 3V and 1.5V. Connect your circuit up as shown. The next picture illustrates when you start the simulation:</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test5-2.png" data-size="1375x934"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test5-2-thumbnail.png" alt="" width="749" height="509"></a>
-<figcaption>Connect up your circuit as shown</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test4-2.png" data-size="1414x964"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/12/gallery/9V_Test4-2-thumbnail.png" alt="" width="749" height="511"></a>
-<figcaption>This is what happens after you start simulation</figcaption>
-</figure>
-</div></div>
-<p>Why would this happen? This is because LEDs have a minimum voltage to light up. If you look at the spec sheet located here:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/12/ledSpec.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/12/responsive/ledSpec-xs.png 300w ,https://knowledge.fourier.industries/media/posts/12/responsive/ledSpec-sm.png 480w ,https://knowledge.fourier.industries/media/posts/12/responsive/ledSpec-md.png 749w"  alt="" width="2408" height="638"></figure>
-<p>The 1.5V battery would be barely able to light up the circuit, and only the 2 other battery types will be able to light up the LED.</p>
-<p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
