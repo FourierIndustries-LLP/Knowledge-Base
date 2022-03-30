@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-30T15:29:48+08:00</updated>
+    <updated>2022-03-30T20:34:10+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -141,7 +141,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html</id>
 
-        <updated>2022-03-27T11:41:42+08:00</updated>
+        <updated>2022-03-30T20:34:10+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us play some tunes with the SSTuino! We are&hellip;
@@ -149,14 +149,43 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <p>Let us play some tunes with the SSTuino! We are now going to insert a piezo element into our circuit. Configure your circuit like this:</p>
+                <p>Let us play some tunes with the SSTuino! We are now going to insert a piezo element into our circuit.</p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fvdca6hg25">About the Piezo</a>
+<ul>
+<li><a href="#mcetoc_1fvdca6hg26">Resources and Going Further</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvdca6hg27">TinkerCAD Exercise</a></li>
+<li><a href="#mcetoc_1fvdca6hg28">Pieno</a></li>
+<li><a href="#mcetoc_1fvdca6hg29">Enhance the pieno</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fvdca6hg25">About the Piezo</h2>
+<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/146-2.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/146-2-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/146-2-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/146-2-md.jpg 749w"  alt="" width="101" height="101"></figure>
+<p>The Piezo Buzzer provided in the kit uses the piezoelectric effect to produce sound. They are easy to drive (i.e. do not need much energy to generate sound) and are also cheap to produce.</p>
+<p>Generally, Piezo Buzzers are sold in two types:</p>
+<ul>
+<li>A fixed frequency with resonator (will have a fixed pitch when turned on)</li>
+<li>A variable frequency without a resonator (pitch can be controlled externally)</li>
+</ul>
+<p>The buzzer provided in the kit does not come with a resonator so we can change its pitch using the SSTuino.</p>
+<h3 id="mcetoc_1fvdca6hg26">Resources and Going Further</h3>
+<ul>
+<li><a href="https://www.allaboutcircuits.com/technical-articles/how-piezoelectric-speakers-work/" target="_blank" rel="noopener noreferrer">All About Circuits: How Piezoelectric Speakers Work</a></li>
+<li><a href="https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/sound" target="_blank" rel="noopener noreferrer">Adafruit: Making Sounds</a></li>
+</ul>
+<h2 id="mcetoc_1fvdca6hg27">TinkerCAD Exercise</h2>
+<p>Let's set up the buzzer inside TinkerCAD! Configure your circuit like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot8-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-md.png 749w"  alt="" width="1197" height="644"></figure>
 <p>I am going to play 3 tones on the harmonic scale. Below is how I programmed it. Can you program it to play up to 1 full scale? <em>(Do, Re, Mi, Fa, So, La, Ti Do!)</em></p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot9.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-md.png 749w"  alt="" width="879" height="254"></figure>
 <p>Let's create this circuit on the SSTuino! This is what it looks like:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <pre>Insert video here</pre>
-<h2>Pieno</h2>
+<h2 id="mcetoc_1fvdca6hg28">Pieno</h2>
 <p>We are now going to use the potentiometer to control the tone of the speaker. When you turn the knob on the potentiometer, the pitch of the speaker will change. With the same circuit as the previous exercise, we are going to tweak the code for the Pieno.</p>
 <p>First, we will need to create a new variable called pot. In this exercise, we are going to use the <strong>map to range </strong>function. The potentiometer has a range from <strong>0 to 1023</strong>, but the speaker has an output range of <strong>35 to 127</strong>. By mapping the range, we can make sure that when the potentiometer is at one end of the input range, the speaker is also at one end of its output range.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot10.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot10-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot10-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot10-md.png 749w"  alt="" width="494" height="155"></figure>
@@ -164,7 +193,7 @@
 <p>Let's try this on the SSTuino!</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <pre>Insert video here</pre>
-<h2>Enhance the pieno</h2>
+<h2 id="mcetoc_1fvdca6hg29">Enhance the pieno</h2>
 <p>Would it be possible to add more functions to the <em>pieno</em>? Sure thing! Let us add 2 more buttons to the circuit as shown:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot11-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-md.png 749w"  alt="" width="1164" height="635"></figure>
 <p>We will add two functions:</p>
@@ -191,7 +220,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-03-27T13:14:55+08:00</updated>
+        <updated>2022-03-30T20:19:26+08:00</updated>
             <summary>
                 <![CDATA[
                     Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -226,7 +255,7 @@
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/arduinoPot27.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-md.png 749w"  alt="" width="1860" height="1006"></figure>
 <p class="msg msg--warning"><strong>Warning: </strong>The pinout for the PIR sensor that is provided with TinkerCAD is different from the kit! We will be talking about the sensor provided in the kit in the sections below.</p>
 <p>Here are the pinout differences between the two sensors:</p>
-<p>Insert gallery here</p>
+<pre>Insert gallery here</pre>
 <h3 id="mcetoc_1fv4sotai1n">Fresnel Lens</h3>
 <p>The lens for the PIR sensor helps it to detect objects from a distance! However, this will not work for a classroom environment because there will be too many people attempting this and as a result, the sensor will always detect movement! 🤣</p>
 <p>To prevent this, let us remove the lens to reduce the detection range!</p>
@@ -279,7 +308,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html</id>
 
-        <updated>2022-03-30T15:29:48+08:00</updated>
+        <updated>2022-03-30T20:17:18+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to read data from&hellip;
@@ -363,7 +392,7 @@ void loop()
 </ul>
 <p>For this exercise, we will use the same circuit and just edit the code:</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-md.png 749w"  alt="" width="538" height="134"></figure>
-<p>I divide the input by 4 as the range of the PWM output is only from 0-255, while the Analog input is from 0 to 1024<br><br>This is the result I should get:</p>
+<p>The input is divided by 4 as the range of the PWM output is only from 0-255, while the Analog input is from 0 to 1024<br><br>This is the result I should get:</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoPot37.mp4" type="video/mp4" /></video></figure>
 <p>Copy this circuit over to your SSTuino board setup.</p>
