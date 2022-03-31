@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-30T20:34:10+08:00</updated>
+    <updated>2022-03-31T15:44:54+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -220,7 +220,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-03-30T20:19:26+08:00</updated>
+        <updated>2022-03-31T15:44:54+08:00</updated>
             <summary>
                 <![CDATA[
                     Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -268,18 +268,16 @@
 <p>Our code only requires us to light up the LED and send the data to the serial monitor, so I don't think there are any variables to declare. Alternatively, you can do so if you wish to for the numbering of the pins.</p>
 <h3 id="mcetoc_1fv4sotai1q">Setup</h3>
 <p>This section will set up the input pins, output pins and indicate that we want to use the serial monitor.</p>
-<pre><code class="language-cpp">
-void setup() 
+<pre><code class="language-cpp">void setup() 
 { 
     pinMode(6, INPUT); // This pin will receive the input signal from the PIR Sensor
     pinMode(5, OUTPUT); // This pin will turn on and off the LED
     Serial.begin(9600); // This will initialise the serial monitor
 }
-    </code></pre>
+</code></pre>
 <h3 id="mcetoc_1fv4sotai1r">Loop</h3>
 <p>This section will run the code forever when the SSTuino is powered on.</p>
-<pre><code class="language-cpp">
-void loop() 
+<pre><code class="language-cpp">void loop() 
 {
   if (digitalRead(6) == 1) {
     digitalWrite(5, HIGH); // This if statement states that if the PIR sensor detects movement, the LED will light up and serial monitor will print a new line "Detected!"
@@ -289,7 +287,7 @@ void loop()
     Serial.println("Not Detected!");
   }
 }
-    </code></pre>
+</code></pre>
 <h2 id="mcetoc_1fv4sotai1s">Your Turn</h2>
 <p>Let's try this out! This is what it looks like on the SSTuino:</p>
 <pre>Insert video here</pre>
@@ -421,7 +419,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html</id>
 
-        <updated>2022-03-28T14:59:50+08:00</updated>
+        <updated>2022-03-31T15:43:28+08:00</updated>
             <summary>
                 <![CDATA[
                     This tutorial aims to teach you the basics of text&hellip;
@@ -438,22 +436,29 @@ void loop()
 <h2>Data Types</h2>
 <p>In programming, there are various data types. Some are used to store text, and others are used to store more complicated types of data. The common data types include:</p>
 <ul>
-<li><strong>String (str, text)</strong> - a combination of characters on the keyboard (letters, numbers symbols)</li>
-<li><strong>Character (char)</strong> - single letters</li>
-<li><strong>Integer (int)</strong> - whole numbers</li>
-<li><strong>Float (real) </strong>- numbers that contain decimal points or fractions</li>
-<li><strong>Boolean (bool) </strong>- for true/false or yes/no options.</li>
+<li><strong>String (<code>String</code>)</strong> - a combination of characters on the keyboard (letters, numbers symbols)</li>
+<li><strong>Character (<code>char</code>)</strong> - single letters like <code>'a'</code></li>
+<li><strong>Integer (<code>int</code>)</strong> - whole numbers ranging from -32,768 to +32,767</li>
+<li><strong>Float (<code>float</code>) </strong>- numbers that contain decimal points like 25.6</li>
+<li><strong>Boolean (<code>bool</code>) </strong>- either <code>true</code> or <code>false</code>. Can also be used to represent a pin state like <code>HIGH</code> or <code>LOW</code>.</li>
 </ul>
 <p>In many programming languages, variables must be declared before they can be used. Here are some examples that are used in Arduino:</p>
 <pre><code class="language-cpp">String password = "hello world";
 int temp = 0;
-bool ledState = 1;
+bool logicStatement = false;
+bool ledState = HIGH;
+float temperature = 25.6;
 </code></pre>
 <h2>Conversion of Data Types</h2>
 <p>There are expressions that contain variables and constants of different data types. If you need to calculate the expressions, they will need to be converted to the same data type. Below are some common conversion types to help you.</p>
 <h3>String to Int</h3>
 <p> </p>
-<p> </p>
+<h2>Resources and Going Further</h2>
+<p>For the more experienced programmers amongst you, do keep in mind that Arduino uses variables in the same way C and C++ do. You can have special variables like unsigned variables (e.g. <code>unsigned int</code>) to represent positive-only numbers, as well as character arrays (e.g. <code>char myString[] = "string here";</code>) to represent a string instead of using Arduino's <code>String</code> object.</p>
+<p>For more information on the intricacies of C and C++ style data types, you can refer to this link below for Sparkfun's take on this issue:</p>
+<ul>
+<li><a href="https://learn.sparkfun.com/tutorials/data-types-in-arduino/all" target="_blank" rel="noopener noreferrer">Sparkfun's Guide on Data Types in Arduino</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
