@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-03-31T15:44:54+08:00</updated>
+    <updated>2022-04-01T14:35:37+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -419,7 +419,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html</id>
 
-        <updated>2022-03-31T15:43:28+08:00</updated>
+        <updated>2022-04-01T14:35:37+08:00</updated>
             <summary>
                 <![CDATA[
                     This tutorial aims to teach you the basics of text&hellip;
@@ -428,12 +428,35 @@
         <content type="html">
             <![CDATA[
                 <p>This tutorial aims to teach you the basics of text coding, using the Arduino IDE. We started using the IDE to edit code frequently and will be using it to program increasingly complex projects in the future.</p>
-<h2>Basic Building Blocks</h2>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fvhtc1p6gf">Basic Building Blocks</a></li>
+<li><a href="#mcetoc_1fvhtc1p6gg">Data Types</a></li>
+<li><a href="#mcetoc_1fvhtc1p6gh">Conversion of Data Types</a>
+<ul>
+<li><a href="#mcetoc_1fvhtc1p6gi">String to Int</a>
+<ul>
+<li><a href="#mcetoc_1fvhtc1p6gj">Example Code</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvhtc1p6gk">String to Float</a>
+<ul>
+<li><a href="#mcetoc_1fvhtc1p6gl">Example Code</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvhtc1p6gm">Converting different data types to String</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvhtc1p6gn">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fvhtc1p6gf">Basic Building Blocks</h2>
 <figure class="post__image"><img loading="lazy"  style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);" src="https://knowledge.fourier.industries/media/posts/18/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/18/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/18/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/18/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
 <p><strong>Declaration - </strong>Used to declare the libraries and variables used in the code. For example, the variable <code>temp</code> is declared as an integer and has the starting value of 0.</p>
 <p><strong>Setup - </strong>Code that is run once to set up your SSTuino. For example, the <code>Serial.begin(9600);</code> tells it to start the serial monitor with a baud rate (speed) of 9600bps (bits per second)</p>
 <p><strong>Loop - </strong>Code that is repeated forever, when the microcontroller is powered. For example, the code inside the example tells it to output temperature data using the serial monitor every 10 milliseconds.</p>
-<h2>Data Types</h2>
+<h2 id="mcetoc_1fvhtc1p6gg">Data Types</h2>
 <p>In programming, there are various data types. Some are used to store text, and others are used to store more complicated types of data. The common data types include:</p>
 <ul>
 <li><strong>String (<code>String</code>)</strong> - a combination of characters on the keyboard (letters, numbers symbols)</li>
@@ -449,11 +472,55 @@ bool logicStatement = false;
 bool ledState = HIGH;
 float temperature = 25.6;
 </code></pre>
-<h2>Conversion of Data Types</h2>
+<h2 id="mcetoc_1fvhtc1p6gh">Conversion of Data Types</h2>
 <p>There are expressions that contain variables and constants of different data types. If you need to calculate the expressions, they will need to be converted to the same data type. Below are some common conversion types to help you.</p>
-<h3>String to Int</h3>
-<p> </p>
-<h2>Resources and Going Further</h2>
+<h3 id="mcetoc_1fvhtc1p6gi">String to Int</h3>
+<p><code>toInt()</code> - Converts String to Integer. The input string should start with an integer. If the string contains non-integers, the function will stop performing the conversion. In the event where the conversion could not be performed as the String does not start with an integer, a zero (data type: long) is returned. </p>
+<h4 id="mcetoc_1fvhtc1p6gj">Example Code</h4>
+<pre><code class="language-cpp">
+void setup() {
+  Serial.begin(9600);
+
+  String myString = "20";
+  int myInt = myString.toInt(); //This is where the toInt() Function is used
+  Serial.println(myInt);
+}
+
+void loop() {
+}
+</code></pre>
+<p>You can copy this code to your Arduino IDE and try it out!</p>
+<h3 id="mcetoc_1fvhtc1p6gk">String to Float</h3>
+<p><code>toFloat()</code> - Converts String to Float. The input string should start with a digit. If the string contains non-digits, the function will stop performing the conversion. In the event where the conversion could not be performed as the String does not start with a digit, a zero (data type: float) is returned.</p>
+<h4 id="mcetoc_1fvhtc1p6gl">Example Code</h4>
+<pre><code class="language-cpp">
+void setup() {
+  Serial.begin(9600);
+
+  String myString = "20.56";
+  float myFloat = myString.toFloat(); //This is where the toFloat() Function is used
+  Serial.println(myFloat);
+}
+
+void loop() {
+}
+</code></pre>
+<p>You can copy this code to your Arduino IDE and try it out!</p>
+<h3 id="mcetoc_1fvhtc1p6gm">Converting different data types to String</h3>
+<p>The below code section shows how different data types can be converted to String.</p>
+<pre><code class="language-cpp">
+String stringOne = "Hello String";                    // using a constant String
+String stringOne = String('a');                       // converting a constant char into a String
+String stringTwo = String("This is a string");        // converting a constant string into a String object
+String stringOne = String(stringTwo + " with more");  // concatenating two strings
+String stringOne = String(13);                        // using a constant integer
+String stringOne = String(analogRead(0), DEC);        // using an int and a base
+String stringOne = String(45, HEX);                   // using an int and a base (hexadecimal)
+String stringOne = String(255, BIN);                  // using an int and a base (binary)
+String stringOne = String(millis(), DEC);             // using a long and a base
+String stringOne = String(5.698, 3);                  // using a float and the decimal places
+</code></pre>
+<h2 id="mcetoc_1fvhtc1p6gn">Resources and Going Further</h2>
 <p>For the more experienced programmers amongst you, do keep in mind that Arduino uses variables in the same way C and C++ do. You can have special variables like unsigned variables (e.g. <code>unsigned int</code>) to represent positive-only numbers, as well as character arrays (e.g. <code>char myString[] = "string here";</code>) to represent a string instead of using Arduino's <code>String</code> object.</p>
 <p>For more information on the intricacies of C and C++ style data types, you can refer to this link below for Sparkfun's take on this issue:</p>
 <ul>
