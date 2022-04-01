@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-01T14:35:37+08:00</updated>
+    <updated>2022-04-01T16:54:29+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -220,7 +220,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-03-31T15:44:54+08:00</updated>
+        <updated>2022-04-01T16:54:29+08:00</updated>
             <summary>
                 <![CDATA[
                     Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -255,7 +255,14 @@
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/arduinoPot27.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-md.png 749w"  alt="" width="1860" height="1006"></figure>
 <p class="msg msg--warning"><strong>Warning: </strong>The pinout for the PIR sensor that is provided with TinkerCAD is different from the kit! We will be talking about the sensor provided in the kit in the sections below.</p>
 <p>Here are the pinout differences between the two sensors:</p>
-<pre>Insert gallery here</pre>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/PIR-Motion-Sensor-01.png" data-size="226x205"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/PIR-Motion-Sensor-01-thumbnail.png" alt="" width="226" height="205"></a>
+<figcaption>Pin out of the PIR Sensor in TinkerCAD</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/Passive-Infrared-PIR-Sensor-Pinout-Diagram.png" data-size="259x311"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/Passive-Infrared-PIR-Sensor-Pinout-Diagram-thumbnail.png" alt="" width="259" height="311"></a>
+<figcaption>Pin out of the PIR Sensor provided in the SSTuino Innovator's Kit</figcaption>
+</figure>
+</div></div>
 <h3 id="mcetoc_1fv4sotai1n">Fresnel Lens</h3>
 <p>The lens for the PIR sensor helps it to detect objects from a distance! However, this will not work for a classroom environment because there will be too many people attempting this and as a result, the sensor will always detect movement! 🤣</p>
 <p>To prevent this, let us remove the lens to reduce the detection range!</p>
