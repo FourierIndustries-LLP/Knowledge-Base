@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-01T16:54:29+08:00</updated>
+    <updated>2022-04-01T17:06:34+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html</id>
 
-        <updated>2022-03-30T14:09:20+08:00</updated>
+        <updated>2022-04-01T17:05:42+08:00</updated>
             <summary>
                 <![CDATA[
                     For this exercise, we will be going to use the&hellip;
@@ -29,24 +29,20 @@
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#mcetoc_1fvan9u4ng">About the Component</a>
+<li><a href="#mcetoc_1fvan9u4ng">About the Component</a></li>
+<li><a href="#mcetoc_1fvanutqb1l">Reading LDR value</a>
 <ul>
-<li><a href="#mcetoc_1fvanutqb1k">Resources and Going Further</a></li>
+<li><a href="#mcetoc_1fvi5ukvv4e">Calibration of the sensor</a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1fvanutqb1l">Reading LDR value</a></li>
 <li><a href="#mcetoc_1fvao1ho31r">Control RGB LED</a></li>
+<li><a href="#mcetoc_1fvi5ukvv4f">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fvan9u4ng">About the Component</h2>
 <figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/LDR.jpeg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/LDR-xs.jpeg 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/LDR-sm.jpeg 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/LDR-md.jpeg 749w"  alt="" width="171" height="160"></figure>
 <p>The Light Dependent Resistor (LDR/Photoresistor) is a type of resistor that reacts with light. When the amount of light it detects changes, the resistance changes. However, as there are many types of LDRs around, the way they change resistance with the amount of light would be different.</p>
 <p>As the LDR reacts to the amount of light it receives, it is very useful as automatic brightness control on your laptops and mobile devices.</p>
-<h3 id="mcetoc_1fvanutqb1k">Resources and Going Further</h3>
-<ul>
-<li><a href="https://learn.adafruit.com/photocells" target="_blank" rel="noopener noreferrer">Adafruit: Photocells</a></li>
-<li><a href="https://www.electronics-notes.com/articles/electronic_components/resistors/light-dependent-resistor-ldr.php" target="_blank" rel="noopener noreferrer">Electronics-notes: Light Dependent Resistor</a></li>
-</ul>
 <h2 id="mcetoc_1fvanutqb1l">Reading LDR value</h2>
 <p>Let's create a new circuit on TinkerCAD like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot30.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-md.png 749w"  alt="" width="1852" height="984"></figure>
@@ -56,7 +52,7 @@
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoPot31.mp4" type="video/mp4" /></video></figure>
 <p>While I change the light intensity of the LDR, the readings also change.</p>
-<h3>Calibration of the sensor</h3>
+<h3 id="mcetoc_1fvi5ukvv4e">Calibration of the sensor</h3>
 <p>As the sensor has multiple variations, let's check yours out! Construct the circuit on your SSTuino!</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <p>After you are done uploading the code, open the serial monitor. Now note down the value when the room is lit. Afterwards, turn off the lights in the room and note down the value again. We will need this data afterwards to tell when to turn on the RGB LED.</p>
@@ -70,6 +66,11 @@
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <p>If you have other ideas on how to control the RGB LED, please try them out and share them with your peers too!</p>
+<h2 id="mcetoc_1fvi5ukvv4f">Resources and Going Further</h2>
+<ul>
+<li><a href="https://learn.adafruit.com/photocells" target="_blank" rel="noopener noreferrer">Adafruit: Photocells</a></li>
+<li><a href="https://www.electronics-notes.com/articles/electronic_components/resistors/light-dependent-resistor-ldr.php" target="_blank" rel="noopener noreferrer">Electronics-notes: Light Dependent Resistor</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -82,7 +83,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html</id>
 
-        <updated>2022-03-29T20:11:49+08:00</updated>
+        <updated>2022-04-01T17:06:34+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -94,12 +95,9 @@
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#mcetoc_1fvaopr9t49">About the Sensor</a>
-<ul>
-<li><a href="#mcetoc_1fvap7cft66">Resources and Going Further</a></li>
-</ul>
-</li>
+<li><a href="#mcetoc_1fvaopr9t49">About the Sensor</a></li>
 <li><a href="#mcetoc_1fvap7cft67">Using the Sensor</a></li>
+<li><a href="#mcetoc_1fvi60h1c4q">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fvaopr9t49">About the Sensor</h2>
@@ -108,13 +106,6 @@
 <p>It is in a <strong>transceiver</strong> configuration, where both the transmitter and receiver are on the same sensor.</p>
 <p>One of the uses of the ultrasonic distance sensor is in the automotive industry. They are usually used as reverse warning sensors but are increasingly used in self-driving vehicles.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot21.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-md.jpg 749w"  alt="" width="374" height="273"></figure>
-<h3 id="mcetoc_1fvap7cft66">Resources and Going Further</h3>
-<ul>
-<li><a href="https://learn.adafruit.com/ultrasonic-sonar-distance-sensors" target="_blank" rel="noopener noreferrer">Adafruit: Ultrasonic Sonar Distance Sensors</a></li>
-<li><a href="https://www.maxbotix.com/articles/how-ultrasonic-sensors-work.htm" target="_blank" rel="noopener noreferrer">MaxBotix: Understanding How Ultrasonic Sensors Work</a></li>
-<li><a href="https://www.murata.com/en-sg/products/sensor/ultrasonic/library/apps" target="_blank" rel="noopener noreferrer">muRata: Ultrasonic Sensors application guide</a></li>
-<li><a href="https://www.continental-automotive.com/en-gl/Passenger-Cars/Autonomous-Mobility/Enablers/Ultrasonic-Parking-Sensor" target="_blank" rel="noopener noreferrer">Continental Automotive: Ultrasonic Parking Sensor</a></li>
-</ul>
 <h2 id="mcetoc_1fvap7cft67">Using the Sensor</h2>
 <p>The ultrasonic sensor we are going to use is the HC-SR04, which is commonly used in Arduino circuits:</p>
 <figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot18.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-xs.png 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-sm.png 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-md.png 749w"  alt="" width="221" height="129"></figure>
@@ -129,6 +120,13 @@
 <p>Let's build this circuit on the SSTuino and try it out! This is what it looks like on the SSTuino:</p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<h2 id="mcetoc_1fvi60h1c4q">Resources and Going Further</h2>
+<ul>
+<li><a href="https://learn.adafruit.com/ultrasonic-sonar-distance-sensors" target="_blank" rel="noopener noreferrer">Adafruit: Ultrasonic Sonar Distance Sensors</a></li>
+<li><a href="https://www.maxbotix.com/articles/how-ultrasonic-sensors-work.htm" target="_blank" rel="noopener noreferrer">MaxBotix: Understanding How Ultrasonic Sensors Work</a></li>
+<li><a href="https://www.murata.com/en-sg/products/sensor/ultrasonic/library/apps" target="_blank" rel="noopener noreferrer">muRata: Ultrasonic Sensors application guide</a></li>
+<li><a href="https://www.continental-automotive.com/en-gl/Passenger-Cars/Autonomous-Mobility/Enablers/Ultrasonic-Parking-Sensor" target="_blank" rel="noopener noreferrer">Continental Automotive: Ultrasonic Parking Sensor</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-24" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -141,7 +139,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html</id>
 
-        <updated>2022-03-30T20:34:10+08:00</updated>
+        <updated>2022-04-01T17:04:48+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us play some tunes with the SSTuino! We are&hellip;
@@ -153,14 +151,11 @@
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#mcetoc_1fvdca6hg25">About the Piezo</a>
-<ul>
-<li><a href="#mcetoc_1fvdca6hg26">Resources and Going Further</a></li>
-</ul>
-</li>
+<li><a href="#mcetoc_1fvdca6hg25">About the Piezo</a></li>
 <li><a href="#mcetoc_1fvdca6hg27">TinkerCAD Exercise</a></li>
 <li><a href="#mcetoc_1fvdca6hg28">Pieno</a></li>
 <li><a href="#mcetoc_1fvdca6hg29">Enhance the pieno</a></li>
+<li><a href="#mcetoc_1fvi5tdb43r">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fvdca6hg25">About the Piezo</h2>
@@ -172,11 +167,6 @@
 <li>A variable frequency without a resonator (pitch can be controlled externally)</li>
 </ul>
 <p>The buzzer provided in the kit does not come with a resonator so we can change its pitch using the SSTuino.</p>
-<h3 id="mcetoc_1fvdca6hg26">Resources and Going Further</h3>
-<ul>
-<li><a href="https://www.allaboutcircuits.com/technical-articles/how-piezoelectric-speakers-work/" target="_blank" rel="noopener noreferrer">All About Circuits: How Piezoelectric Speakers Work</a></li>
-<li><a href="https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/sound" target="_blank" rel="noopener noreferrer">Adafruit: Making Sounds</a></li>
-</ul>
 <h2 id="mcetoc_1fvdca6hg27">TinkerCAD Exercise</h2>
 <p>Let's set up the buzzer inside TinkerCAD! Configure your circuit like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot8-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot8-2-md.png 749w"  alt="" width="1197" height="644"></figure>
@@ -208,6 +198,11 @@
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<h2 id="mcetoc_1fvi5tdb43r">Resources and Going Further</h2>
+<ul>
+<li><a href="https://www.allaboutcircuits.com/technical-articles/how-piezoelectric-speakers-work/" target="_blank" rel="noopener noreferrer">All About Circuits: How Piezoelectric Speakers Work</a></li>
+<li><a href="https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/sound" target="_blank" rel="noopener noreferrer">Adafruit: Making Sounds</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -313,7 +308,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html</id>
 
-        <updated>2022-03-30T20:17:18+08:00</updated>
+        <updated>2022-04-01T17:03:46+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to read data from&hellip;
@@ -325,19 +320,12 @@
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#mcetoc_1fut95ja3dt">About the Potentiometer</a>
-<ul>
-<li><a href="#mcetoc_1fut95ja4du">Resources and Going Further</a></li>
-</ul>
-</li>
+<li><a href="#mcetoc_1fut95ja3dt">About the Potentiometer</a></li>
 <li><a href="#mcetoc_1fut95ja4dv">Using the Potentiometer</a></li>
 <li><a href="#mcetoc_1fut95ja4e0">LED Speed Control</a></li>
-<li><a href="#mcetoc_1fut95ja4e1">LED Brightness Control</a>
-<ul>
-<li><a href="#mcetoc_1fut95ja4e2">Resources and Going Further</a></li>
-</ul>
-</li>
+<li><a href="#mcetoc_1fut95ja4e1">LED Brightness Control</a></li>
 <li><a href="#mcetoc_1fut95ja4e3">Bar Graph</a></li>
+<li><a href="#mcetoc_1fvi5rfai3f">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fut95ja3dt">About the Potentiometer</h2>
@@ -348,11 +336,6 @@
 <p>Potentiometers are used frequently and commonly on electronic devices. A simple example would be the volume knob on speakers or the light dimmers in your house!</p>
 <figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-md.png 749w"  alt="" width="104" height="88"></figure>
 <p>The potentiometer that is provided in the kit is a 10K Ohm potentiometer, which means that when the knob is turned fully to one end it is 0 Ohm, while at the other end it is 10K Ohm.</p>
-<h2>Resources and Going Further</h2>
-<ul>
-<li><a href="https://www.electronics-tutorials.ws/resistor/potentiometer.html" target="_blank" rel="noopener noreferrer">Electronics Tutorials: Potentiometers</a></li>
-<li><a href="https://www.digikey.sg/en/products/detail/bourns-inc/3386F-1-103TLF/1232544" target="_blank" rel="noopener noreferrer">Digikey Singapore: Bournes 3386F Potentiometer</a></li>
-</ul>
 <h2 id="mcetoc_1fut95ja4dv">Using the Potentiometer</h2>
 <p>Let us fire up TinkerCAD, create a new circuit and configure your circuit like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-md.png 749w"  alt="" width="1260" height="579"></figure>
@@ -369,11 +352,6 @@
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot35.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot35-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot35-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot35-md.png 749w"  alt="" width="291" height="184"></figure>
 <p>Here is what it looks like on the SSTuino II:</p>
 <pre>Insert video here</pre>
-<h3>Resources and Going Further</h3>
-<ul>
-<li><a href="https://www.arduino.cc/en/Reference/AnalogRead" target="_blank" rel="noopener noreferrer">Arduino: analogRead</a></li>
-<li><a href="https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/all" target="_blank" rel="noopener noreferrer">Sparkfun: Analog to Digital Conversion</a></li>
-</ul>
 <h2 id="mcetoc_1fut95ja4e0">LED Speed Control</h2>
 <p>Let us make use of the potentiometer reading we have from the SSTuino to alter the blinking speed of the LED! Fire up TinkerCAD and make a circuit like so:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
@@ -390,11 +368,6 @@
 <p>PWM stands for Pulse Width Modulation. The pin would output a series of square waves, and depending on the duty cycle, adjusts the width of the square wave. What it essentially does is that it turns on and off the component very quickly, such that our eyes cannot see the difference.</p>
 <p>In the diagram below, you can see how the duty cycle is adjusted by changing the width of the square wave. When the duty cycle is 0, it turns off the component. From 0 to 100, it gradually increases the intensity and is a full power when at 100% duty cycle.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/Screenshot-2022-03-24-at-12.00.59.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-md.png 749w"  alt="" width="231" height="252"></figure>
-<h3 id="mcetoc_1fut95ja4e2">Resources and Going Further</h3>
-<ul>
-<li><a href="https://docs.arduino.cc/learn/microcontrollers/analog-output" target="_blank" rel="noopener noreferrer">Arduino: Basics of Pulse Width Modulation</a></li>
-<li><a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation/all" target="_blank" rel="noopener noreferrer">Sparkfun Learn: Pulse Width Modulation</a></li>
-</ul>
 <p>For this exercise, we will use the same circuit and just edit the code:</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-md.png 749w"  alt="" width="538" height="134"></figure>
 <p>The input is divided by 4 as the range of the PWM output is only from 0-255, while the Analog input is from 0 to 1024<br><br>This is the result I should get:</p>
@@ -414,6 +387,15 @@
 <p>In text programming, you can simplify this too! How can it be done?</p>
 <p>This is how it works on the SSTuino II:</p>
 <pre>Insert video here</pre>
+<h2 id="mcetoc_1fvi5rfai3f">Resources and Going Further</h2>
+<ul>
+<li><a href="https://www.electronics-tutorials.ws/resistor/potentiometer.html" target="_blank" rel="noopener noreferrer">Electronics Tutorials: Potentiometers</a></li>
+<li><a href="https://www.digikey.sg/en/products/detail/bourns-inc/3386F-1-103TLF/1232544" target="_blank" rel="noopener noreferrer">Digikey Singapore: Bournes 3386F Potentiometer</a></li>
+<li><a href="https://www.arduino.cc/en/Reference/AnalogRead" target="_blank" rel="noopener noreferrer">Arduino: analogRead</a></li>
+<li><a href="https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/all" target="_blank" rel="noopener noreferrer">Sparkfun: Analog to Digital Conversion</a></li>
+<li><a href="https://docs.arduino.cc/learn/microcontrollers/analog-output" target="_blank" rel="noopener noreferrer">Arduino: Basics of Pulse Width Modulation</a></li>
+<li><a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation/all" target="_blank" rel="noopener noreferrer">Sparkfun Learn: Pulse Width Modulation</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -545,7 +527,7 @@ String stringOne = String(5.698, 3);                  // using a float and the d
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html</id>
 
-        <updated>2022-03-23T14:43:15+08:00</updated>
+        <updated>2022-04-01T17:01:06+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will cover the usage of variables&hellip;
@@ -564,15 +546,12 @@ String stringOne = String(5.698, 3);                  // using a float and the d
 <li><a href="#mcetoc_1fulqia872gr">AND Operator</a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1fulqia872gs">OR Operator</a>
-<ul>
-<li><a href="#mcetoc_1fulqia872gt">Resources and Going Further</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fulqia872gu">OR Operator exercise</a></li>
+<li><a href="#mcetoc_1fulqia872gs">OR Operator</a></li>
+<li><a href="#mcetoc_1fulqia872gt">OR Operator exercise</a></li>
 <li><a href="#mcetoc_1fulqia872gv">AND Operator exercise</a></li>
 <li><a href="#mcetoc_1fulqia872h0">Drag Race example</a></li>
 <li><a href="#mcetoc_1fulqia872h1">Toggle Switch</a></li>
+<li><a href="#mcetoc_1fvi5lvf516">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fulqia872go">Naming your variables</h2>
@@ -680,11 +659,7 @@ void loop()
 </tr>
 </tbody>
 </table>
-<h3 id="mcetoc_1fulqia872gt">Resources and Going Further</h3>
-<ul>
-<li><a href="https://www.electronics-tutorials.ws/category/logic" target="_blank" rel="noopener noreferrer">Electronic Tutorials: Logic Gates</a></li>
-</ul>
-<h2 id="mcetoc_1fulqia872gu">OR Operator exercise</h2>
+<h2 id="mcetoc_1fulqia872gt">OR Operator exercise</h2>
 <p>Let us create a new circuit in TinkerCAD like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton16.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton16-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton16-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton16-md.png 749w"  alt="" width="1818" height="843"></figure>
 <p>Next, we will need to edit the code such that the LED would light up once <strong>one</strong> of the buttons is pressed:</p>
@@ -777,6 +752,10 @@ void loop()
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoButton41.mp4" type="video/mp4" /></video></figure>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<h2 id="mcetoc_1fvi5lvf516">Resources and Going Further</h2>
+<ul>
+<li><a href="https://www.electronics-tutorials.ws/category/logic" target="_blank" rel="noopener noreferrer">Electronic Tutorials: Logic Gates</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -789,7 +768,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html</id>
 
-        <updated>2022-03-22T15:52:18+08:00</updated>
+        <updated>2022-04-01T16:59:52+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will learn about pull up resistors,&hellip;
@@ -801,24 +780,15 @@ void loop()
 <div class="post__toc">
 <h3>Table of Contents</h3>
 <ul>
-<li><a href="#mcetoc_1fulqiifr2he">Pull-up resistors</a>
-<ul>
-<li><a href="#mcetoc_1fulqiifr2hf">Resources and Going Further</a></li>
-</ul>
-</li>
+<li><a href="#mcetoc_1fulqiifr2he">Pull-up resistors</a></li>
 <li><a href="#mcetoc_1fulqiifr2hg">Buttons and If/Else Statement</a></li>
 <li><a href="#mcetoc_1fulqiifr2hh">Control your lights</a></li>
+<li><a href="#mcetoc_1fulqiifr2hf">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fulqiifr2he">Pull-up resistors</h2>
 <p>Pull-up resistors are found in digital logic devices and microcontrollers. When a pin in say, the SSTuino is connected as an input and tries to read the state of the pin, it is very difficult to determine whether the pin is actually high or low, due to a lot of factors such as noise in the circuit. This effect is referred to as floating.<br><br>To eliminate this, we will place a pull-up resistor to ensure that the pin is either in its <code>HIGH</code> or <code>LOW</code> state, while using a little bit of current. Pull-up resistors are usually used on buttons and switches where there is a possibility of signal noise.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://cdn.sparkfun.com/assets/6/f/b/c/7/511568b6ce395f1b40000000.jpg" data-is-external-image="true"  alt="" width="315" height="231"></figure>
-<h3 id="mcetoc_1fulqiifr2hf">Resources and Going Further</h3>
-<ul>
-<li><a href="https://learn.sparkfun.com/tutorials/pull-up-resistors/all" target="_blank" rel="noopener noreferrer">Sparkfun: Pull up resistors</a></li>
-<li><a href="https://learn.adafruit.com/circuit-playground-digital-input/floating-inputs" target="_blank" rel="noopener noreferrer">Adafruit: Floating pins</a></li>
-<li><a href="https://www.mouser.com/blog/dont-leave-your-pins-floating" target="_blank" rel="noopener noreferrer">Mouser: Don't leave your pins floating</a></li>
-</ul>
 <h2 id="mcetoc_1fulqiifr2hg">Buttons and If/Else Statement</h2>
 <p>We are going to read very simple data from a push button, to know whether it has been pressed or not. Set up your circuit as shown:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/15/arduinoButton1-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/15/responsive/arduinoButton1-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/15/responsive/arduinoButton1-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/15/responsive/arduinoButton1-2-md.png 749w"  alt="" width="1809" height="789"></figure>
@@ -855,6 +825,12 @@ void loop()
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoButton33.mp4" type="video/mp4" /></video></figure>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<h2 id="mcetoc_1fulqiifr2hf">Resources and Going Further</h2>
+<ul>
+<li><a href="https://learn.sparkfun.com/tutorials/pull-up-resistors/all" target="_blank" rel="noopener noreferrer">Sparkfun: Pull up resistors</a></li>
+<li><a href="https://learn.adafruit.com/circuit-playground-digital-input/floating-inputs" target="_blank" rel="noopener noreferrer">Adafruit: Floating pins</a></li>
+<li><a href="https://www.mouser.com/blog/dont-leave-your-pins-floating" target="_blank" rel="noopener noreferrer">Mouser: Don't leave your pins floating</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -867,7 +843,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii.html</id>
 
-        <updated>2022-03-24T14:04:05+08:00</updated>
+        <updated>2022-04-01T16:57:50+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will discuss the programming language that&hellip;
@@ -881,13 +857,10 @@ void loop()
 <ul>
 <li><a href="#mcetoc_1fuihi7fh13k">Virtual Programming</a></li>
 <li><a href="#mcetoc_1fuihi7fh13l">Pin 13</a></li>
-<li><a href="#mcetoc_1fuihi7fh13m">Transfer program from TinkerCAD to Arduino IDE</a>
-<ul>
-<li><a href="#mcetoc_1fuihi7fh13n">Additional Information</a></li>
-</ul>
-</li>
+<li><a href="#mcetoc_1fuihi7fh13m">Transfer program from TinkerCAD to Arduino IDE</a></li>
 <li><a href="#mcetoc_1fuihi7fh13o">Uploading code from Arduino IDE to SSTuino II</a></li>
 <li><a href="#mcetoc_1fuihi7fh13p">Built-in LED</a></li>
+<li><a href="#mcetoc_1fvi5ghb7q">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fuihi7fh13k">Virtual Programming</h2>
@@ -959,12 +932,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
   */
 }
 </code></pre>
-<h3 id="mcetoc_1fuihi7fh13n">Resources and Going Further</h3>
-<ul>
-<li><a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia Article: camelCase</a></li>
-<li><a href="https://www.arduino.cc/reference/en/">Official Arduino Language Reference</a></li>
-<li><a href="https://www.codecademy.com/learn/learn-c-plus-plus">Codecademy Course: C++</a></li>
-</ul>
 <h2 id="mcetoc_1fuihi7fh13o">Uploading code from Arduino IDE to SSTuino II</h2>
 <p>Let us connect our SSTuino like this:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
@@ -1008,6 +975,12 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
 <source src="media/files/sstuinoiiDigital5.mp4" type="video/mp4" /></video></figure>
 <p class="msg msg--info">Please note that the built-in LED and Pin 13 on the SSTuino II are different pins. 🙂</p>
+<h2 id="mcetoc_1fvi5ghb7q">Resources and Going Further</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Camel_case">Wikipedia Article: camelCase</a></li>
+<li><a href="https://www.arduino.cc/reference/en/">Official Arduino Language Reference</a></li>
+<li><a href="https://www.codecademy.com/learn/learn-c-plus-plus">Codecademy Course: C++</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -1020,7 +993,7 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
         <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html"/>
         <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html</id>
 
-        <updated>2022-03-21T13:28:40+08:00</updated>
+        <updated>2022-04-01T16:56:34+08:00</updated>
             <summary>
                 <![CDATA[
                     So you have built yourself some very simple circuits. Now&hellip;
@@ -1057,15 +1030,15 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <figure class="post__video"><video loading="lazy" width="492" height="246" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/sstuinoii2.mp4" type="video/mp4" /></video></figure>
 <p>You can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?</p>
-<h2 id="mcetoc_1fuihis4c141">Photoresistor</h2>
-<p>The photoresistor is a resistor that reacts to light. It changes resistance when the amount of light it detects changes. Create a new circuit and set up your circuit like this:</p>
+<h2 id="mcetoc_1fuihis4c141">Light Dependent Resistor</h2>
+<p>The Light Dependent Resistor (LDR/Photoresistor) is a resistor that reacts to light. It changes resistance when the amount of light it detects changes. Create a new circuit and set up your circuit like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/arduino5-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/arduino5-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino5-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino5-2-md.png 749w"  alt="" width="1797" height="906"></figure>
-<p>What this circuit allows you to see is the difference in LED brightness as you cover the photoresistor or shine a torch on it.</p>
+<p>What this circuit allows you to see is the difference in LED brightness as you cover the LDR or shine a torch on it.</p>
 <figure class="post__video"><video loading="lazy" width="492" height="246" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduino6.mp4" type="video/mp4" /></video></figure>
 <p>Copy this circuit over to your SSTuino board setup.</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>What happens to the LED brightness as you play with the photoresistor?</p>
+<p>What happens to the LED brightness as you play with the LDR?</p>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
