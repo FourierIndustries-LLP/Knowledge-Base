@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-01T17:06:34+08:00</updated>
+    <updated>2022-04-03T10:30:42+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -215,7 +215,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-04-01T16:54:29+08:00</updated>
+        <updated>2022-04-03T10:30:42+08:00</updated>
             <summary>
                 <![CDATA[
                     Proximity Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -241,6 +241,7 @@
 </ul>
 </li>
 <li><a href="#mcetoc_1fv4sotai1s">Your Turn</a></li>
+<li><a href="#mcetoc_1fvmivdsr4">Resources and Going Further</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1fv4sotai1l">About the sensor</h2>
@@ -261,10 +262,12 @@
 <h3 id="mcetoc_1fv4sotai1n">Fresnel Lens</h3>
 <p>The lens for the PIR sensor helps it to detect objects from a distance! However, this will not work for a classroom environment because there will be too many people attempting this and as a result, the sensor will always detect movement! 🤣</p>
 <p>To prevent this, let us remove the lens to reduce the detection range!</p>
-<pre>Insert video here</pre>
+<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/arduinoPot38.mp4" type="video/mp4" /></video></figure>
 <p>Let's build the circuit on the SSTuino and we will be moving into programming this example with the Arduino IDE!</p>
 <h2 id="mcetoc_1fv4sotai1o">Moving into Arduino IDE</h2>
-<p>Let's start programming on the Arduino IDE! Let us follow this template</p>
+<p>Let's start programming on the Arduino IDE! Open up the Arduino app. A new window should appear.</p>
+<p>Let's make use of this template we learned previously:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
 <h3 id="mcetoc_1fv4sotai1p">Declaration</h3>
 <p>Our code only requires us to light up the LED and send the data to the serial monitor, so I don't think there are any variables to declare. Alternatively, you can do so if you wish to for the numbering of the pins.</p>
@@ -296,6 +299,11 @@
 <p class="msg msg--success">Let's make some changes: Could you make the LED flash on and off every second once the PIR sensor detects movement?</p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
+<h2 id="mcetoc_1fvmivdsr4">Resources and Going Further</h2>
+<ul>
+<li><a href="http://www.glolab.com/pirparts/infrared.html" target="_blank" rel="noopener noreferrer">Glolab: How Infrared motion detector components work</a></li>
+<li><a href="https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work" target="_blank" rel="noopener noreferrer">Adafruit: How PIRs Work</a></li>
+</ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
