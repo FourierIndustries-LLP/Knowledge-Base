@@ -3,12 +3,278 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-03T10:30:42+08:00</updated>
+    <updated>2022-04-04T15:31:42+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>From Blocks to Code, Part II</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
+        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
+
+        <updated>2022-04-04T15:31:42+08:00</updated>
+            <summary>
+                <![CDATA[
+                    In this tutorial, we are going to explore functions, understand&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>In this tutorial, we are going to explore functions, understand the limitations of block coding, and how to "multitask" your SSTuino.</p>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1fvmoha0d3">Functions</a>
+<ul>
+<li><a href="#mcetoc_1fvp2st7fc">Ultrasonic Distance Sensor Example</a></li>
+<li><a href="#mcetoc_1fvp2st7fd">Potentiometer Example</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvp2st7fe">Limitations of Block Code</a></li>
+<li><a href="#mcetoc_1fvp2st7ff">"Multitasking" your SSTuino</a>
+<ul>
+<li><a href="#mcetoc_1fvp2st7fg">millis() instead of delay()</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1fvp2st7fh">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1fvmoha0d3">Functions</h2>
+<p>Here are the 3 basic parts that you would have in the code.</p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
+<p>However, you can separate code into functions, which create modular pieces of code that perform a defined task. Here are some advantages when you standardise code fragments into functions:</p>
+<ul>
+<li>Functions help the programmer to stay organised and help to conceptualise the program.</li>
+<li>Functions codify one function in one place so that it only has to be thought out and debugged once.</li>
+<li>If the code has to be changed, functions also reduce the errors in modification.</li>
+</ul>
+<p>Functions can also help to have smaller code, especially if particular lines of code are used repeatedly in the program. Although functions have many advantages, do take note that Arduino still requires <code><strong>void setup()</strong></code> and <code><strong>void loop()</strong></code> for the program to work. You can place your additional functions outside of them. Now let's make use of previous examples and implement functions!</p>
+<h3 id="mcetoc_1fvp2st7fc">Ultrasonic Distance Sensor Example</h3>
+<p>We are going to continue to use this circuit from our previous example.</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<figure class="post__image"><img loading="lazy"  src="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/arduinoPot19.png" sizes="(max-width: 749px) 100vw, 749px" srcset="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/responsive/arduinoPot19-xs.png 300w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/responsive/arduinoPot19-sm.png 480w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/responsive/arduinoPot19-md.png 749w"  alt="" width="1758" height="970"></figure>
+<p>Here is an edited text version of the blocks code from TinkerCAD. Firstly the device initialises the Serial Monitor. Note that it does not declare the pins inside setup(). We will cover that in the function! 😁</p>
+<pre><code class="language-cpp">
+void setup() {
+  Serial.begin(9600);
+}
+</code></pre>
+<p>Now we will do up the code in loop(). We make the serial print the time taken for the sound wave to bounce back using the function readUltrasonicDistance(5,6) in microseconds and multiply that by half the speed of sound to display the distance in cm.</p>
+<p class="msg msg--info"><strong>Tip: </strong>The speed of sound is 0.0343 centimetre/microsecond. We half that to 0.01723 because the time taken for the sound to bounce back is 2x the total distance (time taken to the object + time taken from the object)</p>
+<pre><code class="language-cpp">
+void loop()
+{
+  Serial.println(0.01723 * readUltrasonicDistance(5, 6));
+}
+</code></pre>
+<p>And finally the function! We declare it as long as we can use it in the calculation in loop(). The function essentially tells the sensor to "fire" the ultrasonic wave and read the time taken for it to travel to and fro.</p>
+<pre><code class="language-cpp">
+long readUltrasonicDistance(int triggerPin, int echoPin)
+{
+  pinMode(triggerPin, OUTPUT);  // Clear the trigger
+  digitalWrite(triggerPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigger pin to HIGH state for 10 microseconds
+  digitalWrite(triggerPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggerPin, LOW);
+  pinMode(echoPin, INPUT);
+  // Reads the echo pin, and returns the sound wave travel time in microseconds
+  return pulseIn(echoPin, HIGH);
+}
+</code></pre>
+<p>Let's try this out in the Arduino IDE! What other functions would you like to add to this code?</p>
+<h3 id="mcetoc_1fvp2st7fd">Potentiometer Example</h3>
+<p>Let's try out another simple example with the Potentiometer! Set up the circuit as shown:</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<figure class="post__image"><img loading="lazy"  src="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/responsive/arduinoPot4-xs.png 300w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/responsive/arduinoPot4-sm.png 480w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
+<p>Head over to the Arduino IDE and set up the code. First, let's declare the serial port, input and output pins:</p>
+<pre><code class="language-cpp">
+void setup() {
+  Serial.begin(9600);
+  pinMode(A0, INPUT);
+  pinMode(6, OUTPUT);
+}
+</code></pre>
+<p>Next, let's leave <code><strong>void loop()</strong></code> alone for a bit 😆 and set up functions! You can name your functions whatever you want, as long as it is a single word.</p>
+<pre><code class="language-cpp">
+void pwmLed() {
+	analogWrite(6, (analogRead(A0) / 4));
+}
+
+void helloWorld() {
+Serial.println(Hello, World!);
+}
+</code></pre>
+<p>With this, we have just created 2 functions! Let us place them inside <code><strong>void loop()</strong></code></p>
+<pre><code class="language-cpp">
+void loop()
+{
+  helloWorld();
+  pwmLed();
+}
+</code></pre>
+<p>The advantage of using functions in this scenario is that if I would like to not make a section of code run, I do not need to comment out all the lines inside <code><strong>void loop()</strong></code>. Instead, I just have to comment out the function as so!</p>
+<pre><code class="language-cpp">
+void loop()
+{
+  //helloWorld(); // This code will not be run.
+  pwmLed();
+}
+</code></pre>
+<h2 id="mcetoc_1fvp2st7fe">Limitations of Block Code</h2>
+<p>Programming with blocks is super simple! Just plop them in and you are good to go! Block coding is a great tool to get people started with little to no programming knowledge. However, as we move to more advanced tutorials like the Internet of Things, block coding would not be able to be used as it is rather limited. While we love introductory tools such as TinkerCAD's block coding functionality, we would like our students to move on to text-based programming languages too!</p>
+<p>Here are some limitations of block code:</p>
+<ul>
+<li>Inability to support external libraries/locked into the platform </li>
+<li>Inability to use sensors that are not supported by the platform</li>
+<li>Delay based programming, not suitable for time-sensitive applications</li>
+</ul>
+<h2 id="mcetoc_1fvp2st7ff">"Multitasking" your SSTuino</h2>
+<p>Let's make the device "multitask"! For the examples that we have covered so far, we have always used <code><strong>delay()</strong></code> to say light up an LED for 1 second. However, although <code><strong>delay()</strong></code> is handy and works for basic examples, it shouldn't be used in the real world...</p>
+<p>Wait, what? 🤯</p>
+<p>Why shouldn't we use <code><strong>delay()</strong></code>? That is because delay is a blocking function. For example, when you do <code><strong>delay(1000)</strong></code>, the Arduino stops on that line for one second. Blocking functions prevent a program from doing anything else until that particular task has been completed. If you need multiple tasks to occur at the same time, you simply cannot use <strong><code>delay()</code></strong>. If your program requires you to constantly read data (e.g. Ultrasonic Sensor), you should avoid using the delay function.</p>
+<h3 id="mcetoc_1fvp2st7fg">millis() instead of delay()</h3>
+<p>Here comes <code><strong>millis()</strong></code> to the rescue! 🥳 When called, it returns the number of milliseconds that have passed since the program first started. By doing some simple math and comparison, you can verify how much time has passed without blocking your code! Let's take a look at a blink sketch that does not use the <code><strong>delay()</strong></code> function:</p>
+<pre><code class="language-cpp">
+// constants won't change. Used here to set a pin number :
+const int ledPin =  13;      // the number of the LED pin
+
+// Variables will change :
+int ledState = LOW;             // ledState used to set the LED
+
+// Generally, you should use "unsigned long" for variables that hold time
+// The value will quickly become too large for an int to store
+unsigned long previousMillis = 0;        // will store last time LED was updated
+
+// constants won't change :
+const long interval = 1000;           // interval at which to blink (milliseconds)
+
+void setup() {
+  // set the digital pin as output:
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // here is where you'd put code that needs to be running all the time.
+
+  // check to see if it's time to blink the LED; that is, if the
+  // difference between the current time and last time you blinked
+  // the LED is bigger than the interval at which you want to
+  // blink the LED.
+  unsigned long currentMillis = millis();
+
+  if (currentMillis - previousMillis &gt;= interval) {
+    // save the last time you blinked the LED
+    previousMillis = currentMillis;
+
+    // if the LED is off turn it on and vice-versa:
+    if (ledState == LOW) {
+      ledState = HIGH;
+    } else {
+      ledState = LOW;
+    }
+
+    // set the LED with the ledState of the variable:
+    digitalWrite(ledPin, ledState);
+  }
+}
+</code></pre>
+<p>How the code works is that it subtracts the previously recorded time (previousMillis) from the current time (currentMillis). If the remainder is greater than the interval (1000 milliseconds), the program updates the previousMillis variable to the current time, and either turn the LED on or off.</p>
+<p>As the program is non-blocking, any code that is added outside of the first if statement should work correctly. You can now add other tasks and your LED will blink every second!</p>
+<p>Using the <code><strong>millis()</strong></code> function does take a bit more work than using the <code><strong>delay()</strong></code> function but will be worth it if the program needs to multitask.</p>
+<h3>Ultrasonic Sensor and Buzzer Exercise</h3>
+<p>Let's wire up your circuit as so!</p>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot39.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-md.png 749w"  alt="" width="1834" height="985"></figure>
+<p>Next, head over to the Arduino IDE where we will program the ultrasonic sensor to:</p>
+<ul>
+<li>trigger the ultrasonic wave every 1 millisecond</li>
+<li>print the distance to the serial monitor every 1 second</li>
+<li>turn on and off a buzzer every second if the distance is less than 30cm</li>
+</ul>
+<pre><code class="language-cpp">
+const int trigPin = 5; //set pin variables
+const int echoPin = 6;
+const int buzzerPin = 13;
+
+int trigState = LOW; //state of trigPin
+int interval = 1; // interval in milliseconds at which trigPin turns on
+int interval2 = 1000; //time in milliseconds at which the distance is printed in serial monitors
+int printState = LOW; //whether or not to print distance
+int buzzer = LOW; //whether or not buzzer is on
+unsigned long previousMillis = 0; //microsecond at which the pin was last writen
+
+void setup()
+{
+  Serial.begin(9600); //begin serial communication
+  pinMode(trigPin,OUTPUT); //set pinmodes
+  pinMode(echoPin,INPUT);<br>  pinMode(buzzerPin,OUTPUT);
+}
+
+void loop()
+{
+  unsigned long currentMillis = millis(); //time in milliseconds from which the code was started
+  if (currentMillis-previousMillis &gt;= interval) { //check "blink without delay" code
+    previousMillis = currentMillis;// 
+    if (trigState == LOW){
+      (trigState = HIGH);
+    }
+    else {
+      (trigState = LOW);
+    }
+  }
+  // printing speed in serial monitor at an interval of 1s
+  if (currentMillis-previousMillis &gt;= interval2) { //check "blink without delay" code
+    previousMillis = currentMillis;
+    if (printState == LOW){
+      (printState = HIGH);
+    }
+    else {
+      (printState = LOW);
+    }
+  }
+  digitalWrite(trigPin,trigState); // Fire the pulse to measure distance
+  int duration, distance; //variables
+  duration = pulseIn(echoPin,HIGH); // Measure the time taken for the pulse
+  distance = duration * 0.01723; // Calculate speed
+  if (printState = HIGH){  //print the data to the serial monitor
+  Serial.print(distance);
+  Serial.println("cm");}
+  
+  if (distance &lt;= 30){ //If distance &lt;30cm, buzzer will sound at an interval of 1s.
+    if (currentMillis-previousMillis &gt;= interval2) { //check "blink without delay" code
+    previousMillis = currentMillis;
+    if (buzzer == LOW){
+      (buzzer = HIGH);
+      digitalWrite(buzzerPin,HIGH);
+    }
+    else {
+      (buzzer = LOW);
+      digitalWrite(buzzerPin,LOW);
+    }
+  }
+  }
+  else{
+    digitalWrite(buzzerPin,LOW);
+  }
+}
+</code></pre>
+<h2 id="mcetoc_1fvp2st7fh">Resources and Going Further</h2>
+<ul>
+<li><a href="https://docs.arduino.cc/learn/programming/functions" target="_blank" rel="noopener noreferrer">Arduino: Using functions in a sketch</a></li>
+<li><a href="https://randomnerdtutorials.com/why-you-shouldnt-always-use-the-arduino-delay-function/" target="_blank" rel="noopener noreferrer">Random Nerd Tutorials: Why you shouldn't always use the Arduino delay function</a></li>
+<li><a href="https://create.arduino.cc/projecthub/Arduino_Scuola/limitations-of-delay-how-to-do-timers-correctly-833e9e" target="_blank" rel="noopener noreferrer">Arduino Project Hub: Limitations of delay() &amp; how to do timers correctly</a></li>
+</ul>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-25" class="btn btn--green">Next ➡️</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Light Dependent Resistor</title>
         <author>
@@ -127,7 +393,7 @@
 <li><a href="https://www.murata.com/en-sg/products/sensor/ultrasonic/library/apps" target="_blank" rel="noopener noreferrer">muRata: Ultrasonic Sensors application guide</a></li>
 <li><a href="https://www.continental-automotive.com/en-gl/Passenger-Cars/Autonomous-Mobility/Enablers/Ultrasonic-Parking-Sensor" target="_blank" rel="noopener noreferrer">Continental Automotive: Ultrasonic Parking Sensor</a></li>
 </ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="#non-existing-post-with-id-24" class="btn btn--green">Next ➡️</a></p>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -990,65 +1256,6 @@ void loop() //loop = runs forever till the end of time (or until you turn off th
 <li><a href="https://www.codecademy.com/learn/learn-c-plus-plus">Codecademy Course: C++</a></li>
 </ul>
 <p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Building a circuit on SSTuino</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html"/>
-        <id>https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-6.html</id>
-
-        <updated>2022-04-01T16:56:34+08:00</updated>
-            <summary>
-                <![CDATA[
-                    So you have built yourself some very simple circuits. Now&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>So you have built yourself some very simple circuits. Now let us build circuits, but with the SSTuino!</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fuihis4c140">Adding a button</a></li>
-<li><a href="#mcetoc_1fuihis4c141">Photoresistor</a></li>
-</ul>
-</div>
-<p>In TinkerCAD, create a new circuit. In this new circuit, drag out an Arduino Uno, a breadboard, one resistor and a LED. Connect it in this manner, with the <span style="color: #e03e2d;"><strong>Positive(+)</strong></span> connect to <span style="color: #e03e2d;"><strong>5V</strong></span> and the <strong>Negative(-)</strong> connect to <strong>GND</strong>.</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/arduino1-3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/arduino1-3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino1-3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino1-3-md.png 749w"  alt="" width="2160" height="985"></figure>
-<p>Press <strong>Start Simulation</strong> and see your circuit light up!</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/arduino2-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/arduino2-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino2-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino2-2-md.png 749w"  alt="" width="2117" height="1004"></figure>
-<p>Now, copy your circuit from TinkerCAD onto your SSTuino.</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>It should look something like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/sstuinoii1.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/sstuinoii1-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/sstuinoii1-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/sstuinoii1-md.jpg 749w"  alt="" width="3790" height="2621"></figure>
-<p>Let us go back to the simulation and change the circuit like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/arduino7-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/arduino7-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino7-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino7-2-md.png 749w"  alt="" width="1947" height="981"></figure>
-<p>What would happen and why?</p>
-<p class="msg msg--info"><strong>Tip: </strong>Remember, it is important to add a resistor in your circuit to prevent too much current flowing through your components.</p>
-<h2 id="mcetoc_1fuihis4c140">Adding a button</h2>
-<p>Let us add a button to control the circuit! Set up your circuit like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/arduino4-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/arduino4-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino4-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino4-2-md.png 749w"  alt="" width="2199" height="1005"></figure>
-<p>What this circuit allows you to do is to turn on and off your LED. This push button works something like this: When you press the button, the circuit is closed and current can flow to the LED, which makes the LED light up. When the button is not pressed, the circuit is considered open and current will not flow to the LED, which makes the LED not light up.</p>
-<p>Copy this circuit over to your SSTuino board setup. This is how it looks: </p>
-<p class="msg msg--warning"><strong>Warning: </strong>To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__video"><video loading="lazy" width="492" height="246" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/sstuinoii2.mp4" type="video/mp4" /></video></figure>
-<p>You can consider adding more LEDs to the circuit. How would you add the LEDs to the circuit? What kind of reaction does your circuit have?</p>
-<h2 id="mcetoc_1fuihis4c141">Light Dependent Resistor</h2>
-<p>The Light Dependent Resistor (LDR/Photoresistor) is a resistor that reacts to light. It changes resistance when the amount of light it detects changes. Create a new circuit and set up your circuit like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/13/arduino5-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/13/responsive/arduino5-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino5-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/13/responsive/arduino5-2-md.png 749w"  alt="" width="1797" height="906"></figure>
-<p>What this circuit allows you to see is the difference in LED brightness as you cover the LDR or shine a torch on it.</p>
-<figure class="post__video"><video loading="lazy" width="492" height="246" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduino6.mp4" type="video/mp4" /></video></figure>
-<p>Copy this circuit over to your SSTuino board setup.</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>What happens to the LED brightness as you play with the LDR?</p>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<p><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2-parts-list-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
