@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-04T15:31:42+08:00</updated>
+    <updated>2022-04-04T15:38:33+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
 
-        <updated>2022-04-04T15:31:42+08:00</updated>
+        <updated>2022-04-04T15:38:33+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to explore functions, understand&hellip;
@@ -39,6 +39,7 @@
 <li><a href="#mcetoc_1fvp2st7ff">"Multitasking" your SSTuino</a>
 <ul>
 <li><a href="#mcetoc_1fvp2st7fg">millis() instead of delay()</a></li>
+<li><a href="#mcetoc_1fvpo53oi1c">Ultrasonic Sensor and Buzzer Example</a></li>
 </ul>
 </li>
 <li><a href="#mcetoc_1fvp2st7fh">Resources and Going Further</a></li>
@@ -188,7 +189,7 @@ void loop() {
 <p>How the code works is that it subtracts the previously recorded time (previousMillis) from the current time (currentMillis). If the remainder is greater than the interval (1000 milliseconds), the program updates the previousMillis variable to the current time, and either turn the LED on or off.</p>
 <p>As the program is non-blocking, any code that is added outside of the first if statement should work correctly. You can now add other tasks and your LED will blink every second!</p>
 <p>Using the <code><strong>millis()</strong></code> function does take a bit more work than using the <code><strong>delay()</strong></code> function but will be worth it if the program needs to multitask.</p>
-<h3>Ultrasonic Sensor and Buzzer Exercise</h3>
+<h3 id="mcetoc_1fvpo53oi1c">Ultrasonic Sensor and Buzzer Example</h3>
 <p>Let's wire up your circuit as so!</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot39.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-md.png 749w"  alt="" width="1834" height="985"></figure>
