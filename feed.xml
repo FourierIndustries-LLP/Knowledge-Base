@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-04T15:38:33+08:00</updated>
+    <updated>2022-04-04T18:47:23+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
 
-        <updated>2022-04-04T15:38:33+08:00</updated>
+        <updated>2022-04-04T18:47:23+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to explore functions, understand&hellip;
@@ -58,7 +58,7 @@
 <h3 id="mcetoc_1fvp2st7fc">Ultrasonic Distance Sensor Example</h3>
 <p>We are going to continue to use this circuit from our previous example.</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__image"><img loading="lazy"  src="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/arduinoPot19.png" sizes="(max-width: 749px) 100vw, 749px" srcset="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/responsive/arduinoPot19-xs.png 300w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/responsive/arduinoPot19-sm.png 480w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/23/responsive/arduinoPot19-md.png 749w"  alt="" width="1758" height="970"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot19.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-md.png 749w"  alt="" width="1758" height="970"></figure>
 <p>Here is an edited text version of the blocks code from TinkerCAD. Firstly the device initialises the Serial Monitor. Note that it does not declare the pins inside setup(). We will cover that in the function! 😁</p>
 <pre><code class="language-cpp">
 void setup() {
@@ -93,7 +93,7 @@ long readUltrasonicDistance(int triggerPin, int echoPin)
 <h3 id="mcetoc_1fvp2st7fd">Potentiometer Example</h3>
 <p>Let's try out another simple example with the Potentiometer! Set up the circuit as shown:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__image"><img loading="lazy"  src="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/responsive/arduinoPot4-xs.png 300w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/responsive/arduinoPot4-sm.png 480w ,file:///Users/qianzhegoh/Documents/Publii/sites/fourierindustries-knowledge-base/input/media/posts/19/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
 <p>Head over to the Arduino IDE and set up the code. First, let's declare the serial port, input and output pins:</p>
 <pre><code class="language-cpp">
 void setup() {
