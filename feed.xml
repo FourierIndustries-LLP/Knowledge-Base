@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-05T11:11:33+08:00</updated>
+    <updated>2022-04-05T12:14:46+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -558,7 +558,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-04-04T21:18:36+08:00</updated>
+        <updated>2022-04-05T12:14:46+08:00</updated>
             <summary>
                 <![CDATA[
                     Passive Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -598,8 +598,8 @@ void loop()
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/PIR-Motion-Sensor-01.png" data-size="226x205"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/PIR-Motion-Sensor-01-thumbnail.png" alt="" width="226" height="205"></a>
 <figcaption>Pin out of the PIR Sensor in TinkerCAD</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/Passive-Infrared-PIR-Sensor-Pinout-Diagram.png" data-size="259x311"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/Passive-Infrared-PIR-Sensor-Pinout-Diagram-thumbnail.png" alt="" width="259" height="311"></a>
-<figcaption>Pin out of the PIR Sensor provided in the SSTuino Innovator's Kit</figcaption>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/IMG_5480.JPG" data-size="2720x2267"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/IMG_5480-thumbnail.JPG" alt="" width="749" height="624"></a>
+<figcaption>Pin out of the PIR sensor in the Kit (Lens removed)</figcaption>
 </figure>
 </div></div>
 <h3 id="mcetoc_1fv4sotai1n">Fresnel Lens</h3>
