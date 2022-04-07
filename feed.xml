@@ -3,12 +3,194 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-06T19:31:06+08:00</updated>
+    <updated>2022-04-07T13:03:44+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Mobile Apps, Part 1</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/mobile-apps-part-1.html"/>
+        <id>https://knowledge.fourier.industries/mobile-apps-part-1.html</id>
+
+        <updated>2022-04-07T13:03:44+08:00</updated>
+            <summary>
+                <![CDATA[
+                    In this tutorial, we will create a mobile app with&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>In this tutorial, we will create a mobile app with Thunkable and connect your IoT applications with them! Thunkable is an easy to use “code-lite” mobile app creator, in which you can make mobile apps with only block-based code with no need to write text-based code. You can then upload this to your phone or even publish them on actual app stores if you wish to distribute your app.</p>
+<p class="msg msg--info"><strong>Note: </strong>It is strongly recommended that this tutorial be done at home</p>
+<h2>Signing up to Thunkable</h2>
+<p>We can sign up for Thunkable with our SST Google Account by clicking “Sign up with Google”. It’s that simple!</p>
+<p class="align-center"><a href="https://x.thunkable.com/signup?referrerId=random.rrr3r7" target="_blank" rel="noopener noreferrer" class="btn">Sign up to Thunkable</a></p>
+<p>Once you have completed signup, you can click the links below on your mobile phone to download Thunkable Live so that you can upload the app to your mobile phone:</p>
+<figure class="post__image align-center"><a href="https://apps.apple.com/sg/app/thunkable-live/id1223262700" target="_blank" rel="noopener noreferrer"></a><a href="https://apps.apple.com/sg/app/thunkable-live/id1223262700" target="_blank" rel="noopener noreferrer"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/5a902db97f96951c82922874.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/5a902db97f96951c82922874-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/5a902db97f96951c82922874-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/5a902db97f96951c82922874-md.png 749w"  alt="" width="179" height="60"></figure></a><a href="https://apps.apple.com/sg/app/thunkable-live/id1223262700" target="_blank" rel="noopener noreferrer"></a>               <a href="https://play.google.com/store/apps/details?id=com.thunkable.live" target="_blank" rel="noopener noreferrer"><figure class="post__image align-center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/en_badge_web_generic-4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/en_badge_web_generic-4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/en_badge_web_generic-4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/en_badge_web_generic-4-md.png 749w"  alt="" width="200" height="59"></figure></a></p>
+<p>After signing up, you can start creating your first project. For the category, you can put “Just testing”.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-1-NewProj-1.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-1-NewProj-1-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-1-NewProj-1-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-1-NewProj-1-md.png 749w"  alt="" width="516" height="359"></figure>
+<p>It is highly recommended that you watch some of Thunkable’s tutorials at the link below, before you start this lesson to have a good idea of how to use Thunkable: </p>
+<p class="align-center"><a href="https://docs.thunkable.com/v/drag-and-drop/tutorials" target="_blank" rel="noopener noreferrer" class="btn">Thunkable Drag and Drop Tutorials</a></p>
+<h2>Hello World!</h2>
+<p>Time to start creating our first Thunkable app! This part of the tutorial will assume that you already understand how to operate the user interface of Thunkable and are familiar with some of the key concepts in Thunkable. </p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-2-Layout-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-2-Layout-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-2-Layout-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-2-Layout-1E-md.png 749w"  alt="" width="2124" height="1474"></figure>
+<p>Now that you are on your app screen, let’s get familiar with the interface of Thunkable. On the left, you have the Screens and the Add Components menus. </p>
+<p>The Screens menu is for you to add new screens and views to your app. The Add Components menu allows you to easily drag and drop components to your screen. </p>
+<p>On the right side, you can change the properties of the individual components on your screen. For instance, you can change the words or colour of a label, or disable a button, and so on. </p>
+<p>On the top bar, you can see two tabs: Design and Blocks. Design is the tab you are currently in, and lets you design your app screens. Blocks allow you to create the program behind each screen in your app, using block coding just like what you did previously in TinkerCAD.</p>
+<h2>Drag and Drop</h2>
+<p>Let us try dragging and dropping some components into your app! The very first basic, but important component is the Label, which simply displays text on your screen. Drag it directly to the middle of your app.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-1E-md.png 749w"  alt="" width="526" height="491"></figure>
+<p>If you want to delete your label, simply press the trash can button on the Screens menu to delete the label. This is the same for other components in your app as well. </p>
+<h3>Adjusting the properties of the label</h3>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-2E-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-2E-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-2E-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-2E-2-md.png 749w"  alt="" width="469" height="451"></figure>
+<p>Click on the Label and you can now adjust the properties for that Label on the right side of the screen. You can change the contents, font, how big the words are, and so on. Try changing the label to say <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program" target="_blank" rel="noopener noreferrer">“Hello World”</a>!</p>
+<h3>Advanced inputs</h3>
+<p>Let’s try dragging in a <strong>Button</strong> and <strong>Text Input</strong> this time. You can play around with the position and text on the Button and Text Input for now. When you’re done, change the text on the different components and drag them into the order shown below:</p>
+<figure class="post__image post__image--full" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-3E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-3E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-3E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-3E-md.png 749w"  alt="" width="2120" height="1472">
+<figcaption >Drag the elements on the screen into something like this</figcaption>
+</figure>
+<h2>Activating Buttons</h2>
+<p>We are going to make a super simple app: replacing the text of the Label with the text inside your Text Input, the moment that the Button is pressed. Click on the Blocks tab on the top bar to switch to blocks editing.</p>
+<p>We can click on each of the components on the left bar to see the different functions we can use to change the components (e.g. changing the text on a Label, or reading the text from a Text Input):</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-4.png" data-size="1360x1478"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-4-thumbnail.png" alt="" width="749" height="814"></a>
+<figcaption>Text Input</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-5.png" data-size="1271x1480"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-5-thumbnail.png" alt="" width="749" height="872"></a>
+<figcaption>Button</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-6.png" data-size="1262x1466"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-6-thumbnail.png" alt="" width="749" height="870"></a>
+<figcaption>Label</figcaption>
+</figure>
+</div></div>
+<p>For our simple app, we would need to do 3 things:</p>
+<ol>
+<li>Detect when the button is clicked</li>
+<li>Read the text from the Text Input</li>
+<li>Set the contents of the Label to the same contents of the Text Input</li>
+</ol>
+<p>Starting with the first point, we can click the component for our Button and drag the <a href="#" class="btn btn--yellow">when Button1 Click</a> block into our blocks editor. Everything that goes into this block will be acted upon when you click that button.</p>
+<figure class="post__image post__image--full" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-7E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-7E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-7E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-7E-md.png 749w"  alt="" width="2112" height="1472">
+<figcaption >For completion of point 1, drag the Button Click event block into the editor</figcaption>
+</figure>
+<p>To complete point 2, we can use a variable to temporarily store the text that was read from the Text Input. Start by clicking the Variables option and dragging the <a href="#" class="btn btn--yellow">set ‘app’ variable ‘name’ to __</a> block into the editor.</p>
+<figure class="post__image post__image--full" ><figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-8E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-8E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-8E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-8E-md.png 749w"  alt="" width="2110" height="1448"></figure>
+<figcaption >To complete point 2, drag the variable block in</figcaption>
+</figure>
+<p>Let’s give this variable a name like “text”. Keep this name in mind because we will be using it later.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-9-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-9-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-9-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-9-2-md.png 749w"  alt="" width="435" height="114"></figure>
+<p>The last part of point 2 will be to actually read the text from the Text Input and store it into this variable. </p>
+<p>We can do that by clicking the Text Input component and dragging the “Text” property of the component into the rear part of the statement.</p>
+<figure class="post__image post__image--full" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-10E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-10E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-10E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-10E-md.png 749w"  alt="" width="2114" height="1454">
+<figcaption >Drag the text of Text_Input1 into the rear part of the "set app variable" block</figcaption>
+</figure>
+<p>Finally, onto point 3: to set the contents of the Label to the “text” variable that we have just set. Click on your Label component on the left and drag the <a href="#" class="btn btn--yellow">set Label1’s text to ___</a> block into the block editor, and drag the “app variable” block to the end of the “set” block, so that the code will set the text of your Label to the value of the “text” variable.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-11E.png" data-size="2112x1452"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-11E-thumbnail.png" alt="" width="749" height="515"></a>
+<figcaption>Add the "set label text block"...</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-12E.png" data-size="2110x1450"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-3-Drag-12E-thumbnail.png" alt="" width="749" height="515"></a>
+<figcaption>...and set the label to the "text" variable</figcaption>
+</figure>
+</div></div>
+<p>Fantastic! You have now completed your basic app that handles text input, a user action through a button, and the display of output. Next up, we are going to extend our app by processing the input text using some of Thunkable’s built-in functions and adding a tab bar at the bottom.</p>
+<figure ><figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-13E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-13E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-13E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-13E-md.png 749w"  alt="" width="2136" height="422"></figure>
+<figcaption >Press the Play button to start your app!</figcaption>
+</figure>
+<h2>Navigating with a tab bar</h2>
+<p>Many of you may have seen apps with a tab bar at the bottom, like Apple’s Music app, or the Android Clock app. Now we are going to make an app with a tab bar just like that. </p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/tab-ios.jpeg" data-size="1170x2532"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/tab-ios-thumbnail.jpeg" alt="" width="749" height="1621"></a></figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/tab-android.jpg" data-size="1080x2412"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/tab-android-thumbnail.jpg" alt="" width="749" height="1673"></a></figure>
+</div></div>
+<p>We will now extend our app by giving it a Settings page so that we can choose which type of text processing we want our app to do.</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-1E-md.png 749w"  alt="" width="1580" height="720"></figure>
+<p>Click the + button on the Screens menu and click “Bottom Tab Navigator” to add the tab navigator to our app.</p>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-2E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-md.png 749w"  alt="" width="582" height="571">
+<figcaption >Click the trashcan icon to delete all the other screens except Setting</figcaption>
+</figure>
+<p>Wow, that’s a lot of buttons! Let’s delete the ones unnecessary for now. Since we are adding a Settings page, only Settings is relevant to us, so we can delete all of the rest by clicking the trashcan icon as above.</p>
+<p>Next, drag our “Screen1” (which is the first screen that we created) under the Tab Navigators so it looks like this:</p>
+<figure class="post__image post__image--center" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-md.png 749w"  alt="" width="420" height="407">
+<figcaption >Drag Screen1 to be within the Tab Navigator</figcaption>
+</figure>
+<p>Click on “Screen1”, and you might notice that the bottom tab bar has an empty image that we don’t really want. Let’s get an icon to make it look better: copy and paste <code>https://img.icons8.com/fluency/48/000000/home.png</code> into the field called “Active Tab Icon”. Next, we want to rename “Screen1” to something that makes more sense. Click the Screen1 text and you can change it to Home so it matches the icon.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-4-Tab-4E.png" data-size="1328x1334"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-4-Tab-4E-thumbnail.png" alt="" width="749" height="752"></a>
+<figcaption>Change the tab image here...</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-4-Tab-5E.png" data-size="1314x1334"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-4-Tab-5E-thumbnail.png" alt="" width="749" height="760"></a>
+<figcaption>...and change the name of Screen1 to "Home"</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-4-Tab-6E.png" data-size="2120x1466"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-4-Tab-6E-thumbnail.png" alt="" width="749" height="518"></a>
+<figcaption>Don't forget to change the image of the Settings tab!</figcaption>
+</figure>
+</div></div>
+<p>Let us give the Settings page a nicer icon too! Click on the Setting screen on the left and change the link in the “Active Tab Icon” setting to <code>https://img.icons8.com/fluency/48/000000/settings.png</code>.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-md.png 749w"  alt="" width="852" height="222"></figure>
+<p>Much better looking now!</p>
+<h2>Using functions</h2>
+<p>As we have a Settings page now, we can give it some options to turn certain types of text manipulation on and off. Starting with a simple one, we can trim/remove all the spaces to the left and right side of the text we typed in: something like <code>   abcde    </code> will become <code>abcde</code>. There is a built-in function for this, and we can try it out.</p>
+<p>But first, we need to add a switch in Settings so that we can turn this feature on and off.</p>
+<p>Add a Label and a Switch according to the diagram below, and set the default value of the Switch to “false”:</p>
+<figure ><figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-5-Func-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-1E-md.png 749w"  alt="" width="1578" height="1460"></figure>
+<figcaption >Add a Label and Switch to the Settings page</figcaption>
+</figure>
+<p>Let’s switch over to blocks to add our code…We want the value of the Switch to be stored in a variable so that it can be read by our program on the Home tab. Drag the <a href="#" class="btn btn--yellow">when Switch1 on Value Change</a> block into the editor, and set a new variable called <code>removeSpaces</code> to whatever the <code>newValue</code> of the switch is. We are now done with the Settings screen!</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-5-Func-2E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-2E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-2E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-2E-md.png 749w"  alt="" width="2108" height="1448"></figure>
+<p><span style="font-weight: 400;">Moving back to the blocks for Home, we can add an `if` block to our button click event so that we check for that setting we just made previously. </span></p>
+<p><span style="font-weight: 400;">After that, drag a Logic <a href="#" class="btn btn--green">__=__</a> block to check if the statement is equal to true, and drag a <a href="#" class="btn btn--green">true</a> block to the right-hand side of the equals sign.</span></p>
+<p><span style="font-weight: 400;">Finally, drag the <a href="#" class="btn btn--yellow">app variable</a> block from the Variables menu to complete the if statement. Change the variable name to <code>removeSpaces</code> so it matches the name on the other screen.</span></p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-5-Func-3E.png" data-size="2110x1456"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-5-Func-3E-thumbnail.png" alt="" width="749" height="517"></a>
+<figcaption>Drag in the "if" statement</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-5-Func-4E.png" data-size="2108x1450"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-5-Func-4E-thumbnail.png" alt="" width="749" height="515"></a>
+<figcaption>Add in the = statement to check for true</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-5-Func-5E.png" data-size="2110x1456"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-5-Func-5E-thumbnail.png" alt="" width="749" height="517"></a>
+<figcaption>Finally add the "app variable" block</figcaption>
+</figure>
+</div></div>
+<p>At this point, we want to reorder our program a bit so it makes more sense. Recalling that the intention of this app is to:</p>
+<ol>
+<li>Detect when the button is clicked</li>
+<li>Read the text from the Text Input</li>
+<li><strong>(NEW)</strong> Process the text IF the switch on Settings is on</li>
+<li>Set the contents of the Label to the same contents of the Text Input</li>
+</ol>
+<p>We have inserted a new step between the 2nd and last step, which is to process the text IF the switch is active. As such, the program needs to be organised in the same way and here’s how:</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-5-Func-6E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-6E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-6E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-6E-md.png 749w"  alt="" width="1420" height="600"></figure>
+<p>With these changes done, we can drop in the last piece of code that actually performs the change. In programming, we can actually assign a variable back to itself. For example, if you have a statement in Arduino that says <code>i = i+1;</code>, it is perfectly valid as it adds 1 to <code>i</code>. (Note that this is not valid in maths)</p>
+<p>In our case, we can assign the variable called “text” back to itself after we have finished removing the spaces before and after it. We would need to drag 3 types of blocks into the editor: “set app variable” which allows you to set a variable, “app variable” which gets the contents of a variable, and “trim spaces from both sides” from the Text menu to actually trim the spaces.</p>
+<p>Once complete, your code should look something like this:</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-5-Func-7E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-7E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-7E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-7E-md.png 749w"  alt="" width="2672" height="700"></figure>
+<p>Leave the “else” block empty since we don’t need to change the text when the switch is off.</p>
+<h2>Finishing touches</h2>
+<p>We are almost entirely done with our app! For the finishing touches, let’s change the Border Width to 1 pixel, and Text Alignment to “Left” so that we can easily see the differences in the text output.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-6-Finish-1.png" data-size="1366x1340"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-6-Finish-1-thumbnail.png" alt="" width="749" height="735"></a>
+<figcaption>Change the border width to 1 so it has a border</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-6-Finish-2.png" data-size="1360x1424"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-6-Finish-2-thumbnail.png" alt="" width="749" height="784"></a>
+<figcaption>Change text align to left so spaces are more obvious</figcaption>
+</figure>
+</div></div>
+<p>With that done, your app should look a little bit like this…</p>
+<figure class="post__video"><video loading="lazy" width="600" height="300" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/Thunkable-6-Finish-3.mp4" type="video/mp4" /></video></figure>
+<h2>Resources and Going Further</h2>
+<p>If you want some beautiful icons to use in your apps, projects and presentations, this is the icon suite that was used in this tutorial: </p>
+<p class="align-center"><a href="https://icons8.com/icons/fluency" target="_blank" rel="noopener noreferrer" class="btn">Icons8 Fluency Icons</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Getting Started with IoT</title>
         <author>
@@ -17,7 +199,7 @@
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-06T19:31:06+08:00</updated>
+        <updated>2022-04-07T10:24:22+08:00</updated>
             <summary>
                 <![CDATA[
                     What is the Internet of Things (IoT) all about? A&hellip;
@@ -25,13 +207,13 @@
             </summary>
         <content type="html">
             <![CDATA[
-                <h1>What is the Internet of Things (IoT) all about?</h1>
+                <h2>What is the Internet of Things (IoT) all about?</h2>
 <p>A lot of people have been talking about the Internet of Things (IoT), and Industry 4.0, but what does all of this mean for you?</p>
 <figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/andres-urena-tsBropDpnwE-unsplash-2.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-md.jpg 749w"  alt="" width="200" height="154"></figure>Internet of Things, simply put, is the ability for everyday items to connect to the Internet for enhanced functionality. Think of your smart speakers like Alexa, or smart homes that know when you are coming home and automatically prepare the air-con for you.</p>
 <p>Internet of Things is a key component of Industry 4.0 and provides companies with the ability to collect and analyse live data from their devices. </p>
 <figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/r151-preview-4.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-md.jpg 749w"  alt="" width="263" height="176"></figure>For example, newer MRTs that ply Singapore’s MRT tracks are fitted with sensors to automatically detect faults within the trains and tracks, reducing failure and breakdown, and ensuring better service for all.</p>
 <p>With the SSTuino II, you are empowered to create your own IoT devices and innovations. For students, IoT coupled with devices like the SSTuino allows you to collect data about your surroundings and stream them directly to the Internet, giving you the flexibility to conduct scientific inquiry without the need to hold a datalogger there and wait for data to come in. Or, create your own small automations around your household to make life easier! The sky’s the limit.</p>
-<h1>What is MQTT, and why use it?</h1>
+<h2>What is MQTT, and why use it?</h2>
 <p>MQTT stands for Message Queuing Telemetry Transport, and it is a “language” that your SSTuino uses to talk to the IoT server, just like how your web browser talks to websites to retrieve them, but spends even less data!</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/MQTT-1024x719.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-md.jpg 749w"  alt="" width="495" height="348"></figure>
 <p>MQTT has 3 important concepts to understand: “Publish”, “Subscribe” and “topics”.</p>
@@ -41,7 +223,7 @@
 <li>To <strong>Subscribe</strong> to a topic is to receive data from the server to your device. If you ever subscribed to a YouTube channel and clicked the bell icon, you would be notified whenever the channel posts something new. The same applies here when you subscribe to an MQTT topic and have new data pushed to your device the moment it appears.</li>
 </ul>
 <p>MQTT is lightweight and fault-tolerant, making it perfect for use with our IoT devices.</p>
-<h1>Creating an Ubidots STEM account</h1>
+<h2>Creating an Ubidots STEM account</h2>
 <p>You will need to create an account with Ubidots for this exercise. Ubidots is an IoT service that provides you with the ability to connect IoT devices, and display beautiful dashboards with data from your devices.</p>
 <p>We will be using Ubidots STEM, which is a special educational only version of Ubidots.</p>
 <p class="align-center"><a href="https://ubidots.com/stem/" target="_blank" rel="noopener noreferrer" class="btn">Sign up to Ubidots here!</a></p>
@@ -66,13 +248,13 @@
 <li>Up to <strong>3 dashboards</strong>, each with 10 widgets max</li>
 <li>For the full list of limitations, please refer to <a href="https://help.ubidots.com/en/articles/639806-what-is-the-difference-between-ubidots-and-ubidots-stem" target="_blank" rel="noopener noreferrer">this link</a> </li>
 </ul>
-<h1>How Ubidots works</h1>
+<h2>How Ubidots works</h2>
 <p>Each device that you connect to Ubidots is simply called a “Device”, which can have many “Variables”. These “Variables” are data sets that you can send. For example, you can have a Variable for temperature, another Variable for distance, and another Variable for a light switch. Within a Variable, there can be “Dots”, which is Ubidot’s way of describing a single data point at a certain time. If your temperature sensor sends “25.6” to the temperature Variable at 10:30 am, that counts as a single “Dot”.</p>
 <p>Ubidots only allows you to send numbers, which means you cannot send texts through their service. To represent a light switch, you would have to send a number of either 1 or 0. If you need to represent a fading light with <code>analogWrite</code>, you may have to use numbers from 0 to 255.</p>
-<h1>Setting up Ubidots</h1>
+<h2>Setting up Ubidots</h2>
 <p>Please login with the details you used to sign up just now at:</p>
 <p class="align-center"><a href="https://stem.ubidots.com/accounts/signin/" target="_blank" rel="noopener noreferrer" class="btn">Ubidots Login</a></p>
-<h2>Creating a new Device</h2>
+<h3>Creating a new Device</h3>
 <p>We are going to create a Device first. Click on the topbar <strong>“Devices &gt; Devices”</strong> to go to the Devices menu.</p>
 <div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-1E.png" data-size="2134x1410"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-1E-thumbnail.png" alt="" width="749" height="495"></a>
@@ -100,7 +282,7 @@
 <li>The <strong>Token</strong> is the unique <strong>password</strong> of your device</li>
 </ul>
 <p>Note these details down in your Notes app, because we will be using them later.</p>
-<h2>Creating a new Variable</h2>
+<h3>Creating a new Variable</h3>
 <p>Now that you’re done with creating a Device, it’s time to create a Variable! Press the big “Add Variable” sign in the middle of the screen and name your Variable something sensible. In our case, we are going to be measuring the temperature of the surroundings, so we will name it “Temperature”.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-2.png" data-size="2100x1472"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-2-thumbnail.png" alt="" width="749" height="525"></a>
@@ -112,7 +294,7 @@
 </div></div>
 <p class="msg msg--warning"><strong>Warning</strong>: Do not name your Variables and Device names with anything else, as the example code provided relies on the Device being named "SSTuino II" and Variable as "Temperature"</p>
 <p>When you click on the Temperature Variable, you can see the <strong>API Label</strong> of this variable which is <code>temperature</code>. Remember this name, because this is the name of this Variable for computers that need to communicate with it. You can choose to create more Variables here to suit what you need to do.</p>
-<h2>Creating a new Dashboard</h2>
+<h3>Creating a new Dashboard</h3>
 <p>With Variables out of the way, let’s create our first Dashboard. Go to the top bar, <strong>Data &gt; Dashboards</strong> and click “Add New Dashboard”. Give it a simple name like “My Dashboard” and set the Default Time Range to “Last 1 hour” so that the dashboard shows data generally from the last hour. Press the green arrow to add the new dashboard.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E.png" data-size="2104x463"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E-thumbnail.png" alt="" width="749" height="165"></a>
@@ -125,7 +307,7 @@
 <figcaption>Add a new widget to your dashboard with the + icon!</figcaption>
 </figure>
 </div></div>
-<h2>Adding a new widget to the dashboard</h2>
+<h3>Adding a new widget to the dashboard</h3>
 <p>With your dashboard, you can add up to 10 widgets to monitor the status of your devices connected to Ubidots. Click “Add New Widget'' and select “Thermometer” from it. Under the “Data” section, press “Add Variables” and select your Variable from the SSTuino II device.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="4">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4.png" data-size="2108x1474"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4-thumbnail.png" alt="" width="749" height="524"></a>
@@ -141,7 +323,7 @@
 <figcaption>Done!</figcaption>
 </figure>
 </div></div>
-<h1>Connecting your SSTuino II to Ubidots</h1>
+<h2>Connecting your SSTuino II to Ubidots</h2>
 <p>Phew, that was a lot of things to go through! Let’s start to connect your SSTuino II to Ubidots. Go to your Arduino examples and open up the <code>Ubidots_1_Connect</code> example by going to <strong>File &gt; Examples &gt; WiFiNINA &gt; Ubidots_1_Connect</strong>.</p>
 <p>Wow, the code looks quite scary! Not to worry, because we have placed comments to let you know where to put code and where to not place any code.</p>
 <p>In Arduino programs, you can actually have more than one file! Go to the <code>arduino_secrets.h</code> tab located on the tab bar. Here is where you place all the details of your WiFi network and your Ubidots device info.</p>
@@ -169,7 +351,7 @@
 <li><strong>“Connecting to MQTT…….” keeps having more dots but never connects</strong>: There is a network issue with your Wi-Fi hotspot. It might be possible that your mobile signal is bad in the classroom. Try using someone else’s hotspot that is known to be working.</li>
 <li><strong>An error code appeared during “Connecting to MQTT”!</strong>: Check out the “Quick Status/Error Codes Reference” section at the bottom of the <code>helper.h</code> file tab.</li>
 </ul>
-<h1>Resources and Going Further</h1>
+<h2>Resources and Going Further</h2>
 <p>If you are interested to learn more about the inner workings of MQTT, and how it came about, check out these two excellent articles made by Adafruit.</p>
 <ul>
 <li><a href="https://learn.adafruit.com/mqtt-adafruit-io-and-you/why-mqtt" target="_blank" rel="noopener noreferrer">Adafruit: Why use MQTT?</a></li>
@@ -597,7 +779,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html</id>
 
-        <updated>2022-04-01T17:06:34+08:00</updated>
+        <updated>2022-04-07T13:00:00+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1043,247 +1225,6 @@ String stringOne = String(5.698, 3);                  // using a float and the d
 <li><a href="https://learn.sparkfun.com/tutorials/data-types-in-arduino/all" target="_blank" rel="noopener noreferrer">Sparkfun's Guide on Data Types in Arduino</a></li>
 </ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Variables and Operators</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html"/>
-        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-4.html</id>
-
-        <updated>2022-04-01T17:01:06+08:00</updated>
-            <summary>
-                <![CDATA[
-                    In this tutorial, we will cover the usage of variables&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>In this tutorial, we will cover the usage of variables and AND/OR Operators.</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fulqia872go">Naming your variables</a></li>
-<li><a href="#mcetoc_1fulqia872gp">Logic Operations</a>
-<ul>
-<li><a href="#mcetoc_1fulqia872gq">Some history...</a></li>
-<li><a href="#mcetoc_1fulqia872gr">AND Operator</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fulqia872gs">OR Operator</a></li>
-<li><a href="#mcetoc_1fulqia872gt">OR Operator exercise</a></li>
-<li><a href="#mcetoc_1fulqia872gv">AND Operator exercise</a></li>
-<li><a href="#mcetoc_1fulqia872h0">Drag Race example</a></li>
-<li><a href="#mcetoc_1fulqia872h1">Toggle Switch</a></li>
-<li><a href="#mcetoc_1fvi5lvf516">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fulqia872go">Naming your variables</h2>
-<p>After some tinkering with your coding, you may realise that it may be a hassle to change for example a pin, like this example code:</p>
-<pre><code class="language-cpp">
-void setup()
-{
-  pinMode(13, OUTPUT);
-}
-
-void loop()
-{
-  digitalWrite(13, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(13, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
-}
-</code></pre>
-<p>Imagine that you would have to change all the <code>pin 13</code> to another pin, and would have to scan through the entire code just to change all these values! Isn't it a hassle to change all these numbers?</p>
-<p><em>Introducing... Variable names. </em>😎 Here is a modified version of the code above:</p>
-<pre><code class="language-cpp">
-int LED = 13;
-int wait = 1000;
-
-void setup()
-{
-  pinMode(LED, OUTPUT);
-}
-
-void loop()
-{
-  digitalWrite(LED, HIGH);
-  delay(wait); // Wait for 1000 millisecond(s)
-  digitalWrite(13, LOW);
-  delay(wait); // Wait for 1000 millisecond(s)
-}
-</code></pre>
-<p><em><strong>Voilà!</strong></em> I have managed to change all the numbers to variable names. For example, in the event I want to adjust the <code>delay()</code> function in the code, I just have to change the <code>1000</code> in the <code>int wait=1000;</code> into a different number! Now that's straightforward. <em>How about you try it out now?</em></p>
-<h2 id="mcetoc_1fulqia872gp">Logic Operations</h2>
-<p>Logical operations are introduced when we need to evaluate related expressions to return a single value. For this tutorial, we are going to introduce the AND/OR Operators.</p>
-<h3 id="mcetoc_1fulqia872gq">Some history...</h3>
-<p>Back when technology was not this advanced, the various operators were actual hardware logic gates that were placed into the circuit. The chips looked something like this:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton15.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton15-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton15-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton15-md.jpg 749w"  alt="" width="390" height="317"></figure>
-<p>Technology has come a long way, squeezing billions of transistors inside a single chip to provide us with a fast, modern computer.</p>
-<h3 id="mcetoc_1fulqia872gr">AND Operator</h3>
-<p>How it works is that if both Input 1 and Input 2 are <code>high</code>, it will give a <code>high</code> output, as illustrated in this table (emojis added to help you understand 😄):</p>
-<table class="table-bordered" style="border-collapse: collapse; width: 100%; height: 251.797px;" border="1">
-<tbody>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;"><strong>Input 1</strong></td>
-<td style="width: 33.2855%; height: 50.3594px;"><strong>Input 2</strong></td>
-<td style="width: 33.2866%; height: 50.3594px;"><strong>Output</strong></td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">0 😡</td>
-<td style="width: 33.2855%; height: 50.3594px;">0 😡</td>
-<td style="width: 33.2866%; height: 50.3594px;">0 😡</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">0 😡</td>
-<td style="width: 33.2855%; height: 50.3594px;">1 🙂</td>
-<td style="width: 33.2866%; height: 50.3594px;">0 😡</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">1 🙂</td>
-<td style="width: 33.2855%; height: 50.3594px;">0 😡</td>
-<td style="width: 33.2866%; height: 50.3594px;">0 😡</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">1 🙂</td>
-<td style="width: 33.2855%; height: 50.3594px;">1 🙂</td>
-<td style="width: 33.2866%; height: 50.3594px;">1 🙂</td>
-</tr>
-</tbody>
-</table>
-<p> </p>
-<h2 id="mcetoc_1fulqia872gs">OR Operator</h2>
-<p>How it works is that if either Input 1 <strong>OR</strong> Input 2 are <code>high</code>, it will give a <code>high</code> output. If both Inputs are <code>high</code>, it will also give a <code>high</code> output, as illustrated in this table (Emojis added to help you understand 😄): </p>
-<table class="table-bordered" style="border-collapse: collapse; width: 100%;" border="1">
-<tbody>
-<tr>
-<td style="width: 33.2855%;"><strong>Input 1</strong></td>
-<td style="width: 33.2855%;"><strong>Input 2</strong></td>
-<td style="width: 33.2866%;"><strong>Output</strong></td>
-</tr>
-<tr>
-<td style="width: 33.2855%;">0 😡</td>
-<td style="width: 33.2855%;">0 😡</td>
-<td style="width: 33.2866%;">0 😡</td>
-</tr>
-<tr>
-<td style="width: 33.2855%;">0 😡</td>
-<td style="width: 33.2855%;">1 🙂</td>
-<td style="width: 33.2866%;">1 🙂</td>
-</tr>
-<tr>
-<td style="width: 33.2855%;">1 🙂</td>
-<td style="width: 33.2855%;">0 😡</td>
-<td style="width: 33.2866%;">1 🙂</td>
-</tr>
-<tr>
-<td style="width: 33.2855%;">1 🙂</td>
-<td style="width: 33.2855%;">1 🙂</td>
-<td style="width: 33.2866%;">1 🙂</td>
-</tr>
-</tbody>
-</table>
-<h2 id="mcetoc_1fulqia872gt">OR Operator exercise</h2>
-<p>Let us create a new circuit in TinkerCAD like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton16.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton16-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton16-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton16-md.png 749w"  alt="" width="1818" height="843"></figure>
-<p>Next, we will need to edit the code such that the LED would light up once <strong>one</strong> of the buttons is pressed:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton17.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton17-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton17-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton17-md.png 749w"  alt="" width="1897" height="501"></figure>
-<p>You would see this when you start simulation:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton34.mp4" type="video/mp4" /></video></figure>
-<p>Here is what it looks like on the SSTuino:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton38.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fulqia872gv">AND Operator exercise</h2>
-<p>With the same example, we just have to change one part of the code to this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton21.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton21-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton21-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton21-md.png 749w"  alt="" width="2032" height="536"></figure>
-<p class="msg msg--info"><strong>Tip: </strong>To activate the two buttons, you would have to press and hold <strong>SHIFT</strong> on your keyboard while clicking the buttons to activate both buttons.</p>
-<p>You would see this when you start simulation:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton35.mp4" type="video/mp4" /></video></figure>
-<p>Here is what it looks like on the SSTuino:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton39.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fulqia872h0">Drag Race example</h2>
-<p>Let us duplicate the circuit we have just created in the previous section.</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton22.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton22-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton22-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton22-md.png 749w"  alt="" width="636" height="374"></figure>
-<p>We will need to have 3 LEDs this time, to show that:</p>
-<table class="table-bordered" style="border-collapse: collapse; width: 100%; height: 251.797px;" border="1">
-<tbody>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;"><strong>Button 1</strong></td>
-<td style="width: 33.2855%; height: 50.3594px;"><strong>Button 2</strong></td>
-<td style="width: 33.2866%; height: 50.3594px;"><strong>Output</strong></td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">Not Pressed</td>
-<td style="width: 33.2855%; height: 50.3594px;">Not Pressed</td>
-<td style="width: 33.2866%; height: 50.3594px;"><span style="color: #e03e2d;">Red</span> LED</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">Not Pressed</td>
-<td style="width: 33.2855%; height: 50.3594px;">Pressed</td>
-<td style="width: 33.2866%; height: 50.3594px;"><span style="color: #f1c40f;">Yellow</span> LED</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">Pressed</td>
-<td style="width: 33.2855%; height: 50.3594px;">Not Pressed</td>
-<td style="width: 33.2866%; height: 50.3594px;"><span style="color: #f1c40f;">Yellow</span> LED</td>
-</tr>
-<tr style="height: 50.3594px;">
-<td style="width: 33.2855%; height: 50.3594px;">Pressed</td>
-<td style="width: 33.2855%; height: 50.3594px;">Pressed</td>
-<td style="width: 33.2866%; height: 50.3594px;"><span style="color: #2dc26b;">Green</span> LED</td>
-</tr>
-</tbody>
-</table>
-<p>The circuit is built as shown:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton23-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton23-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton23-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton23-2-md.png 749w"  alt="" width="1915" height="872"></figure>
-<p class="msg msg--highlight  msg--success">How would you program this circuit?</p>
-<p>Here is how I did it:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton24.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton24-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton24-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton24-md.png 749w"  alt="" width="1206" height="812"></figure>
-<p>Here is how the code works:</p>
-<ol>
-<li>Are any of the buttons pressed? If yes go to 2, if not, Red LED.</li>
-<li>Are both of the buttons pressed? If yes, Green LED, if not, Yellow LED.</li>
-</ol>
-<p>So would there be other ways to do it? <em>Certainly!</em> This is just one of the ways you can do it! There are many ways to make it work the same way also!</p>
-<p>For the above code, this is what happens when I press <strong>Start Simulation:</strong></p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton36.mp4" type="video/mp4" /></video></figure>
-<p>Here is what it looks like on the SSTuino:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton40.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fulqia872h1">Toggle Switch</h2>
-<p>Let us assume that we only have a button to control our lighting. Based on previous examples, if you were want to light up the LED, you would have to press and hold the LED right? What if I was to use the washroom and want the lights to be on? I would then have to press and hold the button for the lights to remain on! 😱 To make our lives much better, we can make our button into a toggle switch with some coding... 🥳</p>
-<p>Build a circuit as shown:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton4-md.png 749w"  alt="" width="1929" height="853"></figure>
-<p>For the program, we would have to introduce variables. To create variables, navigate here:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton27.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton27-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton27-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton27-md.png 749w"  alt="" width="260" height="230"></figure>
-<p>Create the variables <code>btn</code> and <code>led</code>. We are going to use these variables to store the state of the button and LED. What this means is that if the button is pressed, I change the state of the variable, and it will remember the state. This also means that if I press and hold the button, it does not spam the ON command. It will just activate once. Same with the LED.</p>
-<p>Here is how the program can be coded:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/17/arduinoButton28.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton28-xs.png 300w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton28-sm.png 480w ,https://knowledge.fourier.industries/media/posts/17/responsive/arduinoButton28-md.png 749w"  alt="" width="1152" height="1014"></figure>
-<p class="msg msg--success">You can explore other ways of programming this too!</p>
-<p>Did you manage to do it? If you did, that's great! Do help your peers out too!</p>
-<p>You would see this when you start simulation:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton37.mp4" type="video/mp4" /></video></figure>
-<p>Here is what it looks like on the SSTuino:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoButton41.mp4" type="video/mp4" /></video></figure>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<h2 id="mcetoc_1fvi5lvf516">Resources and Going Further</h2>
-<ul>
-<li><a href="https://www.electronics-tutorials.ws/category/logic" target="_blank" rel="noopener noreferrer">Electronic Tutorials: Logic Gates</a></li>
-</ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-2.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
