@@ -3,21 +3,21 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-07T13:03:44+08:00</updated>
+    <updated>2022-04-07T22:01:45+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
     <entry>
-        <title>Mobile Apps, Part 1</title>
+        <title>Mobile Apps, Part I</title>
         <author>
             <name>FourierIndustries LLP</name>
         </author>
         <link href="https://knowledge.fourier.industries/mobile-apps-part-1.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-1.html</id>
 
-        <updated>2022-04-07T13:03:44+08:00</updated>
+        <updated>2022-04-07T21:50:32+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will create a mobile app with&hellip;
@@ -199,7 +199,7 @@
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-07T10:24:22+08:00</updated>
+        <updated>2022-04-07T22:01:45+08:00</updated>
             <summary>
                 <![CDATA[
                     What is the Internet of Things (IoT) all about? A&hellip;
@@ -209,9 +209,11 @@
             <![CDATA[
                 <h2>What is the Internet of Things (IoT) all about?</h2>
 <p>A lot of people have been talking about the Internet of Things (IoT), and Industry 4.0, but what does all of this mean for you?</p>
-<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/andres-urena-tsBropDpnwE-unsplash-2.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-md.jpg 749w"  alt="" width="200" height="154"></figure>Internet of Things, simply put, is the ability for everyday items to connect to the Internet for enhanced functionality. Think of your smart speakers like Alexa, or smart homes that know when you are coming home and automatically prepare the air-con for you.</p>
+<p> </p>
+<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/andres-urena-tsBropDpnwE-unsplash-2.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-md.jpg 749w"  alt="" width="268" height="206"></figure>Internet of Things, simply put, is the ability for everyday items to connect to the Internet for enhanced functionality. Think of your smart speakers like Alexa, or smart homes that know when you are coming home and automatically prepare the air-con for you.</p>
 <p>Internet of Things is a key component of Industry 4.0 and provides companies with the ability to collect and analyse live data from their devices. </p>
-<figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/r151-preview-4.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-md.jpg 749w"  alt="" width="263" height="176"></figure>For example, newer MRTs that ply Singapore’s MRT tracks are fitted with sensors to automatically detect faults within the trains and tracks, reducing failure and breakdown, and ensuring better service for all.</p>
+<p> </p>
+<figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/r151-preview-4.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-md.jpg 749w"  alt="" width="312" height="209"></figure>For example, newer MRTs that ply Singapore’s MRT tracks are fitted with sensors to automatically detect faults within the trains and tracks, reducing failure and breakdown, and ensuring better service for all.</p>
 <p>With the SSTuino II, you are empowered to create your own IoT devices and innovations. For students, IoT coupled with devices like the SSTuino allows you to collect data about your surroundings and stream them directly to the Internet, giving you the flexibility to conduct scientific inquiry without the need to hold a datalogger there and wait for data to come in. Or, create your own small automations around your household to make life easier! The sky’s the limit.</p>
 <h2>What is MQTT, and why use it?</h2>
 <p>MQTT stands for Message Queuing Telemetry Transport, and it is a “language” that your SSTuino uses to talk to the IoT server, just like how your web browser talks to websites to retrieve them, but spends even less data!</p>
@@ -335,8 +337,8 @@
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/iOS_14_0_1_Personal_Hotspot_settings_maximize_compatibility_highlighted_001-768x592.png" data-size="768x592"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/iOS_14_0_1_Personal_Hotspot_settings_maximize_compatibility_highlighted_001-768x592-thumbnail.png" alt="" width="749" height="577"></a>
 <figcaption>iOS</figcaption>
 </figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Screenshot_20210421-213941.png" data-size="1080x2160"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Screenshot_20210421-213941-thumbnail.png" alt="" width="749" height="1498"></a>
-<figcaption>Android 12 Phones</figcaption>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Screenshot_20210421-213941-2.png" data-size="1080x1397"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Screenshot_20210421-213941-2-thumbnail.png" alt="" width="749" height="969"></a>
+<figcaption>Android 12</figcaption>
 </figure>
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/hotspot-switch-to-2.4GHz-ap-band.png" data-size="1494x1080"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/hotspot-switch-to-2.4GHz-ap-band-thumbnail.png" alt="" width="749" height="541"></a>
 <figcaption>Android 11 and Below</figcaption>
@@ -1110,14 +1112,14 @@ void loop()
         </content>
     </entry>
     <entry>
-        <title>From Blocks to Code, Part 1</title>
+        <title>From Blocks to Code, Part I</title>
         <author>
             <name>FourierIndustries LLP</name>
         </author>
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html</id>
 
-        <updated>2022-04-01T14:35:37+08:00</updated>
+        <updated>2022-04-07T15:20:38+08:00</updated>
             <summary>
                 <![CDATA[
                     This tutorial aims to teach you the basics of text&hellip;
