@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-08T19:42:22+08:00</updated>
+    <updated>2022-04-08T21:26:18+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-08T19:27:34+08:00</updated>
+        <updated>2022-04-08T21:25:55+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -26,13 +26,59 @@
         <content type="html">
             <![CDATA[
                 <p>In this lesson, we will be learning how to send and receive data to and from Ubidots. Let’s go!</p>
-<h2>"Publishing" Data to Ubidots MQTT</h2>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2bn">"Publishing" Data to Ubidots MQTT</a>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2bo">Arduino Hookup</a></li>
+<li><a href="#mcetoc_1g04lk9pg2bp">Transplanting Code</a>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2bq">Step 1: Declaration</a></li>
+<li><a href="#mcetoc_1g04lk9pg2br">Step 2: Setup</a></li>
+<li><a href="#mcetoc_1g04lk9pg2bs">Step 3: Loop</a></li>
+<li><a href="#mcetoc_1g04lk9pg2bt">Step 4: Publish</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mcetoc_1g04lk9pg2bu">"Subscribing" data from Ubidots MQTT</a>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2bv">Ubidots Setup</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c0">Code</a>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2c1">Step 1: Declaration</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c2">Step 2:  Setup</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c3">Step 3: Loop</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c4">Step 4: Message Received</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c5">Step 5: Connect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#mcetoc_1g04lk9pg2c6">Both at the same time!</a>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2c7">Arduino Hookup</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c8">Code</a>
+<ul>
+<li><a href="#mcetoc_1g04lk9pg2c9">Step 1: Declarations</a></li>
+<li><a href="#mcetoc_1g04lk9pg2ca">Step 2: Setup</a></li>
+<li><a href="#mcetoc_1g04lk9pg2cb">Step 3: Loop</a></li>
+<li><a href="#mcetoc_1g04lk9pg2cc">Step 4: Message Received</a></li>
+<li><a href="#mcetoc_1g04lk9pg2cd">Step 5: Connect</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="mcetoc_1g04lk9pg2bn">"Publishing" Data to Ubidots MQTT</h2>
 <p>Let us send (“publish”) some data to Ubidots! We will be sending the ambient temperature to Ubidots with our TMP36 temperature sensor.</p>
 <p>Open the previous Arduino code where we went through all the Wi-Fi passwords and Ubidots tokens (you should have saved it as “Connect”), and save it as a new project (name it something like “Publish”).</p>
-<h3>Arduino Hookup</h3>
+<h3 id="mcetoc_1g04lk9pg2bo">Arduino Hookup</h3>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/arduinoPot40.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-md.png 749w"  alt="" width="1837" height="854"></figure>
 <p>You will need to connect your SSTuino according to the diagram above, with the TMP36 sensor's output connected to Analog In A0.</p>
-<h3>Transplanting Code</h3>
+<h3 id="mcetoc_1g04lk9pg2bp">Transplanting Code</h3>
 <p>Now, let’s look at the TMP36 code that we built previously in TinkerCAD. It should look something like this:</p>
 <pre><code class="language-cpp">// C++ code
 //
@@ -51,7 +97,7 @@ void loop()
   delay(10); // Delay a little bit to improve simulation performance
 }</code></pre>
 <p>Based on what we have learned in <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html">From Blocks To Code - Part I</a>, we will be transplanting the 3 important sections of this code to the IoT template that we are using to connect: <strong>Declaration</strong>, <strong>Setup</strong> and <strong>Loop</strong>. Transplanting code is easy because the example has already marked out where to put your code 😄. Find the parts marked by <code>/********* This is where you put your own code *********/</code>.</p>
-<h4>Step 1: Declaration</h4>
+<h4 id="mcetoc_1g04lk9pg2bq">Step 1: Declaration</h4>
 <p>The first part to transplant would be the variable <code>temp</code> for temperature so that we have this variable in our IoT code.</p>
 <pre><code class="language-cpp">…
 WiFiClient network;
@@ -64,12 +110,12 @@ int temp = 0;
 
 /**************** End of your own code *****************/
 
-void setup() {
+void setup()
 …</code></pre>
-<h4>Step 2: Setup</h4>
+<h4 id="mcetoc_1g04lk9pg2br">Step 2: Setup</h4>
 <p><span style="font-weight: 400;">The second part would be our <code>setup()</code> function, to set Analog Pin A0 as an input. We can ignore the <code>Serial.begin</code> safely as we already set up our Serial connection in the example, so we only need to copy over <code>pinMode()</code>.</span></p>
 <pre><code class="language-cpp">…
-void setup() {
+void setup()<br>{
   Serial.begin(9600);
 
   /********* This is where you put your own code *********/
@@ -87,16 +133,16 @@ void setup() {
   connect(); // Connect to MQTT server
 }
 …</code></pre>
-<h4>Step 3: Loop</h4>
+<h4 id="mcetoc_1g04lk9pg2bs">Step 3: Loop</h4>
 <p>The third part is the <code>loop()</code> function, to calculate the temperature from the voltage. We only need to transplant the 1st line to our IoT example code, underneath <code>This is where you put your own code</code>, since we only need to calculate the temperature.</p>
 <p>As for the delay, we will increase it to 10 seconds (10000 milliseconds) to prevent it from spamming the server.</p>
 <pre><code class="language-cpp">…
-void loop() {
+void loop()<br>{
   client.loop(); // This function must be called on every loop
 
   // Check if MQTT connection is active, and reconnect if it's broken
   // This must be called every loop to ensure connection
-  if (!client.connected()) {
+  if (!client.connected())<br>  {
     Serial.println("MQTT Client disconnected, reconnecting...");
     connect();
   }
@@ -130,12 +176,12 @@ void loop() {
   delay(10000); // repeat every 10 seconds
   …
 </code></pre>
-<h4>Step 4: Publish</h4>
+<h4 id="mcetoc_1g04lk9pg2bt">Step 4: Publish</h4>
 <p>Recall that in the last lesson, we went through what MQTT is and what MQTT topics look like. Let’s say you have followed all instructions and named your device “SSTuino II”. Now the name for this device in the topic should be <code>sstuino-ii</code>. Combine this with the name of the Variable you added on Ubidots earlier and you get <code>sstuino-ii/temperature</code>.</p>
 <p>Publishing to Ubidots using MQTT is as simple as calling the <code>publishUbidots()</code> function like so: <code>publishUbidots(client, “sstuino-ii/temperature”, temperatureString);</code>. Make sure you place all of this code <i>before</i> the delay so that all of it runs before the microcontroller sleeps for 10 seconds.</p>
 <p>The complete code between the brackets in <code>loop()</code> should look something like this:</p>
 <pre><code class="language-cpp">…
-void loop() {
+void loop()<br>{
   …
 
   /********* This is where you put your own code *********/
@@ -156,10 +202,10 @@ void loop() {
 <p>Connect your SSTuino, upload your program, open your Serial Monitor and go to your Ubidots dashboard. You can now see the current temperature on the dashboard! </p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/Ubidots-5-Dashboard-7E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-md.png 749w"  alt="" width="564" height="390"></figure>
 <p>Well done, now you have made your first Internet-connected temperature sensor in 4 steps (Declaration, Setup, Loop, Publish). This simple example can be extended to many other sensors that you may want to build, like motion detectors, air quality sensors, and so on.</p>
-<h2>"Subscribing" data from Ubidots MQTT</h2>
+<h2 id="mcetoc_1g04lk9pg2bu">"Subscribing" data from Ubidots MQTT</h2>
 <p>Now that we have sent, or “published” data to Ubidots, let’s try receiving data by “subscribing”! </p>
 <p>We will be making a very simple example: a smart light switch. Arduino represents a HIGH signal with the number 1, and a LOW signal with the number 0, which means that we can simply represent the state of the light switch as 0s and 1s. Our light switch will use one of the debug lights on the board, meaning that you do not need to connect anything externally for it to work.</p>
-<h3>Ubidots Setup</h3>
+<h3 id="mcetoc_1g04lk9pg2bv">Ubidots Setup</h3>
 <p>Get started by creating a new Variable under your existing Device with the name “Light” as shown:</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/Ubidots-6-Subscribe-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-6-Subscribe-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-6-Subscribe-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-6-Subscribe-1E-md.png 749w"  alt="" width="662" height="452"></figure>
 <p>Next, let’s create a switch on our dashboard so that we can control this light switch. Press the + button on top and create a new switch, then link it to the “Light” Variable of your device.</p>
@@ -175,10 +221,10 @@ void loop() {
 </figure>
 </div></div>
 <p>We are now done with Ubidots.</p>
-<h3>Code</h3>
+<h3 id="mcetoc_1g04lk9pg2c0">Code</h3>
 <p>We can open the code that we used to connect to MQTT previously (should be named Connect) and save it as a new project (name it something like “Subscribe”). You can also open the Publish code you just built as a side-by-side reference, if you need to.</p>
 <p>We can now start building our code for subscribing with 5 major steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Connect</strong>. Compared to the previous Publish example, it has 1 extra and 1 changed step.</p>
-<h4>Step 1: Declaration</h4>
+<h4 id="mcetoc_1g04lk9pg2c1">Step 1: Declaration</h4>
 <p>You will first need to store the state of the light, in other words, whether it is on or off (in Arduino terms, HIGH or LOW). Make an integer variable called <code>light</code> and set it to LOW initially.</p>
 <pre><code class="language-cpp">…
 WiFiClient network;
@@ -191,12 +237,12 @@ int light = LOW;
 
 /**************** End of your own code *****************/
 
-void setup() {
+void setup()
 …</code></pre>
-<h4>Step 2:  Setup</h4>
+<h4 id="mcetoc_1g04lk9pg2c2">Step 2:  Setup</h4>
 <p>In our setup, we need to tell our SSTuino that the pin that we want our light to be an output. We will use Pin 2 in our case as it’s the first pin with an LED. Use <code>pinMode</code> to set Pin 2 as an output.</p>
 <pre><code class="language-cpp">…
-void setup() {
+void setup()<br>{
   Serial.begin(9600);
 
   /********* This is where you put your own code *********/
@@ -214,15 +260,15 @@ void setup() {
   connect(); // Connect to MQTT server
 }
 …</code></pre>
-<h4>Step 3: Loop</h4>
+<h4 id="mcetoc_1g04lk9pg2c3">Step 3: Loop</h4>
 <p>Inside the loop, we have to respond to changes to the <code>light</code> variable by properly toggling the light on pin 2 on or off. Whenever a message from the subscribed topic comes in, another function will change the <code>light</code> variable, and over here, we need to “apply” this change by actually using the <code>digitalWrite()</code> function.</p>
 <pre><code class="language-cpp">…
-void loop() {
+void loop()<br>{
   client.loop(); // This function must be called on every loop
 
   // Check if MQTT connection is active, and reconnect if it's broken
   // This must be called every loop to ensure connection
-  if (!client.connected()) {
+  if (!client.connected())<br>  {
     Serial.println("MQTT Client disconnected, reconnecting...");
     connect();
   }
@@ -234,12 +280,12 @@ void loop() {
   /**************** End of your own code *****************/
 }
 …</code></pre>
-<h4>Step 4: Message Received</h4>
+<h4 id="mcetoc_1g04lk9pg2c4">Step 4: Message Received</h4>
 <p>Inside this special function is where the MQTT subscribe message is actually received. We have to check if it’s really the correct message by checking the topic, and then changing the value of <code>light</code> based on the value received. </p>
 <p>We do this check by using the <code>topicMatches(shortTopic, longTopic)</code> helper function, which breaks down Ubidot’s long and hard-to-understand topic format of <code>/v1.6/devices/{DEVICE}/{VARIABLE}/lv</code> into just <code>{DEVICE}/{VARIABLE}</code>.</p>
 <p>If the topic is the one we want (i.e. outcome of this function is <code>true</code>), we will change the <code>light</code> variable based on the payload of the message. To do that, we have to convert the payload from a String to an integer. Recall the <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html">From Blocks to Code lesson</a>, where we converted data from one type to another. To convert a String to int, we just need to use <code>.toInt()</code> behind the String!</p>
 <pre><code class="language-cpp">…
-void messageReceived(String &amp;topic, String &amp;payload) {
+void messageReceived(String &amp;topic, String &amp;payload) <br>{
   Serial.println("Incoming data: " + topic + " - " + payload);
 
   /* 
@@ -252,7 +298,7 @@ void messageReceived(String &amp;topic, String &amp;payload) {
   
   /********* This is where you put your own code *********/
 
-  if (topicMatches("sstuino-ii/light", topic) == true) {
+  if (topicMatches("sstuino-ii/light", topic) == true)<br>  {
     // You can do something with the payload, which is a String
     light = payload.toInt(); // convert the incoming message from String to int
   }
@@ -260,7 +306,7 @@ void messageReceived(String &amp;topic, String &amp;payload) {
   /**************** End of your own code *****************/
 }
 …</code></pre>
-<h4>Step 5: Connect</h4>
+<h4 id="mcetoc_1g04lk9pg2c5">Step 5: Connect</h4>
 <p>At long last, we have come to the last part we have to change: the bottom part of the <code>connect()</code> function. This function is responsible for connecting to MQTT, but it is also responsible for subscribing to the topics that we want to receive messages from. </p>
 <p>Simply call the <code>subscribeUbidots()</code> function from the helper by coding <code>subscribeUbidots(client, "sstuino-ii/light");</code> after the "Connected to MQTT" Serial printout and you’re done!</p>
 <pre><code class="language-cpp">…
@@ -273,15 +319,15 @@ void messageReceived(String &amp;topic, String &amp;payload) {
 }
 …</code></pre>
 <p>All 5 steps are done now, so it’s time to run your project. Plug in your SSTuino, upload this code, open the Serial Monitor and let it connect. Once it is fully connected, you can try press the switch on your Ubidots dashboard to see the LED on Pin 2 light up!</p>
-<pre>Add video here</pre>
-<h2>Both at the same time!</h2>
+<pre>Add video here of the user pressing the switch on Ubidots and watching pin 2 light up</pre>
+<h2 id="mcetoc_1g04lk9pg2c6">Both at the same time!</h2>
 <p>Now that we have both Publish and Subscribe, let's try to do both at the same time. Use the Save As function to make a copy of your "Publish" project and name it "Both". Keep the Subscribe project on one side of your screen so that you can always refer to it. </p>
-<h3>Arduino Hookup</h3>
+<h3 id="mcetoc_1g04lk9pg2c7">Arduino Hookup</h3>
 <p>This practise will use the exact same circuit as the Publish example.</p>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/arduinoPot40.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-md.png 749w"  alt="" width="1837" height="854"></figure>
-<h3>Code</h3>
+<h3 id="mcetoc_1g04lk9pg2c8">Code</h3>
 <p>We are going to walk through this tutorial the same way as we did for Subscribe, which is to break it down into 5 steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Connect</strong>.</p>
-<h4>Step 1: Declarations</h4>
+<h4 id="mcetoc_1g04lk9pg2c9">Step 1: Declarations</h4>
 <p>Firstly, you want to merge the variables at the top of the code above <code>setup()</code>, having both <code>temp</code> and <code>light</code> for temperature and light switch respectively.</p>
 <pre><code class="language-cpp">…
 WiFiClient network;
@@ -295,12 +341,12 @@ int light = LOW;
 
 /**************** End of your own code *****************/
 
-void setup() {
+void setup()
 …</code></pre>
-<h4>Step 2: Setup</h4>
+<h4 id="mcetoc_1g04lk9pg2ca">Step 2: Setup</h4>
 <p>Next, within the <code>setup()</code> function, add another function call to <code>pinMode</code> so that you designate Pin 2 (the same pin that we used in our Subscribe example) as an output pin. </p>
 <pre><code class="language-cpp">…
-void setup() {
+void setup()<br>{
   Serial.begin(9600);
 
   /********* This is where you put your own code *********/
@@ -319,15 +365,15 @@ void setup() {
   connect(); // Connect to MQTT server
 }
 …</code></pre>
-<h4>Step 3: Loop</h4>
+<h4 id="mcetoc_1g04lk9pg2cb">Step 3: Loop</h4>
 <p>Within the <code>loop()</code> function, we have to periodically set Pin 2’s signal to be on/off, depending on what the variable <code>light</code> is at the moment. We will do this with a <code>digitalWrite(2, light)</code>.</p>
 <pre><code class="language-cpp">…
-void loop() {
+void loop() <br>{
   client.loop(); // This function must be called on every loop
 
   // Check if MQTT connection is active, and reconnect if it's broken
   // This must be called every loop to ensure connection
-  if (!client.connected()) {
+  if (!client.connected())<br>  {
     Serial.println("MQTT Client disconnected, reconnecting...");
     connect();
   }
@@ -347,8 +393,46 @@ void loop() {
   /**************** End of your own code *****************/
 }
 …</code></pre>
-<p> </p>
-<p> </p>
+<h4 id="mcetoc_1g04lk9pg2cc">Step 4: Message Received</h4>
+<p>In the <code>messageReceived()</code> function, we have to check for our incoming message just like what we did previously. Copy from the beginning to the end of the if statement and paste it between <code>This is where you put our code</code> markers.</p>
+<pre><code class="language-cpp">…
+void messageReceived(String &amp;topic, String &amp;payload)
+{
+  Serial.println("Incoming data: " + topic + " - " + payload);
+
+  /*
+    All the messages your MQTT service receives can be
+    loaded here
+
+    *NOTE*: Do not use this function to publish, subscribe
+    or unsubscribe as it may cause deadlocks
+  */
+
+  /********* This is where you put your own code *********/
+
+  if (topicMatches("sstuino-ii/light", topic) == true)
+  {
+    // You can do something with the payload, which is a String
+    light = payload.toInt(); // convert the incoming message from String to int
+  }
+
+  /**************** End of your own code *****************/
+}
+…</code></pre>
+<h4 id="mcetoc_1g04lk9pg2cd">Step 5: Connect</h4>
+<p>Finally, don’t forget to actually subscribe to the topic in question, which should be named <code>sstuino-ii/light</code> at the bottom of the <code>connect()</code> function.</p>
+<pre><code class="language-cpp">…
+  Serial.println("\nConnected to MQTT!");
+
+  /********************************************************
+    Subscribe to topics you need here!
+  ********************************************************/
+  subscribeUbidots(client, "sstuino-ii/light");
+}
+…</code></pre>
+<p>With all of the code done, it’s time to plug in your SSTuino and upload the code. Try playing around with the switch on your dashboard to see if the debug LED on Pin 2 turns on and off.</p>
+<pre>Insert video here</pre>
+<p>If everything works out, awesome! You have successfully made an IoT controller for a smart home, with a temperature sensor to tell you how hot or cold your room is, and an internet-controlled light that you can trigger using other Internet controlled functions. You can explore how to integrate this with IFTTT (If This Then That) or other smart solutions to link your existing devices like a Google Home Mini with your SSTuino based IoT controller. </p>
             ]]>
         </content>
     </entry>
@@ -360,7 +444,7 @@ void loop() {
         <link href="https://knowledge.fourier.industries/mobile-apps-part-1.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-1.html</id>
 
-        <updated>2022-04-07T21:50:32+08:00</updated>
+        <updated>2022-04-08T21:26:06+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will create a mobile app with&hellip;
@@ -370,7 +454,25 @@ void loop() {
             <![CDATA[
                 <p>In this tutorial, we will create a mobile app with Thunkable and connect your IoT applications with them! Thunkable is an easy to use “code-lite” mobile app creator, in which you can make mobile apps with only block-based code with no need to write text-based code. You can then upload this to your phone or even publish them on actual app stores if you wish to distribute your app.</p>
 <p class="msg msg--info"><strong>Note: </strong>It is strongly recommended that this tutorial be done at home</p>
-<h2>Signing up to Thunkable</h2>
+<div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1g04lks6i2dn">Signing up to Thunkable</a></li>
+<li><a href="#mcetoc_1g04lks6i2do">Hello World!</a></li>
+<li><a href="#mcetoc_1g04lks6i2dp">Drag and Drop</a>
+<ul>
+<li><a href="#mcetoc_1g04lks6i2dq">Adjusting the properties of the label</a></li>
+<li><a href="#mcetoc_1g04lks6i2dr">Advanced inputs</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1g04lks6i2ds">Activating Buttons</a></li>
+<li><a href="#mcetoc_1g04lks6i2dt">Navigating with a tab bar</a></li>
+<li><a href="#mcetoc_1g04lks6i2du">Using functions</a></li>
+<li><a href="#mcetoc_1g04lks6i2dv">Finishing touches</a></li>
+<li><a href="#mcetoc_1g04lks6i2e0">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1g04lks6i2dn">Signing up to Thunkable</h2>
 <p>We can sign up for Thunkable with our SST Google Account by clicking “Sign up with Google”. It’s that simple!</p>
 <p class="align-center"><a href="https://x.thunkable.com/signup?referrerId=random.rrr3r7" target="_blank" rel="noopener noreferrer" class="btn">Sign up to Thunkable</a></p>
 <p>Once you have completed signup, you can click the links below on your mobile phone to download Thunkable Live so that you can upload the app to your mobile phone:</p>
@@ -379,26 +481,26 @@ void loop() {
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-1-NewProj-1.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-1-NewProj-1-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-1-NewProj-1-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-1-NewProj-1-md.png 749w"  alt="" width="516" height="359"></figure>
 <p>It is highly recommended that you watch some of Thunkable’s tutorials at the link below, before you start this lesson to have a good idea of how to use Thunkable: </p>
 <p class="align-center"><a href="https://docs.thunkable.com/v/drag-and-drop/tutorials" target="_blank" rel="noopener noreferrer" class="btn">Thunkable Drag and Drop Tutorials</a></p>
-<h2>Hello World!</h2>
+<h2 id="mcetoc_1g04lks6i2do">Hello World!</h2>
 <p>Time to start creating our first Thunkable app! This part of the tutorial will assume that you already understand how to operate the user interface of Thunkable and are familiar with some of the key concepts in Thunkable. </p>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-2-Layout-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-2-Layout-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-2-Layout-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-2-Layout-1E-md.png 749w"  alt="" width="2124" height="1474"></figure>
 <p>Now that you are on your app screen, let’s get familiar with the interface of Thunkable. On the left, you have the Screens and the Add Components menus. </p>
 <p>The Screens menu is for you to add new screens and views to your app. The Add Components menu allows you to easily drag and drop components to your screen. </p>
 <p>On the right side, you can change the properties of the individual components on your screen. For instance, you can change the words or colour of a label, or disable a button, and so on. </p>
 <p>On the top bar, you can see two tabs: Design and Blocks. Design is the tab you are currently in, and lets you design your app screens. Blocks allow you to create the program behind each screen in your app, using block coding just like what you did previously in TinkerCAD.</p>
-<h2>Drag and Drop</h2>
+<h2 id="mcetoc_1g04lks6i2dp">Drag and Drop</h2>
 <p>Let us try dragging and dropping some components into your app! The very first basic, but important component is the Label, which simply displays text on your screen. Drag it directly to the middle of your app.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-1E-md.png 749w"  alt="" width="526" height="491"></figure>
 <p>If you want to delete your label, simply press the trash can button on the Screens menu to delete the label. This is the same for other components in your app as well. </p>
-<h3>Adjusting the properties of the label</h3>
+<h3 id="mcetoc_1g04lks6i2dq">Adjusting the properties of the label</h3>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-2E-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-2E-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-2E-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-2E-2-md.png 749w"  alt="" width="469" height="451"></figure>
 <p>Click on the Label and you can now adjust the properties for that Label on the right side of the screen. You can change the contents, font, how big the words are, and so on. Try changing the label to say <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program" target="_blank" rel="noopener noreferrer">“Hello World”</a>!</p>
-<h3>Advanced inputs</h3>
+<h3 id="mcetoc_1g04lks6i2dr">Advanced inputs</h3>
 <p>Let’s try dragging in a <strong>Button</strong> and <strong>Text Input</strong> this time. You can play around with the position and text on the Button and Text Input for now. When you’re done, change the text on the different components and drag them into the order shown below:</p>
 <figure class="post__image post__image--full" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-3E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-3E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-3E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-3E-md.png 749w"  alt="" width="2120" height="1472">
 <figcaption >Drag the elements on the screen into something like this</figcaption>
 </figure>
-<h2>Activating Buttons</h2>
+<h2 id="mcetoc_1g04lks6i2ds">Activating Buttons</h2>
 <p>We are going to make a super simple app: replacing the text of the Label with the text inside your Text Input, the moment that the Button is pressed. Click on the Blocks tab on the top bar to switch to blocks editing.</p>
 <p>We can click on each of the components on the left bar to see the different functions we can use to change the components (e.g. changing the text on a Label, or reading the text from a Text Input):</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
@@ -446,7 +548,7 @@ void loop() {
 <figure ><figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-3-Drag-13E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-13E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-13E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-3-Drag-13E-md.png 749w"  alt="" width="2136" height="422"></figure>
 <figcaption >Press the Play button to start your app!</figcaption>
 </figure>
-<h2>Navigating with a tab bar</h2>
+<h2 id="mcetoc_1g04lks6i2dt">Navigating with a tab bar</h2>
 <p>Many of you may have seen apps with a tab bar at the bottom, like Apple’s Music app, or the Android Clock app. Now we are going to make an app with a tab bar just like that. </p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/tab-ios.jpeg" data-size="1170x2532"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/tab-ios-thumbnail.jpeg" alt="" width="749" height="1621"></a></figure>
@@ -478,7 +580,7 @@ void loop() {
 <p>Let us give the Settings page a nicer icon too! Click on the Setting screen on the left and change the link in the “Active Tab Icon” setting to <code>https://img.icons8.com/fluency/48/000000/settings.png</code>.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-md.png 749w"  alt="" width="852" height="222"></figure>
 <p>Much better looking now!</p>
-<h2>Using functions</h2>
+<h2 id="mcetoc_1g04lks6i2du">Using functions</h2>
 <p>As we have a Settings page now, we can give it some options to turn certain types of text manipulation on and off. Starting with a simple one, we can trim/remove all the spaces to the left and right side of the text we typed in: something like <code>   abcde    </code> will become <code>abcde</code>. There is a built-in function for this, and we can try it out.</p>
 <p>But first, we need to add a switch in Settings so that we can turn this feature on and off.</p>
 <p>Add a Label and a Switch according to the diagram below, and set the default value of the Switch to “false”:</p>
@@ -515,7 +617,7 @@ void loop() {
 <p>Once complete, your code should look something like this:</p>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-5-Func-7E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-7E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-7E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-7E-md.png 749w"  alt="" width="2672" height="700"></figure>
 <p>Leave the “else” block empty since we don’t need to change the text when the switch is off.</p>
-<h2>Finishing touches</h2>
+<h2 id="mcetoc_1g04lks6i2dv">Finishing touches</h2>
 <p>We are almost entirely done with our app! For the finishing touches, let’s change the Border Width to 1 pixel, and Text Alignment to “Left” so that we can easily see the differences in the text output.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-6-Finish-1.png" data-size="1366x1340"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/gallery/Thunkable-6-Finish-1-thumbnail.png" alt="" width="749" height="735"></a>
@@ -528,7 +630,7 @@ void loop() {
 <p>With that done, your app should look a little bit like this…</p>
 <figure class="post__video"><video loading="lazy" width="600" height="300" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/Thunkable-6-Finish-3.mp4" type="video/mp4" /></video></figure>
-<h2>Resources and Going Further</h2>
+<h2 id="mcetoc_1g04lks6i2e0">Resources and Going Further</h2>
 <p>If you want some beautiful icons to use in your apps, projects and presentations, this is the icon suite that was used in this tutorial: </p>
 <p class="align-center"><a href="https://icons8.com/icons/fluency" target="_blank" rel="noopener noreferrer" class="btn">Icons8 Fluency Icons</a></p>
             ]]>
@@ -542,15 +644,34 @@ void loop() {
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-07T22:01:45+08:00</updated>
+        <updated>2022-04-08T21:25:26+08:00</updated>
             <summary>
                 <![CDATA[
-                    What is the Internet of Things (IoT) all about? A&hellip;
+                    With that done, let’s upload your code. Open the Serial&hellip;
                 ]]>
             </summary>
         <content type="html">
             <![CDATA[
-                <h2>What is the Internet of Things (IoT) all about?</h2>
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1g04lhe1l27p">What is the Internet of Things (IoT) all about?</a></li>
+<li><a href="#mcetoc_1g04lhe1l27q">What is MQTT, and why use it?</a></li>
+<li><a href="#mcetoc_1g04lhe1l27r">Creating an Ubidots STEM account</a></li>
+<li><a href="#mcetoc_1g04lhe1l27s">How Ubidots works</a></li>
+<li><a href="#mcetoc_1g04lhe1l27t">Setting up Ubidots</a>
+<ul>
+<li><a href="#mcetoc_1g04lhe1l27u">Creating a new Device</a></li>
+<li><a href="#mcetoc_1g04lhe1l27v">Creating a new Variable</a></li>
+<li><a href="#mcetoc_1g04lhe1l280">Creating a new Dashboard</a></li>
+<li><a href="#mcetoc_1g04lhe1l281">Adding a new widget to the dashboard</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1g04lhe1l282">Connecting your SSTuino II to Ubidots</a></li>
+<li><a href="#mcetoc_1g04lhe1l283">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1g04lhe1l27p">What is the Internet of Things (IoT) all about?</h2>
 <p>A lot of people have been talking about the Internet of Things (IoT), and Industry 4.0, but what does all of this mean for you?</p>
 <p> </p>
 <figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/andres-urena-tsBropDpnwE-unsplash-2.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-md.jpg 749w"  alt="" width="268" height="206"></figure>Internet of Things, simply put, is the ability for everyday items to connect to the Internet for enhanced functionality. Think of your smart speakers like Alexa, or smart homes that know when you are coming home and automatically prepare the air-con for you.</p>
@@ -558,7 +679,7 @@ void loop() {
 <p> </p>
 <figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/r151-preview-4.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-md.jpg 749w"  alt="" width="312" height="209"></figure>For example, newer MRTs that ply Singapore’s MRT tracks are fitted with sensors to automatically detect faults within the trains and tracks, reducing failure and breakdown, and ensuring better service for all.</p>
 <p>With the SSTuino II, you are empowered to create your own IoT devices and innovations. For students, IoT coupled with devices like the SSTuino allows you to collect data about your surroundings and stream them directly to the Internet, giving you the flexibility to conduct scientific inquiry without the need to hold a datalogger there and wait for data to come in. Or, create your own small automations around your household to make life easier! The sky’s the limit.</p>
-<h2>What is MQTT, and why use it?</h2>
+<h2 id="mcetoc_1g04lhe1l27q">What is MQTT, and why use it?</h2>
 <p>MQTT stands for Message Queuing Telemetry Transport, and it is a “language” that your SSTuino uses to talk to the IoT server, just like how your web browser talks to websites to retrieve them, but spends even less data!</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/MQTT-1024x719.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-md.jpg 749w"  alt="" width="495" height="348"></figure>
 <p>MQTT has 3 important concepts to understand: “Publish”, “Subscribe” and “topics”.</p>
@@ -568,7 +689,7 @@ void loop() {
 <li>To <strong>Subscribe</strong> to a topic is to receive data from the server to your device. If you ever subscribed to a YouTube channel and clicked the bell icon, you would be notified whenever the channel posts something new. The same applies here when you subscribe to an MQTT topic and have new data pushed to your device the moment it appears.</li>
 </ul>
 <p>MQTT is lightweight and fault-tolerant, making it perfect for use with our IoT devices.</p>
-<h2>Creating an Ubidots STEM account</h2>
+<h2 id="mcetoc_1g04lhe1l27r">Creating an Ubidots STEM account</h2>
 <p>You will need to create an account with Ubidots for this exercise. Ubidots is an IoT service that provides you with the ability to connect IoT devices, and display beautiful dashboards with data from your devices.</p>
 <p>We will be using Ubidots STEM, which is a special educational only version of Ubidots.</p>
 <p class="align-center"><a href="https://ubidots.com/stem/" target="_blank" rel="noopener noreferrer" class="btn">Sign up to Ubidots here!</a></p>
@@ -593,13 +714,13 @@ void loop() {
 <li>Up to <strong>3 dashboards</strong>, each with 10 widgets max</li>
 <li>For the full list of limitations, please refer to <a href="https://help.ubidots.com/en/articles/639806-what-is-the-difference-between-ubidots-and-ubidots-stem" target="_blank" rel="noopener noreferrer">this link</a> </li>
 </ul>
-<h2>How Ubidots works</h2>
+<h2 id="mcetoc_1g04lhe1l27s">How Ubidots works</h2>
 <p>Each device that you connect to Ubidots is simply called a “Device”, which can have many “Variables”. These “Variables” are data sets that you can send. For example, you can have a Variable for temperature, another Variable for distance, and another Variable for a light switch. Within a Variable, there can be “Dots”, which is Ubidot’s way of describing a single data point at a certain time. If your temperature sensor sends “25.6” to the temperature Variable at 10:30 am, that counts as a single “Dot”.</p>
 <p>Ubidots only allows you to send numbers, which means you cannot send texts through their service. To represent a light switch, you would have to send a number of either 1 or 0. If you need to represent a fading light with <code>analogWrite</code>, you may have to use numbers from 0 to 255.</p>
-<h2>Setting up Ubidots</h2>
+<h2 id="mcetoc_1g04lhe1l27t">Setting up Ubidots</h2>
 <p>Please login with the details you used to sign up just now at:</p>
 <p class="align-center"><a href="https://stem.ubidots.com/accounts/signin/" target="_blank" rel="noopener noreferrer" class="btn">Ubidots Login</a></p>
-<h3>Creating a new Device</h3>
+<h3 id="mcetoc_1g04lhe1l27u">Creating a new Device</h3>
 <p>We are going to create a Device first. Click on the topbar <strong>“Devices &gt; Devices”</strong> to go to the Devices menu.</p>
 <div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-1E.png" data-size="2134x1410"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-1E-thumbnail.png" alt="" width="749" height="495"></a>
@@ -627,7 +748,7 @@ void loop() {
 <li>The <strong>Token</strong> is the unique <strong>password</strong> of your device</li>
 </ul>
 <p>Note these details down in your Notes app, because we will be using them later.</p>
-<h3>Creating a new Variable</h3>
+<h3 id="mcetoc_1g04lhe1l27v">Creating a new Variable</h3>
 <p>Now that you’re done with creating a Device, it’s time to create a Variable! Press the big “Add Variable” sign in the middle of the screen and name your Variable something sensible. In our case, we are going to be measuring the temperature of the surroundings, so we will name it “Temperature”.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-2.png" data-size="2100x1472"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-2-thumbnail.png" alt="" width="749" height="525"></a>
@@ -639,7 +760,7 @@ void loop() {
 </div></div>
 <p class="msg msg--warning"><strong>Warning</strong>: Do not name your Variables and Device names with anything else, as the example code provided relies on the Device being named "SSTuino II" and Variable as "Temperature"</p>
 <p>When you click on the Temperature Variable, you can see the <strong>API Label</strong> of this variable which is <code>temperature</code>. Remember this name, because this is the name of this Variable for computers that need to communicate with it. You can choose to create more Variables here to suit what you need to do.</p>
-<h3>Creating a new Dashboard</h3>
+<h3 id="mcetoc_1g04lhe1l280">Creating a new Dashboard</h3>
 <p>With Variables out of the way, let’s create our first Dashboard. Go to the top bar, <strong>Data &gt; Dashboards</strong> and click “Add New Dashboard”. Give it a simple name like “My Dashboard” and set the Default Time Range to “Last 1 hour” so that the dashboard shows data generally from the last hour. Press the green arrow to add the new dashboard.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E.png" data-size="2104x463"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E-thumbnail.png" alt="" width="749" height="165"></a>
@@ -652,7 +773,7 @@ void loop() {
 <figcaption>Add a new widget to your dashboard with the + icon!</figcaption>
 </figure>
 </div></div>
-<h3>Adding a new widget to the dashboard</h3>
+<h3 id="mcetoc_1g04lhe1l281">Adding a new widget to the dashboard</h3>
 <p>With your dashboard, you can add up to 10 widgets to monitor the status of your devices connected to Ubidots. Click “Add New Widget'' and select “Thermometer” from it. Under the “Data” section, press “Add Variables” and select your Variable from the SSTuino II device.</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="4">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4.png" data-size="2108x1474"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4-thumbnail.png" alt="" width="749" height="524"></a>
@@ -668,7 +789,7 @@ void loop() {
 <figcaption>Done!</figcaption>
 </figure>
 </div></div>
-<h2>Connecting your SSTuino II to Ubidots</h2>
+<h2 id="mcetoc_1g04lhe1l282">Connecting your SSTuino II to Ubidots</h2>
 <p>Phew, that was a lot of things to go through! Let’s start to connect your SSTuino II to Ubidots. Go to your Arduino examples and open up the <code>Ubidots_1_Connect</code> example by going to <strong>File &gt; Examples &gt; WiFiNINA &gt; Ubidots_1_Connect</strong>.</p>
 <p>Wow, the code looks quite scary! Not to worry, because we have placed comments to let you know where to put code and where to not place any code.</p>
 <p>In Arduino programs, you can actually have more than one file! Go to the <code>arduino_secrets.h</code> tab located on the tab bar. Here is where you place all the details of your WiFi network and your Ubidots device info.</p>
@@ -696,7 +817,7 @@ void loop() {
 <li><strong>“Connecting to MQTT…….” keeps having more dots but never connects</strong>: There is a network issue with your Wi-Fi hotspot. It might be possible that your mobile signal is bad in the classroom. Try using someone else’s hotspot that is known to be working.</li>
 <li><strong>An error code appeared during “Connecting to MQTT”!</strong>: Check out the “Quick Status/Error Codes Reference” section at the bottom of the <code>helper.h</code> file tab.</li>
 </ul>
-<h2>Resources and Going Further</h2>
+<h2 id="mcetoc_1g04lhe1l283">Resources and Going Further</h2>
 <p>If you are interested to learn more about the inner workings of MQTT, and how it came about, check out these two excellent articles made by Adafruit.</p>
 <ul>
 <li><a href="https://learn.adafruit.com/mqtt-adafruit-io-and-you/why-mqtt" target="_blank" rel="noopener noreferrer">Adafruit: Why use MQTT?</a></li>
@@ -713,7 +834,7 @@ void loop() {
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html</id>
 
-        <updated>2022-04-06T12:18:25+08:00</updated>
+        <updated>2022-04-08T21:26:18+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
