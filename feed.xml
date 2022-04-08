@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-08T14:33:48+08:00</updated>
+    <updated>2022-04-08T19:42:22+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-08T14:33:48+08:00</updated>
+        <updated>2022-04-08T19:27:34+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -152,6 +152,7 @@ void loop() {
 }
 …</code></pre>
 <p>Before you upload your program, don't forget to double-check the 'arduino_secrets.h' file to ensure that you have the correct Wi-Fi password and Ubidots account details.</p>
+<pre>Insert video here of using your finger to manually raise the temperature of the TMP36</pre>
 <p>Connect your SSTuino, upload your program, open your Serial Monitor and go to your Ubidots dashboard. You can now see the current temperature on the dashboard! </p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/Ubidots-5-Dashboard-7E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-md.png 749w"  alt="" width="564" height="390"></figure>
 <p>Well done, now you have made your first Internet-connected temperature sensor in 4 steps (Declaration, Setup, Loop, Publish). This simple example can be extended to many other sensors that you may want to build, like motion detectors, air quality sensors, and so on.</p>
@@ -173,7 +174,7 @@ void loop() {
 <figcaption>Done!</figcaption>
 </figure>
 </div></div>
-<p>This concludes the Ubidots part of the work.</p>
+<p>We are now done with Ubidots.</p>
 <h3>Code</h3>
 <p>We can open the code that we used to connect to MQTT previously (should be named Connect) and save it as a new project (name it something like “Subscribe”). You can also open the Publish code you just built as a side-by-side reference, if you need to.</p>
 <p>We can now start building our code for subscribing with 5 major steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Connect</strong>. Compared to the previous Publish example, it has 1 extra and 1 changed step.</p>
@@ -272,6 +273,82 @@ void messageReceived(String &amp;topic, String &amp;payload) {
 }
 …</code></pre>
 <p>All 5 steps are done now, so it’s time to run your project. Plug in your SSTuino, upload this code, open the Serial Monitor and let it connect. Once it is fully connected, you can try press the switch on your Ubidots dashboard to see the LED on Pin 2 light up!</p>
+<pre>Add video here</pre>
+<h2>Both at the same time!</h2>
+<p>Now that we have both Publish and Subscribe, let's try to do both at the same time. Use the Save As function to make a copy of your "Publish" project and name it "Both". Keep the Subscribe project on one side of your screen so that you can always refer to it. </p>
+<h3>Arduino Hookup</h3>
+<p>This practise will use the exact same circuit as the Publish example.</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/arduinoPot40.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-md.png 749w"  alt="" width="1837" height="854"></figure>
+<h3>Code</h3>
+<p>We are going to walk through this tutorial the same way as we did for Subscribe, which is to break it down into 5 steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Connect</strong>.</p>
+<h4>Step 1: Declarations</h4>
+<p>Firstly, you want to merge the variables at the top of the code above <code>setup()</code>, having both <code>temp</code> and <code>light</code> for temperature and light switch respectively.</p>
+<pre><code class="language-cpp">…
+WiFiClient network;
+MQTTClient client;
+
+/********* This is where you put your own code *********/
+
+// Variables
+int temp = 0;
+int light = LOW;
+
+/**************** End of your own code *****************/
+
+void setup() {
+…</code></pre>
+<h4>Step 2: Setup</h4>
+<p>Next, within the <code>setup()</code> function, add another function call to <code>pinMode</code> so that you designate Pin 2 (the same pin that we used in our Subscribe example) as an output pin. </p>
+<pre><code class="language-cpp">…
+void setup() {
+  Serial.begin(9600);
+
+  /********* This is where you put your own code *********/
+
+  pinMode(A0, INPUT);
+  pinMode(2, OUTPUT);
+
+  /**************** End of your own code *****************/
+
+  connectToWiFi(SECRET_SSID, SECRET_PASS); // Connect to the WiFi network
+
+  // Setup the MQTT client, but not connecting yet
+  client.begin(MQTT_URL, MQTT_PORT, network);
+  client.onMessage(messageReceived);
+
+  connect(); // Connect to MQTT server
+}
+…</code></pre>
+<h4>Step 3: Loop</h4>
+<p>Within the <code>loop()</code> function, we have to periodically set Pin 2’s signal to be on/off, depending on what the variable <code>light</code> is at the moment. We will do this with a <code>digitalWrite(2, light)</code>.</p>
+<pre><code class="language-cpp">…
+void loop() {
+  client.loop(); // This function must be called on every loop
+
+  // Check if MQTT connection is active, and reconnect if it's broken
+  // This must be called every loop to ensure connection
+  if (!client.connected()) {
+    Serial.println("MQTT Client disconnected, reconnecting...");
+    connect();
+  }
+
+  /********* This is where you put your own code *********/
+
+  // Read the temperature
+  temp = -40 + 0.488155 * (analogRead(A0) - 20);
+  
+  // Convert the temperature to a String
+  String temperatureString = String(temp);
+  publishUbidots(client, "sstuino-ii/temperature", temperatureString);
+  delay(10000); // repeat every 10 seconds
+
+  digitalWrite(2, light); // &lt;------------- this line was added
+
+  /**************** End of your own code *****************/
+}
+…</code></pre>
+<p> </p>
+<p> </p>
             ]]>
         </content>
     </entry>
@@ -712,7 +789,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
 
-        <updated>2022-04-05T11:04:47+08:00</updated>
+        <updated>2022-04-08T19:40:43+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to explore functions, understand&hellip;
@@ -756,7 +833,8 @@ void loop()
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot19.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-md.png 749w"  alt="" width="1758" height="970"></figure>
 <p>Here is an edited text version of the blocks code from TinkerCAD. Firstly the device initialises the Serial Monitor. Note that it does not declare the pins inside setup(). We will cover that in the function! 😁</p>
 <pre><code class="language-cpp">
-void setup() {
+void setup() 
+{
   Serial.begin(9600);
 }
 </code></pre>
@@ -791,20 +869,23 @@ long readUltrasonicDistance(int triggerPin, int echoPin)
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
 <p>Head over to the Arduino IDE and set up the code. First, let's declare the serial port, input and output pins:</p>
 <pre><code class="language-cpp">
-void setup() {
-  Serial.begin(9600);
-  pinMode(A0, INPUT);
-  pinMode(6, OUTPUT);
+void setup()
+{
+    Serial.begin(9600);
+    pinMode(A0, INPUT);
+    pinMode(6, OUTPUT);
 }
 </code></pre>
 <p>Next, let's leave <code><strong>void loop()</strong></code> alone for a bit 😆 and set up functions! You can name your functions whatever you want, as long as it is a single word.</p>
 <pre><code class="language-cpp">
-void pwmLed() {
-	analogWrite(6, (analogRead(A0) / 4));
+void pwmLed()
+{
+    analogWrite(6, (analogRead(A0) / 4));
 }
 
-void helloWorld() {
-Serial.println(Hello, World!);
+void helloWorld()
+{
+    Serial.println(Hello, World !);
 }
 </code></pre>
 <p>With this, we have just created 2 functions! Let us place them inside <code><strong>void loop()</strong></code></p>
@@ -839,46 +920,52 @@ void loop()
 <p>Here comes <code><strong>millis()</strong></code> to the rescue! 🥳 When called, it returns the number of milliseconds that have passed since the program first started. By doing some simple math and comparison, you can verify how much time has passed without blocking your code! Let's take a look at a blink sketch that does not use the <code><strong>delay()</strong></code> function:</p>
 <pre><code class="language-cpp">
 // constants won't change. Used here to set a pin number :
-const int ledPin =  13;      // the number of the LED pin
+const int ledPin = 13; // the number of the LED pin
 
 // Variables will change :
-int ledState = LOW;             // ledState used to set the LED
+int ledState = LOW; // ledState used to set the LED
 
 // Generally, you should use "unsigned long" for variables that hold time
 // The value will quickly become too large for an int to store
-unsigned long previousMillis = 0;        // will store last time LED was updated
+unsigned long previousMillis = 0; // will store last time LED was updated
 
 // constants won't change :
-const long interval = 1000;           // interval at which to blink (milliseconds)
+const long interval = 1000; // interval at which to blink (milliseconds)
 
-void setup() {
-  // set the digital pin as output:
-  pinMode(ledPin, OUTPUT);
+void setup()
+{
+    // set the digital pin as output:
+    pinMode(ledPin, OUTPUT);
 }
 
-void loop() {
-  // here is where you'd put code that needs to be running all the time.
+void loop()
+{
+    // here is where you'd put code that needs to be running all the time.
 
-  // check to see if it's time to blink the LED; that is, if the
-  // difference between the current time and last time you blinked
-  // the LED is bigger than the interval at which you want to
-  // blink the LED.
-  unsigned long currentMillis = millis();
+    // check to see if it's time to blink the LED; that is, if the
+    // difference between the current time and last time you blinked
+    // the LED is bigger than the interval at which you want to
+    // blink the LED.
+    unsigned long currentMillis = millis();
 
-  if (currentMillis - previousMillis &gt;= interval) {
-    // save the last time you blinked the LED
-    previousMillis = currentMillis;
+    if (currentMillis - previousMillis &gt; = interval)
+    {
+        // save the last time you blinked the LED
+        previousMillis = currentMillis;
 
-    // if the LED is off turn it on and vice-versa:
-    if (ledState == LOW) {
-      ledState = HIGH;
-    } else {
-      ledState = LOW;
+        // if the LED is off turn it on and vice-versa:
+        if (ledState == LOW)
+        {
+            ledState = HIGH;
+        }
+        else
+        {
+            ledState = LOW;
+        }
+
+        // set the LED with the ledState of the variable:
+        digitalWrite(ledPin, ledState);
     }
-
-    // set the LED with the ledState of the variable:
-    digitalWrite(ledPin, ledState);
-  }
 }
 </code></pre>
 <p>How the code works is that it subtracts the previously recorded time (previousMillis) from the current time (currentMillis). If the remainder is greater than the interval (1000 milliseconds), the program updates the previousMillis variable to the current time, and either turn the LED on or off.</p>
@@ -895,70 +982,84 @@ void loop() {
 <li>turn on and off a buzzer every second if the distance is less than 30cm</li>
 </ul>
 <pre><code class="language-cpp">
-const int trigPin = 5; //set pin variables
+const int trigPin = 5; // set pin variables
 const int echoPin = 6;
 const int buzzerPin = 13;
 
-int trigState = LOW; //state of trigPin
-int interval = 1; // interval in milliseconds at which trigPin turns on
-int interval2 = 1000; //time in milliseconds at which the distance is printed in serial monitors
-int printState = LOW; //whether or not to print distance
-int buzzer = LOW; //whether or not buzzer is on
-unsigned long previousMillis = 0; //microsecond at which the pin was last writen
+int trigState = LOW;              // state of trigPin
+int interval = 1;                 // interval in milliseconds at which trigPin turns on
+int interval2 = 1000;             // time in milliseconds at which the distance is printed in serial monitors
+int printState = LOW;             // whether or not to print distance
+int buzzer = LOW;                 // whether or not buzzer is on
+unsigned long previousMillis = 0; // microsecond at which the pin was last writen
 
 void setup()
 {
-  Serial.begin(9600); //begin serial communication
-  pinMode(trigPin,OUTPUT); //set pinmodes
-  pinMode(echoPin,INPUT);<br>  pinMode(buzzerPin,OUTPUT);
+    Serial.begin(9600);       // begin serial communication
+    pinMode(trigPin, OUTPUT); // set pinmodes
+    pinMode(echoPin, INPUT);
+    pinMode(buzzerPin, OUTPUT);
 }
 
 void loop()
 {
-  unsigned long currentMillis = millis(); //time in milliseconds from which the code was started
-  if (currentMillis-previousMillis &gt;= interval) { //check "blink without delay" code
-    previousMillis = currentMillis;// 
-    if (trigState == LOW){
-      (trigState = HIGH);
+    unsigned long currentMillis = millis(); // time in milliseconds from which the code was started
+    if (currentMillis - previousMillis &gt; = interval)
+    {                                   // check "blink without delay" code
+        previousMillis = currentMillis; //
+        if (trigState == LOW)
+        {
+            trigState = HIGH;
+        }
+        else
+        {
+            trigState = LOW;
+        }
     }
-    else {
-      (trigState = LOW);
+    // printing speed in serial monitor at an interval of 1s
+    if (currentMillis - previousMillis &gt; = interval2)
+    { // check "blink without delay" code
+        previousMillis = currentMillis;
+        if (printState == LOW)
+        {
+            printState = HIGH;
+        }
+        else
+        {
+            printState = LOW;
+        }
     }
-  }
-  // printing speed in serial monitor at an interval of 1s
-  if (currentMillis-previousMillis &gt;= interval2) { //check "blink without delay" code
-    previousMillis = currentMillis;
-    if (printState == LOW){
-      (printState = HIGH);
+    digitalWrite(trigPin, trigState);  // Fire the pulse to measure distance
+    int duration, distance;            // variables
+    duration = pulseIn(echoPin, HIGH); // Measure the time taken for the pulse
+    distance = duration * 0.01723;     // Calculate speed
+    if (printState = HIGH)
+    { // print the data to the serial monitor
+        Serial.print(distance);
+        Serial.println("cm");
     }
-    else {
-      (printState = LOW);
+
+    if (distance &lt; = 30)
+    { // If distance &lt;30cm, buzzer will sound at an interval of 1s.
+        if (currentMillis - previousMillis &gt; = interval2)
+        { // check "blink without delay" code
+            previousMillis = currentMillis;
+            if (buzzer == LOW)
+            {
+                buzzer = HIGH;
+                digitalWrite(buzzerPin, HIGH);
+            }
+            else
+            {
+                buzzer = LOW;
+                digitalWrite(buzzerPin, LOW);
+            }
+        }
     }
-  }
-  digitalWrite(trigPin,trigState); // Fire the pulse to measure distance
-  int duration, distance; //variables
-  duration = pulseIn(echoPin,HIGH); // Measure the time taken for the pulse
-  distance = duration * 0.01723; // Calculate speed
-  if (printState = HIGH){  //print the data to the serial monitor
-  Serial.print(distance);
-  Serial.println("cm");}
-  
-  if (distance &lt;= 30){ //If distance &lt;30cm, buzzer will sound at an interval of 1s.
-    if (currentMillis-previousMillis &gt;= interval2) { //check "blink without delay" code
-    previousMillis = currentMillis;
-    if (buzzer == LOW){
-      (buzzer = HIGH);
-      digitalWrite(buzzerPin,HIGH);
+    else
+    {
+        digitalWrite(buzzerPin, LOW);
     }
-    else {
-      (buzzer = LOW);
-      digitalWrite(buzzerPin,LOW);
-    }
-  }
-  }
-  else{
-    digitalWrite(buzzerPin,LOW);
-  }
 }
 </code></pre>
 <h2 id="mcetoc_1fvp2st7fh">Resources and Going Further</h2>
@@ -1179,7 +1280,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
 
-        <updated>2022-04-05T12:14:46+08:00</updated>
+        <updated>2022-04-08T19:42:22+08:00</updated>
             <summary>
                 <![CDATA[
                     Passive Infra-Red (PIR) sensors are found in a lot of&hellip;
@@ -1237,7 +1338,8 @@ void loop()
 <p>Our code only requires us to light up the LED and send the data to the serial monitor, so I don't think there are any variables to declare. Alternatively, you can do so if you wish to for the numbering of the pins.</p>
 <h3 id="mcetoc_1fv4sotai1q">Setup</h3>
 <p>This section will set up the input pins, output pins and indicate that we want to use the serial monitor.</p>
-<pre><code class="language-cpp">void setup() 
+<pre><code class="language-cpp">
+void setup() 
 { 
     pinMode(6, INPUT); // This pin will receive the input signal from the PIR Sensor
     pinMode(5, OUTPUT); // This pin will turn on and off the LED
@@ -1246,15 +1348,19 @@ void loop()
 </code></pre>
 <h3 id="mcetoc_1fv4sotai1r">Loop</h3>
 <p>This section will run the code forever when the SSTuino is powered on.</p>
-<pre><code class="language-cpp">void loop() 
+<pre><code class="language-cpp">
+void loop()
 {
-  if (digitalRead(6) == 1) {
-    digitalWrite(5, HIGH); // This if statement states that if the PIR sensor detects movement, the LED will light up and serial monitor will print a new line "Detected!"
-    Serial.println("Detected!");
-  } else {
-    digitalWrite(5, LOW); //Else the LED will turn off and print a new line "Not Detected!"
-    Serial.println("Not Detected!");
-  }
+    if (digitalRead(6) == 1)
+    {
+        digitalWrite(5, HIGH); // This if statement states that if the PIR sensor detects movement, the LED will light up and serial monitor will print a new line "Detected!"
+        Serial.println("Detected!");
+    }
+    else
+    {
+        digitalWrite(5, LOW); // Else the LED will turn off and print a new line "Not Detected!"
+        Serial.println("Not Detected!");
+    }
 }
 </code></pre>
 <h2 id="mcetoc_1fv4sotai1s">Your Turn</h2>
