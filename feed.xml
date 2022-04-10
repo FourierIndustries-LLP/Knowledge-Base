@@ -3,12 +3,231 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-08T21:26:18+08:00</updated>
+    <updated>2022-04-10T22:54:57+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Capstone Project</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/mobile-apps-part-3.html"/>
+        <id>https://knowledge.fourier.industries/mobile-apps-part-3.html</id>
+
+        <updated>2022-04-10T22:51:51+08:00</updated>
+            <summary>
+                <![CDATA[
+                    In the recent Singapore Budget Debate of 2022, a total&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>In the recent Singapore Budget Debate of 2022, a total of <a href="https://www.straitstimes.com/singapore/politics/budget-debate-mnd-to-fund-technologies-to-green-buildings-sustainability-solutions" target="_blank" rel="noopener noreferrer">$64 million was invested under the Cities of Tomorrow programme</a> to spur the innovative use of energy-efficient technologies. </p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/meric-dagli-Uii70ORiFPE-unsplash.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/meric-dagli-Uii70ORiFPE-unsplash-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/meric-dagli-Uii70ORiFPE-unsplash-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/meric-dagli-Uii70ORiFPE-unsplash-md.jpg 749w"  alt="" width="510" height="287"></figure>
+<p> </p>
+<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/solarnova-03.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/solarnova-03-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/solarnova-03-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/solarnova-03-md.jpg 749w"  alt="" width="379" height="285"></figure>HDB housing blocks are <a href="https://www.straitstimes.com/politics/parliament-10-year-plan-to-make-hdb-towns-more-liveable-and-sustainable" target="_blank" rel="noopener noreferrer">adopting reflective paint and smart lighting</a> to reduce energy consumption in our housing estates, and <a href="https://www.straitstimes.com/singapore/politics/budget-debate-30m-grant-for-building-owners-to-adopt-technologies-for-facilities-management" target="_blank" rel="noopener noreferrer">$30 million in grants were allocated for building owners </a>to build or renovate buildings with smarter infrastructure with sensors to monitor the building and increase energy efficiency.</p>
+<p>With the recent instability in fuel prices, many Singaporean Food and Beverage (F&amp;B) outlets had to pass on the <a href="https://www.todayonline.com/singapore/electricity-prices-inflation-coffee-shops-1842886" target="_blank" rel="noopener noreferrer">increase in electricity bills</a> to their customers buying their food. </p>
+<h2>Objectives</h2>
+<p>A Kopitiam owner in Singapore wishes to save on energy costs by turning off the fans when the Kopitiam is cool enough or when there’s nobody at the Kopitiam. In addition, he also wishes to be able to remotely control the lights so that the lights turn on and off automatically through an IoT automation. For our final project, you have been tasked to design and build a prototype of an Internet of Things hub for a Smart Kopitiam. Let’s get started!</p>
+<p>Our device will need to do two things:</p>
+<ul>
+<li style="font-weight: 400;" aria-level="1">Sense the temperature and human presence to determine if the fans in the Kopitiam need to be turned on. The fans are connected to another IoT device and are not connected to this hub physically, so we only need to send temperature and presence data.</li>
+<li style="font-weight: 400;" aria-level="1">Receive commands from the Internet to turn lights on and off. The lights are connected to this hub physically so we will need to toggle a pin on and off to demonstrate this.</li>
+</ul>
+<p>Given the objectives, we will need 2 sensors (input) and 1 actuator (output). The TMP36 temperature sensor and the Passive Infrared (PIR) sensor will be used to detect temperature and human movement respectively.</p>
+<h2>Ubidots Setup</h2>
+<p>In our previous examples, we have already set up two Variables in Ubidots: Temperature and Light. We just need to add one more variable to represent human movement, called “Motion”.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-1.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-1-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-1-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-1-md.png 749w"  alt="" width="2132" height="1448"></figure>
+<p>After this, let’s create a new Dashboard called “Smart Kopitiam” so that you can have an overview of all the controls and values. (Don’t forget to set the default time range to Last 1 Hour so it’s easy to see your data coming in!)</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-2-md.png 749w"  alt="" width="2116" height="1444"></figure>
+<p>We now need to populate the dashboard with components to show controls for all 3 of the Variables: Temperature, Motion and Light.</p>
+<p>Add 3 widgets and link them to the Variables mentioned above: <strong>Thermometer</strong> (to show temperature), <strong>Indicator</strong> (to show human movement), and <strong>Switch</strong> (to control the light).</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-3-md.png 749w"  alt="" width="2130" height="710"></figure>
+<h2>Hooking up your SSTuino</h2>
+<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
+<p>Let’s start to connect your SSTuino with the sensors we need for this project. </p>
+<ul>
+<li>PIR sensor: Pin 6</li>
+<li>LED: Pin 2</li>
+<li>TMP36 temperature sensor: Pin A0</li>
+</ul>
+<p>You may start connecting your device like the diagram below: </p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-4-md.png 749w"  alt="" width="1494" height="1096"></figure>
+<h2>Programming the SSTuino</h2>
+<p>With the circuit connections done, it’s time to start programming your SSTuino to send and receive data from Ubidots. For this section, you will need to tweak the previous example code you have already built for sending data in both ways. Try it out!</p>
+<h3>Hints</h3>
+<ul>
+<li>The previous code you made has 1 Variable sending and 1 Variable receiving. In this project, you need to send 2 Variables, and receive 1 Variable. </li>
+<li>Use what you have learnt in <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html">From Blocks to Code Part II</a>, how would you avoid using the <code>delay()</code> function and use <code>millis()</code> instead?</li>
+</ul>
+<p>By the end, you should see something like this appearing on your Smart Kopitiam dashboard, and you should also be able to control the light using the Switch widget on the dashboard.</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-5-md.png 749w"  alt="" width="2130" height="702"></figure>
+<h2>Making an app to control it 😄</h2>
+<p>Once you are satisfied with your program, it’s time to make an app to control it! </p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-6-md.png 749w"  alt="" width="313" height="488"></figure>
+<p>We have provided an app template with the basic functions to connect to Ubidots and the general layout of the app:</p>
+<p class="align-center"><a href="https://x.thunkable.com/copy/d75c2d13ec8bbda6550356833a196b24" target="_blank" rel="noopener noreferrer" class="btn">Smart Kopitiam App Template</a></p>
+<p>You will need to link up the rest of the code yourself. We have placed the 3 important controls on the app, named:</p>
+<ul>
+<li><strong>Switch_Light</strong> - Light switch</li>
+<li><strong>Label_Motion</strong> - Text label indicating motion</li>
+<li><strong>Label_Temp</strong> - Text label indicating temperature</li>
+</ul>
+<p class="msg msg--info"><strong>Hint</strong>: If you want to fetch a Variable automatically from Ubidots and display it on a label, you can use something like the code below:<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-7-md.png 749w"  alt="" width="436" height="282"></figure>
+<h2>Conclusion</h2>
+<p>If you have completed your Capstone project with a fully working mobile app, circuit and program, congratulations! You have completed the SSTuino II Essentials Track. </p>
+<p>If you feel like you are up for a challenge, or just wish to learn more about how to build different solutions with your SSTuino II, we have something in store for you! Our team is currently working on the Advanced Tracks, which will give in-depth tutorials on using the SSTuino II in scientific inquiry, or building advanced mobile apps with Swift Playgrounds. Stay tuned 😊</p>
+<p><a href="https://knowledge.fourier.industries/mobile-apps-part-2.html" class="btn btn--outline">⬅️ Back</a></p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>Mobile Apps, Part II</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/mobile-apps-part-2.html"/>
+        <id>https://knowledge.fourier.industries/mobile-apps-part-2.html</id>
+
+        <updated>2022-04-10T22:54:57+08:00</updated>
+            <summary>
+                <![CDATA[
+                    In our previous tutorial, we have gone through all of&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>In our previous tutorial, we have gone through all of the basics of making a Thunkable app. Now, we are going to actually create an app that links to Ubidots. Don't worry, we have made a whole bunch of functions that make it much easier to integrate. </p>
+<p>Click on the button below to clone the template.</p>
+<p class="align-center"><a href="https://x.thunkable.com/copy/bfc99f8dc5f002c3ee19889b6e1227a0" target="_blank" rel="noopener noreferrer" class="btn">Clone the Thunkable IoT App Template</a></p>
+<h2>Trying out the basics</h2>
+<p>The template app is built similarly to the app you made in Part 1 of this tutorial, with a Home and Settings page. Let’s try out this app! Click the Play button (Web Preview).</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-1E-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-1E-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-1E-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-1E-2-md.png 749w"  alt="" width="2130" height="206"></figure>
+<p>We need to copy the credentials from Ubidots to our app. Click the Settings tab to go to the settings of the app first. </p>
+<p>Go to your SSTuino II device and copy the Token and API Label to your app as shown below:</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-7-Basics-2E.png" data-size="942x1404"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-7-Basics-2E-thumbnail.png" alt="" width="749" height="1116"></a>
+<figcaption>Transfer the text from here...</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-7-Basics-3E.png" data-size="798x1380"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-7-Basics-3E-thumbnail.png" alt="" width="749" height="1295"></a>
+<figcaption>...to here!</figcaption>
+</figure>
+</div></div>
+<p>Don't forget to press Save!</p>
+<h3>Retrieving Variables from Ubidots</h3>
+<p>Time to go back to the Home screen and try getting a Variable from Ubidots! You just need to type the name of your Ubidots Variable (like “temperature” or “light”) into the “Variable Label” text box and press “Get Variable”.</p>
+<p>If everything goes right, Ubidots should respond with the last value that was received:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4-md.png 749w"  alt="" width="350" height="286"></figure>
+<pre>Insert video of the temperature changing on the dashboard</pre>
+<p>If you didn’t see the above, you might want to double-check some of your settings with the Common Issues list below:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 45.2252%;"><strong>Error</strong></td>
+<td style="width: 54.7748%;"><strong>Solution</strong></td>
+</tr>
+<tr>
+<td style="width: 45.2252%;">The server responds with <code>{"code": 404001, "message":"The request was not found."}</code></td>
+<td style="width: 54.7748%;">You might have entered one of the following things wrongly: the Variable Label on the Home screen, or the Device Label on the Settings screen.</td>
+</tr>
+<tr>
+<td style="width: 45.2252%;">The server responds with <code>{"code": 401002, "message": "Incorrect authentication credentials."}</code></td>
+<td style="width: 54.7748%;">You have entered an incorrect Authentication Token on the Settings screen</td>
+</tr>
+<tr>
+<td style="width: 45.2252%;">The response is empty (e.g. it just shows <code>Response: </code>)</td>
+<td style="width: 54.7748%;">Double-check your Variable in Ubidots, was any data ever created on that Variable channel? This happens when there are no pre-existing data for that Variable.</td>
+</tr>
+</tbody>
+</table>
+<h3>Sending Variables to Ubidots</h3>
+<p>To send data to a Ubidots Variable, we need to also fill in the “Variable Content” field below on what we want to send to Ubidots. In our example, we can send a temperature value of 28.9 to Ubidots by pressing the “Push Variable” button to send this value to the Variable in Ubidots.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-md.png 749w"  alt="" width="276" height="474"></figure>
+<p>If all goes well, you should see the message above telling you that the value has been recorded. If not, check out some of the Common Issues listed below:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 62.7494%;"><strong>Error</strong></td>
+<td style="width: 37.3933%;"><strong>Solution</strong></td>
+</tr>
+<tr>
+<td style="width: 62.7494%;">The server tells me I don’t have permissions to create a new variable: Error: <code>{"error": {"message": "The user has not permissions to create a new variable.","code":403001}}</code></td>
+<td style="width: 37.3933%;">You might have keyed in the wrong Device Label in the Settings screen</td>
+</tr>
+<tr>
+<td style="width: 62.7494%;">The server responds with <code>{"code": 401002, "message": "Incorrect authentication credentials."}</code></td>
+<td style="width: 37.3933%;">You have entered an incorrect Authentication Token on the Settings screen</td>
+</tr>
+<tr>
+<td style="width: 62.7494%;">The server responds with <code>{"error": {"message": "The value NaN is not in a valid range.”,"code":4000013331}}</code> or <code>{"code":400001," message": "The payload sent is not a valid json document."}</code></td>
+<td style="width: 37.3933%;">Looks like you entered some text in the Variable Content field! Remember that Ubidots only accepts numbers.</td>
+</tr>
+</tbody>
+</table>
+<h2>Understanding the code</h2>
+<p>We can now start to look at the code in Thunkable piece by piece to understand what it does, and how it works. There are a few sections of the block codes to understand:</p>
+<ol>
+<li>Stored Variables</li>
+<li>Button Click</li>
+<li>What's an Object?</li>
+<li>Getting Data from Ubidots</li>
+<li>Sending Data to Ubidots</li>
+</ol>
+<h3>Stored Variables</h3>
+<p>Stored Variables are very much like the App Variables we previously used, but they will persist even after you close and reopen the app. App Variables, on the other hand, get reset after the app is closed.</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-1.png" data-size="840x148"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-1-thumbnail.png" alt="" width="749" height="132"></a>
+<figcaption>Declaring a stored variable</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-2.png" data-size="540x148"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-2-thumbnail.png" alt="" width="540" height="148"></a>
+<figcaption>Getting a stored variable</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-3.png" data-size="958x88"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-3-thumbnail.png" alt="" width="749" height="69"></a>
+<figcaption>Setting the value of a stored variable</figcaption>
+</figure>
+</div></div>
+<h3>Button Click</h3>
+<p>This part is almost entirely similar to what you did in the previous exercise in Part 1. </p>
+<p>Firstly, the app needs to detect the button click from the two buttons to either retrieve or send a data point. (See <strong>"Detect Button Press"</strong> in the diagram)</p>
+<p>After that, it sets a variable to be equal to the result of the request from Ubidots. At this point, your app will connect to Ubidots and ask for the information. (<strong>"Get Variable from Ubidots"</strong> in the diagram)</p>
+<p>Once the information has been downloaded, it is stored in an object which has two properties: “error” and “text”. The property “error” is a boolean (true/false value) that indicates whether an issue has happened with the connection and “text” is a string (alphanumeric text) that contains the response of the server (if no error occurred) or the error message (if an error occurred).</p>
+<p>Our program here checks whether “error” is true, and shows the message with the words “Error:” in front of it. If not, the words “Response:” will be added in front of the incoming message and displayed on a label. (See <strong>"Check if error occurred"</strong> and <strong>"Output text onto screen"</strong> in the diagram)</p>
+<figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-8-Understanding-4E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-4E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-4E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-4E-md.png 749w"  alt="" width="1984" height="732"></figure>
+<h3>What’s an Object?</h3>
+<p>At this point, you might be asking, what is an Object? An Object in Thunkable is a special kind of variable that can store many other variables inside it and you can retrieve the variables inside through names. The “names” that are used to retrieve variables are called “properties”. </p>
+<p>For example, if I create an Object called “person” to represent a person, I would want it to have several properties like:</p>
+<ul>
+<li>Name</li>
+<li>Birthday</li>
+<li>Gender</li>
+</ul>
+<p>..and the same applies for Thunkable! You can set and retrieve properties of an object using the “get property of object” function, and you can construct objects with the “create objects with fields” function.</p>
+<div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-5.png" data-size="1278x168"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-5-thumbnail.png" alt="" width="749" height="98"></a>
+<figcaption>Retrieving info from an object</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-6.png" data-size="582x282"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/30/gallery/Thunkable-8-Understanding-6-thumbnail.png" alt="" width="582" height="282"></a>
+<figcaption>Creating an object</figcaption>
+</figure>
+</div></div>
+<p><span style="font-weight: 400;">In this app, we use Objects to contain multiple variables (“error” and “text”) within one variable so that a function can output it (Remember that functions cannot output multiple variables).</span></p>
+<h2>Getting Data from Ubidots</h2>
+<p>This template makes use of custom functions to connect to Ubidots. Let’s start with getting data from Ubidots with the “get Ubidots variable” function.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-8-Understanding-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-7-md.png 749w"  alt="" width="543" height="89"></figure>
+<p>For this function, there is only 1 input on the right side: the variable name. On the left side, the function outputs an Object with “error” (true/false, to indicate if an error happened) and “text” (the response from the server).</p>
+<h2>Sending Data to Ubidots</h2>
+<p>To send the data you want to Ubidots, you will need to use the “set Ubidots variable” function.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-8-Understanding-8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-8-md.png 749w"  alt="" width="518" height="118"></figure>
+<p>This function takes 2 inputs on the right side: variable name and variable content. Variable content must be a number as Ubidots only allows numbers. The function outputs the same Object as the “get Ubidots variable” function. If you wish to check if your data has been sent, you just have to simply check if the “error” parameter is false.</p>
+<h2>Conclusion</h2>
+<p>Over the past 2 tutorials, you have learnt the basics of building a mobile application using Thunkable and linking it to IoT services like Ubidots. In our next tutorial, you will be building an IoT device with your SSTuino for a real-life scenario.</p>
+<p><a href="https://knowledge.fourier.industries/mobile-apps-part-1.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-3.html" class="btn btn--green">Next ➡️</a></p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Transmit and Receive</title>
         <author>
@@ -17,7 +236,7 @@
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-08T21:25:55+08:00</updated>
+        <updated>2022-04-10T22:50:23+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -70,6 +289,7 @@
 </li>
 </ul>
 </li>
+<li><a href="#mcetoc_1g068rr6ph">In the next lesson...</a></li>
 </ul>
 </div>
 <h2 id="mcetoc_1g04lk9pg2bn">"Publishing" Data to Ubidots MQTT</h2>
@@ -433,6 +653,22 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <p>With all of the code done, it’s time to plug in your SSTuino and upload the code. Try playing around with the switch on your dashboard to see if the debug LED on Pin 2 turns on and off.</p>
 <pre>Insert video here</pre>
 <p>If everything works out, awesome! You have successfully made an IoT controller for a smart home, with a temperature sensor to tell you how hot or cold your room is, and an internet-controlled light that you can trigger using other Internet controlled functions. You can explore how to integrate this with IFTTT (If This Then That) or other smart solutions to link your existing devices like a Google Home Mini with your SSTuino based IoT controller. </p>
+<h2 id="mcetoc_1g068rr6ph">In the next lesson...</h2>
+<p>In our next two tutorials, we will be building a mobile app with Thunkable, a “code-lite” mobile app creator. It is <strong>highly recommended</strong> that you watch some of Thunkable’s tutorials at home, as well as try out the next tutorial (<a href="https://knowledge.fourier.industries/mobile-apps-part-1.html">Mobile Apps, Part 1</a>). All of these videos are bite-sized, 1-2 minute videos so it’s really quick to get up to speed with how Thunkable works! The next tutorial will only cover a shortened version to get you up to speed.</p>
+<p><strong>Essential Tutorials:</strong></p>
+<ol>
+<li>Intro to Drag and Drop: <a href="https://www.youtube.com/watch?v=dQQsvQr-f1U">https://www.youtube.com/watch?v=dQQsvQr-f1U</a></li>
+<li>Building a super simple translation app: <a href="https://www.youtube.com/watch?v=0NrkKiCGaxk">Thunkable Drag and Drop Translator App</a></li>
+<li>How screens and navigation works: <a href="https://www.youtube.com/watch?v=TqIVHGYdi54">Screens and Navigation in Thunkable</a></li>
+<li>App Variables: <a href="https://www.youtube.com/watch?v=3M9F3X1bCnA">https://www.youtube.com/watch?v=3M9F3X1bCnA</a></li>
+<li>Functions: <a href="https://www.youtube.com/watch?v=3jS3F3IRQB0">https://www.youtube.com/watch?v=3jS3F3IRQB0</a></li>
+</ol>
+<p><strong>Optional Tutorials:</strong></p>
+<ol>
+<li>Logic Blocks in Thunkable: ​​<a href="https://www.youtube.com/watch?v=qotZVqzTUpg">https://www.youtube.com/watch?v=qotZVqzTUpg</a></li>
+<li>Web API (HTTP) in Thunkable: <a href="https://www.youtube.com/watch?v=FxrXdZPRTLw">https://www.youtube.com/watch?v=FxrXdZPRTLw</a></li>
+</ol>
+<p><a href="https://knowledge.fourier.industries/getting-started-with-iot.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-1.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -444,7 +680,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
         <link href="https://knowledge.fourier.industries/mobile-apps-part-1.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-1.html</id>
 
-        <updated>2022-04-08T21:26:06+08:00</updated>
+        <updated>2022-04-10T22:54:42+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will create a mobile app with&hellip;
@@ -557,12 +793,12 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <p>We will now extend our app by giving it a Settings page so that we can choose which type of text processing we want our app to do.</p>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-1E-md.png 749w"  alt="" width="1580" height="720"></figure>
 <p>Click the + button on the Screens menu and click “Bottom Tab Navigator” to add the tab navigator to our app.</p>
-<figure class="post__image post__image--center" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-2E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-md.png 749w"  alt="" width="582" height="571">
+<figure class="post__image post__image--center" ><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-2E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-2E-md.png 749w"  alt="" width="306" height="300"></figure>
 <figcaption >Click the trashcan icon to delete all the other screens except Setting</figcaption>
 </figure>
 <p>Wow, that’s a lot of buttons! Let’s delete the ones unnecessary for now. Since we are adding a Settings page, only Settings is relevant to us, so we can delete all of the rest by clicking the trashcan icon as above.</p>
 <p>Next, drag our “Screen1” (which is the first screen that we created) under the Tab Navigators so it looks like this:</p>
-<figure class="post__image post__image--center" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-md.png 749w"  alt="" width="420" height="407">
+<figure class="post__image post__image--center" ><figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-3-md.png 749w"  alt="" width="309" height="300"></figure>
 <figcaption >Drag Screen1 to be within the Tab Navigator</figcaption>
 </figure>
 <p>Click on “Screen1”, and you might notice that the bottom tab bar has an empty image that we don’t really want. Let’s get an icon to make it look better: copy and paste <code>https://img.icons8.com/fluency/48/000000/home.png</code> into the field called “Active Tab Icon”. Next, we want to rename “Screen1” to something that makes more sense. Click the Screen1 text and you can change it to Home so it matches the icon.</p>
@@ -578,7 +814,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 </figure>
 </div></div>
 <p>Let us give the Settings page a nicer icon too! Click on the Setting screen on the left and change the link in the “Active Tab Icon” setting to <code>https://img.icons8.com/fluency/48/000000/settings.png</code>.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-md.png 749w"  alt="" width="852" height="222"></figure>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-4-Tab-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-4-Tab-7-md.png 749w"  alt="" width="545" height="142"></figure>
 <p>Much better looking now!</p>
 <h2 id="mcetoc_1g04lks6i2du">Using functions</h2>
 <p>As we have a Settings page now, we can give it some options to turn certain types of text manipulation on and off. Starting with a simple one, we can trim/remove all the spaces to the left and right side of the text we typed in: something like <code>   abcde    </code> will become <code>abcde</code>. There is a built-in function for this, and we can try it out.</p>
@@ -633,6 +869,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <h2 id="mcetoc_1g04lks6i2e0">Resources and Going Further</h2>
 <p>If you want some beautiful icons to use in your apps, projects and presentations, this is the icon suite that was used in this tutorial: </p>
 <p class="align-center"><a href="https://icons8.com/icons/fluency" target="_blank" rel="noopener noreferrer" class="btn">Icons8 Fluency Icons</a></p>
+<p><a href="https://knowledge.fourier.industries/transmit-and-receive.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-2.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -644,7 +881,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-08T21:25:26+08:00</updated>
+        <updated>2022-04-10T22:49:47+08:00</updated>
             <summary>
                 <![CDATA[
                     With that done, let’s upload your code. Open the Serial&hellip;
@@ -823,6 +1060,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <li><a href="https://learn.adafruit.com/mqtt-adafruit-io-and-you/why-mqtt" target="_blank" rel="noopener noreferrer">Adafruit: Why use MQTT?</a></li>
 <li><a href="https://learn.adafruit.com/alltheiot-protocols/mqtt" target="_blank" rel="noopener noreferrer">Adafruit: MQTT Protocol in detail</a></li>
 </ul>
+<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/transmit-and-receive.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
@@ -834,7 +1072,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html</id>
 
-        <updated>2022-04-08T21:26:18+08:00</updated>
+        <updated>2022-04-10T22:47:44+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1390,217 +1628,6 @@ void loop()
 <li><a href="https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/sound" target="_blank" rel="noopener noreferrer">Adafruit: Making Sounds</a></li>
 </ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Passive Infra-Red Sensor</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html"/>
-        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html</id>
-
-        <updated>2022-04-08T19:42:22+08:00</updated>
-            <summary>
-                <![CDATA[
-                    Passive Infra-Red (PIR) sensors are found in a lot of&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Passive Infra-Red (PIR) sensors are found in a lot of buildings and infrastructures to detect the presence of people. For example, the toilets in SST are equipped with PIR sensors to automatically turn on and off the lights to save electricity.</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fv4sotai1l">About the sensor</a></li>
-<li><a href="#mcetoc_1fv4sotai1m">Let's Build it!</a>
-<ul>
-<li><a href="#mcetoc_1fv4sotai1n">Fresnel Lens</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fv4sotai1o">Moving into Arduino IDE</a>
-<ul>
-<li><a href="#mcetoc_1fv4sotai1p">Declaration</a></li>
-<li><a href="#mcetoc_1fv4sotai1q">Setup</a></li>
-<li><a href="#mcetoc_1fv4sotai1r">Loop</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fv4sotai1s">Your Turn</a></li>
-<li><a href="#mcetoc_1fvmivdsr4">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fv4sotai1l">About the sensor</h2>
-<p>There are two main components of the PIR sensor. The first one is the electronics, which detects the movement of objects crossing the sensor. The second one is the lens, which is the <em>magic sauce</em> to help the sensor increase its detection area.</p>
-<h2 id="mcetoc_1fv4sotai1m">Let's Build it!</h2>
-<p>Head over to TinkerCAD and create a new circuit like the one below:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/arduinoPot27.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/arduinoPot27-md.png 749w"  alt="" width="1860" height="1006"></figure>
-<p class="msg msg--warning"><strong>Warning: </strong>The pinout for the PIR sensor that is provided with TinkerCAD is different from the kit! We will be talking about the sensor provided in the kit in the sections below.</p>
-<p>Here are the pinout differences between the two sensors:</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/PIR-Motion-Sensor-01.png" data-size="226x205"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/PIR-Motion-Sensor-01-thumbnail.png" alt="" width="226" height="205"></a>
-<figcaption>Pin out of the PIR Sensor in TinkerCAD</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/20/gallery/IMG_5480.JPG" data-size="2720x2267"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/20/gallery/IMG_5480-thumbnail.JPG" alt="" width="749" height="624"></a>
-<figcaption>Pin out of the PIR sensor in the Kit (Lens removed)</figcaption>
-</figure>
-</div></div>
-<h3 id="mcetoc_1fv4sotai1n">Fresnel Lens</h3>
-<p>The lens for the PIR sensor helps it to detect objects from a distance! However, this will not work for a classroom environment because there will be too many people attempting this and as a result, the sensor will always detect movement! 🤣</p>
-<p>To prevent this, let us remove the lens to reduce the detection range!</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot38.mp4" type="video/mp4" /></video></figure>
-<p>Let's build the circuit on the SSTuino and we will be moving into programming this example with the Arduino IDE!</p>
-<h2 id="mcetoc_1fv4sotai1o">Moving into Arduino IDE</h2>
-<p>Let's start programming on the Arduino IDE! Open up the Arduino app. A new window should appear.</p>
-<p>Let's make use of this template we learned previously:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/20/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/20/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
-<h3 id="mcetoc_1fv4sotai1p">Declaration</h3>
-<p>Our code only requires us to light up the LED and send the data to the serial monitor, so I don't think there are any variables to declare. Alternatively, you can do so if you wish to for the numbering of the pins.</p>
-<h3 id="mcetoc_1fv4sotai1q">Setup</h3>
-<p>This section will set up the input pins, output pins and indicate that we want to use the serial monitor.</p>
-<pre><code class="language-cpp">
-void setup() 
-{ 
-    pinMode(6, INPUT); // This pin will receive the input signal from the PIR Sensor
-    pinMode(5, OUTPUT); // This pin will turn on and off the LED
-    Serial.begin(9600); // This will initialise the serial monitor
-}
-</code></pre>
-<h3 id="mcetoc_1fv4sotai1r">Loop</h3>
-<p>This section will run the code forever when the SSTuino is powered on.</p>
-<pre><code class="language-cpp">
-void loop()
-{
-    if (digitalRead(6) == 1)
-    {
-        digitalWrite(5, HIGH); // This if statement states that if the PIR sensor detects movement, the LED will light up and serial monitor will print a new line "Detected!"
-        Serial.println("Detected!");
-    }
-    else
-    {
-        digitalWrite(5, LOW); // Else the LED will turn off and print a new line "Not Detected!"
-        Serial.println("Not Detected!");
-    }
-}
-</code></pre>
-<h2 id="mcetoc_1fv4sotai1s">Your Turn</h2>
-<p>Let's try this out! This is what it looks like on the SSTuino:</p>
-<pre>Insert video here</pre>
-<p class="msg msg--success">Let's make some changes: Could you make the LED flash on and off every second once the PIR sensor detects movement?</p>
-<pre>Insert video here</pre>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<h2 id="mcetoc_1fvmivdsr4">Resources and Going Further</h2>
-<ul>
-<li><a href="http://www.glolab.com/pirparts/infrared.html" target="_blank" rel="noopener noreferrer">Glolab: How Infrared motion detector components work</a></li>
-<li><a href="https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor/how-pirs-work" target="_blank" rel="noopener noreferrer">Adafruit: How PIRs Work</a></li>
-</ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Potentiometer</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html"/>
-        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-6.html</id>
-
-        <updated>2022-04-05T18:55:48+08:00</updated>
-            <summary>
-                <![CDATA[
-                    In this tutorial, we are going to read data from&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>In this tutorial, we are going to read data from the potentiometer and ultimately use it to control cool stuff!</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fut95ja3dt">About the Potentiometer</a></li>
-<li><a href="#mcetoc_1fut95ja4dv">Using the Potentiometer</a></li>
-<li><a href="#mcetoc_1fut95ja4e0">LED Speed Control</a></li>
-<li><a href="#mcetoc_1fut95ja4e1">LED Brightness Control</a></li>
-<li><a href="#mcetoc_1fut95ja4e3">Bar Graph</a></li>
-<li><a href="#mcetoc_1fvi5rfai3f">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fut95ja3dt">About the Potentiometer</h2>
-<p>The potentiometer is essentially a variable resistor. But instead of having 2 pins, it has 3 pins.</p>
-<figure class="post__image post__image--center" ><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/19/arduinoPot1.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot1-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot1-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot1-md.jpg 749w"  alt="" width="151" height="151">
-<figcaption >The Bourns 3386F 10K Ohm Potentiometer provided in the kit.</figcaption>
-</figure>
-<p>Potentiometers are used frequently and commonly on electronic devices. A simple example would be the volume knob on speakers or the light dimmers in your house!</p>
-<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot-md.png 749w"  alt="" width="104" height="88"></figure>
-<p>The potentiometer that is provided in the kit is a 10K Ohm potentiometer, which means that when the knob is turned fully to one end it is 0 Ohm, while at the other end it is 10K Ohm.</p>
-<h2 id="mcetoc_1fut95ja4dv">Using the Potentiometer</h2>
-<p>Let us fire up TinkerCAD, create a new circuit and configure your circuit like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot2-md.png 749w"  alt="" width="1260" height="579"></figure>
-<p class="msg msg--info">The potentiometer inside TinkerCAD might look different from the one provided in the kit. Fret not as they are the same, but do ensure that the potentiometer inside TinkerCAD is 10k Ohm. 🙂</p>
-<p>Let us program the board to output the potentiometer reading in our serial monitor!</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot3.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot3-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot3-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot3-md.png 749w"  alt="" width="434" height="110"></figure>
-<p>Once you are done with the circuit and code, let's run the simulation and open the serial monitor!</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot34.mp4" type="video/mp4" /></video></figure>
-<p>As you interact with the knob on the potentiometer, you should see the number change from 0 to 1023. Why does this happen? 🤔 Onboard the SSTuino, there is an Analog to Digital Converter (ADC), and it has a resolution of 10 bits. </p>
-<p>Let us set up this circuit on the SSTuino!</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>There is a cool feature inside the Arduino IDE! You can open the serial plotter as an alternative to the serial monitor as shown:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot35.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot35-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot35-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot35-md.png 749w"  alt="" width="291" height="184"></figure>
-<p>Here is what it looks like on the SSTuino II:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot42.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fut95ja4e0">LED Speed Control</h2>
-<p>Let us make use of the potentiometer reading we have from the SSTuino to alter the blinking speed of the LED! Fire up TinkerCAD and make a circuit like so:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
-<p>We are going to edit the code such that the location of the knob will affect the speed at which the LED blinks:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot5-md.png 749w"  alt="" width="497" height="282"></figure>
-<p>Here is what it looks like when I press <strong>Start Simulation:</strong></p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot36.mp4" type="video/mp4" /></video></figure>
-<p>Let us build the circuit on the SSTuino! Here is what it looks like:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot43.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fut95ja4e1">LED Brightness Control</h2>
-<p>We will use SSTuino's PWM output function to control the brightness of the LED. There are some pins with the wavy `~` sign, which means that it can output PWM signals. </p>
-<p>PWM stands for Pulse Width Modulation. The pin would output a series of square waves, and depending on the duty cycle, adjusts the width of the square wave. What it essentially does is that it turns on and off the component very quickly, such that our eyes cannot see the difference.</p>
-<p>In the diagram below, you can see how the duty cycle is adjusted by changing the width of the square wave. When the duty cycle is 0, it turns off the component. From 0 to 100, it gradually increases the intensity and is a full power when at 100% duty cycle.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/Screenshot-2022-03-24-at-12.00.59.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/Screenshot-2022-03-24-at-12.00.59-md.png 749w"  alt="" width="231" height="252"></figure>
-<p>For this exercise, we will use the same circuit and just edit the code:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot6.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot6-md.png 749w"  alt="" width="538" height="134"></figure>
-<p>The input is divided by 4 as the range of the PWM output is only from 0-255, while the Analog input is from 0 to 1024<br><br>This is the result I should get:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot37.mp4" type="video/mp4" /></video></figure>
-<p>Copy this circuit over to your SSTuino board setup.</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>Here is what it looks like on the SSTuino II:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot44.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fut95ja4e3">Bar Graph</h2>
-<p>Let us control many LEDs using the Potentiometer! The aim is to vary the number of LEDs lit up when the knob of the potentiometer is turned.</p>
-<p>Setup the circuit in TinkerCAD as shown below:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/19/arduinoPot25.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-xs.png 300w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-sm.png 480w ,https://knowledge.fourier.industries/media/posts/19/responsive/arduinoPot25-md.png 749w"  alt="" width="425" height="507"></figure>
-<p>In the code, we will be using the <strong>map</strong> function to map the range of the potentiometer input (0 - 1023) to the output pins (2 - 7). The higher the readout from the potentiometer, the more LEDs are light up.</p>
-<p>Below is an embed of the TinkerCAD example. Press on <strong>code</strong> to see the block code. Do you have alternative ways?</p>
-<iframe loading="lazy" width="725" height="453" src="https://www.tinkercad.com/embed/45bdZnBKqGZ?editbtn=1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
-<p class="msg msg--info">If you are unable to load this embed, head to <a href="https://www.tinkercad.com/things/45bdZnBKqGZ" target="_blank" rel="noopener noreferrer">this link</a></p>
-<p>In text programming, you can simplify this too! How can it be done?</p>
-<p>This is how it works on the SSTuino II:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot45.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fvi5rfai3f">Resources and Going Further</h2>
-<ul>
-<li><a href="https://www.electronics-tutorials.ws/resistor/potentiometer.html" target="_blank" rel="noopener noreferrer">Electronics Tutorials: Potentiometers</a></li>
-<li><a href="https://www.digikey.sg/en/products/detail/bourns-inc/3386F-1-103TLF/1232544" target="_blank" rel="noopener noreferrer">Digikey Singapore: Bournes 3386F Potentiometer</a></li>
-<li><a href="https://www.arduino.cc/en/Reference/AnalogRead" target="_blank" rel="noopener noreferrer">Arduino: analogRead</a></li>
-<li><a href="https://learn.sparkfun.com/tutorials/analog-to-digital-conversion/all" target="_blank" rel="noopener noreferrer">Sparkfun: Analog to Digital Conversion</a></li>
-<li><a href="https://docs.arduino.cc/learn/microcontrollers/analog-output" target="_blank" rel="noopener noreferrer">Arduino: Basics of Pulse Width Modulation</a></li>
-<li><a href="https://learn.sparkfun.com/tutorials/pulse-width-modulation/all" target="_blank" rel="noopener noreferrer">Sparkfun Learn: Pulse Width Modulation</a></li>
-</ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-7.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
