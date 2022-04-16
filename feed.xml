@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-10T22:54:57+08:00</updated>
+    <updated>2022-04-16T23:22:19+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -92,7 +92,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-2.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-2.html</id>
 
-        <updated>2022-04-10T22:54:57+08:00</updated>
+        <updated>2022-04-16T23:22:19+08:00</updated>
             <summary>
                 <![CDATA[
                     In our previous tutorial, we have gone through all of&hellip;
@@ -223,7 +223,7 @@
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-8-Understanding-8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-8-Understanding-8-md.png 749w"  alt="" width="518" height="118"></figure>
 <p>This function takes 2 inputs on the right side: variable name and variable content. Variable content must be a number as Ubidots only allows numbers. The function outputs the same Object as the “get Ubidots variable” function. If you wish to check if your data has been sent, you just have to simply check if the “error” parameter is false.</p>
 <h2>Conclusion</h2>
-<p>Over the past 2 tutorials, you have learnt the basics of building a mobile application using Thunkable and linking it to IoT services like Ubidots. In our next tutorial, you will be building an IoT device with your SSTuino for a real-life scenario.</p>
+<p>Over the past 2 tutorials, you have learnt the basics of building a mobile application using Thunkable and linking it to IoT services like Ubidots. In our next tutorial, you will be building a full IoT solution to increase energy efficiency in our heartland: kopitiams!</p>
 <p><a href="https://knowledge.fourier.industries/mobile-apps-part-1.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-3.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -236,7 +236,7 @@
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-10T22:50:23+08:00</updated>
+        <updated>2022-04-16T23:19:17+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -270,7 +270,7 @@
 <li><a href="#mcetoc_1g04lk9pg2c2">Step 2:  Setup</a></li>
 <li><a href="#mcetoc_1g04lk9pg2c3">Step 3: Loop</a></li>
 <li><a href="#mcetoc_1g04lk9pg2c4">Step 4: Message Received</a></li>
-<li><a href="#mcetoc_1g04lk9pg2c5">Step 5: Connect</a></li>
+<li><a href="#mcetoc_1g04lk9pg2c5">Step 5: Subscribe</a></li>
 </ul>
 </li>
 </ul>
@@ -350,21 +350,22 @@ void setup()<br>{
   client.begin(MQTT_URL, MQTT_PORT, network);
   client.onMessage(messageReceived);
 
-  connect(); // Connect to MQTT server
+  connect(client, &amp;subscribe); // Connect to MQTT server
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2bs">Step 3: Loop</h4>
 <p>The third part is the <code>loop()</code> function, to calculate the temperature from the voltage. We only need to transplant the 1st line to our IoT example code, underneath <code>This is where you put your own code</code>, since we only need to calculate the temperature.</p>
 <p>As for the delay, we will increase it to 10 seconds (10000 milliseconds) to prevent it from spamming the server.</p>
 <pre><code class="language-cpp">…
-void loop()<br>{
-  client.loop(); // This function must be called on every loop
+void loop()
+{
+  bool connected = client.loop(); // This function must be called on every loop
 
   // Check if MQTT connection is active, and reconnect if it's broken
-  // This must be called every loop to ensure connection
-  if (!client.connected())<br>  {
+  if (connected == false)
+  {
     Serial.println("MQTT Client disconnected, reconnecting...");
-    connect();
+    connect(client, &amp;subscribe);
   }
 
   /********* This is where you put your own code *********/
@@ -382,8 +383,9 @@ void loop()<br>{
 <ul>
 <li><code>connectToWiFi(SSID, password)</code>: Connects to Wi-Fi, and automatically reconnects if the Wi-Fi disconnects</li>
 <li><code>publishUbidots(client, topic, message)</code>: Publishes an MQTT message on a topic</li>
-<li><code>subscribeUbidots(client, topic)</code>: Subscribes to an MQTT topic. You should only use this function at the last part of the `connect()` function</li>
+<li><code>subscribeUbidots(client, topic)</code>: Subscribes to an MQTT topic. You should only use this function at the last part of the <code>connect()</code> function</li>
 <li><code>topicMatches(longTopic, shortTopic)</code>: Checks if your topic matches the topic sent by Ubidots</li>
+<li><code>connect(client, subscribe)</code>: Connects to MQTT and automatically subscribes to topics designated in the <code>subscribe()</code> function</li>
 </ul>
 <p>Since MQTT only allows us to publish the data in the form of Strings, we need to convert our temperature number into a String. Make a new String variable called <code>temperatureString</code> with <code>temp</code> (recall lesson <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html">From Blocks to Code - Part I</a>).</p>
 <pre><code class="language-cpp">
@@ -399,7 +401,7 @@ void loop()<br>{
 <h4 id="mcetoc_1g04lk9pg2bt">Step 4: Publish</h4>
 <p>Recall that in the last lesson, we went through what MQTT is and what MQTT topics look like. Let’s say you have followed all instructions and named your device “SSTuino II”. Now the name for this device in the topic should be <code>sstuino-ii</code>. Combine this with the name of the Variable you added on Ubidots earlier and you get <code>sstuino-ii/temperature</code>.</p>
 <p>Publishing to Ubidots using MQTT is as simple as calling the <code>publishUbidots()</code> function like so: <code>publishUbidots(client, “sstuino-ii/temperature”, temperatureString);</code>. Make sure you place all of this code <i>before</i> the delay so that all of it runs before the microcontroller sleeps for 10 seconds.</p>
-<p>The complete code between the brackets in <code>loop()</code> should look something like this:</p>
+<p>The code between the <code>/****/</code> in <code>loop()</code> should look something like this:</p>
 <pre><code class="language-cpp">…
 void loop()<br>{
   …
@@ -442,10 +444,10 @@ void loop()<br>{
 </div></div>
 <p>We are now done with Ubidots.</p>
 <h3 id="mcetoc_1g04lk9pg2c0">Code</h3>
-<p>We can open the code that we used to connect to MQTT previously (should be named Connect) and save it as a new project (name it something like “Subscribe”). You can also open the Publish code you just built as a side-by-side reference, if you need to.</p>
-<p>We can now start building our code for subscribing with 5 major steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Connect</strong>. Compared to the previous Publish example, it has 1 extra and 1 changed step.</p>
+<p>We can open the code that we used to connect to MQTT previously (should be named Connect) and save it as a new project (name it something like “Subscribe”). You can also open the Publish code you just built as a side-by-side reference if you need to.</p>
+<p>We can now start building our code for subscribing with 5 major steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Subscribe</strong>. Compared to the previous Publish example, it has 1 extra and 1 changed step.</p>
 <h4 id="mcetoc_1g04lk9pg2c1">Step 1: Declaration</h4>
-<p>You will first need to store the state of the light, in other words, whether it is on or off (in Arduino terms, HIGH or LOW). Make an integer variable called <code>light</code> and set it to LOW initially.</p>
+<p>You will first need to store the state of the light, in other words, whether it is on or off (in Arduino terms, <code>HIGH</code> or <code>LOW</code>). Make an integer variable called <code>light</code> and set it to <code>LOW</code> initially.</p>
 <pre><code class="language-cpp">…
 WiFiClient network;
 MQTTClient client;
@@ -477,20 +479,21 @@ void setup()<br>{
   client.begin(MQTT_URL, MQTT_PORT, network);
   client.onMessage(messageReceived);
 
-  connect(); // Connect to MQTT server
+  connect(client, &amp;subscribe); // Connect to MQTT server
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2c3">Step 3: Loop</h4>
 <p>Inside the loop, we have to respond to changes to the <code>light</code> variable by properly toggling the light on pin 2 on or off. Whenever a message from the subscribed topic comes in, another function will change the <code>light</code> variable, and over here, we need to “apply” this change by actually using the <code>digitalWrite()</code> function.</p>
 <pre><code class="language-cpp">…
-void loop()<br>{
-  client.loop(); // This function must be called on every loop
+void loop()
+{
+  bool connected = client.loop(); // This function must be called on every loop
 
   // Check if MQTT connection is active, and reconnect if it's broken
-  // This must be called every loop to ensure connection
-  if (!client.connected())<br>  {
+  if (connected == false)
+  {
     Serial.println("MQTT Client disconnected, reconnecting...");
-    connect();
+    connect(client, &amp;subscribe);
   }
 
   /********* This is where you put your own code *********/
@@ -519,23 +522,27 @@ void messageReceived(String &amp;topic, String &amp;payload) <br>{
   /********* This is where you put your own code *********/
 
   if (topicMatches("sstuino-ii/light", topic) == true)<br>  {
-    // You can do something with the payload, which is a String
     light = payload.toInt(); // convert the incoming message from String to int
   }
 
   /**************** End of your own code *****************/
 }
 …</code></pre>
-<h4 id="mcetoc_1g04lk9pg2c5">Step 5: Connect</h4>
-<p>At long last, we have come to the last part we have to change: the bottom part of the <code>connect()</code> function. This function is responsible for connecting to MQTT, but it is also responsible for subscribing to the topics that we want to receive messages from. </p>
-<p>Simply call the <code>subscribeUbidots()</code> function from the helper by coding <code>subscribeUbidots(client, "sstuino-ii/light");</code> after the "Connected to MQTT" Serial printout and you’re done!</p>
+<h4 id="mcetoc_1g04lk9pg2c5">Step 5: Subscribe</h4>
+<p>At long last, we have come to the last part we have to change: the <code>subscribe()</code> function. This function is responsible for subscribing to the topics that we want to receive messages from. </p>
+<p>Simply call the <code>subscribeUbidots()</code> function from the helper by coding <code>subscribeUbidots(client, "sstuino-ii/light");</code> and you’re done!</p>
 <pre><code class="language-cpp">…
-  Serial.println("\nConnected to MQTT!");
+void subscribe() {
+  /*
+    For example, a subscribe is called like:
+    subscribeUbidots(client, "sstuino-ii/light");
+  */
+ 
+  /********* This is where you put your own code *********/
 
-  /********************************************************
-    Subscribe to topics you need here!
-  ********************************************************/
   subscribeUbidots(client, "sstuino-ii/light");
+
+  /**************** End of your own code *****************/
 }
 …</code></pre>
 <p>All 5 steps are done now, so it’s time to run your project. Plug in your SSTuino, upload this code, open the Serial Monitor and let it connect. Once it is fully connected, you can try press the switch on your Ubidots dashboard to see the LED on Pin 2 light up!</p>
@@ -546,9 +553,11 @@ void messageReceived(String &amp;topic, String &amp;payload) <br>{
 <p>This practise will use the exact same circuit as the Publish example.</p>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/arduinoPot40.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-md.png 749w"  alt="" width="1837" height="854"></figure>
 <h3 id="mcetoc_1g04lk9pg2c8">Code</h3>
-<p>We are going to walk through this tutorial the same way as we did for Subscribe, which is to break it down into 5 steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Connect</strong>.</p>
+<p>We are going to walk through this tutorial the same way as we did for Subscribe, which is to break it down into 5 steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Subscribe</strong>.</p>
+<p>In addition, as our program is now time-sensitive, we will need to multitask our Arduino! Recall the lesson <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html">From Blocks to Code Part II</a>, where we talked about how to avoid using <code>delay()</code> and use <code>millis()</code> to check the time since the SSTuino is powered on.</p>
 <h4 id="mcetoc_1g04lk9pg2c9">Step 1: Declarations</h4>
 <p>Firstly, you want to merge the variables at the top of the code above <code>setup()</code>, having both <code>temp</code> and <code>light</code> for temperature and light switch respectively.</p>
+<p>We will introduce 2 completely new variables here, <code>previousMillis</code> which records the last time a delay occured and <code>interval</code>, the number of milliseconds between one delay and the next. </p>
 <pre><code class="language-cpp">…
 WiFiClient network;
 MQTTClient client;
@@ -558,6 +567,10 @@ MQTTClient client;
 // Variables
 int temp = 0;
 int light = LOW;
+
+// Variables for multitasking
+unsigned long previousMillis = 0;
+const long interval = 10000; // 10 seconds interval
 
 /**************** End of your own code *****************/
 
@@ -582,33 +595,47 @@ void setup()<br>{
   client.begin(MQTT_URL, MQTT_PORT, network);
   client.onMessage(messageReceived);
 
-  connect(); // Connect to MQTT server
+  connect(client, &amp;subscribe); // Connect to MQTT server
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2cb">Step 3: Loop</h4>
-<p>Within the <code>loop()</code> function, we have to periodically set Pin 2’s signal to be on/off, depending on what the variable <code>light</code> is at the moment. We will do this with a <code>digitalWrite(2, light)</code>.</p>
+<p>Within the <code>loop()</code> function, we will add the fundamental pieces of code that checks if enough time has passed between the last time the delay fired and the current time. If enough time has passed, the temperature is read and sent to the server. </p>
+<pre><code class="language-cpp">if (currentMillis - previousMillis &gt;= interval)
+{
+  previousMillis = currentMillis;
+  
+  // Do what you need to do here
+}</code></pre>
+<p>Secondly, we have to periodically set Pin 2’s signal to be on/off, depending on what the variable <code>light</code> is at the moment. We will do this with a <code>digitalWrite(2, light)</code>. Notice how this is outside the brackets that are responsible for checking if the delay time has passed, which means that it will be called every single time when the loop is run.</p>
+<p>Here's the code for the <code>loop()</code> function in full:</p>
 <pre><code class="language-cpp">…
-void loop() <br>{
-  client.loop(); // This function must be called on every loop
+void loop()
+{
+  bool connected = client.loop(); // This function must be called on every loop
 
   // Check if MQTT connection is active, and reconnect if it's broken
-  // This must be called every loop to ensure connection
-  if (!client.connected())<br>  {
+  if (connected == false)
+  {
     Serial.println("MQTT Client disconnected, reconnecting...");
-    connect();
+    connect(client, &amp;subscribe);
   }
 
   /********* This is where you put your own code *********/
 
-  // Read the temperature
-  temp = -40 + 0.488155 * (analogRead(A0) - 20);
-  
-  // Convert the temperature to a String
-  String temperatureString = String(temp);
-  publishUbidots(client, "sstuino-ii/temperature", temperatureString);
-  delay(10000); // repeat every 10 seconds
+  unsigned long currentMillis = millis();
+  if (currentMillis - previousMillis &gt;= interval)
+  {
+    previousMillis = currentMillis;
+    
+    // Read the temperature
+    temp = -40 + 0.488155 * (analogRead(A0) - 20);
 
-  digitalWrite(2, light); // &lt;------------- this line was added
+    // Convert the temperature to a String
+    String temperatureString = String(temp);
+    publishUbidots(client, "sstuino-ii/temperature", temperatureString);
+  }
+
+  digitalWrite(2, light);
 
   /**************** End of your own code *****************/
 }
@@ -632,22 +659,27 @@ void messageReceived(String &amp;topic, String &amp;payload)
 
   if (topicMatches("sstuino-ii/light", topic) == true)
   {
-    // You can do something with the payload, which is a String
     light = payload.toInt(); // convert the incoming message from String to int
   }
 
   /**************** End of your own code *****************/
 }
 …</code></pre>
-<h4 id="mcetoc_1g04lk9pg2cd">Step 5: Connect</h4>
-<p>Finally, don’t forget to actually subscribe to the topic in question, which should be named <code>sstuino-ii/light</code> at the bottom of the <code>connect()</code> function.</p>
+<h4 id="mcetoc_1g04lk9pg2cd">Step 5: Subscribe</h4>
+<p>Finally, don’t forget to actually subscribe to the topic in question, which should be named <code>sstuino-ii/light</code>, in the <code>subscribe()</code> function.</p>
 <pre><code class="language-cpp">…
-  Serial.println("\nConnected to MQTT!");
+void subscribe()
+{
+  /*
+    For example, a subscribe is called like:
+    subscribeUbidots(client, "sstuino-ii/light");
+  */
+ 
+  /********* This is where you put your own code *********/
 
-  /********************************************************
-    Subscribe to topics you need here!
-  ********************************************************/
   subscribeUbidots(client, "sstuino-ii/light");
+
+  /**************** End of your own code *****************/
 }
 …</code></pre>
 <p>With all of the code done, it’s time to plug in your SSTuino and upload the code. Try playing around with the switch on your dashboard to see if the debug LED on Pin 2 turns on and off.</p>
@@ -657,16 +689,16 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <p>In our next two tutorials, we will be building a mobile app with Thunkable, a “code-lite” mobile app creator. It is <strong>highly recommended</strong> that you watch some of Thunkable’s tutorials at home, as well as try out the next tutorial (<a href="https://knowledge.fourier.industries/mobile-apps-part-1.html">Mobile Apps, Part 1</a>). All of these videos are bite-sized, 1-2 minute videos so it’s really quick to get up to speed with how Thunkable works! The next tutorial will only cover a shortened version to get you up to speed.</p>
 <p><strong>Essential Tutorials:</strong></p>
 <ol>
-<li>Intro to Drag and Drop: <a href="https://www.youtube.com/watch?v=dQQsvQr-f1U">https://www.youtube.com/watch?v=dQQsvQr-f1U</a></li>
-<li>Building a super simple translation app: <a href="https://www.youtube.com/watch?v=0NrkKiCGaxk">Thunkable Drag and Drop Translator App</a></li>
-<li>How screens and navigation works: <a href="https://www.youtube.com/watch?v=TqIVHGYdi54">Screens and Navigation in Thunkable</a></li>
-<li>App Variables: <a href="https://www.youtube.com/watch?v=3M9F3X1bCnA">https://www.youtube.com/watch?v=3M9F3X1bCnA</a></li>
-<li>Functions: <a href="https://www.youtube.com/watch?v=3jS3F3IRQB0">https://www.youtube.com/watch?v=3jS3F3IRQB0</a></li>
+<li><a href="https://www.youtube.com/watch?v=dQQsvQr-f1U">Introduction to Drag and Drop</a></li>
+<li><a href="https://www.youtube.com/watch?v=0NrkKiCGaxk">Build a Translator App with Thunkable</a></li>
+<li><a href="https://www.youtube.com/watch?v=TqIVHGYdi54">How Screens and Navigation works in Thunkable</a></li>
+<li><a href="https://www.youtube.com/watch?v=3M9F3X1bCnA">Using App Variables</a></li>
+<li><a href="https://www.youtube.com/watch?v=3jS3F3IRQB0">Using Functions</a></li>
 </ol>
 <p><strong>Optional Tutorials:</strong></p>
 <ol>
-<li>Logic Blocks in Thunkable: ​​<a href="https://www.youtube.com/watch?v=qotZVqzTUpg">https://www.youtube.com/watch?v=qotZVqzTUpg</a></li>
-<li>Web API (HTTP) in Thunkable: <a href="https://www.youtube.com/watch?v=FxrXdZPRTLw">https://www.youtube.com/watch?v=FxrXdZPRTLw</a></li>
+<li><a href="https://www.youtube.com/watch?v=qotZVqzTUpg">Using Logic Blocks</a></li>
+<li><a href="https://www.youtube.com/watch?v=FxrXdZPRTLw">Understanding Web (HTTP) APIs in Thunkable</a></li>
 </ol>
 <p><a href="https://knowledge.fourier.industries/getting-started-with-iot.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-1.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
@@ -680,7 +712,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
         <link href="https://knowledge.fourier.industries/mobile-apps-part-1.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-1.html</id>
 
-        <updated>2022-04-10T22:54:42+08:00</updated>
+        <updated>2022-04-16T23:21:26+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will create a mobile app with&hellip;
@@ -825,7 +857,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 </figure>
 <p>Let’s switch over to blocks to add our code…We want the value of the Switch to be stored in a variable so that it can be read by our program on the Home tab. Drag the <a href="#" class="btn btn--yellow">when Switch1 on Value Change</a> block into the editor, and set a new variable called <code>removeSpaces</code> to whatever the <code>newValue</code> of the switch is. We are now done with the Settings screen!</p>
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/28/Thunkable-5-Func-2E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-2E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-2E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/28/responsive/Thunkable-5-Func-2E-md.png 749w"  alt="" width="2108" height="1448"></figure>
-<p><span style="font-weight: 400;">Moving back to the blocks for Home, we can add an `if` block to our button click event so that we check for that setting we just made previously. </span></p>
+<p><span style="font-weight: 400;">Moving back to the blocks for Home, we can add an <a href="#" class="btn btn--yellow">if</a> block to our button click event so that we check for that setting we just made previously. </span></p>
 <p><span style="font-weight: 400;">After that, drag a Logic <a href="#" class="btn btn--green">__=__</a> block to check if the statement is equal to true, and drag a <a href="#" class="btn btn--green">true</a> block to the right-hand side of the equals sign.</span></p>
 <p><span style="font-weight: 400;">Finally, drag the <a href="#" class="btn btn--yellow">app variable</a> block from the Variables menu to complete the if statement. Change the variable name to <code>removeSpaces</code> so it matches the name on the other screen.</span></p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
@@ -867,8 +899,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <figure class="post__video"><video loading="lazy" width="600" height="300" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/Thunkable-6-Finish-3.mp4" type="video/mp4" /></video></figure>
 <h2 id="mcetoc_1g04lks6i2e0">Resources and Going Further</h2>
-<p>If you want some beautiful icons to use in your apps, projects and presentations, this is the icon suite that was used in this tutorial: </p>
-<p class="align-center"><a href="https://icons8.com/icons/fluency" target="_blank" rel="noopener noreferrer" class="btn">Icons8 Fluency Icons</a></p>
+<p>If you want some beautiful icons to use in your apps, projects and presentations, this is the icon suite that was used in this tutorial: <a href="https://icons8.com/icons/fluency" target="_blank" rel="noopener noreferrer">Icons8 Fluency Icons</a></p>
 <p><a href="https://knowledge.fourier.industries/transmit-and-receive.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-2.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
@@ -881,7 +912,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-10T22:49:47+08:00</updated>
+        <updated>2022-04-16T16:25:30+08:00</updated>
             <summary>
                 <![CDATA[
                     With that done, let’s upload your code. Open the Serial&hellip;
@@ -999,7 +1030,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 <p>When you click on the Temperature Variable, you can see the <strong>API Label</strong> of this variable which is <code>temperature</code>. Remember this name, because this is the name of this Variable for computers that need to communicate with it. You can choose to create more Variables here to suit what you need to do.</p>
 <h3 id="mcetoc_1g04lhe1l280">Creating a new Dashboard</h3>
 <p>With Variables out of the way, let’s create our first Dashboard. Go to the top bar, <strong>Data &gt; Dashboards</strong> and click “Add New Dashboard”. Give it a simple name like “My Dashboard” and set the Default Time Range to “Last 1 hour” so that the dashboard shows data generally from the last hour. Press the green arrow to add the new dashboard.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E.png" data-size="2104x463"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E-thumbnail.png" alt="" width="749" height="165"></a>
 <figcaption>Click on "Dashboards" under "Data"</figcaption>
 </figure>
@@ -1012,7 +1043,7 @@ void messageReceived(String &amp;topic, String &amp;payload)
 </div></div>
 <h3 id="mcetoc_1g04lhe1l281">Adding a new widget to the dashboard</h3>
 <p>With your dashboard, you can add up to 10 widgets to monitor the status of your devices connected to Ubidots. Click “Add New Widget'' and select “Thermometer” from it. Under the “Data” section, press “Add Variables” and select your Variable from the SSTuino II device.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="4">
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4.png" data-size="2108x1474"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4-thumbnail.png" alt="" width="749" height="524"></a>
 <figcaption>Select the Temperature widget</figcaption>
 </figure>
