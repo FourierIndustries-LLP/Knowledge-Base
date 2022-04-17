@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-16T23:22:19+08:00</updated>
+    <updated>2022-04-17T10:56:12+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-3.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-3.html</id>
 
-        <updated>2022-04-10T22:51:51+08:00</updated>
+        <updated>2022-04-17T10:56:12+08:00</updated>
             <summary>
                 <![CDATA[
                     In the recent Singapore Budget Debate of 2022, a total&hellip;
@@ -37,7 +37,7 @@
 <li style="font-weight: 400;" aria-level="1">Sense the temperature and human presence to determine if the fans in the Kopitiam need to be turned on. The fans are connected to another IoT device and are not connected to this hub physically, so we only need to send temperature and presence data.</li>
 <li style="font-weight: 400;" aria-level="1">Receive commands from the Internet to turn lights on and off. The lights are connected to this hub physically so we will need to toggle a pin on and off to demonstrate this.</li>
 </ul>
-<p>Given the objectives, we will need 2 sensors (input) and 1 actuator (output). The TMP36 temperature sensor and the Passive Infrared (PIR) sensor will be used to detect temperature and human movement respectively.</p>
+<p>Given the objectives, we will need 2 sensors (input) and 1 actuator (output). The TMP36 temperature sensor and the Passive Infrared (PIR) sensor will be used to detect temperature and human movement respectively. For the output side of things, we will have a single LED to represent the light that we are controlling.</p>
 <h2>Ubidots Setup</h2>
 <p>In our previous examples, we have already set up two Variables in Ubidots: Temperature and Light. We just need to add one more variable to represent human movement, called “Motion”.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-1.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-1-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-1-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-1-md.png 749w"  alt="" width="2132" height="1448"></figure>
@@ -92,7 +92,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-2.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-2.html</id>
 
-        <updated>2022-04-16T23:22:19+08:00</updated>
+        <updated>2022-04-17T10:51:06+08:00</updated>
             <summary>
                 <![CDATA[
                     In our previous tutorial, we have gone through all of&hellip;
@@ -120,8 +120,7 @@
 <h3>Retrieving Variables from Ubidots</h3>
 <p>Time to go back to the Home screen and try getting a Variable from Ubidots! You just need to type the name of your Ubidots Variable (like “temperature” or “light”) into the “Variable Label” text box and press “Get Variable”.</p>
 <p>If everything goes right, Ubidots should respond with the last value that was received:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4-md.png 749w"  alt="" width="350" height="286"></figure>
-<pre>Insert video of the temperature changing on the dashboard</pre>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-4E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-4E-md.png 749w"  alt="" width="307" height="518"></figure>
 <p>If you didn’t see the above, you might want to double-check some of your settings with the Common Issues list below:</p>
 <table style="border-collapse: collapse; width: 100%;" border="1">
 <tbody>
@@ -146,6 +145,7 @@
 <h3>Sending Variables to Ubidots</h3>
 <p>To send data to a Ubidots Variable, we need to also fill in the “Variable Content” field below on what we want to send to Ubidots. In our example, we can send a temperature value of 28.9 to Ubidots by pressing the “Push Variable” button to send this value to the Variable in Ubidots.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-md.png 749w"  alt="" width="276" height="474"></figure>
+<pre>Insert video of the temperature changing on the dashboard as the phone app changes</pre>
 <p>If all goes well, you should see the message above telling you that the value has been recorded. If not, check out some of the Common Issues listed below:</p>
 <table style="border-collapse: collapse; width: 100%;" border="1">
 <tbody>
@@ -1103,7 +1103,7 @@ void subscribe()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html</id>
 
-        <updated>2022-04-10T22:47:44+08:00</updated>
+        <updated>2022-04-17T10:00:32+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1144,14 +1144,14 @@ int temp = 0; // Setup the variable 'temp' as an integer and starts as 0
 
 void setup()
 {
-  pinMode(A0, INPUT); //initilise pin A0 as input
-  Serial.begin(9600); //initilise serial
+  pinMode(A0, INPUT); //set pin A0 as input
+  Serial.begin(9600); //start serial monitor
 
 }
 
 void loop()
 {
-  temp = (-40 + 0.488155 * (analogRead(A0) - 20) + 0); //calculations to convert voltage drop measured from A0 into temperature. Adjust 0 to calibrate sensor.
+  temp = (-40 + 0.488155 * (analogRead(A0) - 20) + 0); //calculations to convert voltage drop measured from A0 into temperature. Change 0 to calibrate sensor.
   Serial.println(temp); //print variable 'temp' to serial monitor
 }
 </code></pre>
@@ -1470,7 +1470,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html</id>
 
-        <updated>2022-04-05T18:56:34+08:00</updated>
+        <updated>2022-04-17T10:01:37+08:00</updated>
             <summary>
                 <![CDATA[
                     For this exercise, we will be going to use the&hellip;
@@ -1500,7 +1500,7 @@ void loop()
 <p>Let's create a new circuit on TinkerCAD like this:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot30.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-md.png 749w"  alt="" width="1852" height="984"></figure>
 <p>We will read the value from the LDR and output it on the serial monitor:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot14.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-md.png 749w"  alt="" width="447" height="109"></figure>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot14.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-md.png 749w"  alt="" width="575" height="140"></figure>
 <p>When running the simulation, open up the serial monitor. The result should look something like this:</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoPot31.mp4" type="video/mp4" /></video></figure>
@@ -1538,7 +1538,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html</id>
 
-        <updated>2022-04-07T13:00:00+08:00</updated>
+        <updated>2022-04-17T10:31:00+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1547,21 +1547,13 @@ void loop()
         <content type="html">
             <![CDATA[
                 <p>In this tutorial, we are going to learn about the Ultrasonic Sensor and read its distance using the serial monitor!</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fvaopr9t49">About the Sensor</a></li>
-<li><a href="#mcetoc_1fvap7cft67">Using the Sensor</a></li>
-<li><a href="#mcetoc_1fvi60h1c4q">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fvaopr9t49">About the Sensor</h2>
+<h2>About the Sensor</h2>
 <figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot17.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot17-md.jpg 749w"  alt="" width="221" height="159"></figure>
 <p>The ultrasonic distance sensor uses ultrasonic waves - a very high-pitched sound that we cannot hear to measure the distance it is from an object.</p>
 <p>It is in a <strong>transceiver</strong> configuration, where both the transmitter and receiver are on the same sensor.</p>
 <p>One of the uses of the ultrasonic distance sensor is in the automotive industry. They are usually used as reverse warning sensors but are increasingly used in self-driving vehicles.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot21.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot21-md.jpg 749w"  alt="" width="374" height="273"></figure>
-<h2 id="mcetoc_1fvap7cft67">Using the Sensor</h2>
+<h2>Using the Sensor</h2>
 <p>The ultrasonic sensor we are going to use is the HC-SR04, which is commonly used in Arduino circuits:</p>
 <figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/23/arduinoPot18.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-xs.png 300w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-sm.png 480w ,https://knowledge.fourier.industries/media/posts/23/responsive/arduinoPot18-md.png 749w"  alt="" width="221" height="129"></figure>
 <p class="msg msg--info"><strong>Note:</strong> We are using the 4 pin sensor instead of the 3 pin version, which can be found by typing <strong>ultrasonic sensor </strong>in the component search bar.</p>
@@ -1575,7 +1567,7 @@ void loop()
 <p>Let's build this circuit on the SSTuino and try it out! This is what it looks like on the SSTuino:</p>
 <pre>Insert video here</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<h2 id="mcetoc_1fvi60h1c4q">Resources and Going Further</h2>
+<h2>Resources and Going Further</h2>
 <ul>
 <li><a href="https://learn.adafruit.com/ultrasonic-sonar-distance-sensors" target="_blank" rel="noopener noreferrer">Adafruit: Ultrasonic Sonar Distance Sensors</a></li>
 <li><a href="https://www.maxbotix.com/articles/how-ultrasonic-sensors-work.htm" target="_blank" rel="noopener noreferrer">MaxBotix: Understanding How Ultrasonic Sensors Work</a></li>
