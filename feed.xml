@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-17T10:56:12+08:00</updated>
+    <updated>2022-04-18T15:15:32+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-3.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-3.html</id>
 
-        <updated>2022-04-17T10:56:12+08:00</updated>
+        <updated>2022-04-17T20:09:05+08:00</updated>
             <summary>
                 <![CDATA[
                     In the recent Singapore Budget Debate of 2022, a total&hellip;
@@ -79,6 +79,8 @@
 <p class="msg msg--info"><strong>Hint</strong>: If you want to fetch a Variable automatically from Ubidots and display it on a label, you can use something like the code below:<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/31/Thunkable-9-CapstoneSetup-7.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-7-xs.png 300w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-7-sm.png 480w ,https://knowledge.fourier.industries/media/posts/31/responsive/Thunkable-9-CapstoneSetup-7-md.png 749w"  alt="" width="436" height="282"></figure>
 <h2>Conclusion</h2>
 <p>If you have completed your Capstone project with a fully working mobile app, circuit and program, congratulations! You have completed the SSTuino II Essentials Track. </p>
+<p>Please help us out by completing this short 5-minute survey about your experience learning about the Internet of Things and how to use an Arduino. Thank you! 😀</p>
+<p class="align-center"><a href="https://docs.google.com/forms/d/e/1FAIpQLSfeytRFQjktCTV007iZLaYcHlpn8XW5iiY9yqx4_40R6Cm_dg/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="btn">Click here to Submit Feedback</a></p>
 <p>If you feel like you are up for a challenge, or just wish to learn more about how to build different solutions with your SSTuino II, we have something in store for you! Our team is currently working on the Advanced Tracks, which will give in-depth tutorials on using the SSTuino II in scientific inquiry, or building advanced mobile apps with Swift Playgrounds. Stay tuned 😊</p>
 <p><a href="https://knowledge.fourier.industries/mobile-apps-part-2.html" class="btn btn--outline">⬅️ Back</a></p>
             ]]>
@@ -92,7 +94,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-2.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-2.html</id>
 
-        <updated>2022-04-17T10:51:06+08:00</updated>
+        <updated>2022-04-18T15:15:32+08:00</updated>
             <summary>
                 <![CDATA[
                     In our previous tutorial, we have gone through all of&hellip;
@@ -145,7 +147,7 @@
 <h3>Sending Variables to Ubidots</h3>
 <p>To send data to a Ubidots Variable, we need to also fill in the “Variable Content” field below on what we want to send to Ubidots. In our example, we can send a temperature value of 28.9 to Ubidots by pressing the “Push Variable” button to send this value to the Variable in Ubidots.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/30/Thunkable-7-Basics-5.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-xs.png 300w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-sm.png 480w ,https://knowledge.fourier.industries/media/posts/30/responsive/Thunkable-7-Basics-5-md.png 749w"  alt="" width="276" height="474"></figure>
-<pre>Insert video of the temperature changing on the dashboard as the phone app changes</pre>
+<pre>Video coming soon! Thank you :) Temperature will be changing on the dashboard as the phone sends data</pre>
 <p>If all goes well, you should see the message above telling you that the value has been recorded. If not, check out some of the Common Issues listed below:</p>
 <table style="border-collapse: collapse; width: 100%;" border="1">
 <tbody>
@@ -236,7 +238,7 @@
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-16T23:19:17+08:00</updated>
+        <updated>2022-04-18T15:14:26+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -420,7 +422,7 @@ void loop()<br>{
 }
 …</code></pre>
 <p>Before you upload your program, don't forget to double-check the 'arduino_secrets.h' file to ensure that you have the correct Wi-Fi password and Ubidots account details.</p>
-<pre>Insert video here of using your finger to manually raise the temperature of the TMP36</pre>
+<pre>Video coming soon! Thank you :) Use your finger to manually raise the temperature of the TMP36</pre>
 <p>Connect your SSTuino, upload your program, open your Serial Monitor and go to your Ubidots dashboard. You can now see the current temperature on the dashboard! </p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/Ubidots-5-Dashboard-7E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/Ubidots-5-Dashboard-7E-md.png 749w"  alt="" width="564" height="390"></figure>
 <p>Well done, now you have made your first Internet-connected temperature sensor in 4 steps (Declaration, Setup, Loop, Publish). This simple example can be extended to many other sensors that you may want to build, like motion detectors, air quality sensors, and so on.</p>
@@ -683,7 +685,7 @@ void subscribe()
 }
 …</code></pre>
 <p>With all of the code done, it’s time to plug in your SSTuino and upload the code. Try playing around with the switch on your dashboard to see if the debug LED on Pin 2 turns on and off.</p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <p>If everything works out, awesome! You have successfully made an IoT controller for a smart home, with a temperature sensor to tell you how hot or cold your room is, and an internet-controlled light that you can trigger using other Internet controlled functions. You can explore how to integrate this with IFTTT (If This Then That) or other smart solutions to link your existing devices like a Google Home Mini with your SSTuino based IoT controller. </p>
 <h2 id="mcetoc_1g068rr6ph">In the next lesson...</h2>
 <p>In our next two tutorials, we will be building a mobile app with Thunkable, a “code-lite” mobile app creator. It is <strong>highly recommended</strong> that you watch some of Thunkable’s tutorials at home, as well as try out the next tutorial (<a href="https://knowledge.fourier.industries/mobile-apps-part-1.html">Mobile Apps, Part 1</a>). All of these videos are bite-sized, 1-2 minute videos so it’s really quick to get up to speed with how Thunkable works! The next tutorial will only cover a shortened version to get you up to speed.</p>
@@ -1103,7 +1105,7 @@ void subscribe()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html</id>
 
-        <updated>2022-04-17T10:00:32+08:00</updated>
+        <updated>2022-04-18T15:13:05+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1158,10 +1160,10 @@ void loop()
 <p>Let's try this on the SSTuino!</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <p>Here is what it looks like:</p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <h2 id="mcetoc_1fvrr1ms32g">Challenge yourself</h2>
 <p>Using the bar graph example we did in the previous tutorials, how would you set the temperature sensor up such that when it is hotter, more LEDs will light up?</p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <h2 id="mcetoc_1fvrr7cv532">Resources and Going Further</h2>
 <ul>
 <li><a href="https://learn.adafruit.com/tmp36-temperature-sensor" target="_blank" rel="noopener noreferrer">Adafruit: TMP36 Temperature Sensor</a></li>
@@ -1179,7 +1181,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
 
-        <updated>2022-04-08T19:40:43+08:00</updated>
+        <updated>2022-04-17T20:14:49+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to explore functions, understand&hellip;
@@ -1216,19 +1218,19 @@ void loop()
 <li>Functions codify one function in one place so that it only has to be thought out and debugged once.</li>
 <li>If the code has to be changed, functions also reduce the errors in modification.</li>
 </ul>
-<p>Functions can also help to have smaller code, especially if particular lines of code are used repeatedly in the program. Although functions have many advantages, do take note that Arduino still requires <code><strong>void setup()</strong></code> and <code><strong>void loop()</strong></code> for the program to work. You can place your additional functions outside of them. Now let's make use of previous examples and implement functions!</p>
+<p>Functions can also help to have smaller code, especially if particular lines of code are used repeatedly in the program. Although functions have many advantages, do take note that Arduino still requires <code><strong>void setup()</strong></code> and <code><strong>void loop()</strong></code> for the program to work. You can place your additional functions outside of them. Now let’s make some functions with the previous examples!</p>
 <h3 id="mcetoc_1fvp2st7fc">Ultrasonic Distance Sensor Example</h3>
 <p>We are going to continue to use this circuit from our previous example.</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot19.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-md.png 749w"  alt="" width="1758" height="970"></figure>
-<p>Here is an edited text version of the blocks code from TinkerCAD. Firstly the device initialises the Serial Monitor. Note that it does not declare the pins inside setup(). We will cover that in the function! 😁</p>
+<p>Here is an edited text version of the blocks code from TinkerCAD. Firstly the device initialises the Serial Monitor. Note that it does not declare the pins inside <code>setup()</code>. We will cover that in the function! 😁</p>
 <pre><code class="language-cpp">
 void setup() 
 {
   Serial.begin(9600);
 }
 </code></pre>
-<p>Now we will do up the code in loop(). We make the serial print the time taken for the sound wave to bounce back using the function readUltrasonicDistance(5,6) in microseconds and multiply that by half the speed of sound to display the distance in cm.</p>
+<p>Now we will do up the code in <code>loop()</code>. We will make the serial monitor print the time taken for the sound wave to bounce back using the function <code>readUltrasonicDistance(5,6)</code> in microseconds and multiply that by half the speed of sound to display the distance in cm.</p>
 <p class="msg msg--info"><strong>Tip: </strong>The speed of sound is 0.0343 centimetre/microsecond. We half that to 0.01723 because the time taken for the sound to bounce back is 2x the total distance (time taken to the object + time taken from the object)</p>
 <pre><code class="language-cpp">
 void loop()
@@ -1236,7 +1238,7 @@ void loop()
   Serial.println(0.01723 * readUltrasonicDistance(5, 6));
 }
 </code></pre>
-<p>And finally the function! We declare it as long as we can use it in the calculation in loop(). The function essentially tells the sensor to "fire" the ultrasonic wave and read the time taken for it to travel to and fro.</p>
+<p>And finally the function! We declare it as long as we can use it in the calculation in <code>loop()</code>. The function essentially tells the sensor to "fire" the ultrasonic wave and read the time taken for it to travel to and fro.</p>
 <pre><code class="language-cpp">
 long readUltrasonicDistance(int triggerPin, int echoPin)
 {
@@ -1333,7 +1335,7 @@ void loop()
     // here is where you'd put code that needs to be running all the time.
 
     // check to see if it's time to blink the LED; that is, if the
-    // difference between the current time and last time you blinked
+    // difference between the current time and the last time you blinked
     // the LED is bigger than the interval at which you want to
     // blink the LED.
     unsigned long currentMillis = millis();
@@ -1358,7 +1360,7 @@ void loop()
     }
 }
 </code></pre>
-<p>How the code works is that it subtracts the previously recorded time (previousMillis) from the current time (currentMillis). If the remainder is greater than the interval (1000 milliseconds), the program updates the previousMillis variable to the current time, and either turn the LED on or off.</p>
+<p>How the code works is that it subtracts the previously recorded time (<code>previousMillis</code>) from the current time (<code>currentMillis</code>). If the remainder is greater than the interval (1000 milliseconds), the program updates the <code>previousMillis</code> variable to the current time, and either turns the LED on or off.</p>
 <p>As the program is non-blocking, any code that is added outside of the first if statement should work correctly. You can now add other tasks and your LED will blink every second!</p>
 <p>Using the <code><strong>millis()</strong></code> function does take a bit more work than using the <code><strong>delay()</strong></code> function but will be worth it if the program needs to multitask.</p>
 <h3 id="mcetoc_1fvpo53oi1c">Ultrasonic Sensor and Buzzer Example</h3>
@@ -1453,6 +1455,7 @@ void loop()
 }
 </code></pre>
 <h2 id="mcetoc_1fvp2st7fh">Resources and Going Further</h2>
+<p>If you want to know more about how to use functions, and how to avoid using <code>delay()</code> to control timing on an Arduino, check out the articles below.</p>
 <ul>
 <li><a href="https://docs.arduino.cc/learn/programming/functions" target="_blank" rel="noopener noreferrer">Arduino: Using functions in a sketch</a></li>
 <li><a href="https://randomnerdtutorials.com/why-you-shouldnt-always-use-the-arduino-delay-function/" target="_blank" rel="noopener noreferrer">Random Nerd Tutorials: Why you shouldn't always use the Arduino delay function</a></li>
@@ -1538,7 +1541,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html</id>
 
-        <updated>2022-04-17T10:31:00+08:00</updated>
+        <updated>2022-04-18T15:10:15+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1565,7 +1568,7 @@ void loop()
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/arduinoPot29.mp4" type="video/mp4" /></video></figure>
 <p>Let's build this circuit on the SSTuino and try it out! This is what it looks like on the SSTuino:</p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <h2>Resources and Going Further</h2>
 <ul>
@@ -1586,7 +1589,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html</id>
 
-        <updated>2022-04-01T17:04:48+08:00</updated>
+        <updated>2022-04-18T15:09:45+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us play some tunes with the SSTuino! We are&hellip;
@@ -1621,7 +1624,7 @@ void loop()
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot9.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot9-md.png 749w"  alt="" width="879" height="254"></figure>
 <p>Let's create this circuit on the SSTuino! This is what it looks like:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <h2 id="mcetoc_1fvdca6hg28">Pieno</h2>
 <p>We are now going to use the potentiometer to control the tone of the speaker. When you turn the knob on the potentiometer, the pitch of the speaker will change. With the same circuit as the previous exercise, we are going to tweak the code for the Pieno.</p>
 <p>First, we will need to create a new variable called pot. In this exercise, we are going to use the <strong>map to range </strong>function. The potentiometer has a range from <strong>0 to 1023</strong>, but the speaker has an output range of <strong>35 to 127</strong>. By mapping the range, we can make sure that when the potentiometer is at one end of the input range, the speaker is also at one end of its output range.</p>
@@ -1629,7 +1632,7 @@ void loop()
 <p>After you have tried this out, run the simulation and create your own music!</p>
 <p>Let's try this on the SSTuino!</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <h2 id="mcetoc_1fvdca6hg29">Enhance the pieno</h2>
 <p>Would it be possible to add more functions to the <em>pieno</em>? Sure thing! Let us add 2 more buttons to the circuit as shown:</p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot11-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot11-2-md.png 749w"  alt="" width="1164" height="635"></figure>
@@ -1640,10 +1643,10 @@ void loop()
 </ul>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/21/arduinoPot12.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot12-xs.png 300w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot12-sm.png 480w ,https://knowledge.fourier.industries/media/posts/21/responsive/arduinoPot12-md.png 749w"  alt="" width="396" height="385"></figure>
 <p>This happens when you press start simulation:</p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <p>Let's create this circuit on the SSTuino! This is what it looks like on the SSTuino:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<pre>Insert video here</pre>
+<pre>Video coming soon! Thank you :)</pre>
 <p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
 <h2 id="mcetoc_1fvi5tdb43r">Resources and Going Further</h2>
 <ul>
