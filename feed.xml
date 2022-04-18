@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-18T15:15:32+08:00</updated>
+    <updated>2022-04-18T21:53:08+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -914,7 +914,7 @@ void subscribe()
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-16T16:25:30+08:00</updated>
+        <updated>2022-04-18T21:53:08+08:00</updated>
             <summary>
                 <![CDATA[
                     With that done, let’s upload your code. Open the Serial&hellip;
@@ -1061,6 +1061,7 @@ void subscribe()
 </div></div>
 <h2 id="mcetoc_1g04lhe1l282">Connecting your SSTuino II to Ubidots</h2>
 <p>Phew, that was a lot of things to go through! Let’s start to connect your SSTuino II to Ubidots. Go to your Arduino examples and open up the <code>Ubidots_1_Connect</code> example by going to <strong>File &gt; Examples &gt; WiFiNINA &gt; Ubidots_1_Connect</strong>.</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/Screenshot-2022-04-18-at-9.52.01-PM.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/Screenshot-2022-04-18-at-9.52.01-PM-xs.png 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/Screenshot-2022-04-18-at-9.52.01-PM-sm.png 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/Screenshot-2022-04-18-at-9.52.01-PM-md.png 749w"  alt="" width="586" height="523"></figure>
 <p>Wow, the code looks quite scary! Not to worry, because we have placed comments to let you know where to put code and where to not place any code.</p>
 <p>In Arduino programs, you can actually have more than one file! Go to the <code>arduino_secrets.h</code> tab located on the tab bar. Here is where you place all the details of your WiFi network and your Ubidots device info.</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/Arduino-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-1E-md.png 749w"  alt="" width="430" height="537"></figure>
@@ -1181,7 +1182,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
 
-        <updated>2022-04-17T20:14:49+08:00</updated>
+        <updated>2022-04-18T20:16:33+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to explore functions, understand&hellip;
@@ -1238,7 +1239,7 @@ void loop()
   Serial.println(0.01723 * readUltrasonicDistance(5, 6));
 }
 </code></pre>
-<p>And finally the function! We declare it as long as we can use it in the calculation in <code>loop()</code>. The function essentially tells the sensor to "fire" the ultrasonic wave and read the time taken for it to travel to and fro.</p>
+<p>And finally the function! We declare it so that we can use it in the calculation in <code>loop()</code>. The function essentially tells the sensor to "fire" the ultrasonic wave and read the time taken for it to travel to and fro.</p>
 <pre><code class="language-cpp">
 long readUltrasonicDistance(int triggerPin, int echoPin)
 {
@@ -1259,7 +1260,7 @@ long readUltrasonicDistance(int triggerPin, int echoPin)
 <p>Let's try out another simple example with the Potentiometer! Set up the circuit as shown:</p>
 <p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
 <figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
-<p>Head over to the Arduino IDE and set up the code. First, let's declare the serial port, input and output pins:</p>
+<p>Head over to the Arduino IDE and set up the code. First, let’s open the serial port, input and output pins:</p>
 <pre><code class="language-cpp">
 void setup()
 {
@@ -1268,7 +1269,7 @@ void setup()
     pinMode(6, OUTPUT);
 }
 </code></pre>
-<p>Next, let's leave <code><strong>void loop()</strong></code> alone for a bit 😆 and set up functions! You can name your functions whatever you want, as long as it is a single word.</p>
+<p>Next, let's leave <code><strong>void loop()</strong></code> alone for a bit 😆 and set up functions! You can name your functions whatever you want, as long as it’s a single word and does not start with numbers.</p>
 <pre><code class="language-cpp">
 void pwmLed()
 {
@@ -1277,7 +1278,7 @@ void pwmLed()
 
 void helloWorld()
 {
-    Serial.println(Hello, World !);
+    Serial.println("Hello, World!");
 }
 </code></pre>
 <p>With this, we have just created 2 functions! Let us place them inside <code><strong>void loop()</strong></code></p>
@@ -1288,7 +1289,7 @@ void loop()
   pwmLed();
 }
 </code></pre>
-<p>The advantage of using functions in this scenario is that if I would like to not make a section of code run, I do not need to comment out all the lines inside <code><strong>void loop()</strong></code>. Instead, I just have to comment out the function as so!</p>
+<p>The advantage of using functions in this scenario is that if I would like to not make a section of code run, I do not need to comment out all the lines inside <code><strong>void loop()</strong></code>. Instead, I just have to comment out the function like this!</p>
 <pre><code class="language-cpp">
 void loop()
 {
@@ -1297,19 +1298,19 @@ void loop()
 }
 </code></pre>
 <h2 id="mcetoc_1fvp2st7fe">Limitations of Block Code</h2>
-<p>Programming with blocks is super simple! Just plop them in and you are good to go! Block coding is a great tool to get people started with little to no programming knowledge. However, as we move to more advanced tutorials like the Internet of Things, block coding would not be able to be used as it is rather limited. While we love introductory tools such as TinkerCAD's block coding functionality, we would like our students to move on to text-based programming languages too!</p>
+<p>Programming with blocks is super simple! Just plop them in and you are good to go! Block coding is a great tool to get people started with little to no programming knowledge. However, as we move to more advanced tutorials like the Internet of Things, there are many functions not available to us in block coding. While we love introductory tools such as TinkerCAD's block coding functionality, we would like our students to move on to text-based programming languages too!</p>
 <p>Here are some limitations of block code:</p>
 <ul>
-<li>Inability to support external libraries/locked into the platform </li>
+<li>Cannot use code that other people wrote (aka libraries)</li>
 <li>Inability to use sensors that are not supported by the platform</li>
-<li>Delay based programming, not suitable for time-sensitive applications</li>
+<li>Block coding uses delays, which is no good if you want to do multiple things at once</li>
 </ul>
 <h2 id="mcetoc_1fvp2st7ff">"Multitasking" your SSTuino</h2>
 <p>Let's make the device "multitask"! For the examples that we have covered so far, we have always used <code><strong>delay()</strong></code> to say light up an LED for 1 second. However, although <code><strong>delay()</strong></code> is handy and works for basic examples, it shouldn't be used in the real world...</p>
 <p>Wait, what? 🤯</p>
 <p>Why shouldn't we use <code><strong>delay()</strong></code>? That is because delay is a blocking function. For example, when you do <code><strong>delay(1000)</strong></code>, the Arduino stops on that line for one second. Blocking functions prevent a program from doing anything else until that particular task has been completed. If you need multiple tasks to occur at the same time, you simply cannot use <strong><code>delay()</code></strong>. If your program requires you to constantly read data (e.g. Ultrasonic Sensor), you should avoid using the delay function.</p>
 <h3 id="mcetoc_1fvp2st7fg">millis() instead of delay()</h3>
-<p>Here comes <code><strong>millis()</strong></code> to the rescue! 🥳 When called, it returns the number of milliseconds that have passed since the program first started. By doing some simple math and comparison, you can verify how much time has passed without blocking your code! Let's take a look at a blink sketch that does not use the <code><strong>delay()</strong></code> function:</p>
+<p>Here comes <code><strong>millis()</strong></code> to the rescue! 🥳 When called, it returns the number of milliseconds that have passed since the program first started. By doing some simple math and comparison, you can verify how much time has passed without blocking your code! Let’s take a look at the Blink sketch that does not use the <code><strong>delay()</strong></code> function:</p>
 <pre><code class="language-cpp">
 // constants won't change. Used here to set a pin number :
 const int ledPin = 13; // the number of the LED pin
@@ -1340,7 +1341,7 @@ void loop()
     // blink the LED.
     unsigned long currentMillis = millis();
 
-    if (currentMillis - previousMillis &gt; = interval)
+    if (currentMillis - previousMillis &gt;= interval)
     {
         // save the last time you blinked the LED
         previousMillis = currentMillis;
@@ -1396,7 +1397,7 @@ void setup()
 void loop()
 {
     unsigned long currentMillis = millis(); // time in milliseconds from which the code was started
-    if (currentMillis - previousMillis &gt; = interval)
+    if (currentMillis - previousMillis &gt;= interval)
     {                                   // check "blink without delay" code
         previousMillis = currentMillis; //
         if (trigState == LOW)
@@ -1409,7 +1410,7 @@ void loop()
         }
     }
     // printing speed in serial monitor at an interval of 1s
-    if (currentMillis - previousMillis &gt; = interval2)
+    if (currentMillis - previousMillis &gt;= interval2)
     { // check "blink without delay" code
         previousMillis = currentMillis;
         if (printState == LOW)
@@ -1433,7 +1434,7 @@ void loop()
 
     if (distance &lt; = 30)
     { // If distance &lt;30cm, buzzer will sound at an interval of 1s.
-        if (currentMillis - previousMillis &gt; = interval2)
+        if (currentMillis - previousMillis &gt;= interval2)
         { // check "blink without delay" code
             previousMillis = currentMillis;
             if (buzzer == LOW)
