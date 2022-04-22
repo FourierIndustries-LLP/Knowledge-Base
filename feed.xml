@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-04-18T21:53:08+08:00</updated>
+    <updated>2022-04-22T19:37:06+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-3.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-3.html</id>
 
-        <updated>2022-04-17T20:09:05+08:00</updated>
+        <updated>2022-04-22T19:37:06+08:00</updated>
             <summary>
                 <![CDATA[
                     In the recent Singapore Budget Debate of 2022, a total&hellip;
@@ -94,7 +94,7 @@
         <link href="https://knowledge.fourier.industries/mobile-apps-part-2.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-2.html</id>
 
-        <updated>2022-04-18T15:15:32+08:00</updated>
+        <updated>2022-04-22T19:37:01+08:00</updated>
             <summary>
                 <![CDATA[
                     In our previous tutorial, we have gone through all of&hellip;
@@ -238,7 +238,7 @@
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-18T15:14:26+08:00</updated>
+        <updated>2022-04-22T19:36:47+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -714,7 +714,7 @@ void subscribe()
         <link href="https://knowledge.fourier.industries/mobile-apps-part-1.html"/>
         <id>https://knowledge.fourier.industries/mobile-apps-part-1.html</id>
 
-        <updated>2022-04-16T23:21:26+08:00</updated>
+        <updated>2022-04-22T19:36:51+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we will create a mobile app with&hellip;
@@ -914,7 +914,7 @@ void subscribe()
         <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
         <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
 
-        <updated>2022-04-18T21:53:08+08:00</updated>
+        <updated>2022-04-22T19:36:44+08:00</updated>
             <summary>
                 <![CDATA[
                     With that done, let’s upload your code. Open the Serial&hellip;
@@ -1106,7 +1106,7 @@ void subscribe()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html</id>
 
-        <updated>2022-04-18T15:13:05+08:00</updated>
+        <updated>2022-04-22T19:36:39+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1182,7 +1182,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
 
-        <updated>2022-04-18T20:16:33+08:00</updated>
+        <updated>2022-04-22T19:36:27+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to explore functions, understand&hellip;
@@ -1474,7 +1474,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html</id>
 
-        <updated>2022-04-17T10:01:37+08:00</updated>
+        <updated>2022-04-22T19:35:46+08:00</updated>
             <summary>
                 <![CDATA[
                     For this exercise, we will be going to use the&hellip;
@@ -1542,7 +1542,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html</id>
 
-        <updated>2022-04-18T15:10:15+08:00</updated>
+        <updated>2022-04-22T19:35:55+08:00</updated>
             <summary>
                 <![CDATA[
                     In this tutorial, we are going to learn about the&hellip;
@@ -1590,7 +1590,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html"/>
         <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html</id>
 
-        <updated>2022-04-18T15:09:45+08:00</updated>
+        <updated>2022-04-22T19:35:36+08:00</updated>
             <summary>
                 <![CDATA[
                     Let us play some tunes with the SSTuino! We are&hellip;
