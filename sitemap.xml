@@ -830,9 +830,13 @@
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/sstuino-innovators-kit-v2.html</loc>
-<lastmod>2022-03-18T19:53:59+08:00</lastmod>
+<lastmod>2022-06-07T20:23:59+08:00</lastmod>
 <image:image>
 <image:loc>https://knowledge.fourier.industries/media/posts/3/sstuinoii_infographic_low.png</image:loc>
+<image:title><![CDATA[]]></image:title>
+</image:image>
+<image:image>
+<image:loc>https://knowledge.fourier.industries/media/posts/3/gallery/SSTuino-II-Rev-A-Pinout-Final-thumbnail.png</image:loc>
 <image:title><![CDATA[]]></image:title>
 </image:image>
 <image:image>
@@ -842,7 +846,7 @@
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/terms-of-service.html</loc>
-<lastmod>2022-05-24T10:10:43+08:00</lastmod>
+<lastmod>2022-06-07T20:27:38+08:00</lastmod>
 </url>
 <url>
 <loc>https://knowledge.fourier.industries/transmit-and-receive.html</loc>
