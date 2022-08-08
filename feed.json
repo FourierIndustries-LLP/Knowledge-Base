@@ -27,7 +27,7 @@
         {
             "id": "https://knowledge.fourier.industries/frequently-asked-questions-faq-sstuino-ii.html",
             "url": "https://knowledge.fourier.industries/frequently-asked-questions-faq-sstuino-ii.html",
-            "title": "Frequently Asked Questions (FAQ) - SSTuino II",
+            "title": "SSTuino II - Frequently Asked Questions (FAQ)",
             "summary": "This article contains the most commonly asked questions and basic&hellip;",
             "content_html": "<p>This article contains the most commonly asked questions and basic troubleshooting tips for your SSTuino II product.</p>\n<h2>Problems with Uploading Code</h2>\n<h3>I get a warning that says <code>avrdude: jtagmkII_initialize(): Cannot locate “flash” and “boot” memories in description</code></h3>\n<p>This warning message will not affect your code uploads, and you do not need to worry as long as Arduino IDE shows that your upload is completed. If you wish to see the code upload progress bar, you can turn on verbose mode for code upload:</p>\n<figure class=\"post__image post__image--center\"><img loading=\"lazy\"  src=\"https://knowledge.fourier.industries/media/posts/32/Screenshot-2022-04-19-at-1.34.03-PM.png\" sizes=\"(max-width: 749px) 100vw, 749px\" srcset=\"https://knowledge.fourier.industries/media/posts/32/responsive/Screenshot-2022-04-19-at-1.34.03-PM-xs.png 300w ,https://knowledge.fourier.industries/media/posts/32/responsive/Screenshot-2022-04-19-at-1.34.03-PM-sm.png 480w ,https://knowledge.fourier.industries/media/posts/32/responsive/Screenshot-2022-04-19-at-1.34.03-PM-md.png 749w\"  alt=\"\" width=\"423\" height=\"307\"></figure>\n<h3>My code refuses to upload with the error <code>avrdude: jtagmkII_close(): timeout/error communicating with programmer (status -1)</code></h3>\n<p>If your error looks like the one in this <a href=\"https://forum.arduino.cc/t/sketch-upload-problems/855649\" target=\"_blank\" rel=\"noopener noreferrer\">Arduino forum post</a>, your SSTuino II might be faulty. If you still experience this issue even after unplugging everything from the board (except the USB cord, of course), and the board is within warranty, please contact us through the <a href=\"http://fourierindustries.atlassian.net/servicedesk/customer/portals\" target=\"_blank\" rel=\"noopener noreferrer\">Help Centre</a> and quote your board's serial number. </p>\n<h2>Issues with hardware</h2>\n<h3>The debug lights (lights on the top row) flicker when I touch the bottom of the board!</h3>\n<p>This is a normal side effect of how microcontrollers and transistors behave, and will not cause issues to your hardware. </p>\n<p>If you are interested to know the reasons behind the phenomenon, it is because every digital pin of the Explorer board is wired to a transistor called a <a href=\"https://reibot.org/2011/09/06/a-beginners-guide-to-the-mosfet/\" target=\"_blank\" rel=\"noopener noreferrer\">MOSFET</a>. These transistors are very sensitive to tiny variations in electrical pulses, and even a minor voltage difference such as the one caused by your fingers can cause it to connect the circuit and turn on the LED. </p>",
             "author": {
@@ -36,7 +36,7 @@
             "tags": [
             ],
             "date_published": "2022-04-19T13:30:31+08:00",
-            "date_modified": "2022-05-24T10:02:07+08:00"
+            "date_modified": "2022-08-08T22:35:21+08:00"
         },
         {
             "id": "https://knowledge.fourier.industries/mobile-apps-part-3.html",
