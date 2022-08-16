@@ -1,0 +1,130 @@
+<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to Use SSTuino II&#x27;s Onboard RGB LED - FourierIndustries Knowledge Base</title><meta name="description" content="Overview Ever notice that your SSTuino II has an RGB&hellip;"><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://knowledge.fourier.industries/how-to-use-sstuino-iis-onboard-rgb-led.html"><link rel="alternate" type="application/atom+xml" href="https://knowledge.fourier.industries/feed.xml"><link rel="alternate" type="application/json" href="https://knowledge.fourier.industries/feed.json"><meta property="og:title" content="How to Use SSTuino II's Onboard RGB LED"><meta property="og:image" content="https://knowledge.fourier.industries/media/website/logo-3.png"><meta property="og:site_name" content="FourierIndustries Knowledge Base"><meta property="og:description" content="Overview Ever notice that your SSTuino II has an RGB&hellip;"><meta property="og:url" content="https://knowledge.fourier.industries/how-to-use-sstuino-iis-onboard-rgb-led.html"><meta property="og:type" content="article"><link rel="stylesheet" href="https://knowledge.fourier.industries/assets/css/style.css?v=475fbb5a3cf77d9829324a8d8d83c76e"><link rel="stylesheet" href="https://knowledge.fourier.industries/assets/css/prism-dark.css?v=77202604b9c81e0cfc60210c4810d09c"><link rel="preconnect" href="https://62YTNPHZEM-dsn.algolia.net" crossorigin><link rel="stylesheet" href="https://knowledge.fourier.industries/assets/css/docsearch.css?v=5f509c0dccaf0aaffb9fc8c0b9e1351c"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Article","mainEntityOfPage":{"@type":"WebPage","@id":"https://knowledge.fourier.industries/how-to-use-sstuino-iis-onboard-rgb-led.html"},"headline":"How to Use SSTuino II's Onboard RGB LED","datePublished":"2022-08-09T10:32","dateModified":"2022-08-09T15:16","image":{"@type":"ImageObject","url":"https://knowledge.fourier.industries/media/website/logo-3.png","height":100,"width":320},"description":"Overview Ever notice that your SSTuino II has an RGB&hellip;","author":{"@type":"Person","name":"Pan Ziyue","url":"https://knowledge.fourier.industries/authors/pan-ziyue/"},"publisher":{"@type":"Organization","name":"FourierIndustries LLP","logo":{"@type":"ImageObject","url":"https://knowledge.fourier.industries/media/website/logo-3.png","height":100,"width":320}}}</script></head><body><header class="header" id="js-header"><a class="logo" href="https://knowledge.fourier.industries/"><img src="https://knowledge.fourier.industries/media/website/logo-3.png" alt="FourierIndustries Knowledge Base"></a></header><main><div class="container container--with-sidebar"><div class="sidebar js-sidebar"><div class="sidebar__search"><div id="docsearch"></div></div><nav class="sidebar__menu"><ul class="js-sidebar-menu"><li class="has-submenu"><span>SSTuino Series</span><ul><li class="has-submenu"><span>SSTuino II</span><ul><li><a href="https://knowledge.fourier.industries/sstuino-innovators-kit-v2.html">Introduction</a></li><li><a href="https://knowledge.fourier.industries/sstuino-ii-essentials-track.html">Essentials Track</a></li><li><a href="https://knowledge.fourier.industries/frequently-asked-questions-faq-sstuino-ii.html">Frequently Asked Questions</a></li><li><a href="https://knowledge.fourier.industries/advanced-iot-track-2.html">Advanced Scientific Track</a></li><li><a href="https://knowledge.fourier.industries/advanced-iot-track.html">Advanced IoT Track</a></li><li><a href="https://knowledge.fourier.industries/advanced-iot-track-3.html">Advanced Actuators Track</a></li></ul></li><li class="has-submenu"><span>SSTuino Classic</span><ul><li><a href="https://knowledge.fourier.industries/home.html">Introduction</a></li><li><a href="https://knowledge.fourier.industries/home.html">Essentials Track</a></li></ul></li></ul></li><li class="has-submenu"><span>Exploring Further</span><ul><li><a href="https://knowledge.fourier.industries/work-in-progress.html">Sensors</a></li><li><a href="https://knowledge.fourier.industries/work-in-progress.html">Actuators</a></li></ul></li><li class="has-submenu"><span>Browse by Level</span><ul><li><a href="https://knowledge.fourier.industries/work-in-progress.html">Beginner</a></li><li><a href="https://knowledge.fourier.industries/work-in-progress.html">Intermediate</a></li><li><a href="https://knowledge.fourier.industries/work-in-progress.html">Advanced</a></li></ul></li></ul></nav></div><div class="content content--center"><article class="post"><h1>How to Use SSTuino II&#x27;s Onboard RGB LED</h1><div class="post__entry"><div class="post__toc"><h3>Table of Contents</h3><ul><li><a href="#mcetoc_1ga0j33qu8c">Overview</a></li><li><a href="#mcetoc_1ga0j88bc9s">Wiring it up</a></li><li><a href="#mcetoc_1ga0j88bc9t">Code</a><ul><li><a href="#mcetoc_1ga0j33qu8e">Switching it up</a></li><li><a href="#mcetoc_1ga0j33qu8f">Completed code</a></li></ul></li><li><a href="#mcetoc_1ga0j88bc9u">Resources and Going Further</a></li></ul></div><h2 id="mcetoc_1ga0j33qu8c">Overview</h2><p>Ever notice that your SSTuino II has an RGB LED on the board itself? This tutorial will walk you through how to use it!</p><p>The RGB LED is physically connected to the Wi-Fi chip (ESP32) and must be controlled through the WiFiNINA interface, which has a special function to set the LED's brightness.</p><h2 id="mcetoc_1ga0j88bc9s">Wiring it up</h2><p>There is no need to wire anything externally to your SSTuino II. It can even operate completely independently of the Explorer board. The ESP32 Wi-Fi chip is physically wired to the ATmega4809 main microcontroller via SPI pins and communicates solely via SPI. </p><h2 id="mcetoc_1ga0j88bc9t">Code</h2><p>Open an existing Arduino sketch, or create a new sketch and ensure that you have imported the two necessary libraries for operating with the Wi-Fi chip:</p><pre><code class="language-cpp">#include &lt;SPI.h&gt;
+#include &lt;WiFiNINA.h&gt;
+</code></pre><p>Afterwards, you can use the function below to change the brightness of the RGB LED however you like:</p><pre><code class="language-cpp">WiFi.setLEDs(255, 255, 255);
+</code></pre><p>The 3 parameters represent the value of red, green and blue respectively. If you have previously used <code>analogWrite()</code>, this is very similar. The maximum and minimum values are 255 and 0 respectively, with 255 being the LED at maximum brightness and 0 switching off the LED.</p><h3 id="mcetoc_1ga0j33qu8e">Switching it up</h3><p>Do you want to make it look similar to what the SSTuino II looked like when you first connected it? Well, you can do that!</p><p>There are two parts to the program used for the code. At first, the LED will cycle all its colours independently: red, green, followed by blue. Place this code in the <code>setup()</code> part of your sketch to do exactly that.</p><pre><code class="language-cpp">WiFi.setLEDs(32, 0, 0);
+delay(500);
+WiFi.setLEDs(0, 32, 0);
+delay(500);
+WiFi.setLEDs(0, 0, 32);
+delay(500);</code></pre><p>Afterwards, you want your LED to slowly fade from one colour to the next. Let's go through the logic: slowly increase the brightness of one colour while decreasing the other one, until the first one reaches maximum brightness while the previous colour reaches 0 (completely turns off). Now, the colour will need to change (if it was originally red to green, it will now need to be green to blue, and then blue to red, and so on and so forth). </p><p class="msg msg--highlight"><strong>Note:</strong> notice that we are only using 32 in our example and not the highest possible value, 255. Why is that so? The reason is that 255 is typically way too bright, and we found that 32 was a good amount that could be seen in most lighting conditions.</p><p>Firstly, you will need an array to contain the values (0-255) of the 3 colours. An array is a special type of variable that stores multiple other variables. Think of it like a pill box organiser:</p><figure class="post__image post__image--center"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/39/pill_organizer_feature_getty_creative.jpeg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/39/responsive/pill_organizer_feature_getty_creative-xs.jpeg 300w, https://knowledge.fourier.industries/media/posts/39/responsive/pill_organizer_feature_getty_creative-sm.jpeg 480w, https://knowledge.fourier.industries/media/posts/39/responsive/pill_organizer_feature_getty_creative-md.jpeg 749w" alt="" width="457" height="257"></figure><p>A pill box organiser like the one you see above has 7 slots, one for each day. You can put pills in each box, take them out, or simply leave that slot empty. </p><p>For our case, we only need to contain 3 colours (red, green and blue) and hence we will only need an array with 3 "slots". Set all the slots to 0 except the first slot (red), which we will put as 32. </p><pre><code class="language-cpp">  int rgbColour[3];
+  // Start off with red (set red to 32/255)
+  rgbColour[0] = 32;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;</code></pre><p>Next, you should make a for loop to cycle through all the possible colours (specifically, the colours that are supposed to decrease in brightness). There are only 3 colours in total, so limit the for loop to stop at 3.</p><p>Next, the program will need to select a colour that should be increasing. For example, if the current decreasing colour is red, the increasing colour should be green, and then blue, and then back to red. For this task, we wrote a one-line ternary operator: <code>int incColour = decColour == 2 ? 0 : decColour + 1;</code>. This one line does the same thing as the 6 lines of code below:</p><pre><code class="language-cpp">int incColour;
+if (decColour == 2) {
+  incColour = 0;
+} else {
+  incColour = decColour + 1;
+}</code></pre><p>Finally, you can start to write the inner loop for actually fading the colours, by decrementing the value of 1 colour and incrementing the value of another colour. </p><pre><code class="language-cpp">for (int i = 0; i &lt; 32; i += 1)
+{
+  rgbColour[decColour] -= 1;
+  rgbColour[incColour] += 1;
+
+  WiFi.setLEDs(rgbColour[0], rgbColour[1], rgbColour[2]);
+  delay(60);
+}</code></pre><p>At last, your program <code>loop()</code> should look something like this:</p><pre><code class="language-cpp">void loop()
+{
+  // This code increases the intensity of one colour, while
+  // fading the other colour, and cycles to another colour
+  // once the initial one is finished
+
+  int rgbColour[3];
+  // Start off with red (set red to 32/255)
+  rgbColour[0] = 32;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;
+
+  // Choose the colours to increment and decrement.
+  for (int decColour = 0; decColour &lt; 3; decColour += 1)
+  {
+    int incColour = decColour == 2 ? 0 : decColour + 1;
+
+    // cross-fade the two colours.
+    for (int i = 0; i &lt; 32; i += 1)
+    {
+      rgbColour[decColour] -= 1;
+      rgbColour[incColour] += 1;
+
+      WiFi.setLEDs(rgbColour[0], rgbColour[1], rgbColour[2]);
+      delay(60);
+    }
+  }
+}
+</code></pre><h3 id="mcetoc_1ga0j33qu8f">Completed code</h3><pre><code class="language-cpp">/*
+  RGB LED program for the SSTuino II
+  
+  Flashes all the LEDs inside the RGB LED
+  one by one, and then cross fades two colours
+
+  Written by Pan Ziyue for FourierIndustries
+  Licensed under the Creative Commons 0 (CC0) License and
+  released to public domain
+  &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;
+ */
+
+#include &lt;SPI.h&gt;
+#include &lt;WiFiNINA.h&gt;
+
+void setup()
+{
+  // Perform a single 1/8th strength cycle through on 
+  // pure colours, max value possible is 255
+  WiFi.setLEDs(32, 0, 0);
+  delay(500);
+  WiFi.setLEDs(0, 32, 0);
+  delay(500);
+  WiFi.setLEDs(0, 0, 32);
+  delay(500);
+}
+
+void loop()
+{
+  // This code increases the intensity of one colour, while
+  // fading the other colour, and cycles to another colour
+  // once the initial one is finished
+
+  int rgbColour[3];
+  // Start off with red (set red to 32/255)
+  rgbColour[0] = 32;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;
+
+  // Choose the colours to increment and decrement.
+  for (int decColour = 0; decColour &lt; 3; decColour += 1)
+  {
+    int incColour = decColour == 2 ? 0 : decColour + 1;
+
+    // cross-fade the two colours.
+    for (int i = 0; i &lt; 32; i += 1)
+    {
+      rgbColour[decColour] -= 1;
+      rgbColour[incColour] += 1;
+
+      WiFi.setLEDs(rgbColour[0], rgbColour[1], rgbColour[2]);
+      delay(60);
+    }
+  }
+}
+</code></pre><h2 id="mcetoc_1ga0j88bc9u">Resources and Going Further</h2><p>If you wish to explore more about the Wi-Fi chip's specific features that you can invoke in the WiFiNINA library, you can check out some of the resources below:</p><ul><li><a href="https://www.arduino.cc/reference/en/libraries/wifinina/" target="_blank" rel="noopener noreferrer">Arduino Official Reference - WiFiNINA</a></li></ul><footer><div class="post__footer"><dl class="post__meta"><dt>Created:</dt><dd><time datetime="2022-08-09T10:32">9 August 2022</time></dd><dt>Updated:</dt><dd><time datetime="2022-08-09T15:16">9 August 2022</time></dd><dt>Author:</dt><dd><a href="https://knowledge.fourier.industries/authors/pan-ziyue/" rel="post.author" title="Pan Ziyue">Pan Ziyue</a></dd></dl><div class="post__share"><button class="post__share-button" aria-label="Share"><svg width="32" height="32"><use xlink:href="https://knowledge.fourier.industries/assets/svg/svg-map.svg#share"></use></svg></button><div class="post__share-popup"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fknowledge.fourier.industries%2Fhow-to-use-sstuino-iis-onboard-rgb-led.html" class="js-share facebook" title="Share with Facebook" rel="nofollow noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="https://knowledge.fourier.industries/assets/svg/svg-map.svg#facebook"/></svg> Facebook </a><a href="https://api.whatsapp.com/send?text=How%20to%20Use%20SSTuino%20II's%20Onboard%20RGB%20LED https%3A%2F%2Fknowledge.fourier.industries%2Fhow-to-use-sstuino-iis-onboard-rgb-led.html" class="js-share whatsapp" title="Share with WhatsApp" rel="nofollow noopener noreferrer"><svg class="icon" aria-hidden="true" focusable="false"><use xlink:href="https://knowledge.fourier.industries/assets/svg/svg-map.svg#whatsapp"/></svg> WhatsApp</a></div></div><dl class="post__tag"><dt>Tags:</dt><dd><a href="https://knowledge.fourier.industries/tags/actuators/" title="Actuators">Actuators</a></dd><dd><a href="https://knowledge.fourier.industries/tags/beginner/" title="Beginner">Beginner</a></dd></dl></div><div class="post__related"><h3>Similar posts:</h3><ul><li><a href="https://knowledge.fourier.industries/utilising-smart-led-strips-with-sstuino-ii.html" title="Utilising Smart LED Strips with SSTuino II">Utilising Smart LED Strips with SSTuino II</a></li></ul></div><nav><ul class="post__nav"><li class="post__nav-prev">Prev: <a href="https://knowledge.fourier.industries/terms-of-service.html" rel="prev" title="Terms of Service">Terms of Service</a></li><li class="post__nav-next">Next: <a href="https://knowledge.fourier.industries/utilising-smart-led-strips-with-sstuino-ii.html" rel="next" title="Utilising Smart LED Strips with SSTuino II">Utilising Smart LED Strips with SSTuino II</a></li></ul></nav></footer></div></article></div></div></main><footer class="footer"><div><a class="footer__logo" href="https://knowledge.fourier.industries/"><img src="https://knowledge.fourier.industries/media/website/logo-3.png" alt="FourierIndustries Knowledge Base"></a><ul class="footer__nav"><li><a href="https://knowledge.fourier.industries/terms-of-service.html">Terms of Service</a></li><li><a href="https://knowledge.fourier.industries/contact-us.html">Contact Us</a></li></ul></div><div><div class="footer__copy">Copyright © FourierIndustries LLP | Powered by Publii</div><div class="footer__social"></div></div></footer><script>window.publiiThemeMenuConfig = {    
+        mobileMenuMode: 'overlay',
+        animationSpeed: 300,
+        submenuWidth: 'auto',
+        doubleClickTime: 500,
+        mobileMenuExpandableSubmenus: true
+   };</script><script defer="defer" src="https://knowledge.fourier.industries/assets/js/scripts.min.js?v=19238bf2fc84904070fcd40cc63434e6"></script><script>var images = document.querySelectorAll('img[loading]');
+
+        for (var i = 0; i < images.length; i++) {
+            if (images[i].complete) {
+                images[i].classList.add('is-loaded');
+            } else {
+                images[i].addEventListener('load', function () {
+                    this.classList.add('is-loaded');
+                }, false);
+            }
+        }</script><script defer="defer" src="https://knowledge.fourier.industries/assets/js/prism.js?v=3f40a85448916137440d70109f6ef21e"></script><script defer="defer" src="https://knowledge.fourier.industries/assets/js/prism-line-numbers.min.js?v=13275d3ac10d7028cf6a6f5da276f68c"></script><script defer="defer" src="https://knowledge.fourier.industries/assets/js/clipboard.min.js?v=ad98572d415d2f2452845a6068a913c0"></script><script defer="defer" src="https://knowledge.fourier.industries/assets/js/prism-copy-to-clipboard.min.js?v=57b50bd6f44169b9bab177133c984653"></script><script src="https://knowledge.fourier.industries/assets/js/docsearch.min.js?v=d59ba9b8392f352d8127a805b3df99b9"></script><script>docsearch({
+         container: '#docsearch',
+         appId: '62YTNPHZEM',
+         indexName: 'knowledge-fourier',
+         apiKey: '097a668efc489587eb7c5ca95081083d',
+         debug: false
+      });</script></body></html>

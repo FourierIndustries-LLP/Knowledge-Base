@@ -3,12 +3,306 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-08T22:35:21+08:00</updated>
+    <updated>2022-08-09T16:34:21+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Utilising Smart LED Strips with SSTuino II</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/utilising-smart-led-strips-with-sstuino-ii.html"/>
+        <id>https://knowledge.fourier.industries/utilising-smart-led-strips-with-sstuino-ii.html</id>
+            <category term="Intermediate"/>
+            <category term="Actuators"/>
+
+        <updated>2022-08-09T16:34:21+08:00</updated>
+            <summary>
+                <![CDATA[
+                    Overview Have you ever seen products like Razer's Chroma and&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1ga0lchs4a6">Overview</a></li>
+<li><a href="#mcetoc_1ga0lc3e7a3">Wiring it up</a></li>
+<li><a href="#mcetoc_1ga0ld9r2ag">Code</a>
+<ul>
+<li><a href="#mcetoc_1ga0nbb3sjf">Software Setup</a></li>
+<li><a href="#mcetoc_1ga0nbb3sjg">Example code</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1ga0ldmuaak">Troubleshooting</a></li>
+<li><a href="#mcetoc_1ga0ld9r2ah">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1ga0lchs4a6">Overview</h2>
+<p>Have you ever seen products like Razer's Chroma and thought to yourself: wouldn't it be great if I could make one myself? Well, now you can! </p>
+<p>Most smart LED strips on the market use a special kind of RGB LED called a "WS2812B" LED. Sometimes, they are marketed online as "NeoPixels" by Adafruit, or simply "individually addressable LEDs" by other manufacturers. Most of these products are compatible with each other and the terms above are interchangeable, to a certain degree. For convenience's sake, we will call them "smart LEDs".</p>
+<p>The WS2812B is a tiny computer chip that sits inside the LED package, allowing you to control the smart LED's brightness without having to have 3 digital pins doing <code>analogWrite()</code>. Furthermore, you can daisy chain the LEDs to each other to individually control other LEDs down the LED strip. </p>
+<p>On the left image below, you can see an ordinary RGB LED. On the right side, you can see this smart RGB LED that has the WS2812B chip inside the LED package. </p>
+<div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/40/gallery/26b8f435099d0355514254fd08-2.jpg" data-size="604x604"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/40/gallery/26b8f435099d0355514254fd08-2-thumbnail.jpg" alt="" width="604" height="604"></a>
+<figcaption>Normal RGB LED</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/40//gallery/WS2812B_SMD_Closeup.jpg" data-size="600x600"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/40//gallery/WS2812B_SMD_Closeup-thumbnail.jpg" alt="" width="600" height="600"></a>
+<figcaption>Special WS2812B LED</figcaption>
+</figure>
+</div></div>
+<p>The major advantage of using smart LEDs is that you only need 1 single wire to control a lot of LEDs at once, which is especially useful if you need to control an entire array or strip of LEDs.</p>
+<h2 id="mcetoc_1ga0lc3e7a3">Wiring it up</h2>
+<figure class="post__image post__image--center" ><figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/40//Screenshot-2022-08-09-at-12.36.29.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/40//responsive/Screenshot-2022-08-09-at-12.36.29-xs.png 300w ,https://knowledge.fourier.industries/media/posts/40//responsive/Screenshot-2022-08-09-at-12.36.29-sm.png 480w ,https://knowledge.fourier.industries/media/posts/40//responsive/Screenshot-2022-08-09-at-12.36.29-md.png 749w"  alt="TinkerCAD diagram for a &quot;Neopixel&quot; strip" width="1128" height="616"></figure>
+<figcaption >TinkerCAD diagram for a simple "Neopixel" strip</figcaption>
+</figure>
+<p>The wiring diagram for using a smart LED is incredibly simple. Simply connect the 5V terminal of the strip to the corresponding 5V on your SSTuino, GND to GND, and DIN (data in) to a data pin of your choice.</p>
+<p class="msg msg--warning"><strong>Warning</strong>: smart LED strips can draw a lot of current! Your SSTuino can usually power up to 40 of these smart LEDs before requiring an external 5V power source. If you need to build a project with extremely long smart LED strips (&gt;100), multiple power sources might need to be provided along the length of the LED strip to prevent dimming and power loss.</p>
+<h2 id="mcetoc_1ga0ld9r2ag">Code</h2>
+<h3 id="mcetoc_1ga0nbb3sjf">Software Setup</h3>
+<p>You will need to install an external library to your Arduino IDE, called "Adafruit NeoPixel". Simply open the Library Manager under the Tools top bar menu and search for "neopixel". </p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/40/Screenshot-2022-08-09-at-15.04.18.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/40/responsive/Screenshot-2022-08-09-at-15.04.18-xs.png 300w ,https://knowledge.fourier.industries/media/posts/40/responsive/Screenshot-2022-08-09-at-15.04.18-sm.png 480w ,https://knowledge.fourier.industries/media/posts/40/responsive/Screenshot-2022-08-09-at-15.04.18-md.png 749w"  alt="" width="799" height="450"></figure>
+<h3 id="mcetoc_1ga0nbb3sjg">Example code</h3>
+<p>This code below will import the Adafruit NeoPixel library, and set the maximum number of LEDs in your LED strip to 12 bulbs in <code>#define NUMPIXELS 12</code> (remember, the maximum your SSTuino can go is 40 bulbs, any more and the LED strip will require external power, or limit its own brightness).</p>
+<p>In the <code>setup()</code> section, simply initialise the library.</p>
+<p>Afterwards, you will create a custom function called <code>setColor()</code> which picks a random value between 0 and 255 (completely off and completely on) for each of the colours: red, green and blue.</p>
+<p>Within <code>loop()</code>, you will call <code>setColor()</code> once to set the colour values inside the variables <code>redColor</code>, <code>greenColor</code> and <code>blueColor</code>, but not actually show the colours on the LED strip yet. Afterwards, create a for loop that goes through each of the LEDs ("pixels", as termed by Adafruit) and actually displays the colour. </p>
+<pre><code class="language-cpp">#include &lt;Adafruit_NeoPixel.h&gt;
+
+#define PIN 2	 // input pin Neopixel is attached to
+
+#define NUMPIXELS      12 // number of neopixels in strip
+
+Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+int delayval = 100; // timing delay in milliseconds
+
+int redColor = 0;
+int greenColor = 0;
+int blueColor = 0;
+
+void setup() {
+  // Initialise the NeoPixel library.
+  pixels.begin();
+}
+
+void loop() {
+  setColor();
+
+  for (int i=0; i &lt; NUMPIXELS; i++) {
+    // pixels.Color takes RGB values, from 0,0,0 up to 255,255,255
+    pixels.setPixelColor(i, pixels.Color(redColor, greenColor, blueColor));
+
+    // This sends the updated pixel color to the hardware.
+    pixels.show();
+
+    // Delay for a period of time (in milliseconds).
+    delay(delayval);
+  }
+}
+
+// setColor()
+// picks random values to set for RGB
+void setColor(){
+  redColor = random(0, 255);
+  greenColor = random(0,255);
+  blueColor = random(0, 255);
+}</code></pre>
+<h2 id="mcetoc_1ga0ldmuaak">Troubleshooting</h2>
+<ul>
+<li><strong>My smart LED bulbs are flickering/not giving the correct output!</strong>: This is most likely an issue with your LED strips. As smart LED strips require the signal to be propagated from one LED to the next like a game of Telephone, if one of the LEDs is faulty, it will result in a corrupted signal for the next LED. You will need to replace your smart LED strip.</li>
+</ul>
+<h2 id="mcetoc_1ga0ld9r2ah">Resources and Going Further</h2>
+<p>Smart LEDs like the WS2812B are commonly used in many projects requiring fancy, individually addressable LED lighting solutions. The Adafruit NeoPixel library we showed in this example is the easiest way to get started, but if you desire higher levels of functionality, you should use FastLED, a more powerful and advanced library for use with microcontrollers. </p>
+<ul>
+<li><strong><a href="https://fastled.io" target="_blank" rel="noopener noreferrer">FastLED Official Site and Documentation</a></strong></li>
+</ul>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>How to Use SSTuino II&#x27;s Onboard RGB LED</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/how-to-use-sstuino-iis-onboard-rgb-led.html"/>
+        <id>https://knowledge.fourier.industries/how-to-use-sstuino-iis-onboard-rgb-led.html</id>
+            <category term="Beginner"/>
+            <category term="Actuators"/>
+
+        <updated>2022-08-09T15:16:24+08:00</updated>
+            <summary>
+                <![CDATA[
+                    Overview Ever notice that your SSTuino II has an RGB&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1ga0j33qu8c">Overview</a></li>
+<li><a href="#mcetoc_1ga0j88bc9s">Wiring it up</a></li>
+<li><a href="#mcetoc_1ga0j88bc9t">Code</a>
+<ul>
+<li><a href="#mcetoc_1ga0j33qu8e">Switching it up</a></li>
+<li><a href="#mcetoc_1ga0j33qu8f">Completed code</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1ga0j88bc9u">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1ga0j33qu8c">Overview</h2>
+<p>Ever notice that your SSTuino II has an RGB LED on the board itself? This tutorial will walk you through how to use it!</p>
+<p>The RGB LED is physically connected to the Wi-Fi chip (ESP32) and must be controlled through the WiFiNINA interface, which has a special function to set the LED's brightness.</p>
+<h2 id="mcetoc_1ga0j88bc9s">Wiring it up</h2>
+<p>There is no need to wire anything externally to your SSTuino II. It can even operate completely independently of the Explorer board. The ESP32 Wi-Fi chip is physically wired to the ATmega4809 main microcontroller via SPI pins and communicates solely via SPI. </p>
+<h2 id="mcetoc_1ga0j88bc9t">Code</h2>
+<p>Open an existing Arduino sketch, or create a new sketch and ensure that you have imported the two necessary libraries for operating with the Wi-Fi chip:</p>
+<pre><code class="language-cpp">#include &lt;SPI.h&gt;
+#include &lt;WiFiNINA.h&gt;
+</code></pre>
+<p>Afterwards, you can use the function below to change the brightness of the RGB LED however you like:</p>
+<pre><code class="language-cpp">WiFi.setLEDs(255, 255, 255);
+</code></pre>
+<p>The 3 parameters represent the value of red, green and blue respectively. If you have previously used <code>analogWrite()</code>, this is very similar. The maximum and minimum values are 255 and 0 respectively, with 255 being the LED at maximum brightness and 0 switching off the LED.</p>
+<h3 id="mcetoc_1ga0j33qu8e">Switching it up</h3>
+<p>Do you want to make it look similar to what the SSTuino II looked like when you first connected it? Well, you can do that!</p>
+<p>There are two parts to the program used for the code. At first, the LED will cycle all its colours independently: red, green, followed by blue. Place this code in the <code>setup()</code> part of your sketch to do exactly that.</p>
+<pre><code class="language-cpp">WiFi.setLEDs(32, 0, 0);
+delay(500);
+WiFi.setLEDs(0, 32, 0);
+delay(500);
+WiFi.setLEDs(0, 0, 32);
+delay(500);</code></pre>
+<p>Afterwards, you want your LED to slowly fade from one colour to the next. Let's go through the logic: slowly increase the brightness of one colour while decreasing the other one, until the first one reaches maximum brightness while the previous colour reaches 0 (completely turns off). Now, the colour will need to change (if it was originally red to green, it will now need to be green to blue, and then blue to red, and so on and so forth). </p>
+<p class="msg msg--highlight "><strong>Note:</strong> notice that we are only using 32 in our example and not the highest possible value, 255. Why is that so? The reason is that 255 is typically way too bright, and we found that 32 was a good amount that could be seen in most lighting conditions.</p>
+<p>Firstly, you will need an array to contain the values (0-255) of the 3 colours. An array is a special type of variable that stores multiple other variables. Think of it like a pill box organiser:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/39/pill_organizer_feature_getty_creative.jpeg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/39/responsive/pill_organizer_feature_getty_creative-xs.jpeg 300w ,https://knowledge.fourier.industries/media/posts/39/responsive/pill_organizer_feature_getty_creative-sm.jpeg 480w ,https://knowledge.fourier.industries/media/posts/39/responsive/pill_organizer_feature_getty_creative-md.jpeg 749w"  alt="" width="457" height="257"></figure>
+<p>A pill box organiser like the one you see above has 7 slots, one for each day. You can put pills in each box, take them out, or simply leave that slot empty. </p>
+<p>For our case, we only need to contain 3 colours (red, green and blue) and hence we will only need an array with 3 "slots". Set all the slots to 0 except the first slot (red), which we will put as 32. </p>
+<pre><code class="language-cpp">  int rgbColour[3];
+  // Start off with red (set red to 32/255)
+  rgbColour[0] = 32;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;</code></pre>
+<p>Next, you should make a for loop to cycle through all the possible colours (specifically, the colours that are supposed to decrease in brightness). There are only 3 colours in total, so limit the for loop to stop at 3.</p>
+<p>Next, the program will need to select a colour that should be increasing. For example, if the current decreasing colour is red, the increasing colour should be green, and then blue, and then back to red. For this task, we wrote a one-line ternary operator: <code>int incColour = decColour == 2 ? 0 : decColour + 1;</code>. This one line does the same thing as the 6 lines of code below:</p>
+<pre><code class="language-cpp">int incColour;
+if (decColour == 2) {
+  incColour = 0;
+} else {
+  incColour = decColour + 1;
+}</code></pre>
+<p>Finally, you can start to write the inner loop for actually fading the colours, by decrementing the value of 1 colour and incrementing the value of another colour. </p>
+<pre><code class="language-cpp">for (int i = 0; i &lt; 32; i += 1)
+{
+  rgbColour[decColour] -= 1;
+  rgbColour[incColour] += 1;
+
+  WiFi.setLEDs(rgbColour[0], rgbColour[1], rgbColour[2]);
+  delay(60);
+}</code></pre>
+<p>At last, your program <code>loop()</code> should look something like this:</p>
+<pre><code class="language-cpp">void loop()
+{
+  // This code increases the intensity of one colour, while
+  // fading the other colour, and cycles to another colour
+  // once the initial one is finished
+
+  int rgbColour[3];
+  // Start off with red (set red to 32/255)
+  rgbColour[0] = 32;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;
+
+  // Choose the colours to increment and decrement.
+  for (int decColour = 0; decColour &lt; 3; decColour += 1)
+  {
+    int incColour = decColour == 2 ? 0 : decColour + 1;
+
+    // cross-fade the two colours.
+    for (int i = 0; i &lt; 32; i += 1)
+    {
+      rgbColour[decColour] -= 1;
+      rgbColour[incColour] += 1;
+
+      WiFi.setLEDs(rgbColour[0], rgbColour[1], rgbColour[2]);
+      delay(60);
+    }
+  }
+}
+</code></pre>
+<h3 id="mcetoc_1ga0j33qu8f">Completed code</h3>
+<pre><code class="language-cpp">/*
+  RGB LED program for the SSTuino II
+  
+  Flashes all the LEDs inside the RGB LED
+  one by one, and then cross fades two colours
+
+  Written by Pan Ziyue for FourierIndustries
+  Licensed under the Creative Commons 0 (CC0) License and
+  released to public domain
+  &lt;http://creativecommons.org/publicdomain/zero/1.0/&gt;
+ */
+
+#include &lt;SPI.h&gt;
+#include &lt;WiFiNINA.h&gt;
+
+void setup()
+{
+  // Perform a single 1/8th strength cycle through on 
+  // pure colours, max value possible is 255
+  WiFi.setLEDs(32, 0, 0);
+  delay(500);
+  WiFi.setLEDs(0, 32, 0);
+  delay(500);
+  WiFi.setLEDs(0, 0, 32);
+  delay(500);
+}
+
+void loop()
+{
+  // This code increases the intensity of one colour, while
+  // fading the other colour, and cycles to another colour
+  // once the initial one is finished
+
+  int rgbColour[3];
+  // Start off with red (set red to 32/255)
+  rgbColour[0] = 32;
+  rgbColour[1] = 0;
+  rgbColour[2] = 0;
+
+  // Choose the colours to increment and decrement.
+  for (int decColour = 0; decColour &lt; 3; decColour += 1)
+  {
+    int incColour = decColour == 2 ? 0 : decColour + 1;
+
+    // cross-fade the two colours.
+    for (int i = 0; i &lt; 32; i += 1)
+    {
+      rgbColour[decColour] -= 1;
+      rgbColour[incColour] += 1;
+
+      WiFi.setLEDs(rgbColour[0], rgbColour[1], rgbColour[2]);
+      delay(60);
+    }
+  }
+}
+</code></pre>
+<h2 id="mcetoc_1ga0j88bc9u">Resources and Going Further</h2>
+<p>If you wish to explore more about the Wi-Fi chip's specific features that you can invoke in the WiFiNINA library, you can check out some of the resources below:</p>
+<ul>
+<li><a href="https://www.arduino.cc/reference/en/libraries/wifinina/" target="_blank" rel="noopener noreferrer">Arduino Official Reference - WiFiNINA</a></li>
+</ul>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Terms of Service</title>
         <author>
@@ -1257,366 +1551,6 @@ void loop()
 <li><a href="https://www.analog.com/media/en/technical-documentation/data-sheets/TMP35_36_37.pdf" target="_blank" rel="noopener noreferrer">Analog Devices: TMP36 datasheet</a></li>
 </ul>
 <p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/getting-started-with-iot.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>From Blocks to Code, Part II</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html"/>
-        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html</id>
-
-        <updated>2022-04-22T19:36:27+08:00</updated>
-            <summary>
-                <![CDATA[
-                    In this tutorial, we are going to explore functions, understand&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>In this tutorial, we are going to explore functions, understand the limitations of block coding, and how to "multitask" your SSTuino.</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fvmoha0d3">Functions</a>
-<ul>
-<li><a href="#mcetoc_1fvp2st7fc">Ultrasonic Distance Sensor Example</a></li>
-<li><a href="#mcetoc_1fvp2st7fd">Potentiometer Example</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fvp2st7fe">Limitations of Block Code</a></li>
-<li><a href="#mcetoc_1fvp2st7ff">"Multitasking" your SSTuino</a>
-<ul>
-<li><a href="#mcetoc_1fvp2st7fg">millis() instead of delay()</a></li>
-<li><a href="#mcetoc_1fvpo53oi1c">Ultrasonic Sensor and Buzzer Example</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fvp2st7fh">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fvmoha0d3">Functions</h2>
-<p>Here are the 3 basic parts that you would have in the code.</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/SSTuinoIoT8.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/SSTuinoIoT8-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/SSTuinoIoT8-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/SSTuinoIoT8-md.png 749w"  alt="" width="897" height="387"></figure>
-<p>However, you can separate code into functions, which create modular pieces of code that perform a defined task. Here are some advantages when you standardise code fragments into functions:</p>
-<ul>
-<li>Functions help the programmer to stay organised and help to conceptualise the program.</li>
-<li>Functions codify one function in one place so that it only has to be thought out and debugged once.</li>
-<li>If the code has to be changed, functions also reduce the errors in modification.</li>
-</ul>
-<p>Functions can also help to have smaller code, especially if particular lines of code are used repeatedly in the program. Although functions have many advantages, do take note that Arduino still requires <code><strong>void setup()</strong></code> and <code><strong>void loop()</strong></code> for the program to work. You can place your additional functions outside of them. Now let’s make some functions with the previous examples!</p>
-<h3 id="mcetoc_1fvp2st7fc">Ultrasonic Distance Sensor Example</h3>
-<p>We are going to continue to use this circuit from our previous example.</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot19.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot19-md.png 749w"  alt="" width="1758" height="970"></figure>
-<p>Here is an edited text version of the blocks code from TinkerCAD. Firstly the device initialises the Serial Monitor. Note that it does not declare the pins inside <code>setup()</code>. We will cover that in the function! 😁</p>
-<pre><code class="language-cpp">
-void setup() 
-{
-  Serial.begin(9600);
-}
-</code></pre>
-<p>Now we will do up the code in <code>loop()</code>. We will make the serial monitor print the time taken for the sound wave to bounce back using the function <code>readUltrasonicDistance(5,6)</code> in microseconds and multiply that by half the speed of sound to display the distance in cm.</p>
-<p class="msg msg--info"><strong>Tip: </strong>The speed of sound is 0.0343 centimetre/microsecond. We half that to 0.01723 because the time taken for the sound to bounce back is 2x the total distance (time taken to the object + time taken from the object)</p>
-<pre><code class="language-cpp">
-void loop()
-{
-  Serial.println(0.01723 * readUltrasonicDistance(5, 6));
-}
-</code></pre>
-<p>And finally the function! We declare it so that we can use it in the calculation in <code>loop()</code>. The function essentially tells the sensor to "fire" the ultrasonic wave and read the time taken for it to travel to and fro.</p>
-<pre><code class="language-cpp">
-long readUltrasonicDistance(int triggerPin, int echoPin)
-{
-  pinMode(triggerPin, OUTPUT);  // Clear the trigger
-  digitalWrite(triggerPin, LOW);
-  delayMicroseconds(2);
-  // Sets the trigger pin to HIGH state for 10 microseconds
-  digitalWrite(triggerPin, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(triggerPin, LOW);
-  pinMode(echoPin, INPUT);
-  // Reads the echo pin, and returns the sound wave travel time in microseconds
-  return pulseIn(echoPin, HIGH);
-}
-</code></pre>
-<p>Let's try this out in the Arduino IDE! What other functions would you like to add to this code?</p>
-<h3 id="mcetoc_1fvp2st7fd">Potentiometer Example</h3>
-<p>Let's try out another simple example with the Potentiometer! Set up the circuit as shown:</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot4-md.png 749w"  alt="" width="1159" height="563"></figure>
-<p>Head over to the Arduino IDE and set up the code. First, let’s open the serial port, input and output pins:</p>
-<pre><code class="language-cpp">
-void setup()
-{
-    Serial.begin(9600);
-    pinMode(A0, INPUT);
-    pinMode(6, OUTPUT);
-}
-</code></pre>
-<p>Next, let's leave <code><strong>void loop()</strong></code> alone for a bit 😆 and set up functions! You can name your functions whatever you want, as long as it’s a single word and does not start with numbers.</p>
-<pre><code class="language-cpp">
-void pwmLed()
-{
-    analogWrite(6, (analogRead(A0) / 4));
-}
-
-void helloWorld()
-{
-    Serial.println("Hello, World!");
-}
-</code></pre>
-<p>With this, we have just created 2 functions! Let us place them inside <code><strong>void loop()</strong></code></p>
-<pre><code class="language-cpp">
-void loop()
-{
-  helloWorld();
-  pwmLed();
-}
-</code></pre>
-<p>The advantage of using functions in this scenario is that if I would like to not make a section of code run, I do not need to comment out all the lines inside <code><strong>void loop()</strong></code>. Instead, I just have to comment out the function like this!</p>
-<pre><code class="language-cpp">
-void loop()
-{
-  //helloWorld(); // This code will not be run.
-  pwmLed();
-}
-</code></pre>
-<h2 id="mcetoc_1fvp2st7fe">Limitations of Block Code</h2>
-<p>Programming with blocks is super simple! Just plop them in and you are good to go! Block coding is a great tool to get people started with little to no programming knowledge. However, as we move to more advanced tutorials like the Internet of Things, there are many functions not available to us in block coding. While we love introductory tools such as TinkerCAD's block coding functionality, we would like our students to move on to text-based programming languages too!</p>
-<p>Here are some limitations of block code:</p>
-<ul>
-<li>Cannot use code that other people wrote (aka libraries)</li>
-<li>Inability to use sensors that are not supported by the platform</li>
-<li>Block coding uses delays, which is no good if you want to do multiple things at once</li>
-</ul>
-<h2 id="mcetoc_1fvp2st7ff">"Multitasking" your SSTuino</h2>
-<p>Let's make the device "multitask"! For the examples that we have covered so far, we have always used <code><strong>delay()</strong></code> to say light up an LED for 1 second. However, although <code><strong>delay()</strong></code> is handy and works for basic examples, it shouldn't be used in the real world...</p>
-<p>Wait, what? 🤯</p>
-<p>Why shouldn't we use <code><strong>delay()</strong></code>? That is because delay is a blocking function. For example, when you do <code><strong>delay(1000)</strong></code>, the Arduino stops on that line for one second. Blocking functions prevent a program from doing anything else until that particular task has been completed. If you need multiple tasks to occur at the same time, you simply cannot use <strong><code>delay()</code></strong>. If your program requires you to constantly read data (e.g. Ultrasonic Sensor), you should avoid using the delay function.</p>
-<h3 id="mcetoc_1fvp2st7fg">millis() instead of delay()</h3>
-<p>Here comes <code><strong>millis()</strong></code> to the rescue! 🥳 When called, it returns the number of milliseconds that have passed since the program first started. By doing some simple math and comparison, you can verify how much time has passed without blocking your code! Let’s take a look at the Blink sketch that does not use the <code><strong>delay()</strong></code> function:</p>
-<pre><code class="language-cpp">
-// constants won't change. Used here to set a pin number :
-const int ledPin = 13; // the number of the LED pin
-
-// Variables will change :
-int ledState = LOW; // ledState used to set the LED
-
-// Generally, you should use "unsigned long" for variables that hold time
-// The value will quickly become too large for an int to store
-unsigned long previousMillis = 0; // will store last time LED was updated
-
-// constants won't change :
-const long interval = 1000; // interval at which to blink (milliseconds)
-
-void setup()
-{
-    // set the digital pin as output:
-    pinMode(ledPin, OUTPUT);
-}
-
-void loop()
-{
-    // here is where you'd put code that needs to be running all the time.
-
-    // check to see if it's time to blink the LED; that is, if the
-    // difference between the current time and the last time you blinked
-    // the LED is bigger than the interval at which you want to
-    // blink the LED.
-    unsigned long currentMillis = millis();
-
-    if (currentMillis - previousMillis &gt;= interval)
-    {
-        // save the last time you blinked the LED
-        previousMillis = currentMillis;
-
-        // if the LED is off turn it on and vice-versa:
-        if (ledState == LOW)
-        {
-            ledState = HIGH;
-        }
-        else
-        {
-            ledState = LOW;
-        }
-
-        // set the LED with the ledState of the variable:
-        digitalWrite(ledPin, ledState);
-    }
-}
-</code></pre>
-<p>How the code works is that it subtracts the previously recorded time (<code>previousMillis</code>) from the current time (<code>currentMillis</code>). If the remainder is greater than the interval (1000 milliseconds), the program updates the <code>previousMillis</code> variable to the current time, and either turns the LED on or off.</p>
-<p>As the program is non-blocking, any code that is added outside of the first if statement should work correctly. You can now add other tasks and your LED will blink every second!</p>
-<p>Using the <code><strong>millis()</strong></code> function does take a bit more work than using the <code><strong>delay()</strong></code> function but will be worth it if the program needs to multitask.</p>
-<h3 id="mcetoc_1fvpo53oi1c">Ultrasonic Sensor and Buzzer Example</h3>
-<p>Let's wire up your circuit as so!</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/24/arduinoPot39.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-xs.png 300w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-sm.png 480w ,https://knowledge.fourier.industries/media/posts/24/responsive/arduinoPot39-md.png 749w"  alt="" width="1834" height="985"></figure>
-<p>Next, head over to the Arduino IDE where we will program the ultrasonic sensor to:</p>
-<ul>
-<li>trigger the ultrasonic wave every 1 millisecond</li>
-<li>print the distance to the serial monitor every 1 second</li>
-<li>turn on and off a buzzer every second if the distance is less than 30cm</li>
-</ul>
-<pre><code class="language-cpp">
-const int trigPin = 5; // set pin variables
-const int echoPin = 6;
-const int buzzerPin = 13;
-
-int trigState = LOW;              // state of trigPin
-int interval = 1;                 // interval in milliseconds at which trigPin turns on
-int interval2 = 1000;             // time in milliseconds at which the distance is printed in serial monitors
-int printState = LOW;             // whether or not to print distance
-int buzzer = LOW;                 // whether or not buzzer is on
-unsigned long previousMillis = 0; // microsecond at which the pin was last writen
-
-void setup()
-{
-    Serial.begin(9600);       // begin serial communication
-    pinMode(trigPin, OUTPUT); // set pinmodes
-    pinMode(echoPin, INPUT);
-    pinMode(buzzerPin, OUTPUT);
-}
-
-void loop()
-{
-    unsigned long currentMillis = millis(); // time in milliseconds from which the code was started
-    if (currentMillis - previousMillis &gt;= interval)
-    {                                   // check "blink without delay" code
-        previousMillis = currentMillis; //
-        if (trigState == LOW)
-        {
-            trigState = HIGH;
-        }
-        else
-        {
-            trigState = LOW;
-        }
-    }
-    // printing speed in serial monitor at an interval of 1s
-    if (currentMillis - previousMillis &gt;= interval2)
-    { // check "blink without delay" code
-        previousMillis = currentMillis;
-        if (printState == LOW)
-        {
-            printState = HIGH;
-        }
-        else
-        {
-            printState = LOW;
-        }
-    }
-    digitalWrite(trigPin, trigState);  // Fire the pulse to measure distance
-    int duration, distance;            // variables
-    duration = pulseIn(echoPin, HIGH); // Measure the time taken for the pulse
-    distance = duration * 0.01723;     // Calculate speed
-    if (printState = HIGH)
-    { // print the data to the serial monitor
-        Serial.print(distance);
-        Serial.println("cm");
-    }
-
-    if (distance &lt; = 30)
-    { // If distance &lt;30cm, buzzer will sound at an interval of 1s.
-        if (currentMillis - previousMillis &gt;= interval2)
-        { // check "blink without delay" code
-            previousMillis = currentMillis;
-            if (buzzer == LOW)
-            {
-                buzzer = HIGH;
-                digitalWrite(buzzerPin, HIGH);
-            }
-            else
-            {
-                buzzer = LOW;
-                digitalWrite(buzzerPin, LOW);
-            }
-        }
-    }
-    else
-    {
-        digitalWrite(buzzerPin, LOW);
-    }
-}
-</code></pre>
-<h2 id="mcetoc_1fvp2st7fh">Resources and Going Further</h2>
-<p>If you want to know more about how to use functions, and how to avoid using <code>delay()</code> to control timing on an Arduino, check out the articles below.</p>
-<ul>
-<li><a href="https://docs.arduino.cc/learn/programming/functions" target="_blank" rel="noopener noreferrer">Arduino: Using functions in a sketch</a></li>
-<li><a href="https://randomnerdtutorials.com/why-you-shouldnt-always-use-the-arduino-delay-function/" target="_blank" rel="noopener noreferrer">Random Nerd Tutorials: Why you shouldn't always use the Arduino delay function</a></li>
-<li><a href="https://create.arduino.cc/projecthub/Arduino_Scuola/limitations-of-delay-how-to-do-timers-correctly-833e9e" target="_blank" rel="noopener noreferrer">Arduino Project Hub: Limitations of delay() &amp; how to do timers correctly</a></li>
-</ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Light Dependent Resistor</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html"/>
-        <id>https://knowledge.fourier.industries/programming-the-sstuino-ii-9.html</id>
-
-        <updated>2022-04-22T19:35:46+08:00</updated>
-            <summary>
-                <![CDATA[
-                    For this exercise, we will be going to use the&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>For this exercise, we will be going to use the Light Dependent Resistor (LDR) to trigger the RGB LED! We can make use of the LDR to turn on the RGB LED when the environment is dark, and use the potentiometer to control the colour of the LED!</p>
-<div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1fvan9u4ng">About the Component</a></li>
-<li><a href="#mcetoc_1fvanutqb1l">Reading LDR value</a>
-<ul>
-<li><a href="#mcetoc_1fvi5ukvv4e">Calibration of the sensor</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1fvao1ho31r">Control RGB LED</a></li>
-<li><a href="#mcetoc_1fvi5ukvv4f">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1fvan9u4ng">About the Component</h2>
-<figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/LDR.jpeg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/LDR-xs.jpeg 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/LDR-sm.jpeg 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/LDR-md.jpeg 749w"  alt="" width="171" height="160"></figure>
-<p>The Light Dependent Resistor (LDR/Photoresistor) is a type of resistor that reacts with light. When the amount of light it detects changes, the resistance changes. However, as there are many types of LDRs around, the way they change resistance with the amount of light would be different.</p>
-<p>As the LDR reacts to the amount of light it receives, it is very useful as automatic brightness control on your laptops and mobile devices.</p>
-<h2 id="mcetoc_1fvanutqb1l">Reading LDR value</h2>
-<p>Let's create a new circuit on TinkerCAD like this:</p>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot30.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot30-md.png 749w"  alt="" width="1852" height="984"></figure>
-<p>We will read the value from the LDR and output it on the serial monitor:</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot14.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot14-md.png 749w"  alt="" width="575" height="140"></figure>
-<p>When running the simulation, open up the serial monitor. The result should look something like this:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot31.mp4" type="video/mp4" /></video></figure>
-<p>While I change the light intensity of the LDR, the readings also change.</p>
-<h3 id="mcetoc_1fvi5ukvv4e">Calibration of the sensor</h3>
-<p>As the sensor has multiple variations, let's check yours out! Construct the circuit on your SSTuino!</p>
-<p class="msg msg--warning"><strong>Warning:</strong> To prevent damage to your Learning Device or your components, please <strong>do not connect the SSTuino to your LD or power supply</strong> when you are wiring up your circuit. </p>
-<p>After you are done uploading the code, open the serial monitor. Now note down the value when the room is lit. Afterwards, turn off the lights in the room and note down the value again. We will need this data afterwards to tell when to turn on the RGB LED.</p>
-<p class="msg msg--info"><strong>Tip: </strong>If the lights in the room are unable to be turned off, you can use your hands to cover the LDR. Similarly, if your environment is originally dark, you can use the torch from your mobile device to shine at it.</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot46.mp4" type="video/mp4" /></video></figure>
-<h2 id="mcetoc_1fvao1ho31r">Control RGB LED</h2>
-<p>Now let us make the sensor useful! Make it such that the LED will light up when the environment darkens, and you can use the potentiometer to control the colour. To do so, we edit our code to something like this:</p>
-<p class="msg msg--info"><strong>Tip: </strong>Use the average of your bright and dark value and input it inside the area (Read analog pin A0 &lt; 512)</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/22/arduinoPot32.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot32-xs.png 300w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot32-sm.png 480w ,https://knowledge.fourier.industries/media/posts/22/responsive/arduinoPot32-md.png 749w"  alt="" width="530" height="374"></figure>
-<p>Afterwards, upload the code to the SSTuino. It should look like this:</p>
-<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
-    <source src="media/files/arduinoPot47.mp4" type="video/mp4" /></video></figure>
-<p class="msg msg--success">Let's share your work! Record and post a video onto Instagram with the hashtag <em><strong>#sstuino</strong></em>!</p>
-<p>If you have other ideas on how to control the RGB LED, please try them out and share them with your peers too!</p>
-<h2 id="mcetoc_1fvi5ukvv4f">Resources and Going Further</h2>
-<ul>
-<li><a href="https://learn.adafruit.com/photocells" target="_blank" rel="noopener noreferrer">Adafruit: Photocells</a></li>
-<li><a href="https://www.electronics-notes.com/articles/electronic_components/resistors/light-dependent-resistor-ldr.php" target="_blank" rel="noopener noreferrer">Electronics-notes: Light Dependent Resistor</a></li>
-</ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-8.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
