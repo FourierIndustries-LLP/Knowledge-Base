@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-09T16:34:21+08:00</updated>
+    <updated>2022-08-18T12:26:26+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -616,7 +616,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-04-22T19:36:47+08:00</updated>
+        <updated>2022-08-18T12:26:26+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -926,7 +926,7 @@ void subscribe() {
 }
 …</code></pre>
 <p>All 5 steps are done now, so it’s time to run your project. Plug in your SSTuino, upload this code, open the Serial Monitor and let it connect. Once it is fully connected, you can try press the switch on your Ubidots dashboard to see the LED on Pin 2 light up!</p>
-<pre>Add video here of the user pressing the switch on Ubidots and watching pin 2 light up</pre>
+<pre>Video coming soon! :) The user should be pressing the switch on Ubidots and pin 2 should light up</pre>
 <h2 id="mcetoc_1g04lk9pg2c6">Both at the same time!</h2>
 <p>Now that we have both Publish and Subscribe, let's try to do both at the same time. Use the Save As function to make a copy of your "Publish" project and name it "Both". Keep the Subscribe project on one side of your screen so that you can always refer to it. </p>
 <h3 id="mcetoc_1g04lk9pg2c7">Arduino Hookup</h3>
