@@ -3,12 +3,92 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-22T10:58:31+08:00</updated>
+    <updated>2022-08-23T10:35:26+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
     <id>https://knowledge.fourier.industries</id>
 
+    <entry>
+        <title>Displays</title>
+        <author>
+            <name>FourierIndustries LLP</name>
+        </author>
+        <link href="https://knowledge.fourier.industries/utilising-smart-led-strips-with-sstuino-ii-3.html"/>
+        <id>https://knowledge.fourier.industries/utilising-smart-led-strips-with-sstuino-ii-3.html</id>
+            <category term="Intermediate"/>
+            <category term="Actuators"/>
+
+        <updated>2022-08-23T10:35:26+08:00</updated>
+            <summary>
+                <![CDATA[
+                    Overview Ever wondered if you could display your data on&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <div class="post__toc">
+<h3>Table of Contents</h3>
+<ul>
+<li><a href="#mcetoc_1ga0lchs4a6">Overview</a></li>
+<li><a href="#mcetoc_1ga0lc3e7a3">Wiring it up</a></li>
+<li><a href="#mcetoc_1ga0ld9r2ag">Code</a>
+<ul>
+<li><a href="#mcetoc_1ga0nbb3sjf">Software Setup</a></li>
+<li><a href="#mcetoc_1ga0nbb3sjg">Example code</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1ga0ldmuaak">Troubleshooting</a></li>
+<li><a href="#mcetoc_1ga0ld9r2ah">Resources and Going Further</a></li>
+</ul>
+</div>
+<h2 id="mcetoc_1ga0lchs4a6">Overview</h2>
+<p>Ever wondered if you could display your data on a screen? In this tutorial, we will explore how to use the SSD1306 OLED Display!</p>
+<figure class="post__image post__image--center" ><figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/61FlaWpfVYL._SL1001_.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/61FlaWpfVYL._SL1001_-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/61FlaWpfVYL._SL1001_-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/61FlaWpfVYL._SL1001_-md.jpg 749w"  alt="" width="333" height="333"></figure>
+<figcaption >The SSD1306 OLED Display.</figcaption>
+</figure>
+<h2 id="mcetoc_1ga0lc3e7a3">Wiring it up</h2>
+<p>First, we will need to connect the SSD1306 to the SSTuino as follows:</p>
+<ul>
+<li>GND of display to GND of SSTuino</li>
+<li>VCC/Vin of display to 5V of SSTuino</li>
+<li>SCL of display to SCL of SSTuino</li>
+<li>SDA of display to SDA of SSTuino</li>
+</ul>
+<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/Screenshot-2022-08-23-at-09.58.28.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-xs.png 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-sm.png 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-md.png 749w"  alt="" width="1216" height="1314"></figure>
+<h2 id="mcetoc_1ga0ld9r2ag">Code</h2>
+<h3 id="mcetoc_1ga0nbb3sjf">Software Setup</h3>
+<p>You will need to install two external libraries to your Arduino IDE, called "Adafruit_SSD1306 and Adafruit_GFX". Simply open the Library Manager under the Tools top bar menu and search for "adafruit ssd1306" and "adafruit gfx". </p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-09.50.51.png" data-size="1598x412"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-09.50.51-thumbnail.png" alt="" width="749" height="193"></a>
+<figcaption>Adafruit SSD1306</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-09.51.48.png" data-size="1600x406"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-09.51.48-thumbnail.png" alt="" width="749" height="190"></a>
+<figcaption>Adafruit GFX</figcaption>
+</figure>
+</div></div>
+<h3 id="mcetoc_1ga0nbb3sjg">Example code</h3>
+<p>Next open up the example code by going to <strong>File &gt; Examples &gt; Adafruit SSD1306 &gt; SSD1306_128x64_i2c. </strong>Change the address to 0x3C for our specific OLED Display as indicated in the picture below:</p>
+<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-10.06.57-2.png" data-size="1380x1730"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-10.06.57-2-thumbnail.png" alt="" width="749" height="939"></a>
+<figcaption>Open the example file.</figcaption>
+</figure>
+<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-10.08.59.png" data-size="998x1198"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-10.08.59-thumbnail.png" alt="" width="749" height="899"></a>
+<figcaption>change the address to 0x3C</figcaption>
+</figure>
+</div></div>
+<p>Upload the code to the SSTuino. The OLED Display should light up with its own test sequence!</p>
+<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/OLED_test.mp4" type="video/mp4" /></video></figure>
+<h2 id="mcetoc_1ga0ld9r2ah">Resources and Going Further</h2>
+<p>If you would like to learn more about the OLED display, do hit up Adafruit's website here:</p>
+<ul>
+<li><strong><a href="https://learn.adafruit.com/monochrome-oled-breakouts/overview" target="_blank" rel="noopener noreferrer">https://learn.adafruit.com/16-channel-pwm-servo-driverhttps://learn.adafruit.com/monochrome-oled-breakouts/overview</a></strong></li>
+</ul>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>SSTuino II without the Explorer Board!</title>
         <author>
@@ -1366,198 +1446,6 @@ void subscribe()
 <h2 id="mcetoc_1g04lks6i2e0">Resources and Going Further</h2>
 <p>If you want some beautiful icons to use in your apps, projects and presentations, this is the icon suite that was used in this tutorial: <a href="https://icons8.com/icons/fluency" target="_blank" rel="noopener noreferrer">Icons8 Fluency Icons</a></p>
 <p><a href="https://knowledge.fourier.industries/transmit-and-receive.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/mobile-apps-part-2.html" class="btn btn--green">Next ➡️</a></p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Getting Started with IoT</title>
-        <author>
-            <name>FourierIndustries LLP</name>
-        </author>
-        <link href="https://knowledge.fourier.industries/getting-started-with-iot.html"/>
-        <id>https://knowledge.fourier.industries/getting-started-with-iot.html</id>
-
-        <updated>2022-04-22T19:36:44+08:00</updated>
-            <summary>
-                <![CDATA[
-                    What is the Internet of Things (IoT) all about? A&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <div class="post__toc">
-<h3>Table of Contents</h3>
-<ul>
-<li><a href="#mcetoc_1g04lhe1l27p">What is the Internet of Things (IoT) all about?</a></li>
-<li><a href="#mcetoc_1g04lhe1l27q">What is MQTT, and why use it?</a></li>
-<li><a href="#mcetoc_1g04lhe1l27r">Creating an Ubidots STEM account</a></li>
-<li><a href="#mcetoc_1g04lhe1l27s">How Ubidots works</a></li>
-<li><a href="#mcetoc_1g04lhe1l27t">Setting up Ubidots</a>
-<ul>
-<li><a href="#mcetoc_1g04lhe1l27u">Creating a new Device</a></li>
-<li><a href="#mcetoc_1g04lhe1l27v">Creating a new Variable</a></li>
-<li><a href="#mcetoc_1g04lhe1l280">Creating a new Dashboard</a></li>
-<li><a href="#mcetoc_1g04lhe1l281">Adding a new widget to the dashboard</a></li>
-</ul>
-</li>
-<li><a href="#mcetoc_1g04lhe1l282">Connecting your SSTuino II to Ubidots</a></li>
-<li><a href="#mcetoc_1g04lhe1l283">Resources and Going Further</a></li>
-</ul>
-</div>
-<h2 id="mcetoc_1g04lhe1l27p">What is the Internet of Things (IoT) all about?</h2>
-<p>A lot of people have been talking about the Internet of Things (IoT), and Industry 4.0, but what does all of this mean for you?</p>
-<p> </p>
-<figure class="post__image post__image--left"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/andres-urena-tsBropDpnwE-unsplash-2.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/andres-urena-tsBropDpnwE-unsplash-2-md.jpg 749w"  alt="" width="268" height="206"></figure>Internet of Things, simply put, is the ability for everyday items to connect to the Internet for enhanced functionality. Think of your smart speakers like Alexa, or smart homes that know when you are coming home and automatically prepare the air-con for you.</p>
-<p>Internet of Things is a key component of Industry 4.0 and provides companies with the ability to collect and analyse live data from their devices. </p>
-<p> </p>
-<figure class="post__image post__image--right"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/r151-preview-4.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/r151-preview-4-md.jpg 749w"  alt="" width="312" height="209"></figure>For example, newer MRTs that ply Singapore’s MRT tracks are fitted with sensors to automatically detect faults within the trains and tracks, reducing failure and breakdown, and ensuring better service for all.</p>
-<p>With the SSTuino II, you are empowered to create your own IoT devices and innovations. For students, IoT coupled with devices like the SSTuino allows you to collect data about your surroundings and stream them directly to the Internet, giving you the flexibility to conduct scientific inquiry without the need to hold a datalogger there and wait for data to come in. Or, create your own small automations around your household to make life easier! The sky’s the limit.</p>
-<h2 id="mcetoc_1g04lhe1l27q">What is MQTT, and why use it?</h2>
-<p>MQTT stands for Message Queuing Telemetry Transport, and it is a “language” that your SSTuino uses to talk to the IoT server, just like how your web browser talks to websites to retrieve them, but spends even less data!</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/MQTT-1024x719.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/MQTT-1024x719-md.jpg 749w"  alt="" width="495" height="348"></figure>
-<p>MQTT has 3 important concepts to understand: “Publish”, “Subscribe” and “topics”.</p>
-<ul>
-<li><strong>Topics</strong> are like the address of a website, allowing you to specify a certain device and its resources. For example, you could have a topic that looks like <code>sstuino-ii/temperature</code>, which would mean that you want to access the ‘temperature’ Variable within the ‘sstuino-ii’ Device.</li>
-<li>To <strong>Publish</strong> data means that you are transmitting data from your device to the server, with a given topic. It is a bit like submitting a form on a website.</li>
-<li>To <strong>Subscribe</strong> to a topic is to receive data from the server to your device. If you ever subscribed to a YouTube channel and clicked the bell icon, you would be notified whenever the channel posts something new. The same applies here when you subscribe to an MQTT topic and have new data pushed to your device the moment it appears.</li>
-</ul>
-<p>MQTT is lightweight and fault-tolerant, making it perfect for use with our IoT devices.</p>
-<h2 id="mcetoc_1g04lhe1l27r">Creating an Ubidots STEM account</h2>
-<p>You will need to create an account with Ubidots for this exercise. Ubidots is an IoT service that provides you with the ability to connect IoT devices, and display beautiful dashboards with data from your devices.</p>
-<p>We will be using Ubidots STEM, which is a special educational only version of Ubidots.</p>
-<p class="align-center"><a href="https://ubidots.com/stem/" target="_blank" rel="noopener noreferrer" class="btn">Sign up to Ubidots here!</a></p>
-<p>Please sign up with Ubidots STEM using your SST email.</p>
-<div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-2-Signup-1.png" data-size="2038x1398"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-2-Signup-1-thumbnail.png" alt="" width="749" height="514"></a>
-<figcaption>Sign up page</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-2-Signup-2E.png" data-size="2058x1416"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-2-Signup-2E-thumbnail.png" alt="" width="749" height="515"></a>
-<figcaption>Click "Take me to Ubidots STEM"</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-2-Signup-3.png" data-size="2136x1412"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-2-Signup-3-thumbnail.png" alt="" width="749" height="495"></a>
-<figcaption>You should see this when you complete the signup</figcaption>
-</figure>
-</div></div>
-<p>Note that Ubidots STEM has a few limitations that you have to take note of when deploying your IoT devices and applications:</p>
-<ul>
-<li>Can only be used in <strong>educational</strong> settings</li>
-<li>Can only create up to <strong>3 devices</strong>, each device with <strong>10 variables</strong> (sometimes also called channels)</li>
-<li>Up to <strong>4,000 data points per day</strong> (2-3 data points per minute) across all devices, so if your device sends data 24/7, please make sure to not exceed this limit</li>
-<li>Maximum rate of <strong>1 data point per second</strong>, no faster than that</li>
-<li>Up to <strong>3 dashboards</strong>, each with 10 widgets max</li>
-<li>For the full list of limitations, please refer to <a href="https://help.ubidots.com/en/articles/639806-what-is-the-difference-between-ubidots-and-ubidots-stem" target="_blank" rel="noopener noreferrer">this link</a> </li>
-</ul>
-<h2 id="mcetoc_1g04lhe1l27s">How Ubidots works</h2>
-<p>Each device that you connect to Ubidots is simply called a “Device”, which can have many “Variables”. These “Variables” are data sets that you can send. For example, you can have a Variable for temperature, another Variable for distance, and another Variable for a light switch. Within a Variable, there can be “Dots”, which is Ubidot’s way of describing a single data point at a certain time. If your temperature sensor sends “25.6” to the temperature Variable at 10:30 am, that counts as a single “Dot”.</p>
-<p>Ubidots only allows you to send numbers, which means you cannot send texts through their service. To represent a light switch, you would have to send a number of either 1 or 0. If you need to represent a fading light with <code>analogWrite</code>, you may have to use numbers from 0 to 255.</p>
-<h2 id="mcetoc_1g04lhe1l27t">Setting up Ubidots</h2>
-<p>Please login with the details you used to sign up just now at:</p>
-<p class="align-center"><a href="https://stem.ubidots.com/accounts/signin/" target="_blank" rel="noopener noreferrer" class="btn">Ubidots Login</a></p>
-<h3 id="mcetoc_1g04lhe1l27u">Creating a new Device</h3>
-<p>We are going to create a Device first. Click on the topbar <strong>“Devices &gt; Devices”</strong> to go to the Devices menu.</p>
-<div class="gallery-wrapper gallery-wrapper--full"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-1E.png" data-size="2134x1410"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-1E-thumbnail.png" alt="" width="749" height="495"></a>
-<figcaption>Go to the Devices menu</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-2E.png" data-size="2116x1414"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-2E-thumbnail.png" alt="" width="749" height="501"></a>
-<figcaption>Press the + button</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-3E.png" data-size="2108x1418"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-3E-thumbnail.png" alt="" width="749" height="504"></a>
-<figcaption>Select "Blank Device"</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-4.png" data-size="2134x1412"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-4-thumbnail.png" alt="" width="749" height="496"></a>
-<figcaption>Name the device "SSTuino II"</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-5.png" data-size="2136x1408"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-3-Device-5-thumbnail.png" alt="" width="749" height="494"></a>
-<figcaption>Done!</figcaption>
-</figure>
-</div></div>
-<p>Create a Device by pressing the + button and selecting “Blank Device”. Name it something sensible, in our example, we simply name it “SSTuino II”. Now we have a device created!</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/Ubidots-4-Variable-1E-4.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/Ubidots-4-Variable-1E-4-xs.png 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/Ubidots-4-Variable-1E-4-sm.png 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/Ubidots-4-Variable-1E-4-md.png 749w"  alt="" width="508" height="457"></figure>
-<p>Go to your device and you will notice a few key things that you will need to take note of, namely the “API Label”, ID and “Token”.</p>
-<ul>
-<li>The <strong>API Label</strong> is the name of your device for a computer to recognise, like your name on Facebook or Instagram</li>
-<li>The <strong>ID</strong> is the unique ID that your device will be connecting with, a bit like a <strong>username</strong></li>
-<li>The <strong>Token</strong> is the unique <strong>password</strong> of your device</li>
-</ul>
-<p>Note these details down in your Notes app, because we will be using them later.</p>
-<h3 id="mcetoc_1g04lhe1l27v">Creating a new Variable</h3>
-<p>Now that you’re done with creating a Device, it’s time to create a Variable! Press the big “Add Variable” sign in the middle of the screen and name your Variable something sensible. In our case, we are going to be measuring the temperature of the surroundings, so we will name it “Temperature”.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-2.png" data-size="2100x1472"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-2-thumbnail.png" alt="" width="749" height="525"></a>
-<figcaption>This is what you should see after creating the Variable</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-3E.png" data-size="2100x1482"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-4-Variable-3E-thumbnail.png" alt="" width="749" height="529"></a>
-<figcaption>Take note of the Variable's "API Label"</figcaption>
-</figure>
-</div></div>
-<p class="msg msg--warning"><strong>Warning</strong>: Do not name your Variables and Device names with anything else, as the example code provided relies on the Device being named "SSTuino II" and Variable as "Temperature"</p>
-<p>When you click on the Temperature Variable, you can see the <strong>API Label</strong> of this variable which is <code>temperature</code>. Remember this name, because this is the name of this Variable for computers that need to communicate with it. You can choose to create more Variables here to suit what you need to do.</p>
-<h3 id="mcetoc_1g04lhe1l280">Creating a new Dashboard</h3>
-<p>With Variables out of the way, let’s create our first Dashboard. Go to the top bar, <strong>Data &gt; Dashboards</strong> and click “Add New Dashboard”. Give it a simple name like “My Dashboard” and set the Default Time Range to “Last 1 hour” so that the dashboard shows data generally from the last hour. Press the green arrow to add the new dashboard.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="1">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E.png" data-size="2104x463"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-1E-thumbnail.png" alt="" width="749" height="165"></a>
-<figcaption>Click on "Dashboards" under "Data"</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-2E.png" data-size="2128x1468"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-2E-thumbnail.png" alt="" width="749" height="517"></a>
-<figcaption>Select "Last 1 hour" to be the Default time range</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-3E.png" data-size="2104x764"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-3E-thumbnail.png" alt="" width="749" height="272"></a>
-<figcaption>Add a new widget to your dashboard with the + icon!</figcaption>
-</figure>
-</div></div>
-<h3 id="mcetoc_1g04lhe1l281">Adding a new widget to the dashboard</h3>
-<p>With your dashboard, you can add up to 10 widgets to monitor the status of your devices connected to Ubidots. Click “Add New Widget'' and select “Thermometer” from it. Under the “Data” section, press “Add Variables” and select your Variable from the SSTuino II device.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4.png" data-size="2108x1474"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-4-thumbnail.png" alt="" width="749" height="524"></a>
-<figcaption>Select the Temperature widget</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-5E.png" data-size="2134x1464"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-5E-thumbnail.png" alt="" width="749" height="514"></a>
-<figcaption>Click Add Variables</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-6.png" data-size="2132x1468"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-6-thumbnail.png" alt="" width="749" height="516"></a>
-<figcaption>Select the "Temperature" Variable</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-7.png" data-size="2106x1482"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Ubidots-5-Dashboard-7-thumbnail.png" alt="" width="749" height="527"></a>
-<figcaption>Done!</figcaption>
-</figure>
-</div></div>
-<h2 id="mcetoc_1g04lhe1l282">Connecting your SSTuino II to Ubidots</h2>
-<p>Phew, that was a lot of things to go through! Let’s start to connect your SSTuino II to Ubidots. Go to your Arduino examples and open up the <code>Ubidots_1_Connect</code> example by going to <strong>File &gt; Examples &gt; WiFiNINA &gt; Ubidots_1_Connect</strong>.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/Screenshot-2022-04-18-at-9.52.01-PM.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/Screenshot-2022-04-18-at-9.52.01-PM-xs.png 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/Screenshot-2022-04-18-at-9.52.01-PM-sm.png 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/Screenshot-2022-04-18-at-9.52.01-PM-md.png 749w"  alt="" width="586" height="523"></figure>
-<p>Wow, the code looks quite scary! Not to worry, because we have placed comments to let you know where to put code and where to not place any code.</p>
-<p>In Arduino programs, you can actually have more than one file! Go to the <code>arduino_secrets.h</code> tab located on the tab bar. Here is where you place all the details of your WiFi network and your Ubidots device info.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/Arduino-1E.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-1E-xs.png 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-1E-sm.png 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-1E-md.png 749w"  alt="" width="430" height="537"></figure>
-<p>Remember the 3 things, <strong>API Label</strong>, <strong>ID</strong> and <strong>Token</strong> that you noted down when setting up Ubidots? It’s time to copy and paste them into your code. Follow the comments given inside the code and paste them in the right places, in between the <code>""</code> quotation marks.</p>
-<p>For the Wi-Fi network details, you will need to set up your own Wi-Fi hotspot using your phone, as the SSTuino does not support the higher frequency (5GHz) Wi-Fi networks used by the school.</p>
-<p>If you have a newer phone, please enable “Maximise Compatibility” for iOS and certain Android devices, or “Advanced &gt; AP Band: 2.4GHz” for other Android devices.</p>
-<div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="3">
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/iOS_14_0_1_Personal_Hotspot_settings_maximize_compatibility_highlighted_001-768x592.png" data-size="768x592"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/iOS_14_0_1_Personal_Hotspot_settings_maximize_compatibility_highlighted_001-768x592-thumbnail.png" alt="" width="749" height="577"></a>
-<figcaption>iOS</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/Screenshot_20210421-213941-2.png" data-size="1080x1397"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/Screenshot_20210421-213941-2-thumbnail.png" alt="" width="749" height="969"></a>
-<figcaption>Android 12</figcaption>
-</figure>
-<figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/26/gallery/hotspot-switch-to-2.4GHz-ap-band.png" data-size="1494x1080"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/26/gallery/hotspot-switch-to-2.4GHz-ap-band-thumbnail.png" alt="" width="749" height="541"></a>
-<figcaption>Android 11 and Below</figcaption>
-</figure>
-</div></div>
-<p>With that done, let’s upload your code. Open the Serial Monitor and see if it connects to the Internet with the sentence <code>Connected to MQTT!</code>. If so, congratulations! Your SSTuino has successfully connected to the Internet and Ubidots.</p>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/26/Arduino-2.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-2-xs.png 300w ,https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-2-sm.png 480w ,https://knowledge.fourier.industries/media/posts/26/responsive/Arduino-2-md.png 749w"  alt="" width="554" height="261"></figure>
-<p>Don't forget to save your code to your Arduino sketchbooks folder as “Connect”. We will be using this code as our base for the next few lessons.</p>
-<p>If your code isn’t working, check out the list below for some of the common issues:</p>
-<ul>
-<li><strong>It’s stuck at “Retrying WiFi Connection”!</strong>: Double check if your Wi-Fi password and name are correct, and your Wi-Fi network is turned on and discoverable. For iPhones, you have to keep the Personal Hotspot page in settings open for the network to be discoverable.</li>
-<li><strong>“Connecting to MQTT…….” keeps having more dots but never connects</strong>: There is a network issue with your Wi-Fi hotspot. It might be possible that your mobile signal is bad in the classroom. Try using someone else’s hotspot that is known to be working.</li>
-<li><strong>An error code appeared during “Connecting to MQTT”!</strong>: Check out the “Quick Status/Error Codes Reference” section at the bottom of the <code>helper.h</code> file tab.</li>
-</ul>
-<h2 id="mcetoc_1g04lhe1l283">Resources and Going Further</h2>
-<p>If you are interested to learn more about the inner workings of MQTT, and how it came about, check out these two excellent articles made by Adafruit.</p>
-<ul>
-<li><a href="https://learn.adafruit.com/mqtt-adafruit-io-and-you/why-mqtt" target="_blank" rel="noopener noreferrer">Adafruit: Why use MQTT?</a></li>
-<li><a href="https://learn.adafruit.com/alltheiot-protocols/mqtt" target="_blank" rel="noopener noreferrer">Adafruit: MQTT Protocol in detail</a></li>
-</ul>
-<p><a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-3.html" class="btn btn--outline">⬅️ Back</a><a style="float: right;" href="https://knowledge.fourier.industries/transmit-and-receive.html" class="btn btn--green">Next ➡️</a></p>
             ]]>
         </content>
     </entry>
