@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-23T10:41:06+08:00</updated>
+    <updated>2022-08-23T12:58:18+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -781,7 +781,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-08-18T12:26:26+08:00</updated>
+        <updated>2022-08-23T12:58:18+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -944,7 +944,7 @@ void loop()
   …
 </code></pre>
 <h4 id="mcetoc_1g04lk9pg2bt">Step 4: Publish</h4>
-<p>Recall that in the last lesson, we went through what MQTT is and what MQTT topics look like. Let’s say you have followed all instructions and named your device “SSTuino II”. Now the name for this device in the topic should be <code>sstuino-ii</code>. Combine this with the name of the Variable you added on Ubidots earlier and you get <code>sstuino-ii/temperature</code>.</p>
+<p>Recall that in the last lesson, we went through what MQTT is and what MQTT topics look like. Let’s say you have followed all instructions and named your device “SSTuino II”. Now the name for this device in the topic should be <code>sstuino-ii</code>, which should be the same as the <strong><a href="https://knowledge.fourier.industries/getting-started-with-iot.html">API_LABEL</a></strong> that you have noted down previously.  Combine this with the name of the Variable you added on Ubidots earlier and you get <code>sstuino-ii/temperature</code>.</p>
 <p>Publishing to Ubidots using MQTT is as simple as calling the <code>publishUbidots()</code> function like so: <code>publishUbidots(client, “sstuino-ii/temperature”, temperatureString);</code>. Make sure you place all of this code <i>before</i> the delay so that all of it runs before the microcontroller sleeps for 10 seconds.</p>
 <p>The code between the <code>/****/</code> in <code>loop()</code> should look something like this:</p>
 <pre><code class="language-cpp">…
