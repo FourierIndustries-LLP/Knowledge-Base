@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-23T10:35:26+08:00</updated>
+    <updated>2022-08-23T10:41:06+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Intermediate"/>
             <category term="Actuators"/>
 
-        <updated>2022-08-23T10:35:26+08:00</updated>
+        <updated>2022-08-23T10:41:06+08:00</updated>
             <summary>
                 <![CDATA[
                     Overview Ever wondered if you could display your data on&hellip;
@@ -55,7 +55,7 @@
 <li>SCL of display to SCL of SSTuino</li>
 <li>SDA of display to SDA of SSTuino</li>
 </ul>
-<figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/Screenshot-2022-08-23-at-09.58.28.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-xs.png 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-sm.png 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-md.png 749w"  alt="" width="1216" height="1314"></figure>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/Screenshot-2022-08-23-at-09.58.28.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-xs.png 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-sm.png 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-md.png 749w"  alt="" width="370" height="400"></figure>
 <h2 id="mcetoc_1ga0ld9r2ag">Code</h2>
 <h3 id="mcetoc_1ga0nbb3sjf">Software Setup</h3>
 <p>You will need to install two external libraries to your Arduino IDE, called "Adafruit_SSD1306 and Adafruit_GFX". Simply open the Library Manager under the Tools top bar menu and search for "adafruit ssd1306" and "adafruit gfx". </p>
