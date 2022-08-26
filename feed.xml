@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-23T12:58:18+08:00</updated>
+    <updated>2022-08-26T14:52:05+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Intermediate"/>
             <category term="Actuators"/>
 
-        <updated>2022-08-23T10:41:06+08:00</updated>
+        <updated>2022-08-26T14:52:05+08:00</updated>
             <summary>
                 <![CDATA[
                     Overview Ever wondered if you could display your data on&hellip;
@@ -81,9 +81,10 @@
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/OLED_test.mp4" type="video/mp4" /></video></figure>
 <h2 id="mcetoc_1ga0ld9r2ah">Resources and Going Further</h2>
-<p>If you would like to learn more about the OLED display, do hit up Adafruit's website here:</p>
+<p>If you would like to learn more about the OLED display, do hit up the resources below:</p>
 <ul>
 <li><strong><a href="https://learn.adafruit.com/monochrome-oled-breakouts/overview" target="_blank" rel="noopener noreferrer">https://learn.adafruit.com/16-channel-pwm-servo-driverhttps://learn.adafruit.com/monochrome-oled-breakouts/overview</a></strong></li>
+<li><strong><a href="https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/" target="_blank" rel="noopener noreferrer">https://randomnerdtutorials.com/guide-for-oled-display-with-arduino/</a></strong></li>
 </ul>
 <p> </p>
             ]]>
