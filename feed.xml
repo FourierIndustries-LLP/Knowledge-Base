@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-31T11:20:02+08:00</updated>
+    <updated>2022-08-31T11:56:11+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Intermediate"/>
             <category term="Actuators"/>
 
-        <updated>2022-08-31T09:47:27+08:00</updated>
+        <updated>2022-08-31T11:56:11+08:00</updated>
             <summary>
                 <![CDATA[
                     Overview Ever wondered if you could display your data on&hellip;
@@ -31,6 +31,8 @@
 <h3>Table of Contents</h3>
 <ul>
 <li><a href="#mcetoc_1ga0lchs4a6">Overview</a></li>
+<li><a href="#mcetoc_1gbouqub8h">Adafruit SSD1306 Demo</a>
+<ul>
 <li><a href="#mcetoc_1ga0lc3e7a3">Wiring it up</a></li>
 <li><a href="#mcetoc_1ga0ld9r2ag">Code</a>
 <ul>
@@ -38,7 +40,14 @@
 <li><a href="#mcetoc_1ga0nbb3sjg">Example code</a></li>
 </ul>
 </li>
-<li><a href="#mcetoc_1ga0ldmuaak">Troubleshooting</a></li>
+</ul>
+</li>
+<li><a href="#mcetoc_1gbouqub8i">Room Thermometer with TMP36</a>
+<ul>
+<li><a href="#mcetoc_1gbov9t2h1c">Wiring it up</a></li>
+<li><a href="#mcetoc_1gbov9t2h1d">Code</a></li>
+</ul>
+</li>
 <li><a href="#mcetoc_1ga0ld9r2ah">Resources and Going Further</a></li>
 </ul>
 </div>
@@ -47,7 +56,9 @@
 <figure class="post__image post__image--center" ><figure class="post__image"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/61FlaWpfVYL._SL1001_.jpg" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/61FlaWpfVYL._SL1001_-xs.jpg 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/61FlaWpfVYL._SL1001_-sm.jpg 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/61FlaWpfVYL._SL1001_-md.jpg 749w"  alt="" width="333" height="333"></figure>
 <figcaption >The SSD1306 OLED Display.</figcaption>
 </figure>
-<h2 id="mcetoc_1ga0lc3e7a3">Wiring it up</h2>
+<h2 id="mcetoc_1gbouqub8h">Adafruit SSD1306 Demo</h2>
+<p>We will make use of the demo provided by Adafruit to test the OLED Display out!</p>
+<h3 id="mcetoc_1ga0lc3e7a3">Wiring it up</h3>
 <p>First, we will need to connect the SSD1306 to the SSTuino as follows:</p>
 <ul>
 <li>GND of display to GND of SSTuino</li>
@@ -56,8 +67,8 @@
 <li>SDA of display to SDA of SSTuino</li>
 </ul>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/Screenshot-2022-08-23-at-09.58.28.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-xs.png 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-sm.png 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-md.png 749w"  alt="" width="370" height="400"></figure>
-<h2 id="mcetoc_1ga0ld9r2ag">Code</h2>
-<h3 id="mcetoc_1ga0nbb3sjf">Software Setup</h3>
+<h3 id="mcetoc_1ga0ld9r2ag">Code</h3>
+<h4 id="mcetoc_1ga0nbb3sjf">Software Setup</h4>
 <p>You will need to install two external libraries to your Arduino IDE, called "Adafruit_SSD1306 and Adafruit_GFX". Simply open the Library Manager under the Tools top bar menu and search for "adafruit ssd1306" and "adafruit gfx". </p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-09.50.51.png" data-size="1598x412"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-09.50.51-thumbnail.png" alt="" width="749" height="193"></a>
@@ -67,7 +78,7 @@
 <figcaption>Adafruit GFX</figcaption>
 </figure>
 </div></div>
-<h3 id="mcetoc_1ga0nbb3sjg">Example code</h3>
+<h4 id="mcetoc_1ga0nbb3sjg">Example code</h4>
 <p>Next open up the example code by going to <strong>File &gt; Examples &gt; Adafruit SSD1306 &gt; SSD1306_128x64_i2c. </strong>Change the address to 0x3C for our specific OLED Display as indicated in the picture below:</p>
 <div class="gallery-wrapper"><div class="gallery"  data-is-empty="false" data-translation="Add images" data-columns="2">
 <figure class="gallery__item"><a href="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-10.06.57-2.png" data-size="1380x1730"><img loading="lazy" src="https://knowledge.fourier.industries/media/posts/43/gallery/Screenshot-2022-08-23-at-10.06.57-2-thumbnail.png" alt="" width="749" height="939"></a>
@@ -80,6 +91,87 @@
 <p>Upload the code to the SSTuino. The OLED Display should light up with its own test sequence!</p>
 <figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
     <source src="media/files/OLED_test.mp4" type="video/mp4" /></video></figure>
+<h2 id="mcetoc_1gbouqub8i">Room Thermometer with TMP36</h2>
+<p>Next, we are going to use the TMP36 to measure the temperature of your surroundings and display it on the OLED Display.</p>
+<h3 id="mcetoc_1gbov9t2h1c">Wiring it up</h3>
+<p>First, we will need to connect the SSD1306 to the SSTuino as follows:</p>
+<ul>
+<li>GND of display to GND of SSTuino</li>
+<li>VCC/Vin of display to 5V of SSTuino</li>
+<li>SCL of display to SCL of SSTuino</li>
+<li>SDA of display to SDA of SSTuino</li>
+</ul>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/Screenshot-2022-08-23-at-09.58.28.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-xs.png 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-sm.png 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-23-at-09.58.28-md.png 749w"  alt="" width="370" height="400"></figure>
+<p>Then connect the TMP36 to the SSTuino as follows:</p>
+<figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/43/Screenshot-2022-08-31-at-11.36.15.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-31-at-11.36.15-xs.png 300w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-31-at-11.36.15-sm.png 480w ,https://knowledge.fourier.industries/media/posts/43/responsive/Screenshot-2022-08-31-at-11.36.15-md.png 749w"  alt="" width="513" height="346"></figure>
+<h3 id="mcetoc_1gbov9t2h1d">Code</h3>
+<pre><code class="language-cpp">
+/*
+Temperature Sensor + OLED Tutorial for SSTuino II
+Written by Goh Qian Zhe, with code derived from Adafruit's libraries.
+Find out more at knowledge.fourier.industries
+ */
+#include &lt;SPI.h&gt;
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+#include &lt;Fonts/FreeSans9pt7b.h&gt; // Additional Fonts
+#include &lt;Fonts/FreeSans24pt7b.h&gt;
+
+#define SCREEN_WIDTH 128 // OLED display width, in pixels
+#define SCREEN_HEIGHT 64 // OLED display height, in pixels
+#define OLED_RESET     -1 // Reset pin # (or -1 if sharing Arduino reset pin)
+#define SCREEN_ADDRESS 0x3C ///&lt; See datasheet for Address; 0x3D for 128x64, 0x3C for 128x32
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &amp;Wire, OLED_RESET);
+int temp = 0;
+
+void setup() {
+  pinMode(A0, INPUT);
+  Serial.begin(9600);
+  // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)) {
+    Serial.println(F("SSD1306 allocation failed"));
+    for(;;); // Don't proceed, loop forever
+  }
+  display.clearDisplay();
+  display.setFont(&amp;FreeSans9pt7b);
+  display.setTextSize(1);      // Normal 1:1 pixel scale
+  display.setTextColor(SSD1306_WHITE); // Draw white text
+  display.setCursor(0, 24);     // Start at top-left corner
+  display.cp437(true);         // Use full 256 char 'Code Page 437' font
+  display.write("Temperature        Sensor"); // Welcome page
+  display.display();
+  delay(5000);
+  display.setFont();
+}
+
+void loop() {
+  // This area is the code for the sensor to read and display data.
+  temp = ((-40 + 0.488155 * (analogRead(A0) - 20)) + 0);
+  Serial.println(temp);
+  display.clearDisplay();
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  display.setCursor(0, 0);
+  display.cp437(true);
+  display.write("Current Temperature:"); // Sets the top line
+  display.setTextSize(1);
+  display.setFont(&amp;FreeSans24pt7b);
+  display.setCursor(0, 56);
+  char _buffer[8];
+  sprintf(_buffer, "%02u", temp); // Converts int to char
+  display.write(_buffer); // Displays the temperature
+  display.drawCircle(84, 24, 3, SSD1306_WHITE); // Degrees sign
+  display.setCursor(96, 56);
+  display.write("C");
+  display.display(); 
+  display.setFont(); 
+  delay(10000); // Refreshes every 10 seconds
+}
+</code></pre>
+<p>This is how it looks like!</p>
+<figure class="post__video"><video loading="lazy" width="300" height="150" playsinline="" autoplay="autoplay" muted="" loop="loop" data-mce-fragment="1">
+    <source src="media/files/OLED_TMP36.mp4" type="video/mp4" /></video></figure>
 <h2 id="mcetoc_1ga0ld9r2ah">Resources and Going Further</h2>
 <p>If you would like to learn more about the OLED display, do hit up the resources below:</p>
 <ul>
