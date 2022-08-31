@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2022-08-31T09:45:43+08:00</updated>
+    <updated>2022-08-31T11:20:02+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -19,7 +19,7 @@
             <category term="Intermediate"/>
             <category term="Actuators"/>
 
-        <updated>2022-08-31T09:45:43+08:00</updated>
+        <updated>2022-08-31T09:47:27+08:00</updated>
             <summary>
                 <![CDATA[
                     Overview Ever wondered if you could display your data on&hellip;
@@ -532,7 +532,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/frequently-asked-questions-faq-sstuino-ii.html"/>
         <id>https://knowledge.fourier.industries/frequently-asked-questions-faq-sstuino-ii.html</id>
 
-        <updated>2022-08-08T22:35:21+08:00</updated>
+        <updated>2022-08-31T11:20:02+08:00</updated>
             <summary>
                 <![CDATA[
                     This article contains the most commonly asked questions and basic&hellip;
@@ -545,12 +545,15 @@ void loop()
 <h3>I get a warning that says <code>avrdude: jtagmkII_initialize(): Cannot locate “flash” and “boot” memories in description</code></h3>
 <p>This warning message will not affect your code uploads, and you do not need to worry as long as Arduino IDE shows that your upload is completed. If you wish to see the code upload progress bar, you can turn on verbose mode for code upload:</p>
 <figure class="post__image post__image--center"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/32/Screenshot-2022-04-19-at-1.34.03-PM.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/32/responsive/Screenshot-2022-04-19-at-1.34.03-PM-xs.png 300w ,https://knowledge.fourier.industries/media/posts/32/responsive/Screenshot-2022-04-19-at-1.34.03-PM-sm.png 480w ,https://knowledge.fourier.industries/media/posts/32/responsive/Screenshot-2022-04-19-at-1.34.03-PM-md.png 749w"  alt="" width="423" height="307"></figure>
+<p>Update 2022/08/31: As of this date, you can update your SSTuino II board through the Board Manager to version 1.1.1, which permanently fixes this issue.</p>
 <h3>My code refuses to upload with the error <code>avrdude: jtagmkII_close(): timeout/error communicating with programmer (status -1)</code></h3>
 <p>If your error looks like the one in this <a href="https://forum.arduino.cc/t/sketch-upload-problems/855649" target="_blank" rel="noopener noreferrer">Arduino forum post</a>, your SSTuino II might be faulty. If you still experience this issue even after unplugging everything from the board (except the USB cord, of course), and the board is within warranty, please contact us through the <a href="http://fourierindustries.atlassian.net/servicedesk/customer/portals" target="_blank" rel="noopener noreferrer">Help Centre</a> and quote your board's serial number. </p>
 <h2>Issues with hardware</h2>
 <h3>The debug lights (lights on the top row) flicker when I touch the bottom of the board!</h3>
 <p>This is a normal side effect of how microcontrollers and transistors behave, and will not cause issues to your hardware. </p>
 <p>If you are interested to know the reasons behind the phenomenon, it is because every digital pin of the Explorer board is wired to a transistor called a <a href="https://reibot.org/2011/09/06/a-beginners-guide-to-the-mosfet/" target="_blank" rel="noopener noreferrer">MOSFET</a>. These transistors are very sensitive to tiny variations in electrical pulses, and even a minor voltage difference such as the one caused by your fingers can cause it to connect the circuit and turn on the LED. </p>
+<h3>My SSTuino II restarts itself when I use a servo/LED strip/(insert high power peripheral here)</h3>
+<p>The SSTuino is equipped with a polyfuse (a special type of fuse that can reset itself) that limits the maximum current to 1A. In addition, if you connect your SSTuino to a computer, most computers will limit the maximum power consumption to 0.5A. If you need to power high-power devices, you will need to supply 5V directly to the 5V line on the SSTuino. </p>
             ]]>
         </content>
     </entry>
@@ -783,7 +786,7 @@ void loop()
         <link href="https://knowledge.fourier.industries/transmit-and-receive.html"/>
         <id>https://knowledge.fourier.industries/transmit-and-receive.html</id>
 
-        <updated>2022-08-23T12:58:18+08:00</updated>
+        <updated>2022-08-31T10:55:06+08:00</updated>
             <summary>
                 <![CDATA[
                     In this lesson, we will be learning how to send&hellip;
@@ -831,7 +834,7 @@ void loop()
 <li><a href="#mcetoc_1g04lk9pg2ca">Step 2: Setup</a></li>
 <li><a href="#mcetoc_1g04lk9pg2cb">Step 3: Loop</a></li>
 <li><a href="#mcetoc_1g04lk9pg2cc">Step 4: Message Received</a></li>
-<li><a href="#mcetoc_1g04lk9pg2cd">Step 5: Connect</a></li>
+<li><a href="#mcetoc_1g04lk9pg2cd">Step 5: Subscribe</a></li>
 </ul>
 </li>
 </ul>
@@ -870,57 +873,60 @@ void loop()
 WiFiClient network;
 MQTTClient client;
 
+// declaration
+
 /********* This is where you put your own code *********/
 
-// Variables
+// Timer for multitasking. Default is 10000 ms (10 seconds)
+RBD::Timer timer(10000);
 int temp = 0;
 
 /**************** End of your own code *****************/
-
-void setup()
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2br">Step 2: Setup</h4>
 <p><span style="font-weight: 400;">The second part would be our <code>setup()</code> function, to set Analog Pin A0 as an input. We can ignore the <code>Serial.begin</code> safely as we already set up our Serial connection in the example, so we only need to copy over <code>pinMode()</code>.</span></p>
 <pre><code class="language-cpp">…
-void setup()<br>{
+void setup()
+{
   Serial.begin(9600);
 
   /********* This is where you put your own code *********/
-
+    
   pinMode(A0, INPUT);
-
+    
   /**************** End of your own code *****************/
 
-  connectToWiFi(SECRET_SSID, SECRET_PASS); // Connect to the WiFi network
-
-  // Setup the MQTT client, but not connecting yet
-  client.begin(MQTT_URL, MQTT_PORT, network);
-  client.onMessage(messageReceived);
-
-  connect(client, &amp;subscribe); // Connect to MQTT server
+  connectToWiFiAndMQTT(network, SECRET_SSID, SECRET_PASS, client, subscribe, messageReceived);
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2bs">Step 3: Loop</h4>
-<p>The third part is the <code>loop()</code> function, to calculate the temperature from the voltage. We only need to transplant the 1st line to our IoT example code, underneath <code>This is where you put your own code</code>, since we only need to calculate the temperature.</p>
-<p>As for the delay, we will increase it to 10 seconds (10000 milliseconds) to prevent it from spamming the server.</p>
+<p>The third part is the <code>loop()</code> function, to calculate the temperature from the voltage. We only need to transplant the 1st line to our IoT example code, underneath <code>This is where you put your own code</code> and add a timer to only publish the value every 10 seconds. <code>timer.onRestart()</code> is the code used to check if the timer has reached 10 seconds, and also resets the timer once the time limit is reached.</p>
 <pre><code class="language-cpp">…
 void loop()
 {
-  bool connected = client.loop(); // This function must be called on every loop
+  connectionCheck(client, subscribe); // Check if connection is ok, must run on every loop
 
-  // Check if MQTT connection is active, and reconnect if it's broken
-  if (connected == false)
-  {
-    Serial.println("MQTT Client disconnected, reconnecting...");
-    connect(client, &amp;subscribe);
-  }
+  /*
+    If you need to publish data here, a publish is called 
+    with a timer like this:
+
+    if (timer.onRestart())
+    {
+      String dataString = String(data);
+      publishUbidots(client, "topicName", dataString);
+    }
+
+    The value passed to publishUbidots must be a String
+  */
 
   /********* This is where you put your own code *********/
 
-  // Read the temperature
-  temp = -40 + 0.488155 * (analogRead(A0) - 20);
-  
-  delay(10000);
+  // Publish every 10 seconds
+  if (timer.onRestart())
+  {
+    // Read the temperature
+    temp = -40 + 0.488155 * (analogRead(A0) - 20);
+  }
 
   /**************** End of your own code *****************/
 }
@@ -931,37 +937,36 @@ void loop()
 <li><code>connectToWiFi(SSID, password)</code>: Connects to Wi-Fi, and automatically reconnects if the Wi-Fi disconnects</li>
 <li><code>publishUbidots(client, topic, message)</code>: Publishes an MQTT message on a topic</li>
 <li><code>subscribeUbidots(client, topic)</code>: Subscribes to an MQTT topic. You should only use this function at the last part of the <code>connect()</code> function</li>
-<li><code>topicMatches(longTopic, shortTopic)</code>: Checks if your topic matches the topic sent by Ubidots</li>
+<li><code>topicMatches(shortTopic, longTopic)</code>: Checks if your topic matches the topic sent by Ubidots</li>
 <li><code>connect(client, subscribe)</code>: Connects to MQTT and automatically subscribes to topics designated in the <code>subscribe()</code> function</li>
 </ul>
 <p>Since MQTT only allows us to publish the data in the form of Strings, we need to convert our temperature number into a String. Make a new String variable called <code>temperatureString</code> with <code>temp</code> (recall lesson <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html">From Blocks to Code - Part I</a>).</p>
-<pre><code class="language-cpp">
-  …
+<pre><code class="language-cpp">…
   temp = -40 + 0.488155 * (analogRead(A0) - 20);
     
   // Convert the temperature to a String
   String temperatureString = String(temp);
-  
-  delay(10000); // repeat every 10 seconds
-  …
+…
 </code></pre>
 <h4 id="mcetoc_1g04lk9pg2bt">Step 4: Publish</h4>
-<p>Recall that in the last lesson, we went through what MQTT is and what MQTT topics look like. Let’s say you have followed all instructions and named your device “SSTuino II”. Now the name for this device in the topic should be <code>sstuino-ii</code>, which should be the same as the <strong><a href="https://knowledge.fourier.industries/getting-started-with-iot.html">API_LABEL</a></strong> that you have noted down previously.  Combine this with the name of the Variable you added on Ubidots earlier and you get <code>sstuino-ii/temperature</code>.</p>
-<p>Publishing to Ubidots using MQTT is as simple as calling the <code>publishUbidots()</code> function like so: <code>publishUbidots(client, “sstuino-ii/temperature”, temperatureString);</code>. Make sure you place all of this code <i>before</i> the delay so that all of it runs before the microcontroller sleeps for 10 seconds.</p>
-<p>The code between the <code>/****/</code> in <code>loop()</code> should look something like this:</p>
+<p>Publishing to Ubidots using MQTT is as simple as calling the <code>publishUbidots()</code> function like so: <code>publishUbidots(client, “temperature”, temperatureString);</code>. </p>
+<p>The code between the <code>/****/</code> in <code>loop()</code> should now look something like this:</p>
 <pre><code class="language-cpp">…
 void loop()<br>{
   …
 
   /********* This is where you put your own code *********/
 
-  // Read the temperature
-  temp = -40 + 0.488155 * (analogRead(A0) - 20);
+  // Publish every 10 seconds
+  if (timer.onRestart())
+  {
+    // Read the temperature
+    temp = -40 + 0.488155 * (analogRead(A0) - 20);
     
-  // Convert the temperature to a String
-  String temperatureString = String(temp);
-  publishUbidots(client, "sstuino-ii/temperature", temperatureString);
-  delay(10000); // repeat every 10 seconds
+    // Convert the temperature to a String
+    String temperatureString = String(temp);
+    publishUbidots(client, "temperature", temperatureString);
+  }
 
   /**************** End of your own code *****************/
 }
@@ -1001,6 +1006,9 @@ MQTTClient client;
 
 /********* This is where you put your own code *********/
 
+// Timer for multitasking. Default is 10000 ms (10 seconds)
+RBD::Timer timer(10000);
+
 // Variables
 int light = LOW;
 
@@ -1020,13 +1028,7 @@ void setup()<br>{
 
   /**************** End of your own code *****************/
 
-  connectToWiFi(SECRET_SSID, SECRET_PASS); // Connect to the WiFi network
-
-  // Setup the MQTT client, but not connecting yet
-  client.begin(MQTT_URL, MQTT_PORT, network);
-  client.onMessage(messageReceived);
-
-  connect(client, &amp;subscribe); // Connect to MQTT server
+  connectToWiFiAndMQTT(network, SECRET_SSID, SECRET_PASS, client, subscribe, messageReceived);
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2c3">Step 3: Loop</h4>
@@ -1034,14 +1036,7 @@ void setup()<br>{
 <pre><code class="language-cpp">…
 void loop()
 {
-  bool connected = client.loop(); // This function must be called on every loop
-
-  // Check if MQTT connection is active, and reconnect if it's broken
-  if (connected == false)
-  {
-    Serial.println("MQTT Client disconnected, reconnecting...");
-    connect(client, &amp;subscribe);
-  }
+  …
 
   /********* This is where you put your own code *********/
 
@@ -1052,23 +1047,34 @@ void loop()
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2c4">Step 4: Message Received</h4>
 <p>Inside this special function is where the MQTT subscribe message is actually received. We have to check if it’s really the correct message by checking the topic, and then changing the value of <code>light</code> based on the value received. </p>
-<p>We do this check by using the <code>topicMatches(shortTopic, longTopic)</code> helper function, which breaks down Ubidot’s long and hard-to-understand topic format of <code>/v1.6/devices/{DEVICE}/{VARIABLE}/lv</code> into just <code>{DEVICE}/{VARIABLE}</code>.</p>
+<p>We do this check by using the <code>topicMatches(shortTopic, longTopic)</code> helper function, which breaks down Ubidot’s long and hard-to-understand topic format of <code>/v1.6/devices/{API LABEL}/{VARIABLE}/lv</code> into just <code>{VARIABLE}</code>.</p>
 <p>If the topic is the one we want (i.e. outcome of this function is <code>true</code>), we will change the <code>light</code> variable based on the payload of the message. To do that, we have to convert the payload from a String to an integer. Recall the <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-5.html">From Blocks to Code lesson</a>, where we converted data from one type to another. To convert a String to int, we just need to use <code>.toInt()</code> behind the String!</p>
 <pre><code class="language-cpp">…
-void messageReceived(String &amp;topic, String &amp;payload) <br>{
+void messageReceived(String &amp;topic, String &amp;payload)
+{
   Serial.println("Incoming data: " + topic + " - " + payload);
 
-  /* 
-    All the messages your MQTT service receives can be 
-    loaded here
-    
+  /*
+    All the messages your MQTT service receives can be
+    loaded here. You should check if the message is the
+    correct topic and convert the message from String
+    to the data type you need
+
+    For example:
+    if (topicMatches("light", topic) == true)
+    {
+      light = payload.toInt(); // convert incoming message from String to int
+    }
+
     *NOTE*: Do not use this function to publish, subscribe
     or unsubscribe as it may cause deadlocks
   */
-  
+
   /********* This is where you put your own code *********/
 
-  if (topicMatches("sstuino-ii/light", topic) == true)<br>  {
+  if (topicMatches("light", topic) == true)
+  {
+    // You can do something with the payload, which is a String
     light = payload.toInt(); // convert the incoming message from String to int
   }
 
@@ -1077,23 +1083,24 @@ void messageReceived(String &amp;topic, String &amp;payload) <br>{
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2c5">Step 5: Subscribe</h4>
 <p>At long last, we have come to the last part we have to change: the <code>subscribe()</code> function. This function is responsible for subscribing to the topics that we want to receive messages from. </p>
-<p>Simply call the <code>subscribeUbidots()</code> function from the helper by coding <code>subscribeUbidots(client, "sstuino-ii/light");</code> and you’re done!</p>
+<p>Simply call the <code>subscribeUbidots()</code> function from the helper by coding <code>subscribeUbidots(client, "light");</code> and you’re done!</p>
 <pre><code class="language-cpp">…
-void subscribe() {
+void subscribe()
+{
   /*
     For example, a subscribe is called like:
-    subscribeUbidots(client, "sstuino-ii/light");
+    subscribeUbidots(client, "light");
   */
  
   /********* This is where you put your own code *********/
 
-  subscribeUbidots(client, "sstuino-ii/light");
+  subscribeUbidots(client, "light");
 
   /**************** End of your own code *****************/
 }
 …</code></pre>
 <p>All 5 steps are done now, so it’s time to run your project. Plug in your SSTuino, upload this code, open the Serial Monitor and let it connect. Once it is fully connected, you can try press the switch on your Ubidots dashboard to see the LED on Pin 2 light up!</p>
-<pre>Video coming soon! :) The user should be pressing the switch on Ubidots and pin 2 should light up</pre>
+<pre>Video coming soon! :) Simply press switch on Ubidots and pin 2 should light up</pre>
 <h2 id="mcetoc_1g04lk9pg2c6">Both at the same time!</h2>
 <p>Now that we have both Publish and Subscribe, let's try to do both at the same time. Use the Save As function to make a copy of your "Publish" project and name it "Both". Keep the Subscribe project on one side of your screen so that you can always refer to it. </p>
 <h3 id="mcetoc_1g04lk9pg2c7">Arduino Hookup</h3>
@@ -1101,13 +1108,14 @@ void subscribe() {
 <figure class="post__image post__image--full"><img loading="lazy"  src="https://knowledge.fourier.industries/media/posts/27/arduinoPot40.png" sizes="(max-width: 749px) 100vw, 749px" srcset="https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-xs.png 300w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-sm.png 480w ,https://knowledge.fourier.industries/media/posts/27/responsive/arduinoPot40-md.png 749w"  alt="" width="1837" height="854"></figure>
 <h3 id="mcetoc_1g04lk9pg2c8">Code</h3>
 <p>We are going to walk through this tutorial the same way as we did for Subscribe, which is to break it down into 5 steps: <strong>Declaration</strong>, <strong>Setup</strong>, <strong>Loop</strong>, <strong>Message Received</strong> and <strong>Subscribe</strong>.</p>
-<p>In addition, as our program is now time-sensitive, we will need to multitask our Arduino! Recall the lesson <a href="https://knowledge.fourier.industries/programming-the-sstuino-ii-10-2.html">From Blocks to Code Part II</a>, where we talked about how to avoid using <code>delay()</code> and use <code>millis()</code> to check the time since the SSTuino is powered on.</p>
+<p>In addition, as our program is now time-sensitive, we will need to multitask our Arduino! To make things simpler, a 10 second (10000 millisecond) timer has already been created for you with the line of code <code style="font-weight: var(--font-weight-normal);">RBD::Timer timer(10000);</code><span style="color: var(--text-primary-color); font-family: var(--editor-font-family); font-size: inherit; font-weight: var(--font-weight-normal);">.</span></p>
 <h4 id="mcetoc_1g04lk9pg2c9">Step 1: Declarations</h4>
 <p>Firstly, you want to merge the variables at the top of the code above <code>setup()</code>, having both <code>temp</code> and <code>light</code> for temperature and light switch respectively.</p>
-<p>We will introduce 2 completely new variables here, <code>previousMillis</code> which records the last time a delay occured and <code>interval</code>, the number of milliseconds between one delay and the next. </p>
 <pre><code class="language-cpp">…
 WiFiClient network;
 MQTTClient client;
+
+// declaration
 
 /********* This is where you put your own code *********/
 
@@ -1115,18 +1123,16 @@ MQTTClient client;
 int temp = 0;
 int light = LOW;
 
-// Variables for multitasking
-unsigned long previousMillis = 0;
-const long interval = 10000; // 10 seconds interval
+// Timer for multitasking. Default is 10000 ms (10 seconds)
+RBD::Timer timer(10000);
 
 /**************** End of your own code *****************/
-
-void setup()
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2ca">Step 2: Setup</h4>
 <p>Next, within the <code>setup()</code> function, add another function call to <code>pinMode</code> so that you designate Pin 2 (the same pin that we used in our Subscribe example) as an output pin. </p>
 <pre><code class="language-cpp">…
-void setup()<br>{
+void setup()
+{
   Serial.begin(9600);
 
   /********* This is where you put your own code *********/
@@ -1136,50 +1142,33 @@ void setup()<br>{
 
   /**************** End of your own code *****************/
 
-  connectToWiFi(SECRET_SSID, SECRET_PASS); // Connect to the WiFi network
-
-  // Setup the MQTT client, but not connecting yet
-  client.begin(MQTT_URL, MQTT_PORT, network);
-  client.onMessage(messageReceived);
-
-  connect(client, &amp;subscribe); // Connect to MQTT server
+  connectToWiFiAndMQTT(network, SECRET_SSID, SECRET_PASS, client, subscribe, messageReceived);
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2cb">Step 3: Loop</h4>
-<p>Within the <code>loop()</code> function, we will add the fundamental pieces of code that checks if enough time has passed between the last time the delay fired and the current time. If enough time has passed, the temperature is read and sent to the server. </p>
-<pre><code class="language-cpp">if (currentMillis - previousMillis &gt;= interval)
-{
-  previousMillis = currentMillis;
-  
-  // Do what you need to do here
-}</code></pre>
-<p>Secondly, we have to periodically set Pin 2’s signal to be on/off, depending on what the variable <code>light</code> is at the moment. We will do this with a <code>digitalWrite(2, light)</code>. Notice how this is outside the brackets that are responsible for checking if the delay time has passed, which means that it will be called every single time when the loop is run.</p>
+<p>Within the <code>loop()</code> function, we have to periodically set Pin 2’s signal to be on/off, depending on what the variable <code>light</code> is at the moment. We will do this with a <code>digitalWrite(2, light)</code>.</p>
+<p>Notice how that the <code>digitalWrite</code> function is outside the <code>if (timer.onRestart())</code> brackets that are responsible for checking if the delay time has passed, which means that it will be called every single time when the loop is run, instead of every 10 seconds.</p>
 <p>Here's the code for the <code>loop()</code> function in full:</p>
 <pre><code class="language-cpp">…
 void loop()
 {
-  bool connected = client.loop(); // This function must be called on every loop
+  connectionCheck(client, subscribe); // Check if connection is ok, must run on every loop
 
-  // Check if MQTT connection is active, and reconnect if it's broken
-  if (connected == false)
-  {
-    Serial.println("MQTT Client disconnected, reconnecting...");
-    connect(client, &amp;subscribe);
-  }
+  /*
+    …
+  */
 
   /********* This is where you put your own code *********/
 
-  unsigned long currentMillis = millis();
-  if (currentMillis - previousMillis &gt;= interval)
+  // Publish every 10 seconds
+  if (timer.onRestart())
   {
-    previousMillis = currentMillis;
-    
     // Read the temperature
     temp = -40 + 0.488155 * (analogRead(A0) - 20);
 
     // Convert the temperature to a String
     String temperatureString = String(temp);
-    publishUbidots(client, "sstuino-ii/temperature", temperatureString);
+    publishUbidots(client, "temperature", temperatureString);
   }
 
   digitalWrite(2, light);
@@ -1195,17 +1184,14 @@ void messageReceived(String &amp;topic, String &amp;payload)
   Serial.println("Incoming data: " + topic + " - " + payload);
 
   /*
-    All the messages your MQTT service receives can be
-    loaded here
-
-    *NOTE*: Do not use this function to publish, subscribe
-    or unsubscribe as it may cause deadlocks
+    …
   */
 
   /********* This is where you put your own code *********/
 
-  if (topicMatches("sstuino-ii/light", topic) == true)
+  if (topicMatches("light", topic) == true)
   {
+    // You can do something with the payload, which is a String
     light = payload.toInt(); // convert the incoming message from String to int
   }
 
@@ -1213,18 +1199,18 @@ void messageReceived(String &amp;topic, String &amp;payload)
 }
 …</code></pre>
 <h4 id="mcetoc_1g04lk9pg2cd">Step 5: Subscribe</h4>
-<p>Finally, don’t forget to actually subscribe to the topic in question, which should be named <code>sstuino-ii/light</code>, in the <code>subscribe()</code> function.</p>
+<p>Finally, don’t forget to actually subscribe to the topic in question, which should be named <code>light</code>, in the <code>subscribe()</code> function.</p>
 <pre><code class="language-cpp">…
 void subscribe()
 {
   /*
     For example, a subscribe is called like:
-    subscribeUbidots(client, "sstuino-ii/light");
+    subscribeUbidots(client, "light");
   */
  
   /********* This is where you put your own code *********/
 
-  subscribeUbidots(client, "sstuino-ii/light");
+  subscribeUbidots(client, "light");
 
   /**************** End of your own code *****************/
 }
