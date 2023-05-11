@@ -3,7 +3,7 @@
     <title>FourierIndustries Knowledge Base</title>
     <link href="https://knowledge.fourier.industries/feed.xml" rel="self" />
     <link href="https://knowledge.fourier.industries" />
-    <updated>2023-05-11T14:17:35+08:00</updated>
+    <updated>2023-05-11T15:16:01+08:00</updated>
     <author>
         <name>FourierIndustries LLP</name>
     </author>
@@ -394,7 +394,7 @@ void setColor(){
             <category term="Beginner"/>
             <category term="Actuators"/>
 
-        <updated>2022-08-09T15:16:24+08:00</updated>
+        <updated>2023-05-11T15:16:01+08:00</updated>
             <summary>
                 <![CDATA[
                     Overview Ever notice that your SSTuino II has an RGB&hellip;
@@ -409,8 +409,9 @@ void setColor(){
 <li><a href="#mcetoc_1ga0j88bc9s">Wiring it up</a></li>
 <li><a href="#mcetoc_1ga0j88bc9t">Code</a>
 <ul>
-<li><a href="#mcetoc_1ga0j33qu8e">Switching it up</a></li>
-<li><a href="#mcetoc_1ga0j33qu8f">Completed code</a></li>
+<li><a href="#mcetoc_1h04qkrqct">Basic Tutorial</a></li>
+<li><a href="#mcetoc_1ga0j33qu8e">Switching it up (Advanced Tutorial)</a></li>
+<li><a href="#mcetoc_1ga0j33qu8f">Complete code</a></li>
 </ul>
 </li>
 <li><a href="#mcetoc_1ga0j88bc9u">Resources and Going Further</a></li>
@@ -422,6 +423,7 @@ void setColor(){
 <h2 id="mcetoc_1ga0j88bc9s">Wiring it up</h2>
 <p>There is no need to wire anything externally to your SSTuino II. It can even operate completely independently of the Explorer board. The ESP32 Wi-Fi chip is physically wired to the ATmega4809 main microcontroller via SPI pins and communicates solely via SPI. </p>
 <h2 id="mcetoc_1ga0j88bc9t">Code</h2>
+<h3 id="mcetoc_1h04qkrqct">Basic Tutorial</h3>
 <p>Open an existing Arduino sketch, or create a new sketch and ensure that you have imported the two necessary libraries for operating with the Wi-Fi chip:</p>
 <pre><code class="language-cpp">#include &lt;SPI.h&gt;
 #include &lt;WiFiNINA.h&gt;
@@ -430,7 +432,9 @@ void setColor(){
 <pre><code class="language-cpp">WiFi.setLEDs(255, 255, 255);
 </code></pre>
 <p>The 3 parameters represent the value of red, green and blue respectively. If you have previously used <code>analogWrite()</code>, this is very similar. The maximum and minimum values are 255 and 0 respectively, with 255 being the LED at maximum brightness and 0 switching off the LED.</p>
-<h3 id="mcetoc_1ga0j33qu8e">Switching it up</h3>
+<p>If you wish to download the full sample program, you can download it below:</p>
+<p class="align-center"><a href="https://knowledge.fourier.industries/media/files/Onboard_RGB_Simple.zip" class="btn">Download the Simple RGB Program</a></p>
+<h3 id="mcetoc_1ga0j33qu8e">Switching it up (Advanced Tutorial)</h3>
 <p>Do you want to make it look similar to what the SSTuino II looked like when you first connected it? Well, you can do that!</p>
 <p>There are two parts to the program used for the code. At first, the LED will cycle all its colours independently: red, green, followed by blue. Place this code in the <code>setup()</code> part of your sketch to do exactly that.</p>
 <pre><code class="language-cpp">WiFi.setLEDs(32, 0, 0);
@@ -497,7 +501,7 @@ if (decColour == 2) {
   }
 }
 </code></pre>
-<h3 id="mcetoc_1ga0j33qu8f">Completed code</h3>
+<h3 id="mcetoc_1ga0j33qu8f">Complete code</h3>
 <pre><code class="language-cpp">/*
   RGB LED program for the SSTuino II
   
